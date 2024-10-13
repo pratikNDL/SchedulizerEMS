@@ -1,0 +1,91 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Institute {
+  id String  @id @default(uuid())
+  name String @unique
+  emial String @unique
+  password String
+  departments Department[]
+  admins Admin[]
+  acadmeicBlocks AcadmeicBlock[] 
+  
+}
+
+model Admin {
+  id String  @id @default(uuid())
+  institueId String
+
+  institute Institute @relation(fields: [institueId], references: [id])
+
+}
+
+model Department {
+  id String @id @default(uuid())
+  name String @unique
+  code String @unique
+  institueId String
+
+  faculties Faculty[]
+  courses Course[]
+  institute Institute @relation(fields: [institueId], references: [id])
+}
+
+enum FacultyRank {
+  PROFESSOR
+  ASSOCIATE_PROFESSOR
+  ASSISTANT_PROFESSOR
+}
+
+model Faculty {
+  id String @id @default(uuid())
+  firstName String
+  lastName String
+  email String
+  rank FacultyRank
+  departmentId String
+
+  department Department @relation(fields: [departmentId], references: [id])
+
+}
+
+model Course {
+  id String @id @default(uuid())
+  name String
+  credits Int
+  departmentId String 
+  isLab Boolean @default(false)
+
+  department Department @relation(fields: [departmentId], references: [id])
+
+}
+
+model AcadmeicBlock {
+  id String @id @default(uuid())
+  name String?
+  blockCode String @unique
+  institueId String 
+  rooms Room[]
+  institute Institute @relation(fields: [institueId], references: [id])
+}
+
+model Room {
+  id String @id @default(uuid())
+  floor Int
+  code Int
+  blockId String
+  academicBlock AcadmeicBlock @relation(fields: [blockId], references: [id])
+}
+
