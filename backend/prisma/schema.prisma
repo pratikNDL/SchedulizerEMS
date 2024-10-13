@@ -16,21 +16,12 @@ datasource db {
 model Institute {
   id String  @id @default(uuid())
   name String @unique
-  emial String @unique
+  email String @unique
   password String
   departments Department[]
-  admins Admin[]
   acadmeicBlocks AcadmeicBlock[] 
-  
 }
 
-model Admin {
-  id String  @id @default(uuid())
-  institueId String
-
-  institute Institute @relation(fields: [institueId], references: [id])
-
-}
 
 model Department {
   id String @id @default(uuid())
