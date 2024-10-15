@@ -1,6 +1,6 @@
 import { useState } from "react"
 import LabeledInput from "../components/LabeledInput"
-import { instituteSignupType } from "@pratikndl/common-schedulizer-ems"
+import { instituteSigninType } from "@pratikndl/common-schedulizer-ems"
 import axios from "axios"
 import config from '../../config.json'
 import { Link, useNavigate } from "react-router-dom"
@@ -11,17 +11,17 @@ const defaultInput = {
     password: ''
 }
 
-export const Signup = () => {
+export const Signin = () => {
     const navigate = useNavigate();
 
     const [error, setError] = useState<String>("");
-    const [data, setData] = useState<instituteSignupType>(defaultInput);
+    const [data, setData] = useState<instituteSigninType>(defaultInput);
     const [isDisabled, setIsDisabled] = useState<boolean>(false)
 
     const sendRequesst = async() => {
         setIsDisabled(true);
         try {
-            const response = await  axios.post(config.BACKEND_URl+`/institute/signup`, data);
+            const response = await  axios.post(config.BACKEND_URl+`/institute/signin`, data);
             const token = response.data.token;
             localStorage.setItem('token', token);
             navigate('/home');
@@ -46,24 +46,18 @@ export const Signup = () => {
 
                 <div className="flex flex-col items-center mb-5">
                     <div className='font-bold text-4xl mb-2 '>
-                        Institute Signup
+                        Institute SignIn
                     </div>
                     <div className='font-md text-sm text-gray-500'>
-                        Already have an account?? 
-                        <Link to={'/signin'} className="ml-1 underline font-bold ">
-                            Login
+                        Create an account?? 
+                        <Link to={'/signup'} className="ml-1 underline font-bold ">
+                            SignUp
                         </Link>
                     </div>
                 </div>
 
                 <div className='w-full'>
-                    <LabeledInput 
-                        label={'Institute Name'} value={data.name} placeholder={'Institute of Engineering'}
-                        handler={(e) => setData((prevState) => ({
-                            ...prevState,
-                            name: e.target.value
-                            }))}    
-                    />
+                
                     <LabeledInput 
                         label={'Institute Email'} value={data.email} placeholder={'institute@engineering.com'}
                         handler={(e) => setData((prevState) => ({

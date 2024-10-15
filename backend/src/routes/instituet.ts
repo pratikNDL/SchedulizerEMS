@@ -19,7 +19,7 @@ app.post('/signup', async (c) => {
     const {data, success} = instituteSignup.safeParse(body);
 
     if(!success) {
-        return c.json({message: "invlid Inputs"}, {status: 400})
+        return c.json({message: "invalid Inputs"}, {status: 400})
     }
 
     try {        
@@ -61,7 +61,7 @@ app.post('/signin', async (c) => {
     const {data, success} = instituteSignin.safeParse(body);
 
     if(!success) {
-        return c.json({message: "invlid Inputs"}, {status: 400})
+        return c.json({message: "invalid Inputs"}, {status: 400})
     }
 
     try {        
@@ -74,7 +74,7 @@ app.post('/signin', async (c) => {
 
         
         if (!existingInstitute) {
-            return c.json({message: "Institute does not exists"}, {status: 409}); 
+            return c.json({message: "Incorrect email/password"}, {status: 409}); 
         }
 
         const token = await sign({id: existingInstitute.id}, c.env.JWT_SECRET)

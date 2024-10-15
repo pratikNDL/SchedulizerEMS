@@ -1,7 +1,7 @@
 import {z} from 'zod'
 
 export const instituteSignup = z.object({
-    name: z.string(),
+    name: z.string().min(1),
     email: z.string().email(),
     password: z.string().min(8)
 })
@@ -13,8 +13,8 @@ export const instituteSignin = z.object({
 })
 
 export const departmentInput = z.object({
-    name: z.string(),
-    code: z.string()
+    name: z.string().min(1),
+    code: z.string().min(1)
 })
 
 const FacultyRankEnum = z.enum(['PROFESSOR', 'ASSOCIATE_PROFESSOR', 'ASSISTANT_PROFESSOR']);
@@ -29,7 +29,7 @@ export const facultyInput = z.object({
 })
 
 export const courseInput = z.object({
-    name: z.string(),
+    name: z.string().min(1),
     credits: z.number(),
     departmentId: z.string(),
     isLab: z.boolean()

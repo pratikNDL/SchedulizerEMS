@@ -6,16 +6,15 @@ type LabeledInputType = {
     placeholder: string
     handler: (e: ChangeEvent<HTMLInputElement>) => void,
     type?: "text" | "email" | 'password'
+    addCSS?: string
 }
 
-function LabeledInput({label, value, placeholder, handler, type='text'}: LabeledInputType) {
+function LabeledInput({label, value, placeholder, handler, type='text', addCSS}: LabeledInputType) {
+  
   return (
-    <div className=" mb-5 ">
-        <label  className="text-md font-medium text-gray-900 "> {label}</label>
-        <input className="bg-gray-50 border border-gray-300
-            text-gray-900 text-sm rounded-md
-            focus:ring-orange-500 focus:border-orange-500
-            w-full p-1.5 " 
+    <div className={`mb-5 ${addCSS}`}>
+        <label  className="text-md font-medium text-gray-700 "> {label}</label>
+        <input className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500"
             placeholder={placeholder}
             value={value}
             onChange={(e) => handler(e)}

@@ -20,6 +20,9 @@ app.get('/all', async (c) => {
         const departments = await prisma.department.findMany({
             where : {
                 instituteId: instituteId
+            },
+            select: {
+                instituteId: false
             }
         })
 
