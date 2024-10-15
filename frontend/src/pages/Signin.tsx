@@ -42,8 +42,8 @@ export const Signin = () => {
         
         <div className="h-screen flex justify-center items-center bg-gradient-to-t from-black  to-white">
             
-            <div className="bg-white border-2 border-slate-200 rounded-md hover:shadow-lg p-5 flex flex-col justify-center items-center">
-
+            <div className={`${isDisabled ? "animate-pulse": ""}  bg-white border-2 border-slate-200 rounded-md hover:shadow-lg p-5 flex flex-col justify-center items-center`}>
+            
                 <div className="flex flex-col items-center mb-5">
                     <div className='font-bold text-4xl mb-2 '>
                         Institute SignIn
