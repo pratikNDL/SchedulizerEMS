@@ -5,6 +5,7 @@ import { Signup } from './pages/Signup'
 import { Signin } from './pages/Signin'
 import Home from './pages/Home'
 import Department from './pages/Department'
+import Faculty from './pages/Faculty'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/signin' element={<Signin/>}/>
         <Route path='/home' element={<Home/>}/>
         <Route path='/department' element={<Department/>}/>
+        <Route path='/faculty' element={<Faculty/>}/>
       </Routes>
     </BrowserRouter>
   </>

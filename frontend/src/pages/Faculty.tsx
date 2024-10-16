@@ -1,12 +1,12 @@
 import { ChangeEvent, useRef, useState } from "react";
 import LabeledInput from "../components/LabeledInput"
-import RegisterDepartment from "../components/RegisterDepartment"
 import Table from "../components/Table"
-import useFetchDepartments from "../hooks/useFetchDepartments";
+import useFetchFaculties from "../hooks/useFetchFaculty";
+import RegisterFaculty from "../components/RegisterFaculty";
 
-function Department() {
+function Faculty() {
   const [query, setQuery] = useState("");
-  const {data} = useFetchDepartments(query)
+  const {data} = useFetchFaculties(query)
 
   const timeoutRef = useRef<number | null>(null); 
 
@@ -23,13 +23,13 @@ function Department() {
 
   return (
     <div className="p-5">
-      <RegisterDepartment/>
+      <RegisterFaculty/>
       <div className=" my-4 border p-2">
         <LabeledInput label="" placeholder="search" handler={searchHandler} />
-        <Table titels={["Department Name", "Code"]} rows={data.map((row) => {return {name:row.name, code:row.code}})} />
+        <Table titels={["First Name", "Last Name", "Designation", "code"]} rows={data.map((row) => {return {firstName:row.firstName, lastName:row.lastName, rank:row.rank, code:row.department.code}})} />
       </div>
     </div>
   )
 }
 
-export default Department
+export default Faculty

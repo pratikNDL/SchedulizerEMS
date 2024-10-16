@@ -29,6 +29,39 @@ app.get('/all', async (c) => {
     }
 })
 
+app.get('/', async (c) => {
+    const instituteId = c.get("instituteId") as string;
+    const prisma = c.get("prisma")
+    const query = c.req.query('name');
+    
+    try {
+        const faculties = await prisma.faculty.findMany({
+            where: {
+                OR: [
+                    { firstName: { contains: query, mode: 'insensitive' } },
+                    { lastName: { contains: query, mode: 'insensitive' } },
+                ],
+                instituteId: instituteId
+            },
+
+            select: {
+                firstName: true,
+                lastName: true,
+                rank: true,
+                department: {
+                    select: {
+                        code: true
+                    }
+                }
+            }
+        });
+        return c.json({faculties});
+
+    } catch(e) {
+        return c.json({message: "Something went wrong"}, {status: 500})
+    }
+})
+
 
 app.get('/:code', async (c) => {
     const instituteId = c.get("instituteId") as string;

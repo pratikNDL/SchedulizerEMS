@@ -4,6 +4,7 @@ import { departmentInputType } from "@pratikndl/common-schedulizer-ems"
 import Button from "./Button"
 import config from '../../config.json'
 import axios from "axios"
+import RegisterWrapper from "./RegisterWrapper"
 
 const defaultData: departmentInputType = {
     name: "",
@@ -14,7 +15,7 @@ function RegisterDepartment() {
     const [prompt, setPrompt] = useState<String>("");
     const [error, setError] = useState(true);
     const [loading, setloading] = useState(false)
-    const [showForm, setShowForm] = useState(false)
+
         
     const handler = async() => {
         setloading(true);
@@ -40,28 +41,21 @@ function RegisterDepartment() {
 
     console.log(error);
     return (
-        <div className="p-2 ">
-            <div onClick={() => setShowForm((prev) => !prev)} className="border w-fit px-2 rounded mb-2">
-                    {showForm ? "collapse": "Add New Department"}
-            </div>
-            <div className={`${!showForm ? 'hidden': ''} grid md:grid-cols-12 md:gap-x-2 transition-all` }>
-        
-                <LabeledInput addCSS="md:col-span-8" label="Deapartment Name"  placeholder="Electronics And Computer Science Department"
+        <RegisterWrapper>
+            <LabeledInput addCSS="md:col-span-8" label="Deapartment Name"  placeholder="Electronics And Computer Science Department"
                 handler={(e) => setData({...data, name: e.target.value})}/>
 
                 <LabeledInput addCSS="md:col-span-4" label="Deapartment Code"  placeholder="ECS"
                 handler={(e) => setData({...data, code: e.target.value})}/>
                 
-                <Button addCSS="flex justify-center md:col-span-12" isDisabled={loading} value="Add Department"  handler={handler}/>
+                <div className="flex  justify-center md:col-span-12 ">
+                    <Button addCSS="bg-red-400" isDisabled={loading} value="Add Department"  handler={handler}/>
+                </div>
                 
-                <div className={`flex justify-center mt-3 text-center ${error ? 'text-red-500': 'text-green-400'} md:col-span-12`}>
+                <div className={`flex justify-center mt-3 text-center font-bold ${error ? 'text-red-500': 'text-green-400'} md:col-span-12`}>
                     {prompt}
                 </div>
-
-            </div>
-                <div className="col-span-12 py-0.5 bg-slate-200" />
-
-        </div>
+        </RegisterWrapper>
     
   )
 }
