@@ -9,8 +9,8 @@ type ButtonType = {
 function Button({isDisabled=false, value, handler, addCSS}: ButtonType) {
   return (
     
-    <button className={`rounded-md py-2 px-2 mb-2  font-bold
-        text-sm text-white 
+    <button className={`rounded-sm py-1 px-8   font-medium
+        text-medium text-white 
         transition-shadow hover:shadow-xl w-fit
       disabled:bg-gray-400 disabled:cursor-not-allowed
         ${addCSS}`}

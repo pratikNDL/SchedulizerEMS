@@ -7,9 +7,9 @@ function PageWrapper({children}: {children:ReactNode}) {
   return (
     <>
     <Navbar/>
-    <div className="flex">
+    <div className="flex relative bg-slate-200 " >
       <SideBar/>
-      <div className='p-5'>
+      <div className='pl-40 pt-5 pr-20 min-h-screen h-full'>
         {children}
       </div>
     </div>

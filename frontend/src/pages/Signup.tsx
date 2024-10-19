@@ -4,6 +4,7 @@ import { instituteSignupType } from "@pratikndl/common-schedulizer-ems"
 import axios from "axios"
 import config from '../../config.json'
 import { Link, useNavigate } from "react-router-dom"
+import Button from "../components/Button"
 
 const defaultInput = {  
     name: '', 
@@ -41,10 +42,10 @@ export const Signup = () => {
         
         <div className="h-screen flex justify-center items-center bg-gradient-to-t from-slate-500  to-white">
             
-            <div className={`${isDisabled ? "animate-pulse": ""}  bg-white border-2 border-slate-200 rounded-md hover:shadow-lg p-5 flex flex-col justify-center items-center`}>
+            <div className={`${isDisabled ? "animate-pulse": ""}  bg-white border-2 border-slate-200 rounded-md hover:shadow-lg p-5 flex flex-col justify-center items-center gap-4`}>
 
-                <div className="flex flex-col items-center mb-5">
-                    <div className='font-bold text-4xl mb-2 '>
+                <div className="flex flex-col items-center gap-1">
+                    <div className='font-bold text-4xl'>
                         Institute Signup
                     </div>
                     <div className='font-md text-sm text-gray-500'>
@@ -54,48 +55,18 @@ export const Signup = () => {
                         </Link>
                     </div>
                 </div>
+      
 
-                <div className='w-full'>
-                    <LabeledInput 
-                        label={'Institute Name'} value={data.name} placeholder={'Institute of Engineering'}
-                        handler={(e) => setData((prevState) => ({
-                            ...prevState,
-                            name: e.target.value
-                            }))}    
-                    />
-                    <LabeledInput 
-                        label={'Institute Email'} value={data.email} placeholder={'institute@engineering.com'}
-                        handler={(e) => setData((prevState) => ({
-                            ...prevState,
-                            email: e.target.value
-                            }))}    
-                    />
-                    <LabeledInput 
-                        label={'Password'} value={data.password} placeholder={'Minimum 8 charactors'}
-                        type="password"
-                        handler={(e) => setData((prevState) => ({
-                            ...prevState,
-                            password: e.target.value
-                            }))}    
-                    />
-                </div>        
-
-                <button className={`rounded-md bg-orange-500 py-2 px-4 w-2/3
-                            text-sm text-white transition-all 
-                            hover:bg-orange-700 hover:shadow-xl 
-                            disabled:bg-gray-400 disabled:cursor-not-allowed`}
-
-                        disabled={isDisabled}
-                        type="button"
-                        onClick={sendRequesst}>
-                    Signup
-                </button>   
+                <div className='flex flex-col  w-full gap-4'>
+                    <LabeledInput label={'Institute Email'}  placeholder={'institute@engineering.com'}handler={(e) => setData((prevState) => ({...prevState, email: e.target.value}))}/>
+                    <LabeledInput label={'Institute Name'} placeholder={'institute@engineering.com'}handler={(e) => setData((prevState) => ({...prevState, name: e.target.value}))}/>
+                    <LabeledInput label={'Password'}  placeholder={'password'} type="password" handler={(e) => setData((prevState) => ({...prevState, password: e.target.value}))} />
+                </div> 
+                 
+                <Button isDisabled={isDisabled} value={'Signup'} handler={sendRequesst} addCSS="bg-red-400 "/>
 
                 
-                <div className="py-1 mt-5 w-2/3
-                                rounded
-                                text-lg text-red-600 text-center
-                                " >
+                <div className="w-2/3  text-lg text-red-600 text-center" >
                         {error}
                 </div> 
                 

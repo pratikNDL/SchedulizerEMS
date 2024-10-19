@@ -9,7 +9,7 @@ import PageWrapper from "../components/PageWrapper";
 function Faculty() {
   useFetchMe();
   const [query, setQuery] = useState("");
-  const {data} = useFetchFaculties(query)
+  const {loading, data} = useFetchFaculties(query)
 
   const timeoutRef = useRef<number | null>(null); 
 
@@ -27,9 +27,9 @@ function Faculty() {
   return (
     <PageWrapper>
       <RegisterFaculty/>
-      <div className=" my-4 border p-2">
+      <div className=" my-4 bg-white shadow-xl p-5 rounded flex flex-col gap-4">
         <LabeledInput label="" placeholder="search" handler={searchHandler} />
-        <Table titels={["First Name", "Last Name", "Designation", "code"]} rows={data.map((row) => {return {firstName:row.firstName, lastName:row.lastName, rank:row.rank, code:row.department.code}})} />
+        <Table isLoading={loading} titels={["Name", "Designation", "code"]} rows={data.map((row) => {return {Nmae:row.firstName+ " " + row.lastName, rank:row.rank, code:row.department.code}})} />
       </div>
     </PageWrapper>
   )

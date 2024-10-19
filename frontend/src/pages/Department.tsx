@@ -28,8 +28,8 @@ function Department() {
   return (
     <PageWrapper>
         <RegisterDepartment/>
-        <div className=" my-4 border p-2">
-          <LabeledInput label="" placeholder="search" handler={searchHandler} />
+        <div className=" my-4 p-5 bg-white shadow-xl rounded-md flex flex-col gap-4">
+          <LabeledInput label="" placeholder="Search A Department" handler={searchHandler} />
           <Table isLoading={loading} titels={["Department Name", "Code"]} rows={data.map((row) => {return {name:row.name, code:row.code}})} />
         </div>
     </PageWrapper>

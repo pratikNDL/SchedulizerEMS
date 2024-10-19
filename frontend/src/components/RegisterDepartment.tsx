@@ -42,19 +42,18 @@ function RegisterDepartment() {
     console.log(error);
     return (
         <RegisterWrapper>
-            <LabeledInput addCSS="md:col-span-8" label="Deapartment Name"  placeholder="Electronics And Computer Science Department"
-                handler={(e) => setData({...data, name: e.target.value})}/>
+            <div className="flex flex-col gap-5 items-center justify-evenly">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full ">
+                    <LabeledInput  label="Deapartment Name"  placeholder="Electronics And Computer Science Department" handler={(e) => setData({...data, name: e.target.value})}/>
+                    <LabeledInput label="Deapartment Code"  placeholder="ECS" handler={(e) => setData({...data, code: e.target.value})}/>
+                </div>
 
-                <LabeledInput addCSS="md:col-span-4" label="Deapartment Code"  placeholder="ECS"
-                handler={(e) => setData({...data, code: e.target.value})}/>
+                <Button addCSS="bg-slate-400" isDisabled={loading} value="Add Deaprtment"  handler={handler}/>
                 
-                <div className="flex  justify-center md:col-span-12 ">
-                    <Button addCSS="bg-red-400" isDisabled={loading} value="Add Department"  handler={handler}/>
-                </div>
-                
-                <div className={`flex justify-center mt-3 text-center font-bold ${error ? 'text-red-500': 'text-green-400'} md:col-span-12`}>
+                <div className={` text-center font-bold ${error ? 'text-red-500': 'text-green-400'}`}>
                     {prompt}
-                </div>
+                </div> 
+            </div>
         </RegisterWrapper>
     
   )
