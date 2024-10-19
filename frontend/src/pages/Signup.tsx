@@ -24,7 +24,7 @@ export const Signup = () => {
             const response = await  axios.post(config.BACKEND_URl+`/institute/signup`, data);
             const token = response.data.token;
             localStorage.setItem('token', token);
-            navigate('/home');
+            navigate('/');
         }
         catch(e: any){
             if(!e.response.data.message) {
@@ -33,14 +33,13 @@ export const Signup = () => {
             else {
                 setError(e.response.data.message);
             }
-            setData(defaultInput)
         }
         setIsDisabled(false);
 
     }
     return(
         
-        <div className="h-screen flex justify-center items-center bg-gradient-to-t from-black  to-white">
+        <div className="h-screen flex justify-center items-center bg-gradient-to-t from-slate-500  to-white">
             
             <div className={`${isDisabled ? "animate-pulse": ""}  bg-white border-2 border-slate-200 rounded-md hover:shadow-lg p-5 flex flex-col justify-center items-center`}>
 
