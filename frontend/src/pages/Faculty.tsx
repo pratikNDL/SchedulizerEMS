@@ -2,7 +2,7 @@ import { ChangeEvent, useRef, useState } from "react";
 import LabeledInput from "../components/LabeledInput"
 import Table from "../components/Table"
 import useFetchFaculties from "../hooks/useFetchFaculty";
-import RegisterFaculty from "../components/RegisterFaculty";
+import RegisterFaculty from "../components/FacultyForm";
 import useFetchMe from "../hooks/useFetchMe";
 import PageWrapper from "../components/PageWrapper";
 

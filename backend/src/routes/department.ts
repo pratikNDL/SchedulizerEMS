@@ -12,25 +12,6 @@ const app = new Hono<{
 
 app.use(authAdmin);
 
-app.get('/all', async (c) => {
-    const instituteId = c.get("instituteId") as string;
-    const prisma = c.get("prisma")
-    
-    try {
-        const departments = await prisma.department.findMany({
-            where : {
-                instituteId: instituteId
-            },
-            select: {
-                instituteId: false
-            }
-        })
-
-        return c.json({departments: departments})
-    } catch(e) {
-        return c.json({message: "Something went wrong"}, {status: 500})
-    }
-})
 
 app.get('/', async (c) => {
     const instituteId = c.get("instituteId") as string;

@@ -17,10 +17,10 @@ export const Signup = () => {
 
     const [error, setError] = useState<String>("");
     const [data, setData] = useState<instituteSignupType>(defaultInput);
-    const [isDisabled, setIsDisabled] = useState<boolean>(false)
+    const [isLoading, setisLoading] = useState<boolean>(false)
 
     const sendRequesst = async() => {
-        setIsDisabled(true);
+        setisLoading(true);
         try {
             const response = await  axios.post(config.BACKEND_URl+`/institute/signup`, data);
             const token = response.data.token;
@@ -35,14 +35,14 @@ export const Signup = () => {
                 setError(e.response.data.message);
             }
         }
-        setIsDisabled(false);
+        setisLoading(false);
 
     }
     return(
         
         <div className="h-screen flex justify-center items-center bg-gradient-to-t from-slate-500  to-white">
             
-            <div className={`${isDisabled ? "animate-pulse": ""}  bg-white border-2 border-slate-200 rounded-md hover:shadow-lg p-5 flex flex-col justify-center items-center gap-4`}>
+            <div className={`${isLoading ? "animate-pulse": ""}  bg-white border-2 border-slate-200 rounded-md hover:shadow-lg p-5 flex flex-col justify-center items-center gap-4`}>
 
                 <div className="flex flex-col items-center gap-1">
                     <div className='font-bold text-4xl'>
@@ -63,7 +63,7 @@ export const Signup = () => {
                     <LabeledInput label={'Password'}  placeholder={'password'} type="password" handler={(e) => setData((prevState) => ({...prevState, password: e.target.value}))} />
                 </div> 
                  
-                <Button isDisabled={isDisabled} value={'Signup'} handler={sendRequesst} addCSS="bg-red-400 "/>
+                <Button isDisabled={isLoading} value={'Signup'} handler={sendRequesst} addCSS="bg-red-400 "/>
 
                 
                 <div className="w-2/3  text-lg text-red-600 text-center" >

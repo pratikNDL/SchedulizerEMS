@@ -10,7 +10,7 @@ function Button({isDisabled=false, value, handler, addCSS}: ButtonType) {
   return (
     
     <button className={`rounded-sm py-1 px-8   font-medium
-        text-medium text-white 
+        text-sm text-white 
         transition-shadow hover:shadow-xl w-fit
       disabled:bg-gray-400 disabled:cursor-not-allowed
         ${addCSS}`}

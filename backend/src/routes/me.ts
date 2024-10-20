@@ -16,7 +16,7 @@ app.get('/', async(c) => {
         return c.json({user})
     }
     catch(e) {
-        c.status(201);
+        c.status(401);
         return c.json({e});
     }
 })

@@ -1,7 +1,7 @@
 import { Hono } from "hono";
 import { authAdmin } from "../middlewares/authAdmin";
 import { PrismaClient } from "@prisma/client";
-import { departmentInput } from "@pratikndl/common-schedulizer-ems";
+import { courseInput } from "@pratikndl/common-schedulizer-ems";
 
 const app = new Hono<{
     Variables: {
@@ -12,25 +12,6 @@ const app = new Hono<{
 
 app.use(authAdmin);
 
-app.get('/all', async (c) => {
-    const instituteId = c.get("instituteId") as string;
-    const prisma = c.get("prisma")
-    
-    try {
-        const departments = await prisma.department.findMany({
-            where : {
-                instituteId: instituteId
-            },
-            select: {
-                instituteId: false
-            }
-        })
-
-        return c.json({departments: departments})
-    } catch(e) {
-        return c.json({message: "Something went wrong"}, {status: 500})
-    }
-})
 
 app.get('/', async (c) => {
     const instituteId = c.get("instituteId") as string;
@@ -38,7 +19,7 @@ app.get('/', async (c) => {
     const query = c.req.query('name');
     
     try {
-        const departments = await prisma.department.findMany({
+        const courses = await prisma.course.findMany({
             where: {
                 OR: [
                     { name: { contains: query, mode: 'insensitive' } },
@@ -47,7 +28,7 @@ app.get('/', async (c) => {
                 instituteId: instituteId
             }
         });
-        return c.json({departments});
+        return c.json({courses});
 
     } catch(e) {
         return c.json({message: "Something went wrong"}, {status: 500})
@@ -61,17 +42,16 @@ app.post('/', async (c) => {
     const prisma = c.get("prisma")
     const body = await c.req.json();
 
-    const {data, success} = departmentInput.safeParse(body);
+    const {data, success, error} = courseInput.safeParse(body);
 
     if(!success) {
-        return c.json({message: "invlid Inputs"}, {status: 400})
+        return c.json({message: "invlid Inputs", error}, {status: 400})
     }
     
     try {        
-        const existingDepartment= await prisma.department.findFirst({
+        const existingCourse = await prisma.course.findFirst({
             where: {
                 OR: [
-                    {name: data.name},
                     {code: data.code}, 
                 ],
                 instituteId: instituteId    
@@ -79,18 +59,19 @@ app.post('/', async (c) => {
         });
 
         
-        if (existingDepartment) {
+        if (existingCourse) {
             return c.json({message: "Department with same name or code already exist"}, {status: 409}); 
         }
 
-        const newDepartment = await prisma.department.create({
+        
+        const newRoom = await prisma.course.create({
             data: {
                 ...data,
                 instituteId: instituteId
             }
         })
 
-        return c.json({message: "New Department Created", newDepartment}, {status: 201});
+        return c.json({message: "New Department Created", newRoom}, {status: 201});
 
     } catch (e) {
         console.error(e);

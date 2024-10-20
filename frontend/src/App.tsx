@@ -6,6 +6,7 @@ import { Signin } from './pages/Signin'
 import Home from './pages/Home'
 import Department from './pages/Department'
 import Faculty from './pages/Faculty'
+import Course from './pages/Course'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/department' element={<Department/>}/>
         <Route path='/faculty' element={<Faculty/>}/>
+        <Route path='/course' element={<Course/>}/>
       </Routes>
     </BrowserRouter>
   </>

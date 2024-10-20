@@ -1,6 +1,6 @@
 import { ChangeEvent, useRef, useState } from "react";
 import LabeledInput from "../components/LabeledInput"
-import RegisterDepartment from "../components/RegisterDepartment"
+import RegisterDepartment from "../components/DepartmentForm"
 import Table from "../components/Table"
 import useFetchDepartments from "../hooks/useFetchDepartments";
 import useFetchMe from "../hooks/useFetchMe";

@@ -1,14 +1,14 @@
-import { departmentInputType } from "@pratikndl/common-schedulizer-ems"
+import { courseInputType } from "@pratikndl/common-schedulizer-ems"
 import { useEffect, useState } from "react";
 import axios from "axios";
 import config from '../../config.json'
 
-export type departmentType = departmentInputType & {
+type courseType = courseInputType & {
     id: string
 }
-function useFetchDepartments(query: string) {
+function useFetchCourses(query: string) {
 
-  const [data, setData] = useState<Array<departmentType>>([]);
+  const [data, setData] = useState<Array<courseType>>([]);
   const [loading, setloading] = useState(true);
 
   useEffect(() => {
@@ -16,9 +16,9 @@ function useFetchDepartments(query: string) {
       Authorization: localStorage.getItem('token')
     }
     try {
-      axios.get(config.BACKEND_URl+`/department?name=${query}`, { headers})
+      axios.get(config.BACKEND_URl+`/course?name=${query}`, { headers})
       .then((res) => {
-        setData(res.data.departments);
+        setData(res.data.courses);
         setloading(false)
       })
   }
@@ -31,4 +31,4 @@ function useFetchDepartments(query: string) {
   return {loading, data}
 }
 
-export default useFetchDepartments
+export default useFetchCourses

@@ -17,7 +17,7 @@ export const departmentInput = z.object({
     code: z.string().min(1)
 })
 
-const FacultyRankEnum = z.enum(['PROFESSOR', 'ASSOCIATE_PROFESSOR', 'ASSISTANT_PROFESSOR']);
+export const FacultyRankEnum = z.enum(['PROFESSOR', 'ASSOCIATE_PROFESSOR', 'ASSISTANT_PROFESSOR']);
 
 
 export const facultyInput = z.object({
@@ -32,12 +32,27 @@ export const courseInput = z.object({
     name: z.string().min(1),
     credits: z.number(),
     departmentId: z.string(),
-    isLab: z.boolean()
+    isLab: z.boolean(),
+    code: z.string()
 })
 
+export const blockInput = z.object({
+    name: z.string(),
+    blockCode: z.string(),
+}) 
+
+export const roomInput = z.object({
+    floor: z.number(),
+    code: z.string(),
+    blockId: z.string(),
+    isLab: z.boolean(),
+    batchSize: z.number()
+})
 
 export type instituteSignupType = z.infer<typeof instituteSignup>; 
 export type instituteSigninType = z.infer<typeof instituteSignup>; 
 export type departmentInputType = z.infer<typeof departmentInput>
 export type facultyInputType = z.infer<typeof facultyInput>
 export type courseInputType = z.infer<typeof courseInput>
+export type blockInputType = z.infer<typeof blockInput>
+export type roomInputType = z.infer<typeof roomInput>
