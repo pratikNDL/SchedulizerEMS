@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "Room" ADD COLUMN     "name" TEXT,
+ALTER COLUMN "floor" SET DATA TYPE TEXT;

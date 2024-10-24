@@ -38,8 +38,7 @@ enum FacultyRank {
 
 model Faculty {
   id           String       @id @default(uuid())
-  firstName    String
-  lastName     String
+  name         String
   email        String
   rank         FacultyRank
   departmentId String
@@ -75,7 +74,8 @@ model AcademicBlock {
 
 model Room {
   id           String       @id @default(uuid())
-  floor        Int
+  floor        String
+  name         String?       
   code         String
   blockId      String
   instituteId  String

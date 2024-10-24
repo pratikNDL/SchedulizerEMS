@@ -38,15 +38,13 @@ app.get('/', async (c) => {
         const faculties = await prisma.faculty.findMany({
             where: {
                 OR: [
-                    { firstName: { contains: query, mode: 'insensitive' } },
-                    { lastName: { contains: query, mode: 'insensitive' } },
+                    { name: { contains: query, mode: 'insensitive' } },
                 ],
                 instituteId: instituteId
             },
 
             select: {
-                firstName: true,
-                lastName: true,
+                name: true,
                 rank: true,
                 department: {
                     select: {

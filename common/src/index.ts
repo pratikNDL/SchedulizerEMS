@@ -12,6 +12,13 @@ export const instituteSignin = z.object({
     password: z.string().min(8)
 })
 
+export const department = z.object({
+    id: z.string(),
+    name: z.string().min(1),
+    code: z.string().min(1),
+    instituteId: z.string()
+})
+
 export const departmentInput = z.object({
     name: z.string().min(1),
     code: z.string().min(1)
@@ -19,10 +26,15 @@ export const departmentInput = z.object({
 
 export const FacultyRankEnum = z.enum(['PROFESSOR', 'ASSOCIATE_PROFESSOR', 'ASSISTANT_PROFESSOR']);
 
+export const faculty = z.object({
+    id: z.string(),
+    name: z.string().min(1),
+    email: z.string().min(1),
+    instituteId: z.string()
+})
 
 export const facultyInput = z.object({
-    firstName: z.string().min(1),
-    lastName: z.string().min(1),
+    name: z.string().min(1),
     email: z.string().email(),
     rank: FacultyRankEnum,
     departmentId: z.string()
@@ -42,11 +54,12 @@ export const blockInput = z.object({
 }) 
 
 export const roomInput = z.object({
-    floor: z.number(),
+    floor: z.string(),
     code: z.string(),
     blockId: z.string(),
     isLab: z.boolean(),
-    batchSize: z.number()
+    batchSize: z.number(),
+    name: z.string().optional()
 })
 
 export type instituteSignupType = z.infer<typeof instituteSignup>; 

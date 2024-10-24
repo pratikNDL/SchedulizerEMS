@@ -1,11 +1,11 @@
 import { ChangeEvent, useRef, useState } from "react";
 import LabeledInput from "../components/LabeledInput"
-import RegisterDepartment from "../components/DepartmentForm"
 import Table from "../components/Table"
 import useFetchDepartments from "../hooks/useFetchDepartments";
 import useFetchMe from "../hooks/useFetchMe";
 
 import PageWrapper from "../components/PageWrapper";
+import DepartmentForm from "../components/DepartmentForm";
 
 function Department() {
   useFetchMe();
@@ -27,7 +27,7 @@ function Department() {
 
   return (
     <PageWrapper>
-        <RegisterDepartment/>
+        <DepartmentForm/>
         <div className=" my-4 p-5 bg-white shadow-xl rounded-md flex flex-col gap-4">
           <LabeledInput label="" placeholder="Search A Department" handler={searchHandler} />
           <Table isLoading={loading} titels={["Department Name", "Code"]} rows={data.map((row) => {return {name:row.name, code:row.code}})} />

@@ -17,6 +17,7 @@ function SideBar() {
         <SideBarItem title={'Departemnts'} path={'/department'} isExpanded={isExpanded} icon={departmentIcon}/>
         <SideBarItem title={'Faculties'} path={'/faculty'} isExpanded={isExpanded} icon={facultyIcon}/>
         <SideBarItem title={'Courses'} path={'/course'} isExpanded={isExpanded} icon={facultyIcon}/>
+        <SideBarItem title={'Infrastructure'} path={'/infrastructure'} isExpanded={isExpanded} icon={facultyIcon}/>
     </div>
   )
 }

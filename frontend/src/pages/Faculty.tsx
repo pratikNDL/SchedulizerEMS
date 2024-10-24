@@ -2,9 +2,9 @@ import { ChangeEvent, useRef, useState } from "react";
 import LabeledInput from "../components/LabeledInput"
 import Table from "../components/Table"
 import useFetchFaculties from "../hooks/useFetchFaculty";
-import RegisterFaculty from "../components/FacultyForm";
 import useFetchMe from "../hooks/useFetchMe";
 import PageWrapper from "../components/PageWrapper";
+import FacultyForm from "../components/FacultyForm";
 
 function Faculty() {
   useFetchMe();
@@ -26,10 +26,10 @@ function Faculty() {
 
   return (
     <PageWrapper>
-      <RegisterFaculty/>
+      <FacultyForm/>
       <div className=" my-4 bg-white shadow-xl p-5 rounded flex flex-col gap-4">
         <LabeledInput label="" placeholder="search" handler={searchHandler} />
-        <Table isLoading={loading} titels={["Name", "Designation", "code"]} rows={data.map((row) => {return {Nmae:row.firstName+ " " + row.lastName, rank:row.rank, code:row.department.code}})} />
+        <Table isLoading={loading} titels={["Name", "Designation", "code"]} rows={data.map((row) => {return {Nmae:row.name, rank:row.rank, code:row.department.code}})} />
       </div>
     </PageWrapper>
   )

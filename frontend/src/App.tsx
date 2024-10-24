@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import Department from './pages/Department'
 import Faculty from './pages/Faculty'
 import Course from './pages/Course'
+import Infrastructure from './pages/Infrastructure'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/department' element={<Department/>}/>
         <Route path='/faculty' element={<Faculty/>}/>
         <Route path='/course' element={<Course/>}/>
+        <Route path='/infrastructure' element={<Infrastructure/>}/>
       </Routes>
     </BrowserRouter>
   </>

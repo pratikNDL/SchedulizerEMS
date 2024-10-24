@@ -39,10 +39,10 @@ app.post('/block', async (c) => {
     const prisma = c.get("prisma")
     const body = await c.req.json();
 
-    const {data, success} = blockInput.safeParse(body);
+    const {data, success, error} = blockInput.safeParse(body);
 
     if(!success) {
-        return c.json({message: "Invalid Inputs"}, {status: 400})
+        return c.json({message: "Invalid Inputs", error}, {status: 400})
     }
     
     try {        

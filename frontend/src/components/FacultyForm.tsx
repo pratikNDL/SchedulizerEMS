@@ -47,8 +47,7 @@ function FacultyForm() {
         <FormWrapper>
             <div className="flex flex-col gap-5 items-center justify-evenly">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
-                    <LabeledInput label="First Name"  placeholder="Pratik" handler={(e) => {setData({...data, firstName: e.target.value})}}/>
-                    <LabeledInput label="Last Name"  placeholder="Yadav" handler={(e) => {setData({...data, lastName: e.target.value})}}/>
+                    <LabeledInput label="Name"  placeholder="Pratik" handler={(e) => {setData({...data, name: e.target.value})}}/>
                     <LabeledInput label="Email"  placeholder="pratik@yadav.in" handler={(e) => {setData({...data, email: e.target.value})}}/>
                     <SelectInput handler={(e) => {setData({...data, rank: e.target.value })}} label="Designation"
                         values={[
