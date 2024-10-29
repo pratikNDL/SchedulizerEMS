@@ -8,6 +8,8 @@ import Department from './pages/Department'
 import Faculty from './pages/Faculty'
 import Course from './pages/Course'
 import Infrastructure from './pages/Infrastructure'
+import Schedule from './pages/Schedule'
+import ScheduleMenu from './pages/ScheduleMenu'
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route path='/faculty' element={<Faculty/>}/>
         <Route path='/course' element={<Course/>}/>
         <Route path='/infrastructure' element={<Infrastructure/>}/>
+        <Route path='/schedule' element={<ScheduleMenu/>}/>
+        <Route path='/schedule/:id' element={<Schedule/>}/>
       </Routes>
     </BrowserRouter>
   </>

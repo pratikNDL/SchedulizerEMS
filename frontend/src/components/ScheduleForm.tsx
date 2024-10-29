@@ -1,18 +1,19 @@
 import { useState } from "react"
 import LabeledInput from "./LabeledInput"
-import { departmentInputType } from "@pratikndl/common-schedulizer-ems"
+import { ScheduleInputType } from "@pratikndl/common-schedulizer-ems"
 import Button from "./Button"
 import config from '../../config.json'
 import axios from "axios"
 import FormWrapper from "./FormWrapper"
+import { useNavigate } from "react-router-dom"
 
 
-function DepartmentForm() {
-    const [data, setData] = useState<departmentInputType | {}>({})
+function ScheduleForm() {
+    const [data, setData] = useState< ScheduleInputType | {}>({})
     const [prompt, setPrompt] = useState("");
-    const [error, setError] = useState(true);
+    const [error, setError] = useState(false);
     const [loading, setLoading] = useState(false)
-
+    const navigate = useNavigate();
         
     const handler = async() => {
         setLoading(true);
@@ -20,11 +21,13 @@ function DepartmentForm() {
             Authorization: localStorage.getItem('token')
         }
         try {
-            await  axios.post(config.BACKEND_URl+`/department`, data, { headers});
-            setPrompt("New department Added")
+            const res = await  axios.post(config.BACKEND_URl+`/schedule`, data, { headers});
+            navigate(`schedule/${res.data.newSchedule.id}`)
+            setPrompt("New Schedule Added")
             setError(false)
         }
         catch(e: any){
+            setError(true)
             if(!e.response.data.message) {
                 setPrompt("Something went wrong... Try again later")
             }
@@ -38,10 +41,9 @@ function DepartmentForm() {
 
     return (
         <FormWrapper>
-            <div className="flex flex-col gap-5 items-center justify-evenly">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full ">
-                    <LabeledInput  label="Department Name"  placeholder="Electronics And Computer Science Department" handler={(e) => setData({...data, name: e.target.value})}/>
-                    <LabeledInput label="Department Code"  placeholder="ECS" handler={(e) => setData({...data, code: e.target.value})}/>
+            <div className="flex flex-col gap-5 items-center justify-evenly w-full" >
+                <div className="w-full ">
+                    <LabeledInput  label="Schedule Name"  placeholder="ECS Winter 2024" handler={(e) => setData({...data, name: e.target.value})}/>
                 </div>
 
                 <Button addCSS="bg-blue-400" isDisabled={loading} value="Add"  handler={handler}/>
@@ -55,4 +57,4 @@ function DepartmentForm() {
   )
 }
 
-export default DepartmentForm
+export default ScheduleForm

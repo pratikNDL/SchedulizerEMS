@@ -11,7 +11,7 @@ type LabeledInputType = {
 function LabeledInput({label, value, placeholder, handler, type='text'}: LabeledInputType) {
   
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col w-full">
         <label  className="text-sm font-medium text-gray-700 "> {label}</label>
         <input className="border-b-2 border-blue-300 outline-none text-sm text-ellipsis font-medium bg-transparent  focus:border-b-4 focus:border-b-blue-400  "
             placeholder={placeholder}

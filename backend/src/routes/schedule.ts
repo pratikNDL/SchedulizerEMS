@@ -1,7 +1,7 @@
 import { Hono } from "hono";
 import { authAdmin } from "../middlewares/authAdmin";
 import { PrismaClient } from "@prisma/client";
-import { courseInput } from "@pratikndl/common-schedulizer-ems";
+import { scheduleInput } from "@pratikndl/common-schedulizer-ems";
 
 const app = new Hono<{
     Variables: {
@@ -19,16 +19,13 @@ app.get('/', async (c) => {
     const query = c.req.query('name');
     
     try {
-        const courses = await prisma.course.findMany({
+        const schedules = await prisma.schedule.findMany({
             where: {
-                OR: [
-                    { name: { contains: query, mode: 'insensitive' } },
-                    { code: { contains: query, mode: 'insensitive' } },
-                ],
+                name: { contains: query, mode: 'insensitive' } ,
                 instituteId: instituteId
             }
         });
-        return c.json({courses});
+        return c.json({schedules});
 
     } catch(e) {
         return c.json({message: "Something went wrong"}, {status: 500})
@@ -42,36 +39,34 @@ app.post('/', async (c) => {
     const prisma = c.get("prisma")
     const body = await c.req.json();
 
-    const {data, success, error} = courseInput.safeParse(body);
+    const {data, success} = scheduleInput.safeParse(body);
 
     if(!success) {
-        return c.json({message: "invalid Inputs", error}, {status: 400})
+        return c.json({message: "invalid Inputs"}, {status: 400})
     }
     
     try {        
-        const existingCourse = await prisma.course.findFirst({
+        console.log(data)
+        const existingSchedule = await prisma.schedule.findFirst({
             where: {
-                OR: [
-                    {code: data.code}, 
-                ],
+                name: data.name,
                 instituteId: instituteId    
             }
         });
 
-        
-        if (existingCourse) {
-            return c.json({message: "Department with same name or code already exist"}, {status: 409}); 
+        console.log(existingSchedule);
+        if (existingSchedule) {
+            return c.json({message: "Schedule with same name exist"}, {status: 409}); 
         }
 
-        
-        const newRoom = await prisma.course.create({
+        const newSchedule = await prisma.schedule.create({
             data: {
                 ...data,
                 instituteId: instituteId
             }
         })
 
-        return c.json({message: "New Department Created", newRoom}, {status: 201});
+        return c.json({message: "New Schedule Created", newSchedule}, {status: 201});
 
     } catch (e) {
         console.error(e);

@@ -62,6 +62,10 @@ export const roomInput = z.object({
     name: z.string().optional()
 })
 
+export const scheduleInput = z.object({
+    name: z.string()
+})
+
 export type instituteSignupType = z.infer<typeof instituteSignup>; 
 export type instituteSigninType = z.infer<typeof instituteSignup>; 
 export type departmentInputType = z.infer<typeof departmentInput>
@@ -69,3 +73,4 @@ export type facultyInputType = z.infer<typeof facultyInput>
 export type courseInputType = z.infer<typeof courseInput>
 export type blockInputType = z.infer<typeof blockInput>
 export type roomInputType = z.infer<typeof roomInput>
+export type ScheduleInputType = z.infer<typeof scheduleInput>

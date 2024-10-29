@@ -104,7 +104,7 @@ app.post('/', async (c) => {
     const {data, success} = facultyInput.safeParse(body);
 
     if(!success) {
-        return c.json({message: "invlid Inputs"}, {status: 400})
+        return c.json({message: "invalid Inputs"}, {status: 400})
     }
     
     try {        

@@ -6,7 +6,7 @@ import { cors } from 'hono/cors'
 
 const app = new Hono<{
   Bindings: {
-    DTABASE_URL: string
+    DATABASE_URL: string
   },
   Variables: {
     prisma: PrismaClient

@@ -88,6 +88,20 @@ app.get('/room', async (c) => {
                     { code: { contains: query, mode: 'insensitive' } },
                 ],
                 instituteId: instituteId
+            },
+
+            select: {
+                code: true,
+                floor: true,
+                isLab: true,
+                capacity: true,
+                id: true,
+                academicBlock: {
+                    select: {
+                        blockCode: true,
+                        name: true
+                    }
+                }
             }
         });
         return c.json({rooms});

@@ -3,10 +3,13 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import config from '../../config.json'
 
+type BlockType = blockInputType & {
+  id: string
+}
 
 function useFetchBlock(query: string) {
 
-  const [data, setData] = useState<Array<blockInputType>>([]);
+  const [data, setData] = useState<Array<BlockType>>([]);
   const [loading, setloading] = useState(true);
 
   useEffect(() => {

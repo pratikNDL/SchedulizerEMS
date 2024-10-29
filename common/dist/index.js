@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.roomInput = exports.blockInput = exports.courseInput = exports.facultyInput = exports.faculty = exports.FacultyRankEnum = exports.departmentInput = exports.department = exports.instituteSignin = exports.instituteSignup = void 0;
+exports.scheduleInput = exports.roomInput = exports.blockInput = exports.courseInput = exports.facultyInput = exports.faculty = exports.FacultyRankEnum = exports.departmentInput = exports.department = exports.instituteSignin = exports.instituteSignup = void 0;
 const zod_1 = require("zod");
 exports.instituteSignup = zod_1.z.object({
     name: zod_1.z.string().min(1),
@@ -52,4 +52,7 @@ exports.roomInput = zod_1.z.object({
     isLab: zod_1.z.boolean(),
     batchSize: zod_1.z.number(),
     name: zod_1.z.string().optional()
+});
+exports.scheduleInput = zod_1.z.object({
+    name: zod_1.z.string()
 });
