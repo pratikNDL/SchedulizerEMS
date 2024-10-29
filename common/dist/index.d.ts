@@ -115,21 +115,21 @@ export declare const roomInput: z.ZodObject<{
     code: z.ZodString;
     blockId: z.ZodString;
     isLab: z.ZodBoolean;
-    batchSize: z.ZodNumber;
+    capacity: z.ZodNumber;
     name: z.ZodOptional<z.ZodString>;
 }, "strip", z.ZodTypeAny, {
     code: string;
     isLab: boolean;
     floor: string;
     blockId: string;
-    batchSize: number;
+    capacity: number;
     name?: string | undefined;
 }, {
     code: string;
     isLab: boolean;
     floor: string;
     blockId: string;
-    batchSize: number;
+    capacity: number;
     name?: string | undefined;
 }>;
 export declare const scheduleInput: z.ZodObject<{

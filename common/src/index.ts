@@ -58,7 +58,7 @@ export const roomInput = z.object({
     code: z.string(),
     blockId: z.string(),
     isLab: z.boolean(),
-    batchSize: z.number(),
+    capacity: z.number(),
     name: z.string().optional()
 })
 

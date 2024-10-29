@@ -42,7 +42,7 @@ function Infrastructure() {
         
         {showBlocks ? 
           <Table isLoading={blocks.loading} titels={["Block Name", "Block Code"]} rows={blocks.data.map((block) => {return {name:block.name, blocCode:block.blockCode}})} />
-          :<Table isLoading={loading} titels={["Block", "Code", "Floor", "Capacity", 'Type']} rows={rooms.map((room) => {return {blockid:room.academicBlock.blockCode, code:room.code, floor:room.floor, capacity:room.batchSize, type: `${room.isLab? 'Labarotry': 'Regular' }`}})} />
+          :<Table isLoading={loading} titels={["Block", "Code", "Floor", "Capacity", 'Type']} rows={rooms.map((room) => {return {blockId:room.academicBlock.blockCode, code:room.code, floor:room.floor, capacity:room.capacity, type: `${room.isLab? 'Labarotry': 'Regular' }`}})} />
         }
 
       </div>

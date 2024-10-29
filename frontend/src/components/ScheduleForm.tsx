@@ -22,7 +22,7 @@ function ScheduleForm() {
         }
         try {
             const res = await  axios.post(config.BACKEND_URl+`/schedule`, data, { headers});
-            navigate(`schedule/${res.data.newSchedule.id}`)
+            navigate(`${res.data.newSchedule.id}`)
             setPrompt("New Schedule Added")
             setError(false)
         }

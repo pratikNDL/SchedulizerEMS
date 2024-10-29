@@ -50,7 +50,7 @@ exports.roomInput = zod_1.z.object({
     code: zod_1.z.string(),
     blockId: zod_1.z.string(),
     isLab: zod_1.z.boolean(),
-    batchSize: zod_1.z.number(),
+    capacity: zod_1.z.number(),
     name: zod_1.z.string().optional()
 });
 exports.scheduleInput = zod_1.z.object({

@@ -7,6 +7,7 @@ export type RoomType = {
   floor: string,
   code: string,
   capacity: number,
+  isLab: boolean,
   academicBlock: {
     blockCode: string,
     name: string

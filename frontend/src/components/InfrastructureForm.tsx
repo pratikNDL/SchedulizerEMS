@@ -16,12 +16,12 @@ function InfrastructureForm({showBlocks}: {showBlocks:boolean}) {
     
     const [prompt, setPrompt] = useState("");
     const [error, setError] = useState(true);
-    const [loading, setloading] = useState(false)
+    const [loading, setLoading] = useState(false)
 
     const blocks = useFetchBlock("");
 
     const blockHandler = async() => {
-        setloading(true);
+        setLoading(true);
         const headers = {
             Authorization: localStorage.getItem('token')
         }
@@ -40,22 +40,22 @@ function InfrastructureForm({showBlocks}: {showBlocks:boolean}) {
                 setPrompt(e.response.data.message);
             }
         }
-        setloading(false);
+        setLoading(false);
 
     }
 
     const roomHandler = async() => {
-        setloading(true);
+        setLoading(true);
         console.log(roomData)
         const headers = {
             Authorization: localStorage.getItem('token')
         }
-        if(!('batchSize' in roomData)) {
+        if(!('capacity' in roomData)) {
             setPrompt("Invalid Inputs");
             return;
         }
         try {
-            await  axios.post(config.BACKEND_URl+`/infrastructure/room`, {...roomData, batchSize: Number(roomData.batchSize)}, { headers});
+            await  axios.post(config.BACKEND_URl+`/infrastructure/room`, {...roomData, capacity: Number(roomData.capacity)}, { headers});
             setPrompt("New Room Added")
             setError(false)
         }
@@ -67,7 +67,7 @@ function InfrastructureForm({showBlocks}: {showBlocks:boolean}) {
                 setPrompt(e.response.data.message);
             }
         }
-        setloading(false);
+        setLoading(false);
     }
   return (
     <>
@@ -94,8 +94,8 @@ function InfrastructureForm({showBlocks}: {showBlocks:boolean}) {
           :      
             <div className="flex flex-col gap-5 items-center justify-evenly">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full ">
-                    <LabeledInput label="Romm Code"  placeholder="0/4" handler={(e) => setRoomData({...roomData, code: e.target.value})}/>
-                    <LabeledInput label="Room Capacity" type='number'  placeholder="4" handler={(e) => setRoomData({...roomData, batchSize: e.target.value})}/>
+                    <LabeledInput label="Room Code"  placeholder="0/4" handler={(e) => setRoomData({...roomData, code: e.target.value})}/>
+                    <LabeledInput label="Room Capacity" type='number'  placeholder="4" handler={(e) => setRoomData({...roomData, capacity: e.target.value})}/>
                     <LabeledInput label="Floor"  placeholder="4" handler={(e) => setRoomData({...roomData, floor: e.target.value})}/>
                     <SelectInput handler={(e) => {setRoomData({...roomData, blockId: e.target.value })}} label="Block"
                         values={blocks.loading ? [] : blocks.data.map((block) => { return{displayValue: block.blockCode, targetValue: block.id}})}/>

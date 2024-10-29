@@ -86,6 +86,7 @@ app.get('/room', async (c) => {
             where: {
                 OR: [
                     { code: { contains: query, mode: 'insensitive' } },
+                    { blockId: { contains: query, mode: 'insensitive' } },
                 ],
                 instituteId: instituteId
             },
@@ -117,6 +118,7 @@ app.post('/room', async (c) => {
     const body = await c.req.json();
 
     const {data, success} = roomInput.safeParse(body);
+
 
     if(!success) {
         return c.json({message: "Invalid Inputs"}, {status: 400})

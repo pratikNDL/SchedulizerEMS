@@ -3,7 +3,7 @@ import useFetchRoom, { RoomType } from '../hooks/useFetchRoom'
 import { RoomSelect } from './RoomSelect'
 
 
-function Rooms() {
+function Rooms({id}: {id: string}) {
     const {loading , rooms} = useFetchRoom(""); 
     const [groupedRooms, setGroupedRooms] = useState<Record<string, Array<RoomType>>>({});
 
@@ -27,7 +27,7 @@ function Rooms() {
 
   return (
     <div>
-      <RoomSelect groupedRooms={groupedRooms}/>
+      <RoomSelect groupedRooms={groupedRooms} id={id}/>
     </div>
   )
 }
