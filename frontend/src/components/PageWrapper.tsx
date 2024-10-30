@@ -9,10 +9,12 @@ function PageWrapper({children}: {children?:ReactNode}) {
   return (
     <>
     <Navbar/>
-    <div className="flex flex-col relative bg-blue-200 " >
+    <div className="flex flex-col relative bg-slate-700 " >
       <SideBar/>
       <div className='pl-20 pr-4 pt-5 md:pl-36 md:pr-20 min-h-screen h-full '>
+        <div>
         {children}
+        </div>
       </div>
     </div>
     

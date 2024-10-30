@@ -8,10 +8,11 @@ import InfrastructureForm from '../components/InfrastructureForm';
 import useFetchRoom from '../hooks/useFetchRoom';
 import axios from 'axios'
 import config from '../../config.json'
+import Wrapper from '../components/Wrapper';
 
 function Infrastructure() {
     useFetchMe();
-    const [showBlocks, setShowBlocks] = useState(true);
+    const [showBlocks, setShowBlocks] = useState(false);
     const [query, setQuery] = useState("");
     const blocks = useFetchBlock(query)
     const {loading, rooms} = useFetchRoom(query)
@@ -59,24 +60,24 @@ function Infrastructure() {
     }
   return (
     <PageWrapper>
-      <div className='flex gap-4 text-gray-800 text-sm font-medium mb-4'>
-        <div className={`p-1 border-2 text-sm rounded cursor-pointer hover:bg-blue-200 border-blue-200 hover:shadow-xl ${showBlocks ? ' bg-blue-200 ': 'bg-white'}`} onClick={() => {setQuery(''); setShowBlocks(true)}}>
-          Blocks
-        </div>
-        <div className={`p-1 border-2 text-sm rounded cursor-pointer hover:bg-blue-300 border-blue-300 hover:shadow-xl ${!showBlocks ? ' bg-blue-300 ': 'bg-white'}`} onClick={() => {setQuery(''); setShowBlocks(false)}}>
-          Rooms
-        </div>
+      <div className='mb-5 flex bg-white w-fit rounded-md text-sm text-gray-500 font-medium cursor-pointer '>
+        <div className={`py-1 px-3 rounded-md rounded-r-none ${showBlocks ? '': 'bg-blue-400 text-white'} border-r-2 border-r-gray-500`} onClick={() => {setQuery(''); setShowBlocks(false)}}>Rooms</div>
+        <div className={`py-1 px-3 rounded-md rounded-l-none ${!showBlocks ? '': 'bg-blue-400 text-white'}`} onClick={() => {setQuery(''); setShowBlocks(true)}}>Blocks</div>
       </div>
+
+
+
       <InfrastructureForm showBlocks={showBlocks}/>
-      <div className=" my-4 p-5 bg-white shadow-xl rounded-md flex flex-col gap-4">
+    <Wrapper>
+
         <LabeledInput label="" placeholder={`Search ${showBlocks? 'Blocks': 'Rooms'}`} handler={searchHandler} />
         
         {showBlocks ? 
           <Table deleteHandler={deleteBlockHandler} isLoading={blocks.loading} titles={["Block Name", "Block Code"]} rows={blocks.data.map((block) => ({display: {name:block.name, blocCode:block.blockCode}, id:block.id}))} />
           :<Table deleteHandler={deleteRoomHandler} isLoading={loading} titles={["Block", "Code", "Floor", "Capacity", 'Type']} rows={rooms.map((room) => ({display: {blockId:room.academicBlock.blockCode, code:room.code, floor:room.floor, capacity:room.capacity, type: `${room.isLab? 'Laboratory': 'Regular' }`}, id:room.id}))} />
         }
+    </Wrapper>
 
-      </div>
     </PageWrapper>
   )
 }

@@ -10,6 +10,7 @@ import Course from './pages/Course'
 import Infrastructure from './pages/Infrastructure'
 import Schedule from './pages/Schedule'
 import ScheduleMenu from './pages/ScheduleMenu'
+import Rough from './pages/Rough'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path='/infrastructure' element={<Infrastructure/>}/>
         <Route path='/schedule' element={<ScheduleMenu/>}/>
         <Route path='/schedule/:id' element={<Schedule/>}/>
+        <Route path='/rough' element={<Rough/>}/>
       </Routes>
     </BrowserRouter>
   </>

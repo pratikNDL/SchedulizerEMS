@@ -7,6 +7,7 @@ import PageWrapper from "../components/PageWrapper";
 import FacultyForm from "../components/FacultyForm";
 import axios from 'axios'
 import config from '../../config.json'
+import Wrapper from "../components/Wrapper";
 
 function Faculty() {
   useFetchMe();
@@ -45,10 +46,10 @@ function Faculty() {
   return (
     <PageWrapper>
       <FacultyForm/>
-      <div className=" my-4 bg-white shadow-xl p-5 rounded flex flex-col gap-4">
-        <LabeledInput label="" placeholder="search" handler={searchHandler} />
-        <Table deleteHandler={deleteHandler} isLoading={loading} titles={["Name", "Designation", "code"]} rows={data.map((row) => ({display: {name:row.name, rank:row.rank, code:row.department.code}, id:row.id}))} />
-      </div>
+        <Wrapper>
+          <LabeledInput label="" placeholder="search" handler={searchHandler} />
+          <Table deleteHandler={deleteHandler} isLoading={loading} titles={["Name", "Designation", "code"]} rows={data.map((row) => ({display: {name:row.name, rank:row.rank, code:row.department.code}, id:row.id}))} />
+        </Wrapper>  
     </PageWrapper>
   )
 }

@@ -7,6 +7,7 @@ import { ChangeEvent, useRef, useState } from 'react';
 import useFetchCourses from '../hooks/useFetchCourse';
 import config from '../../config.json'
 import axios from 'axios'
+import Wrapper from '../components/Wrapper';
 
 
 function Course() {
@@ -45,10 +46,10 @@ function Course() {
   return (
     <PageWrapper>
         <CourseForm/>
-        <div className=" my-4 p-5 bg-white shadow-xl rounded-md flex flex-col gap-4">
+        <Wrapper>
           <LabeledInput label="" placeholder="Search A Course" handler={searchHandler} />
           <Table deleteHandler={deleteHandler} isLoading={loading} titles={["Course Name", "Course Code", "Credits", "T/P"]} rows={data.map((row) => ({display:{name:row.name, code:row.code, credits:row.credits, type:`${row.isLab ? 'P': 'T'}`}, id:row.id}))} />
-        </div>
+        </Wrapper>        
     </PageWrapper>
   )
 }

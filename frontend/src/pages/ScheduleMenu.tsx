@@ -4,7 +4,6 @@ import PageWrapper from "../components/PageWrapper"
 import ScheduleForm from "../components/ScheduleForm"
 import useFetchMe from "../hooks/useFetchMe";
 import useFetchSchedule from "../hooks/useFetchSchedule";
-import Spinner from "../components/Spinner";
 import Table from "../components/Table";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios'

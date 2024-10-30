@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <div className='py-2 px-10 border-b  flex justify-between items-center shadow-2xl '>
         <Link to="/">
-          <div className='font-bold text-3xl text-blue-400 hover:cursor-pointer'>
+          <div className='font-bold text-3xl text-gray-600 hover:cursor-pointer'>
               SchedulizerEMS
           </div>
         </Link>

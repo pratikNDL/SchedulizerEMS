@@ -7,6 +7,7 @@ import PageWrapper from "../components/PageWrapper";
 import DepartmentForm from "../components/DepartmentForm"
 import axios from 'axios'
 import config from '../../config.json'
+import Wrapper from "../components/Wrapper";
 
 function Department() {
   useFetchMe();
@@ -44,11 +45,11 @@ function Department() {
 
   return (
     <PageWrapper>
-        <DepartmentForm/>
-        <div className=" my-4 p-5 bg-white shadow-xl rounded-md flex flex-col gap-4">
-          <LabeledInput label="" placeholder="Search A Department" handler={searchHandler} />
-          <Table deleteHandler={deleteHandler} isLoading={loading} titles={["Department Name", "Code"]}  rows={data.map((department) => {return {display:{name:department.name, code:department.code}, id:department.id}})} />
-        </div>
+      <DepartmentForm/>
+      <Wrapper>
+        <LabeledInput label="" placeholder="Search A Department" handler={searchHandler} />
+        <Table deleteHandler={deleteHandler} isLoading={loading} titles={["Department Name", "Code"]}  rows={data.map((department) => {return {display:{name:department.name, code:department.code}, id:department.id}})} />
+      </Wrapper>
     </PageWrapper>
   )
 }

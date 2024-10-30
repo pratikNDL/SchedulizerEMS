@@ -11,7 +11,7 @@ function RegisterWrapper({children} : {
     return (
         <div className="w-full">
 
-            <div className='p-1 bg-white border-2 border-blue-400  w-fit rounded mb-2' onClick={() => setShowForm((prev) => !prev)}>
+            <div className='p-1 bg-white border-2 border-gray-900  w-fit rounded mb-2' onClick={() => setShowForm((prev) => !prev)}>
                 {<img src={showForm ? collapse : add} width={20}></img>}  
             </div>
 
