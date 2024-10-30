@@ -50,7 +50,6 @@ app.post('/signup', async (c) => {
         return c.json({token}, 201); 
 
     } catch (e) {
-        console.error(e);
         return c.json({message: "Something went wrong"}, {status: 500}); 
     }
 });
@@ -81,7 +80,6 @@ app.post('/signin', async (c) => {
         return c.json({token}, 200); 
 
     } catch (e) {
-        console.error(e);
         return c.json({message: "Something went wrong"}, {status: 500}); 
     }
 });

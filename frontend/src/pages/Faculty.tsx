@@ -5,6 +5,8 @@ import useFetchFaculties from "../hooks/useFetchFaculty";
 import useFetchMe from "../hooks/useFetchMe";
 import PageWrapper from "../components/PageWrapper";
 import FacultyForm from "../components/FacultyForm";
+import axios from 'axios'
+import config from '../../config.json'
 
 function Faculty() {
   useFetchMe();
@@ -23,13 +25,29 @@ function Faculty() {
     }, 300);
   }
 
+  const deleteHandler = async (id: string) => {
+    const headers = {
+      Authorization: localStorage.getItem('token')
+    }
+    try {
+      await axios.delete(`${config.BACKEND_URl}/faculty/${id}`, {headers});
+    }
+    catch {
+
+    }
+    setQuery(" ")
+    setTimeout(() => {
+      setQuery("");
+    }, 0);
+  }
+
 
   return (
     <PageWrapper>
       <FacultyForm/>
       <div className=" my-4 bg-white shadow-xl p-5 rounded flex flex-col gap-4">
         <LabeledInput label="" placeholder="search" handler={searchHandler} />
-        <Table isLoading={loading} titels={["Name", "Designation", "code"]} rows={data.map((row) => {return {Nmae:row.name, rank:row.rank, code:row.department.code}})} />
+        <Table deleteHandler={deleteHandler} isLoading={loading} titles={["Name", "Designation", "code"]} rows={data.map((row) => ({display: {name:row.name, rank:row.rank, code:row.department.code}, id:row.id}))} />
       </div>
     </PageWrapper>
   )

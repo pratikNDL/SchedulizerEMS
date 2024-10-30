@@ -1,10 +1,10 @@
 import { ChangeEvent, } from "react";
 
-type Checkboxtype = {
+type CheckBoxType = {
     label: string,
     handler: (e: ChangeEvent<HTMLInputElement>) => void,
 }
-function Checkbox({label, handler}: Checkboxtype) {
+function CheckBox({label, handler}: CheckBoxType) {
     
   return (
     <div className="flex items-center gap-2">
@@ -15,4 +15,4 @@ function Checkbox({label, handler}: Checkboxtype) {
   )
 }
 
-export default Checkbox
+export default CheckBox

@@ -6,6 +6,8 @@ import { ChangeEvent, useRef, useState } from 'react';
 import useFetchBlock from '../hooks/useFetchBlock';
 import InfrastructureForm from '../components/InfrastructureForm';
 import useFetchRoom from '../hooks/useFetchRoom';
+import axios from 'axios'
+import config from '../../config.json'
 
 function Infrastructure() {
     useFetchMe();
@@ -25,7 +27,36 @@ function Infrastructure() {
         setQuery(e.target.value); 
         }, 300);
     }
-
+    const deleteRoomHandler = async (id: string) => {
+      const headers = {
+        Authorization: localStorage.getItem('token')
+      }
+      try {
+        await axios.delete(`${config.BACKEND_URl}/infrastructure/room/${id}`, {headers});
+      }
+      catch {
+  
+      }
+      setQuery(" ")
+      setTimeout(() => {
+        setQuery("");
+      }, 0);
+    }
+    const deleteBlockHandler = async (id: string) => {
+      const headers = {
+        Authorization: localStorage.getItem('token')
+      }
+      try {
+        await axios.delete(`${config.BACKEND_URl}/infrastructure/block/${id}`, {headers});
+      }
+      catch {
+  
+      }
+      setQuery(" ")
+      setTimeout(() => {
+        setQuery("");
+      }, 0);
+    }
   return (
     <PageWrapper>
       <div className='flex gap-4 text-gray-800 text-sm font-medium mb-4'>
@@ -41,8 +72,8 @@ function Infrastructure() {
         <LabeledInput label="" placeholder={`Search ${showBlocks? 'Blocks': 'Rooms'}`} handler={searchHandler} />
         
         {showBlocks ? 
-          <Table isLoading={blocks.loading} titels={["Block Name", "Block Code"]} rows={blocks.data.map((block) => {return {name:block.name, blocCode:block.blockCode}})} />
-          :<Table isLoading={loading} titels={["Block", "Code", "Floor", "Capacity", 'Type']} rows={rooms.map((room) => {return {blockId:room.academicBlock.blockCode, code:room.code, floor:room.floor, capacity:room.capacity, type: `${room.isLab? 'Labarotry': 'Regular' }`}})} />
+          <Table deleteHandler={deleteBlockHandler} isLoading={blocks.loading} titles={["Block Name", "Block Code"]} rows={blocks.data.map((block) => ({display: {name:block.name, blocCode:block.blockCode}, id:block.id}))} />
+          :<Table deleteHandler={deleteRoomHandler} isLoading={loading} titles={["Block", "Code", "Floor", "Capacity", 'Type']} rows={rooms.map((room) => ({display: {blockId:room.academicBlock.blockCode, code:room.code, floor:room.floor, capacity:room.capacity, type: `${room.isLab? 'Laboratory': 'Regular' }`}, id:room.id}))} />
         }
 
       </div>

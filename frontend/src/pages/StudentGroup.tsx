@@ -5,11 +5,8 @@ import Table from '../components/Table'
 import useFetchMe from '../hooks/useFetchMe';
 import { ChangeEvent, useRef, useState } from 'react';
 import useFetchCourses from '../hooks/useFetchCourse';
-import config from '../../config.json'
-import axios from 'axios'
 
-
-function Course() {
+function StudentGroup() {
     useFetchMe();
     const [query, setQuery] = useState("");
     const {loading, data} = useFetchCourses(query)
@@ -26,31 +23,15 @@ function Course() {
         }, 300);
     }
 
-    const deleteHandler = async (id: string) => {
-      const headers = {
-        Authorization: localStorage.getItem('token')
-      }
-      try {
-        await axios.delete(`${config.BACKEND_URl}/course/${id}`, {headers});
-      }
-      catch {
-  
-      }
-      setQuery(" ")
-      setTimeout(() => {
-        setQuery("");
-      }, 0);
-    }
-
   return (
     <PageWrapper>
         <CourseForm/>
         <div className=" my-4 p-5 bg-white shadow-xl rounded-md flex flex-col gap-4">
           <LabeledInput label="" placeholder="Search A Course" handler={searchHandler} />
-          <Table deleteHandler={deleteHandler} isLoading={loading} titles={["Course Name", "Course Code", "Credits", "T/P"]} rows={data.map((row) => ({display:{name:row.name, code:row.code, credits:row.credits, type:`${row.isLab ? 'P': 'T'}`}, id:row.id}))} />
+          <Table isLoading={loading} titles={["Course Name", "Course Code", "Credits", "T/P"]} rows={data.map((row) => {return {name:row.name, code:row.code, credits:row.credits, type:`${row.isLab ? 'P': 'T'}`}})} />
         </div>
     </PageWrapper>
   )
 }
 
-export default Course
+export default StudentGroup

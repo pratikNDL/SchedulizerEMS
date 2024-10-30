@@ -11,7 +11,7 @@ function useFetchSchedule(query: string) {
 
   const [data, setData] = useState<Array<ScheduleType>>([]);
   const [loading, setLoading] = useState(true);
-
+  
   useEffect(() => {
     const headers = {
       Authorization: localStorage.getItem('token')
@@ -30,6 +30,6 @@ function useFetchSchedule(query: string) {
 
   if(!data) setData([]);
   return {loading, data}
-}useFetchSchedule
+}
 
 export default useFetchSchedule

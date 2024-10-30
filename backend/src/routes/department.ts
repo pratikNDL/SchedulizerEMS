@@ -1,6 +1,6 @@
 import { Hono } from "hono";
 import { authAdmin } from "../middlewares/authAdmin";
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient, Prisma } from "@prisma/client";
 import { departmentInput } from "@pratikndl/common-schedulizer-ems";
 
 const app = new Hono<{
@@ -79,6 +79,24 @@ app.post('/', async (c) => {
     }
 })
 
+app.delete('/:id', async (c) => {
+    const prisma = c.get("prisma")
+    const id = c.req.param('id');
+
+    try {        
+        await prisma.department.delete({
+            where:{
+                id: id
+            }
+        })
+
+        return c.json({message: "Department Deleted", }, {status: 201});
+
+    } catch (e) {
+        console.error(e);
+        return c.json({message: "Something went wrong"}, {status: 500}); 
+    }
+})
 
 
 export default app;

@@ -8,16 +8,16 @@ datasource db {
 }
 
 model Institute {
-  id           String         @id @default(uuid())
-  name         String         @unique
-  email        String         @unique
-  password     String
-  departments  Department[]  
+  id             String         @id @default(uuid())
+  name           String         @unique
+  email          String         @unique
+  password       String
+  departments    Department[]  
   academicBlocks AcademicBlock[]
-  faculties Faculty[]
-  rooms Room[]
-  courses Course[]
-  scheduels Schedule[]
+  faculties      Faculty[]
+  rooms          Room[]
+  courses        Course[]
+  scheduels      Schedule[]
 }
 
 model Department {
@@ -58,10 +58,8 @@ model Course {
   departmentId String
   isLab        Boolean       @default(false)
   code         String
-
   instituteId  String
-  classes Class[]
-
+  classes      Class[]
   institute    Institute    @relation(fields: [instituteId], references: [id], onDelete: Cascade)
   department   Department   @relation(fields: [departmentId], references: [id], onDelete: Cascade)
 }
@@ -77,18 +75,18 @@ model AcademicBlock {
 }
 
 model Room {
-  id           String       @id @default(uuid())
-  floor        String
-  name         String?       
-  code         String
-  blockId      String
-  instituteId  String
-  capacity    Int  @default(0)
-  isLab        Boolean
-  institute    Institute    @relation(fields: [instituteId], references: [id], onDelete: Cascade)
+  id            String        @id @default(uuid())
+  floor         String
+  name          String?       
+  code          String
+  blockId       String
+  instituteId   String
+  capacity      Int           @default(0)
+  isLab         Boolean
+  institute     Institute     @relation(fields: [instituteId], references: [id], onDelete: Cascade)
   academicBlock AcademicBlock @relation(fields: [blockId], references: [id], onDelete: Cascade)
-  schedules Schedule[]
-  classes Class[]
+  schedules     Schedule[]
+  classes       Class[]
 }
 
 model Schedule {
@@ -102,10 +100,8 @@ model Schedule {
 model Section {
   id String @id @default(uuid())
   name String
-  departmentId String
-
-  batchesCount Int
-
+  departmentId String 
+  batchCount Int
   batches Batch[]
   classes Class[]
   department Department @relation(fields: [departmentId], references: [id])

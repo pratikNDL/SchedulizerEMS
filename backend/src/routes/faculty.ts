@@ -12,22 +12,7 @@ const app = new Hono<{
 
 app.use(authAdmin);
 
-app.get('/all', async (c) => {
-    const instituteId = c.get("instituteId") as string;
-    const prisma = c.get("prisma")
-    
-    try {
-        const faculties = await prisma.faculty.findMany({
-            where : {
-                instituteId: instituteId
-            }
-        })
 
-        return c.json({faculties})
-    } catch(e) {
-        return c.json({message: "Something went wrong"}, {status: 500})
-    }
-})
 
 app.get('/', async (c) => {
     const instituteId = c.get("instituteId") as string;
@@ -46,6 +31,7 @@ app.get('/', async (c) => {
             select: {
                 name: true,
                 rank: true,
+                id: true,
                 department: {
                     select: {
                         code: true
@@ -135,6 +121,23 @@ app.post('/', async (c) => {
     }
 })
 
+app.delete('/:id', async (c) => {
+    const prisma = c.get("prisma")
+    const id = c.req.param('id');
 
+    try {        
+        await prisma.faculty.delete({
+            where:{
+                id: id
+            }
+        })
+
+        return c.json({message: "faculty Deleted", }, {status: 201});
+
+    } catch (e) {
+        console.error(e);
+        return c.json({message: "Something went wrong"}, {status: 500}); 
+    }
+})
 
 export default app;

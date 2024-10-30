@@ -34,10 +34,10 @@ export function RoomSelect({ groupedRooms, id }: RoomSelectProps) {
       Authorization: localStorage.getItem('token')
     }
     setLoading(true);
-    axios.get(config.BACKEND_URl+`/schedule/${id}`, { headers})
+    axios.get(config.BACKEND_URl+`/schedule/${id}`, {headers})
     .then((response) => { setSelectedRooms(new Set(response.data.schedule.rooms.map((room:RoomType) => room.id)))})
     .then(() => setLoading(false))
-    .catch()
+    .catch((e) => console.log(e))
 
   }, [])
 
@@ -87,7 +87,7 @@ export function RoomSelectPanel({ title, rooms, selectedRooms, setSelectedRooms}
         <div className='p-2 flex flex-col gap-4'>
           <div className='flex flex-col gap-1'>
             <div className='font-medium text-sm'>Regular Classroom</div>
-            <div className='flex gap-1'>
+            <div className='flex gap-1 flex-wrap'>
               {rooms.filter((room) => !room.isLab).map((room) => (
                 <RoomSelectToggle 
                   key={room.id} title={room.code} isChecked={selectedRooms.has(room.id)} 

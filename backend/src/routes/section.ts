@@ -80,22 +80,5 @@ app.post('/', async (c) => {
 })
 
 
-app.delete('/:id', async (c) => {
-    const prisma = c.get("prisma")
-    const id = c.req.param('id');
 
-    try {        
-        await prisma.course.delete({
-            where:{
-                id: id
-            }
-        })
-
-        return c.json({message: "course Deleted", }, {status: 201});
-
-    } catch (e) {
-        console.error(e);
-        return c.json({message: "Something went wrong"}, {status: 500}); 
-    }
-})
 export default app;

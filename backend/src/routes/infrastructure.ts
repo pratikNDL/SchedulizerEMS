@@ -71,6 +71,24 @@ app.post('/block', async (c) => {
         return c.json({message: "New Block Added", newBlock}, {status: 201});
 
     } catch (e) {
+        return c.json({message: "Something went wrong"}, {status: 500}); 
+    }
+})
+
+app.delete('/block/:id', async (c) => {
+    const prisma = c.get("prisma")
+    const id = c.req.param('id');
+
+    try {        
+        await prisma.academicBlock.delete({
+            where:{
+                id: id
+            }
+        })
+
+        return c.json({message: "block Deleted", }, {status: 201});
+
+    } catch (e) {
         console.error(e);
         return c.json({message: "Something went wrong"}, {status: 500}); 
     }
@@ -144,6 +162,24 @@ app.post('/room', async (c) => {
         })
 
         return c.json({message: "New Room Added", newRoom}, {status: 201});
+
+    } catch (e) {
+        return c.json({message: "Something went wrong"}, {status: 500}); 
+    }
+})
+
+app.delete('/room/:id', async (c) => {
+    const prisma = c.get("prisma")
+    const id = c.req.param('id');
+
+    try {        
+        await prisma.room.delete({
+            where:{
+                id: id
+            }
+        })
+
+        return c.json({message: "room Deleted", }, {status: 201});
 
     } catch (e) {
         console.error(e);

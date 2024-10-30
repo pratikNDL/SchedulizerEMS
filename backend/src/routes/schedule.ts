@@ -73,7 +73,7 @@ app.post('/', async (c) => {
     }
     
     try {        
-        console.log(data)
+        
         const existingSchedule = await prisma.schedule.findFirst({
             where: {
                 name: data.name,
@@ -81,7 +81,7 @@ app.post('/', async (c) => {
             }
         });
 
-        console.log(existingSchedule);
+        
         if (existingSchedule) {
             return c.json({message: "Schedule with same name exist"}, {status: 409}); 
         }
@@ -96,7 +96,7 @@ app.post('/', async (c) => {
         return c.json({message: "New Schedule Created", newSchedule}, {status: 201});
 
     } catch (e) {
-        console.error(e);
+        
         return c.json({message: "Something went wrong"}, {status: 500}); 
     }
 })
@@ -107,7 +107,7 @@ app.put('/rooms/:id', async (c) => {
     const id = c.req.param('id');
     const body = await c.req.json();
     
-    console.log(body)
+
     const {data, success, error} = roomsInput.safeParse(body);
 
     if(!success) {
@@ -142,11 +142,28 @@ app.put('/rooms/:id', async (c) => {
         return c.json({message: "Rooms Updated", updatesSchedule}, {status: 201});
 
     } catch (e) {
-        console.error(e);
         return c.json({message: "Something went wrong"}, {status: 500}); 
     }
 })
 
 
+app.delete('/:id', async (c) => {
+    const prisma = c.get("prisma")
+    const id = c.req.param('id');
+
+    try {        
+        await prisma.schedule.delete({
+            where:{
+                id: id
+            }
+        })
+
+        return c.json({message: "schedule Deleted", }, {status: 201});
+
+    } catch (e) {
+        console.error(e);
+        return c.json({message: "Something went wrong"}, {status: 500}); 
+    }
+})
 
 export default app;

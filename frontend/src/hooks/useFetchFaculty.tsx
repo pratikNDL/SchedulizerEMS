@@ -4,6 +4,7 @@ import axios from "axios";
 import config from '../../config.json'
 
 type facultyType = facultyInputType & {
+    id: string,
     department: {
         code: string
     }
