@@ -15,7 +15,7 @@ function RegisterWrapper({children} : {
                 {<img src={showForm ? collapse : add} width={20}></img>}  
             </div>
 
-            <div className={`${!showForm ? 'p-0 h-0 ': 'py-3 px-5'} overflow-hidden transition-none rounded-md bg-white shadow-xl w-full  `}>
+            <div className={`${!showForm ? 'p-0 h-0 ': 'py-3 px-5'} overflow-hidden transition-none rounded-md bg-white shadow-2xl w-full  `}>
                 {children}
             </div>
         

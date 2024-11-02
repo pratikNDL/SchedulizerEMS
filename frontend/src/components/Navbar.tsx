@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 function Navbar() {
     const navigate = useNavigate();
   return (
-    <div className='py-2 px-10 border-b  flex justify-between items-center shadow-2xl '>
+    <div className='py-2 px-10 border-b-2  flex justify-between items-center  absolute top-0 z-20 bg-white w-screen'>
         <Link to="/">
           <div className='font-bold text-3xl text-gray-600 hover:cursor-pointer'>
               SchedulizerEMS
