@@ -1,8 +1,8 @@
 import { Hono } from "hono";
-import { authAdmin } from "../middlewares/authAdmin";
+import { authAdmin } from "../../middlewares/authAdmin";
 import { PrismaClient } from "@prisma/client";
-import { scheduleInput } from "@pratikndl/common-schedulizer-ems";
 import { z } from 'zod';
+import facultyRouter from './faculty'
 
 const app = new Hono<{
     Variables: {
@@ -11,12 +11,20 @@ const app = new Hono<{
     }
 }>();
 
+const scheduleInput = z.object({
+    name: z.string().min(1),
+    days: z.number().min(1, 'Days must be 1 or more').max(7, 'Days must be 7 or less'),
+    slots: z.number().min(1, 'Slots must be 1 or more').max(24, 'Days must be 24 or less')
+})
+
+
 app.use(authAdmin);
 
 const roomsInput = z.object({
     rooms: z.array(z.string()),
 })
 
+app.route('/faculty', facultyRouter)
 
 app.get('/:id', async (c) => {
     const prisma = c.get("prisma")
@@ -30,13 +38,34 @@ app.get('/:id', async (c) => {
             select: {
                 id: true,
                 name: true,
-                rooms: true
+                rooms: true,
+                days: true,
+                slots: true,
             }
         });
         return c.json({schedule});
 
     } catch(e) {
         return c.json({message: "Something went wrong"}, {status: 500})
+    }
+})
+
+app.delete('/:id', async (c) => {
+    const prisma = c.get("prisma")
+    const id = c.req.param('id');
+
+    try {        
+        await prisma.schedule.delete({
+            where:{
+                id: id
+            }
+        })
+
+        return c.json({message: "schedule Deleted", }, {status: 201});
+
+    } catch (e) {
+        console.error(e);
+        return c.json({message: "Something went wrong"}, {status: 500}); 
     }
 })
 
@@ -147,23 +176,6 @@ app.put('/rooms/:id', async (c) => {
 })
 
 
-app.delete('/:id', async (c) => {
-    const prisma = c.get("prisma")
-    const id = c.req.param('id');
 
-    try {        
-        await prisma.schedule.delete({
-            where:{
-                id: id
-            }
-        })
-
-        return c.json({message: "schedule Deleted", }, {status: 201});
-
-    } catch (e) {
-        console.error(e);
-        return c.json({message: "Something went wrong"}, {status: 500}); 
-    }
-})
 
 export default app;

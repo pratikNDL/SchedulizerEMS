@@ -1,10 +1,12 @@
-import { ScheduleInputType } from "@pratikndl/common-schedulizer-ems"
 import { useEffect, useState } from "react";
 import axios from "axios";
 import config from '../../config.json'
 
-type ScheduleType = ScheduleInputType & {
+export type ScheduleType = {
   id: string
+  name: string
+  days: number
+  slots: number
 }
 
 function useFetchSchedule(query: string) {

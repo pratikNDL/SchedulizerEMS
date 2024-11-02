@@ -10,7 +10,7 @@ type BlockType = blockInputType & {
 function useFetchBlock(query: string) {
 
   const [data, setData] = useState<Array<BlockType>>([]);
-  const [loading, setloading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const headers = {
@@ -20,7 +20,7 @@ function useFetchBlock(query: string) {
       axios.get(config.BACKEND_URl+`/infrastructure/block?name=${query}`, { headers})
       .then((res) => {
         setData(res.data.blocks);
-        setloading(false)
+        setLoading(false)
       })
   }
   catch(e: any){

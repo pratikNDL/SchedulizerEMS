@@ -18,6 +18,7 @@ model Institute {
   rooms          Room[]
   courses        Course[]
   scheduels      Schedule[]
+  studentGroups  StudentGroup[]
 }
 
 model Department {
@@ -28,7 +29,7 @@ model Department {
 
   faculties    Faculty[]
   courses      Course[]
-  sections     Section[]
+  StudentGroups     StudentGroup[]
   institute    Institute    @relation(fields: [instituteId], references: [id], onDelete: Cascade)
 }
 
@@ -45,10 +46,21 @@ model Faculty {
   rank         FacultyRank
   departmentId String
   instituteId  String
-
+  constarints FacultyConstraints[]
   classes Class[]
   institute    Institute    @relation(fields: [instituteId], references: [id], onDelete: Cascade)
   department   Department   @relation(fields: [departmentId], references: [id], onDelete: Cascade)
+}
+
+model FacultyConstraints {
+  id String @id @default(uuid())
+  facultyId String
+  scheduleId String
+  constraints Int[]
+
+  faculty Faculty    @relation(fields: [facultyId], references: [id], onDelete: Cascade)
+  schedule Schedule    @relation(fields: [scheduleId], references: [id], onDelete: Cascade)
+
 }
 
 model Course {
@@ -92,40 +104,47 @@ model Room {
 model Schedule {
   id  String @id @default(uuid())
   name String
+  days Int @default(1)
+  slots Int @default(1)
   rooms Room[]
+  facultyConstraints FacultyConstraints[]
   instituteId String
   institute    Institute    @relation(fields: [instituteId], references: [id], onDelete: Cascade)
 }
 
-model Section {
+model StudentGroup {
   id String @id @default(uuid())
   name String
   departmentId String 
   batchCount Int
+  passingYear Int
+  section String
   batches Batch[]
   classes Class[]
+  instituteId  String
+  institute    Institute    @relation(fields: [instituteId], references: [id], onDelete: Cascade)
   department Department @relation(fields: [departmentId], references: [id])
 }
 
 model Batch {
   id String @id @default(uuid())
   name String
-  sectionId String
+  StudentGroupId String
   classes Class[]
 
-  section Section @relation(fields: [sectionId], references: [id])
+  StudentGroup StudentGroup @relation(fields: [StudentGroupId], references: [id])
 }
 
 model Class {
   id String @id @default(uuid())
   facultyId String
-  SectionId String
+  StudentGroupId String
   courseId String
   batchId String? 
   roomId String
 
   faculty Faculty @relation(fields: [facultyId], references: [id])
-  section Section @relation(fields: [SectionId], references: [id])
+  StudentGroup StudentGroup @relation(fields: [StudentGroupId], references: [id])
   course Course @relation(fields: [courseId], references: [id])
   room Room @relation(fields: [roomId], references: [id])
   batch Batch? @relation(fields: [batchId], references: [id])

@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       animation: {
-        'fast-pulse': 'pulse 0.3s infinite', // Customize the duration here
+        'fast-pulse': 'pulse 1.5s infinite', 
       },
     },
   },

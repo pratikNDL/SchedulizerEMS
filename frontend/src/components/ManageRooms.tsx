@@ -3,7 +3,7 @@ import useFetchRoom, { RoomType } from '../hooks/useFetchRoom'
 import { RoomSelect } from './RoomSelect'
 
 
-function Rooms({id}: {id: string}) {
+function ManageRooms({id}: {id: string}) {
     const {loading , rooms} = useFetchRoom(""); 
     const [groupedRooms, setGroupedRooms] = useState<Record<string, Array<RoomType>>>({});
 
@@ -32,4 +32,4 @@ function Rooms({id}: {id: string}) {
   )
 }
 
-export default Rooms
+export default ManageRooms

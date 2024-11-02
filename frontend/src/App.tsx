@@ -11,6 +11,8 @@ import Infrastructure from './pages/Infrastructure'
 import Schedule from './pages/Schedule'
 import ScheduleMenu from './pages/ScheduleMenu'
 import Rough from './pages/Rough'
+import StudentGroup from './pages/StudentGroup'
+import { FacultyConstraint } from './components/ManageFaculties'
 
 function App() {
   return (
@@ -26,7 +28,9 @@ function App() {
         <Route path='/infrastructure' element={<Infrastructure/>}/>
         <Route path='/schedule' element={<ScheduleMenu/>}/>
         <Route path='/schedule/:id' element={<Schedule/>}/>
+        <Route path='/schedule/faculty/:facultyId' element={<FacultyConstraint/>}/>
         <Route path='/rough' element={<Rough/>}/>
+        <Route path='/studentGroup' element={<StudentGroup/>}/>
       </Routes>
     </BrowserRouter>
   </>

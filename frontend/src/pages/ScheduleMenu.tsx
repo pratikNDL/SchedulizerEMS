@@ -53,7 +53,7 @@ function ScheduleMenu() {
             <ScheduleForm/>
             <div className=" my-4 p-5 bg-white shadow-xl rounded-md flex flex-col gap-4">
                 <LabeledInput label="" placeholder="Search A Schedule" handler={searchHandler} />
-                <Table isLoading={loading} titles={['Schedules']} rows={data.map((row) => ({display:{name: row.name}, id:row.id}))} clickHandler={clickHandler} deleteHandler={deleteHandler}/>
+                <Table isLoading={loading} titles={['Name']} rows={data.map((row) => ({display:{name: row.name,}, id:row.id}))} clickHandler={clickHandler} deleteHandler={deleteHandler}/>
             </div>
         </PageWrapper>
     </>
