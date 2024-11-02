@@ -7,7 +7,7 @@ import axios from 'axios'
 import config from '../../config.json'
 import Wrapper from "../components/Wrapper";
 import useFetchStudentGroup from "../hooks/useFetchStudentGroup";
-import StudentGroupForm from "../components/StudentGroupForm";
+import StudentGroupForm from "../components/Forms/StudentGroupForm";
 
 function StudentGroup() {
   useFetchMe();

@@ -1,12 +1,12 @@
 import { useState } from "react"
-import LabeledInput from "./LabeledInput"
+import LabeledInput from "../LabeledInput"
 import { facultyInputType} from "@pratikndl/common-schedulizer-ems"
-import Button from "./Button"
-import config from '../../config.json'
+import Button from "../Button"
+import config from '../../../config.json'
 import axios from "axios"
-import SelectInput from "./SelectInput"
-import useFetchDepartments from "../hooks/useFetchDepartments"
-import FormWrapper from "./FormWrapper"
+import SelectInput from "../SelectInput"
+import useFetchDepartments from "../../hooks/useFetchDepartments"
+import FormWrapper from "../FormWrapper"
 
 
 

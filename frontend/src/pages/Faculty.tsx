@@ -4,7 +4,7 @@ import Table from "../components/Table"
 import useFetchFaculties from "../hooks/useFetchFaculty";
 import useFetchMe from "../hooks/useFetchMe";
 import PageWrapper from "../components/PageWrapper";
-import FacultyForm from "../components/FacultyForm";
+import FacultyForm from "../components/Forms/FacultyForm";
 import axios from 'axios'
 import config from '../../config.json'
 import Wrapper from "../components/Wrapper";

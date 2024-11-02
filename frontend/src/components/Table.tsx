@@ -57,7 +57,7 @@ function TableRow({data, id, cols, index, deleteHandler , clickHandler= async ()
         </div>
         
         { deleteHandler ?
-          <div className={`absolute -left-14 rounded-sm overflow-hidden  pr-10 ${show ? "": "h-0"}`}>
+          <div className={`absolute -left-14 rounded-sm overflow-hidden  pr-10 ${show ? "": "h-0 translate-x-2"} transition-all`}>
             <Button  addCSS="bg-red-400 hover:bg-red-500" isDisabled={loading} value='X' handler={enhancedDeleteHandler}/>      
           </div> : null
         }

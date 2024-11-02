@@ -1,15 +1,15 @@
 import React, { Dispatch, SetStateAction, useEffect, useState } from 'react';
-import { RoomType } from '../hooks/useFetchRoom';
-import Wrapper from './Wrapper';
-import Button from './Button';
+import { RoomType } from '../../hooks/useFetchRoom';
+import Wrapper from '../Wrapper';
+import Button from '../Button';
 import axios from 'axios';
-import config from '../../config.json'
-import Spinner from './Spinner';
+import config from '../../../config.json'
+import Spinner from '../Spinner';
+import { useScheduleContext } from '../../context/ScheduleContext';
 
 
 type RoomSelectProps = {
   groupedRooms: Record<string, Array<RoomType>>;
-  id: String
 };
 
 type RoomSelectPanelProps = {
@@ -25,16 +25,17 @@ type RoomSelectToggleProps = {
   handler: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-export function RoomSelect({ groupedRooms, id }: RoomSelectProps) {
+export function RoomSelect({ groupedRooms }: RoomSelectProps) {
   const [selectedRooms, setSelectedRooms] = useState<Set<string>>(new Set())
   const [loading, setLoading] = useState(true)
+  const schedule = useScheduleContext()
 
   useEffect(() => {
     const headers = {
       Authorization: localStorage.getItem('token')
     }
     setLoading(true);
-    axios.get(config.BACKEND_URl+`/schedule/${id}`, {headers})
+    axios.get(config.BACKEND_URl+`/schedule/${schedule.id}`, {headers})
     .then((response) => { setSelectedRooms(new Set(response.data.schedule.rooms.map((room:RoomType) => room.id)))})
     .then(() => setLoading(false))
     .catch((e) => console.log(e))
@@ -50,7 +51,7 @@ export function RoomSelect({ groupedRooms, id }: RoomSelectProps) {
       rooms: Array.from(selectedRooms)
     }
     try {
-      await axios.put(config.BACKEND_URl+`/schedule/rooms/${id}`, body, {headers})
+      await axios.put(config.BACKEND_URl+`/schedule/rooms/${schedule.id}`, body, {headers})
     }
     catch(e: any){
       console.log(e)

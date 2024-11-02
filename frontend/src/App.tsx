@@ -12,7 +12,7 @@ import Schedule from './pages/Schedule'
 import ScheduleMenu from './pages/ScheduleMenu'
 import Rough from './pages/Rough'
 import StudentGroup from './pages/StudentGroup'
-import { FacultyConstraint } from './components/ManageFaculties'
+import { FacultyConstraint } from './components/Schedule/ManageFaculties'
 
 function App() {
   return (

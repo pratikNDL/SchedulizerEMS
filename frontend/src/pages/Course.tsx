@@ -1,5 +1,5 @@
 import PageWrapper from '../components/PageWrapper'
-import CourseForm from '../components/CourseForm'
+import CourseForm from '../components/Forms/CourseForm'
 import LabeledInput from '../components/LabeledInput'
 import Table from '../components/Table'
 import useFetchMe from '../hooks/useFetchMe';

@@ -1,15 +1,15 @@
 import { ChangeEvent, Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
-import useFetchFaculties from '../hooks/useFetchFaculty'
-import Wrapper from './Wrapper'
-import LabeledInput from './LabeledInput';
-import Table from './Table';
+import useFetchFaculties from '../../hooks/useFetchFaculty'
+import Wrapper from '../Wrapper'
+import LabeledInput from '../LabeledInput';
+import Table from '../Table';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
-import PageWrapper from './PageWrapper';
-import { useScheduleContext } from '../context/ScheduleContext';
-import { ScheduleType } from '../hooks/useFetchSchedule';
-import Button from './Button';
+import PageWrapper from '../PageWrapper';
+import { useScheduleContext } from '../../context/ScheduleContext';
+import { ScheduleType } from '../../hooks/useFetchSchedule';
+import Button from '../Button';
 import axios from 'axios';
-import config from '../../config.json'
+import config from '../../../config.json'
 
 function ManageFaculties() {
 

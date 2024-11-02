@@ -1,10 +1,10 @@
 import { useState } from "react"
-import LabeledInput from "./LabeledInput"
+import LabeledInput from "../LabeledInput"
 import { departmentInputType } from "@pratikndl/common-schedulizer-ems"
-import Button from "./Button"
-import config from '../../config.json'
+import Button from "../Button"
+import config from '../../../config.json'
 import axios from "axios"
-import FormWrapper from "./FormWrapper"
+import FormWrapper from "../FormWrapper"
 
 
 function DepartmentForm() {

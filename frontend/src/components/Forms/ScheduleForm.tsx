@@ -1,12 +1,12 @@
 import { useState } from "react"
-import LabeledInput from "./LabeledInput"
+import LabeledInput from "../LabeledInput"
 
-import Button from "./Button"
-import config from '../../config.json'
+import Button from "../Button"
+import config from '../../../config.json'
 import axios from "axios"
-import FormWrapper from "./FormWrapper"
+import FormWrapper from "../FormWrapper"
 import { useNavigate } from "react-router-dom"
-import { ScheduleType } from "../hooks/useFetchSchedule"
+import { ScheduleType } from "../../hooks/useFetchSchedule"
 
 type ScheduleInputType = Omit<ScheduleType, 'id'>
 

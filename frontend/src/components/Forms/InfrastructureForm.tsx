@@ -1,13 +1,13 @@
 import axios from 'axios';
-import Button from './Button'
-import FormWrapper from './FormWrapper'
-import LabeledInput from './LabeledInput'
+import Button from '../Button'
+import FormWrapper from '../FormWrapper'
+import LabeledInput from '../LabeledInput'
 import { useState } from 'react';
-import config from '../../config.json'
+import config from '../../../config.json'
 import { blockInputType, roomInputType } from '@pratikndl/common-schedulizer-ems';
-import Checkbox from './Checkbox';
-import useFetchBlock from '../hooks/useFetchBlock';
-import SelectInput from './SelectInput';
+import Checkbox from '../Checkbox';
+import useFetchBlock from '../../hooks/useFetchBlock';
+import SelectInput from '../SelectInput';
 
 function InfrastructureForm({showBlocks}: {showBlocks:boolean}) {
 

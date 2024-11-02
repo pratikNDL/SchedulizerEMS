@@ -1,7 +1,7 @@
 import { ChangeEvent, useRef, useState } from "react";
 import LabeledInput from "../components/LabeledInput"
 import PageWrapper from "../components/PageWrapper"
-import ScheduleForm from "../components/ScheduleForm"
+import ScheduleForm from "../components/Forms/ScheduleForm"
 import useFetchMe from "../hooks/useFetchMe";
 import useFetchSchedule from "../hooks/useFetchSchedule";
 import Table from "../components/Table";
