@@ -20,6 +20,7 @@ function RegisterCourse() {
     const departments = useFetchDepartments("");
 
     const handler = async() => {
+        setPrompt('');
         setloading(true);
         const headers = {
             Authorization: localStorage.getItem('token')

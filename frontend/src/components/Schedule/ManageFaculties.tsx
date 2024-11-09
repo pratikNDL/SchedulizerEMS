@@ -1,7 +1,6 @@
-import { ChangeEvent, Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
+import {Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
 import useFetchFaculties from '../../hooks/useFetchFaculty'
 import Wrapper from '../Wrapper'
-import LabeledInput from '../LabeledInput';
 import Table from '../Table';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import PageWrapper from '../PageWrapper';
@@ -13,33 +12,16 @@ import config from '../../../config.json'
 
 function ManageFaculties() {
 
-  const [query, setQuery] = useState("");
-  const faculties = useFetchFaculties(query);
-  const timeoutRef = useRef<number | null>(null); 
   const navigate = useNavigate()
   const schedule = useScheduleContext();
 
-
-
-  const searchHandler = (e: ChangeEvent<HTMLInputElement>): void => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-    timeoutRef.current = window.setTimeout(() => {
-      setQuery(e.target.value); 
-    }, 300);
-  }
-
   const clickHandler = (id: string) => {
-    navigate(`/schedule/faculty/${id}?schedule=${JSON.stringify(schedule)}`, {state: {scheduleId: schedule.id}})
+    navigate(`/schedule/faculty/${id}?schedule=${JSON.stringify(schedule)}`)
   }
 
   return (
   <>
-      <Wrapper>
-        <LabeledInput label="" placeholder="search" handler={searchHandler} />
-        <Table clickHandler={clickHandler} isLoading={faculties.loading} titles={["Name", "Designation", "code"]} rows={faculties.data.map((row) => ({display: {name:row.name, rank:row.rank, code:row.department.code}, id:row.id}))} />
-      </Wrapper> 
+    <Table clickHandler={clickHandler} fetchHandler={useFetchFaculties} titles={["Name", "Designation", "code"]} keysToDisplay={['name', 'rank', 'code']} />      
   </>
   )
 }
@@ -141,7 +123,7 @@ function AvailabilityTable ({days, slots, occupiedSlots, setOccupiedSlots} : Ava
           {Array.from({length: days+1}, (_, day) => 
             Array.from({length: slots+1}, (_, slot) =>  {
               const position = (day-1)*(slots)+slot-1
-              if(day==0 || slot==0) return <div key={position} className='p-2 text-sm text-center font-medium text overflow-hidden bg-blue-200'>{day==0 ? slot: ds[day-1]}</div>
+              if(day==0 || slot==0) return <div key={position} className='p-2 text-sm text-center  text overflow-hidden text-gray-700 font-semibold bg-blue-200'>{day==0 ? slot: ds[day-1]}</div>
               return <AvailabilityBlock key={position} position={position} handler={handler} isOccupied={isOccupied(position)}/>
             }
         )

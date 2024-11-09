@@ -27,7 +27,7 @@ type GroupedRoomsType = Record<string, Array<RoomType>>
 
 
 function ManageRooms() {
-  const {rooms} = useFetchRoom(""); 
+  const {data} = useFetchRoom(""); 
   const [groupedRooms, setGroupedRooms] = useState<GroupedRoomsType>({});
   const [selectedRooms, setSelectedRooms] = useState<Set<string>>(new Set())
   const [loading, setLoading] = useState(true)
@@ -36,14 +36,14 @@ function ManageRooms() {
   useEffect(() => {
     let newGroupedRooms: Record<string, Array<RoomType>> = {};
 
-    rooms.forEach((room) => {
+    data.forEach((room) => {
       if(!(room.academicBlock.blockCode in newGroupedRooms)) {
         newGroupedRooms[room.academicBlock.blockCode] = [];
       }
       newGroupedRooms[room.academicBlock.blockCode].push(room);
     })
     setGroupedRooms(newGroupedRooms);
-  }, [rooms])
+  }, [data])
   
 
   useEffect(() => {
@@ -69,10 +69,10 @@ function ManageRooms() {
   }
 
   return (
-    <div>
+    <div className=''>
       <Wrapper>
-        <div className='text-gray-500'>
-          <div className='text-xl font-bold'>
+        <div >
+          <div className='text-xl font-bold text-gray-700'>
             Manage Rooms
           </div>
           <div className=''>
@@ -109,11 +109,11 @@ export function Panel({ title, rooms, selectedRooms, setSelectedRooms}: PanelPro
   }
   return (
     <Wrapper>
-      <div className='text-xl font-medium'>
+      <div className='text-xl font-bold text-gray-800'>
         {title} Block
       </div>
       <div className='flex flex-col gap-1'>
-        <div className='font-medium text-sm'>Regular Classroom</div>
+        <div className='font-medium'>Regular Classroom</div>
         <div className='flex gap-1 flex-wrap'>
           {rooms.filter((room) => !room.isLab).map((room) => (
             <Block key={room.id} title={room.code} isChecked={selectedRooms.has(room.id)} handler={handler} roomId={room.id}/>))}
@@ -150,13 +150,13 @@ export function PanelSkeleton() {
         <div className='flex flex-col gap-1'>
           <div className='animate-pulse bg-gray-300 py-1.5 w-1/12 rounded'/>
           <div className='flex gap-1'>
-            {Array.from({length: 5}, () => <div className='animate-pulse bg-gray-300 p-4 w-10 rounded'/>)}
+            {Array.from({length: 5}, (_, index) => <div key={index} className='animate-pulse bg-gray-300 p-4 w-10 rounded'/>)}
           </div>
         </div>
         <div className='flex flex-col gap-1'>
           <div className='animate-pulse bg-gray-300 py-1.5 w-1/12 rounded'/>
           <div className='flex gap-1'>
-            {Array.from({length: 5}, () => <div className='animate-pulse bg-gray-300 p-4 w-10 rounded'/>)}
+            {Array.from({length: 5}, (_, index) => <div key={index} className='animate-pulse bg-gray-300 p-4 w-10 rounded'/>)}
           </div>
         </div> 
     </Wrapper>

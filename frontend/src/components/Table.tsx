@@ -1,59 +1,94 @@
-import { ReactNode, useState } from "react"
+import { ChangeEvent, ReactNode, useRef, useState } from "react"
 import Button from "./Button"
+import Wrapper from "./Wrapper";
+import LabeledInput from "./LabeledInput";
 
-type TableType = {
-    titles: Array<string>,
-    rows: Array<{
-      display: Record<string, unknown>,
-      id: string
-    }>,
-    isLoading?: boolean
-    deleteHandler?: (id: string) => Promise<void> | void,
-    clickHandler?: (id: string) => Promise<void>  | void
-}
+type TableType<T> = {
+  titles: Array<string>,
+  keysToDisplay: Array<keyof T>,
+  fetchHandler :  {loading: boolean, data: Array<T>} | ((query: string)=> {loading: boolean,data: Array<T>})
+  deleteHandler?: (id: string) => Promise<void> | void,
+  clickHandler?: (id: string) => Promise<void>  | void
+} 
 
-type TableRowType = {
-  data: Record<string, unknown>,
-  id: string,
-  cols: number
+type TableRowType<T> = {
+  data: T,
+  keysToDisplay: Array<keyof T>,
   index: number
   deleteHandler?: (id: string) => Promise<void> | void,
   clickHandler?: (id: string) => Promise<void> | void
 }
 
-function Table({titles, rows, isLoading, deleteHandler, clickHandler }: TableType) {
+function Table<T extends {id: string},>({titles, fetchHandler, keysToDisplay, deleteHandler, clickHandler  }: TableType<T>) {
+
+  // Fetching Data for Table
+  const [query, setQuery] = useState("") 
+  const {loading, data} = typeof fetchHandler === 'function' ? fetchHandler(query): fetchHandler
+  
+  // Debouncing The Search
+  const timeoutRef = useRef<number | null>(null); 
+  const searchHandler = (e: ChangeEvent<HTMLInputElement>): void => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    timeoutRef.current = window.setTimeout(() => {
+      setQuery(e.target.value); 
+    }, 300);
+  }
+
+  // re-rendering after delete
+  const enhancedDeleteHandler = deleteHandler ? async(id: string) => {
+    await deleteHandler(id);
+    // changing state to something else before empty string , so that react thinks state actually changed
+    setQuery(" ")
+    // seTtimeout , to stop batching the state change request 
+    setTimeout(() => {
+      setQuery("");
+    }, 0);
+  } : undefined
+
   return (
-    <div className='flex flex-col text-sm border-2 border-gray-400 border-r-0 rounded-sm bac'>
-        <div className={`grid bg-blue-100 text-center font-semibold`} style={{ gridTemplateColumns: `repeat(${titles.length}, minmax(0, 1fr))`}}>
+    <Wrapper>
+      { 
+        typeof fetchHandler === 'function' ? 
+          <LabeledInput label="" placeholder="Start Typing To search A record..." handler={searchHandler}/>
+        :
+        null
+      }
+
+      <div className='flex flex-col text-sm border-2 border-gray-400 border-r-0 rounded-sm bac'>
+        <div className={`grid bg-blue-100 text-center font-semibold text-gray-800`} style={{ gridTemplateColumns: `repeat(${titles.length}, minmax(0, 1fr))`}}>
             {titles.map((title, index) => <div key={index} className='p-1 border-r-2 border-gray-400 break-words'>{title}</div>)}
         </div>
-        {isLoading ? 
+        {loading ? 
             <TableBlock><div className="animate-pulse">Fetching Records....</div></TableBlock>: 
-            rows.length == 0 ?
+            data.length == 0 ?
               <TableBlock>No Records Found</TableBlock> :
             <div>
-              {rows.map((row, index) => <TableRow  clickHandler={clickHandler} deleteHandler={deleteHandler} key={row.id} data={row.display} id={row.id} cols={titles.length} index={index}/>)}            
+              {data.map((row, index) => <TableRow <T> keysToDisplay={keysToDisplay} clickHandler={clickHandler} deleteHandler={enhancedDeleteHandler} key={row.id} data={row}  index={index}/>)}            
             </div>
         }
-    </div>
+      </div>
+    </Wrapper>
+    
     )
 }
 
 
-function TableRow({data, id, cols, index, deleteHandler , clickHandler= async () => {} }: TableRowType) {
+function TableRow<T extends {id: string}, >({data, keysToDisplay, index, deleteHandler , clickHandler= async () => {} }: TableRowType<T>) {
   const [show, setShow] = useState(false)
   const [loading, setLoading] = useState(false)
 
   const enhancedDeleteHandler = async () => {
     setLoading(true);
-    if(deleteHandler) await deleteHandler(id);
+    if(deleteHandler) await deleteHandler(data.id);
     setLoading(false);
   }
 
   return (
     <div className="relative flex"  onMouseEnter={() => {setShow(true)}} onMouseLeave={() => {setShow(false)}}>
-        <div key={id} onClick={() => clickHandler(id)}  className={`grid w-full   ${show ? ' bg-green-200 ': `${index%2 ? 'bg-blue-100': 'bg-white'}`} `} style={{gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`}}>    
-            {Object.keys(data).map((key, index) => <TableBlock key={index}>{data[key] as string}</TableBlock>)}
+        <div key={data.id} onClick={() => clickHandler(data.id)}  className={`grid w-full   ${show ? ' bg-green-200 ': `${index%2 ? 'bg-blue-100': 'bg-white'}`} `} style={{gridTemplateColumns: `repeat(${keysToDisplay.length}, minmax(0, 1fr))`}}>    
+            {keysToDisplay.map((key, index) => <TableBlock key={index}>{data[key] as string}</TableBlock>)}
         </div>
         
         { deleteHandler ?

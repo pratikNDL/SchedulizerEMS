@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import config from '../../config.json'
 
-export type RoomType = {
+export type RoomFetchType = {
   id: string,
   floor: string,
   code: string,
@@ -14,10 +14,15 @@ export type RoomType = {
   } 
 }
 
+export type RoomType = Exclude<RoomFetchType, 'academicBlock'| 'isLab'> & {
+  blockCode: string,
+  type: 'Regular' | 'Laboratory'
+}
+
 function useFetchRoom(query: string) {
 
-  const [rooms, setRooms] = useState<Array<RoomType>>([]);
-  const [loading, setloading] = useState(true);
+  const [data, setData] = useState<Array<RoomType>>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const headers = {
@@ -26,8 +31,8 @@ function useFetchRoom(query: string) {
     try {
       axios.get(config.BACKEND_URl+`/infrastructure/room?name=${query}`, { headers})
       .then((res) => {
-        setRooms(res.data.rooms);
-        setloading(false)
+        setData(res.data.rooms.map((room: RoomFetchType) => ({...room, type: room.isLab ? 'Laboratory' : 'Regular', blockCode: room.academicBlock.blockCode})));
+        setLoading(false)
       })
   }
   catch(e: any){
@@ -35,8 +40,8 @@ function useFetchRoom(query: string) {
   }
   }, [query])
 
-  if(!rooms) setRooms([]);
-  return {loading, rooms}
+  if(!data) setData([]);
+  return {loading, data}
 }
 
 export default useFetchRoom

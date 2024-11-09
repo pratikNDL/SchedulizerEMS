@@ -41,13 +41,14 @@ function SideBar() {
 
 function SideBarItem({isExpanded, path, title, icon}: SideBarItemType) {
   return (
-        <NavLink to={path} className={({ isActive }: { isActive: boolean }) => `${isActive ? 'bg-blue-300 shadow-xl' : ''} flex  items-center rounded-sm p-1 hover:bg-blue-300 hover:shadow-xl`}>
+        <NavLink to={path} className={({ isActive }: { isActive: boolean }) => `${isActive ? 'bg-blue-300 shadow-xl' : ''} relative flex  items-center rounded-sm p-1 hover:bg-blue-300 hover:shadow-xl`}>
             <div className={`p-2 flex justify-center items-center `}>
                 <img src={icon} alt="" width={25} className='fill-red-200'/>
             </div>
             <div className={`${isExpanded ? 'ml-3': 'ml-0 w-0 h-0 -translate-x-5 opacity-0 '} overflow-hidden transition-all duration-100 `}>
                 {title}
             </div>
+
         </NavLink>
   )
 }

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import config from '../../config.json'
 
-type BlockType = blockInputType & {
+export type BlockType = blockInputType & {
   id: string
 }
 

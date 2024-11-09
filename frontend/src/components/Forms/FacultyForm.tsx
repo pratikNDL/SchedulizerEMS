@@ -20,7 +20,7 @@ function FacultyForm() {
     const [loading, setloading] = useState(false)
         
     const handler = async() => {
-        console.log(data)
+        setPrompt('');
         setloading(true);
         const headers = {
             Authorization: localStorage.getItem('token')

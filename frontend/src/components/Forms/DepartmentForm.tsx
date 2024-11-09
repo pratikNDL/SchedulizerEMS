@@ -15,6 +15,7 @@ function DepartmentForm() {
 
         
     const handler = async() => {
+        setPrompt('');
         setLoading(true);
         const headers = {
             Authorization: localStorage.getItem('token')

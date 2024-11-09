@@ -8,6 +8,7 @@ import axios from "axios";
 import config from '../../config.json'
 import { ScheduleContext } from "../context/ScheduleContext";
 import ManageRooms from "../components/Schedule/ManageRooms";
+import ManageStudents from "../components/Schedule/ManageStudents";
 
 function Schedule() {
   const {id} = useParams();
@@ -29,12 +30,17 @@ function Schedule() {
           <div className={`py-1 px-3   border-2 border-gray-400 border-l-0 ${show=='faculty' ? 'bg-blue-400 text-white' : 'bg-white'}`} onClick={() => {setShow('faculty')}}>Faculties</div>
           <div className={`py-1 px-3  rounded-md rounded-l-none border-2 border-gray-400 border-l-0 ${show=='studentGroup' ? 'bg-blue-400 text-white': 'bg-white'}`} onClick={() => {setShow('studentGroup')}}>Students</div>
         </div>
-        {schedule ? 
-        <ScheduleContext.Provider value={schedule}>
-          {
-            show == 'room' ? <ManageRooms/> : show == 'faculty' ? <ManageFaculties/> : null
-          }
-        </ScheduleContext.Provider>: null
+        
+
+        {
+          schedule ? 
+            <ScheduleContext.Provider value={schedule}>
+              {
+                show == 'room' ? <ManageRooms/> : show == 'faculty' ? <ManageFaculties/> : <ManageStudents/>
+              }
+            </ScheduleContext.Provider> 
+            :
+            null
         }
         </PageWrapper>
     </>

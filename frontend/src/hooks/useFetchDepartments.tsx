@@ -3,13 +3,13 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import config from '../../config.json'
 
-export type departmentType = departmentInputType & {
+export type DepartmentType = departmentInputType & {
     id: string
 }
 function useFetchDepartments(query: string) {
 
-  const [data, setData] = useState<Array<departmentType>>([]);
-  const [loading, setloading] = useState(true);
+  const [data, setData] = useState<Array<DepartmentType>>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const headers = {
@@ -19,7 +19,7 @@ function useFetchDepartments(query: string) {
       axios.get(config.BACKEND_URl+`/department?name=${query}`, { headers})
       .then((res) => {
         setData(res.data.departments);
-        setloading(false)
+        setLoading(false)
       })
   }
   catch(e: any){
@@ -27,7 +27,6 @@ function useFetchDepartments(query: string) {
   }
   }, [query])
 
-  if(!data) setData([]);
   return {loading, data}
 }
 

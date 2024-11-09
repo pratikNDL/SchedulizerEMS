@@ -46,7 +46,7 @@ function InfrastructureForm({showBlocks}: {showBlocks:boolean}) {
 
     const roomHandler = async() => {
         setLoading(true);
-        console.log(roomData)
+        setPrompt('');
         const headers = {
             Authorization: localStorage.getItem('token')
         }

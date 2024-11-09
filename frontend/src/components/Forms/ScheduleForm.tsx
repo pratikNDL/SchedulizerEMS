@@ -19,6 +19,8 @@ function ScheduleForm() {
         
     const handler = async() => {
         setLoading(true);
+        setPrompt('');
+
         const headers = {
             Authorization: localStorage.getItem('token')
         }

@@ -3,13 +3,15 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import config from '../../config.json'
 
-type courseType = courseInputType & {
+export type CourseType = courseInputType & {
     id: string
+    type: 'T'|'P'
+
 }
 function useFetchCourses(query: string) {
 
-  const [data, setData] = useState<Array<courseType>>([]);
-  const [loading, setloading] = useState(true);
+  const [data, setData] = useState<Array<CourseType>>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const headers = {
@@ -18,8 +20,8 @@ function useFetchCourses(query: string) {
     try {
       axios.get(config.BACKEND_URl+`/course?name=${query}`, { headers})
       .then((res) => {
-        setData(res.data.courses);
-        setloading(false)
+        setData(res.data.courses.map((course: CourseType) => ({...course, type: course.isLab ? 'P' : 'T'})));
+        setLoading(false)
       })
   }
   catch(e: any){
