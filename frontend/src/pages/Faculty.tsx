@@ -5,11 +5,13 @@ import PageWrapper from "../components/PageWrapper";
 import FacultyForm from "../components/Forms/FacultyForm";
 import axios from 'axios'
 import config from '../../config.json'
+import { useState } from "react";
 
 function Faculty() {
   useFetchMe();
   
-
+  const [refresh, setRefresh] = useState(false);
+  const triggerRefresh = () => setRefresh(prev => !prev);
   const deleteHandler = async (id: string) => {
     try {
       await axios.delete(`${config.BACKEND_URl}/faculty/${id}`, {headers: {Authorization: localStorage.getItem('token')}});
@@ -21,8 +23,8 @@ function Faculty() {
 
   return (
     <PageWrapper>
-      <FacultyForm/>
-      <Table <FacultyType> fetchHandler={useFetchFaculties} keysToDisplay={['name', 'rank', 'code' ]} titles={['Name', 'Designation', 'Department']} deleteHandler={deleteHandler}/>
+      <FacultyForm triggerRefresh={triggerRefresh} />
+      <Table <FacultyType>  fetchHandler={useFetchFaculties} keysToDisplay={['name', 'rank', 'code' ]} titles={['Name', 'Designation', 'Department']} deleteHandler={deleteHandler} refresh={refresh}/>
     </PageWrapper>
   )
 }

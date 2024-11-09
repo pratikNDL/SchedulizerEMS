@@ -10,7 +10,7 @@ import { ScheduleType } from "../../hooks/useFetchSchedule"
 
 type ScheduleInputType = Omit<ScheduleType, 'id'>
 
-function ScheduleForm() {
+function ScheduleForm({triggerRefresh}: {triggerRefresh: () => void}) {
     const [data, setData] = useState< ScheduleInputType | {}>({})
     const [prompt, setPrompt] = useState("");
     const [error, setError] = useState(false);
@@ -45,6 +45,7 @@ function ScheduleForm() {
             }
         }
         setLoading(false);
+        triggerRefresh();
 
     }
 

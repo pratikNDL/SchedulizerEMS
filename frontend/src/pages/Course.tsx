@@ -5,10 +5,12 @@ import useFetchMe from '../hooks/useFetchMe';
 import useFetchCourses, { CourseType } from '../hooks/useFetchCourse';
 import config from '../../config.json'
 import axios from 'axios'
+import { useState } from 'react';
 
 function Course() {
     useFetchMe();
-    
+    const [refresh, setRefresh] = useState(false);
+    const triggerRefresh = () => setRefresh(prev => !prev);
     const deleteHandler = async (id: string) => {
       const headers = {
         Authorization: localStorage.getItem('token')
@@ -23,8 +25,8 @@ function Course() {
 
   return (
     <PageWrapper>
-        <CourseForm/>
-        <Table <CourseType> deleteHandler={deleteHandler} fetchHandler={useFetchCourses} titles={["Course Name", "Course Code", "Credits", "T/P"]} keysToDisplay={['name', 'code', 'credits', 'type']} />
+        <CourseForm triggerRefresh={triggerRefresh}/>
+        <Table <CourseType> deleteHandler={deleteHandler} fetchHandler={useFetchCourses} titles={["Course Name", "Course Code", "Credits", "T/P"]} keysToDisplay={['name', 'code', 'credits', 'type']} refresh={refresh}/>
     </PageWrapper>
   )
 }

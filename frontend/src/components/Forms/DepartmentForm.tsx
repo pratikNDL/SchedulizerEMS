@@ -7,7 +7,7 @@ import axios from "axios"
 import FormWrapper from "../FormWrapper"
 
 
-function DepartmentForm() {
+function DepartmentForm({triggerRefresh}: {triggerRefresh: () => void}) {
     const [data, setData] = useState<departmentInputType | {}>({})
     const [prompt, setPrompt] = useState("");
     const [error, setError] = useState(true);
@@ -34,7 +34,7 @@ function DepartmentForm() {
             }
         }
         setLoading(false);
-
+        triggerRefresh()
     }
 
     return (

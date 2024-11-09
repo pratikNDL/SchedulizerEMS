@@ -5,10 +5,12 @@ import axios from 'axios'
 import config from '../../config.json'
 import useFetchStudentGroup from "../hooks/useFetchStudentGroup";
 import StudentGroupForm from "../components/Forms/StudentGroupForm";
+import { useState } from "react";
 
 function StudentGroup() {
   useFetchMe();
-  
+  const [refresh, setRefresh] = useState(false);
+  const triggerRefresh = () => setRefresh(prev => !prev);
 
   const deleteHandler = async (id: string) => {
     const headers = {
@@ -25,8 +27,8 @@ function StudentGroup() {
 
   return (
     <PageWrapper>
-      <StudentGroupForm/>
-          <Table deleteHandler={deleteHandler} fetchHandler={useFetchStudentGroup} titles={["Name", "Department", "Passing Year", "Section", "No. Batches"]} keysToDisplay={['name', 'departmentCode' ,'passingYear', 'section', 'batchCount']} />
+      <StudentGroupForm triggerRefresh={triggerRefresh}/>
+          <Table deleteHandler={deleteHandler} fetchHandler={useFetchStudentGroup} titles={["Name", "Department", "Passing Year", "Section", "No. Batches"]} keysToDisplay={['name', 'departmentCode' ,'passingYear', 'section', 'batchCount']} refresh={refresh}/>
     </PageWrapper>
   )
 }

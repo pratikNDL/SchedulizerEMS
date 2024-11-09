@@ -10,18 +10,18 @@ import useFetchDepartments from "../../hooks/useFetchDepartments"
 import Checkbox from "../Checkbox"
 
 
-function RegisterCourse() {
+function RegisterCourse({triggerRefresh}: {triggerRefresh: () => void}) {
     const [data, setData] = useState<courseInputType | {}>({isLab: false})
 
     const [prompt, setPrompt] = useState<String>("");
     const [error, setError] = useState(true);
-    const [loading, setloading] = useState(false)
+    const [loading, setLoading] = useState(false)
 
     const departments = useFetchDepartments("");
 
     const handler = async() => {
         setPrompt('');
-        setloading(true);
+        setLoading(true);
         const headers = {
             Authorization: localStorage.getItem('token')
         }
@@ -45,7 +45,8 @@ function RegisterCourse() {
                 setPrompt(e.response.data.message);
             }
         }
-        setloading(false);
+        setLoading(false);
+        triggerRefresh();
 
     }
 

@@ -9,7 +9,7 @@ import Checkbox from '../Checkbox';
 import useFetchBlock from '../../hooks/useFetchBlock';
 import SelectInput from '../SelectInput';
 
-function InfrastructureForm({showBlocks}: {showBlocks:boolean}) {
+function InfrastructureForm({showBlocks, triggerRefresh}: {showBlocks:boolean, triggerRefresh:() => void}) {
 
     const [blockData, setBlockData] = useState<blockInputType | {}>({})
     const [roomData, setRoomData] = useState<roomInputType | {}>({isLab: false})
@@ -41,6 +41,7 @@ function InfrastructureForm({showBlocks}: {showBlocks:boolean}) {
             }
         }
         setLoading(false);
+        triggerRefresh();
 
     }
 
@@ -68,6 +69,8 @@ function InfrastructureForm({showBlocks}: {showBlocks:boolean}) {
             }
         }
         setLoading(false);
+        triggerRefresh();
+
     }
   return (
     <>
@@ -80,7 +83,7 @@ function InfrastructureForm({showBlocks}: {showBlocks:boolean}) {
             
             <div className="flex flex-col gap-5 items-center">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full ">
-                    <LabeledInput  label="Block Name"  placeholder="First Year Block" handler={(e) => setBlockData({...blockData, name: e.target.value})}/>
+                    <LabeledInput key={'blockName'} label="Block Name"  placeholder="First Year Block" handler={(e) => setBlockData({...blockData, name: e.target.value})}/>
                     <LabeledInput label="Block Code"  placeholder="G" handler={(e) => setBlockData({...blockData, blockCode: e.target.value})}/>
                 </div>
 
@@ -94,12 +97,12 @@ function InfrastructureForm({showBlocks}: {showBlocks:boolean}) {
           :      
             <div className="flex flex-col gap-5 items-center justify-evenly">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full ">
-                    <LabeledInput label="Room Code"  placeholder="0/4" handler={(e) => setRoomData({...roomData, code: e.target.value})}/>
+                    <LabeledInput label="Room Code" key={'rommName'} placeholder="0/4" handler={(e) => setRoomData({...roomData, code: e.target.value})}/>
                     <LabeledInput label="Room Capacity" type='number'  placeholder="4" handler={(e) => setRoomData({...roomData, capacity: e.target.value})}/>
                     <LabeledInput label="Floor"  placeholder="4" handler={(e) => setRoomData({...roomData, floor: e.target.value})}/>
                     <SelectInput handler={(e) => {setRoomData({...roomData, blockId: e.target.value })}} label="Block"
                         values={blocks.loading ? [] : blocks.data.map((block) => { return{displayValue: block.blockCode, targetValue: block.id}})}/>
-                    <Checkbox label='Labarotary' handler={(e) => setRoomData({...roomData, isLab: e.target.checked})}/>
+                    <Checkbox label='Laboratory' handler={(e) => setRoomData({...roomData, isLab: e.target.checked})}/>
                 
                 </div>
 

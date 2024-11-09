@@ -12,7 +12,7 @@ import FormWrapper from "../FormWrapper"
 
 
 
-function StudentGroupForm() {
+function StudentGroupForm({triggerRefresh}: {triggerRefresh: () => void}) {
     const departments = useFetchDepartments("");
     const [data, setData] = useState<Omit<StudentGroupType,'id'>| {}>({})
     
@@ -52,6 +52,7 @@ function StudentGroupForm() {
             }
         }
         setLoading(false);
+        triggerRefresh()
 
     }
 

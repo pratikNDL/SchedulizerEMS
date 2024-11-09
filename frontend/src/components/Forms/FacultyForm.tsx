@@ -11,17 +11,17 @@ import FormWrapper from "../FormWrapper"
 
 
 
-function FacultyForm() {
+function FacultyForm({triggerRefresh}: {triggerRefresh: () => void}) {
     const departments = useFetchDepartments("");
     const [data, setData] = useState<facultyInputType | {}>({})
     
     const [prompt, setPrompt] = useState<String>("");
     const [error, setError] = useState(true);
-    const [loading, setloading] = useState(false)
+    const [loading, setLoading] = useState(false)
         
     const handler = async() => {
         setPrompt('');
-        setloading(true);
+        setLoading(true);
         const headers = {
             Authorization: localStorage.getItem('token')
         }
@@ -38,8 +38,8 @@ function FacultyForm() {
                 setPrompt(e.response.data.message);
             }
         }
-        setloading(false);
-
+        setLoading(false);
+        triggerRefresh();
     }
 
 

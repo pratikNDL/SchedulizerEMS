@@ -14,6 +14,7 @@ const app = new Hono<{
 app.get('/:scheduleId', async (c) => {
     const prisma = c.get("prisma")
     const scheduleId = c.req.param('scheduleId');
+    const query = c.req.query('name')
 
     try {
         const existingSchedule = await prisma.schedule.findFirst({
@@ -22,6 +23,9 @@ app.get('/:scheduleId', async (c) => {
             },
             select: {
                 studentGroups: {
+                    where: {
+                        name: {contains: query, mode: 'insensitive'}
+                    },
                     select : {
                         id: true,
                         name: true,

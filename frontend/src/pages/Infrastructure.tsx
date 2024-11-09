@@ -11,6 +11,8 @@ import { useState } from 'react';
 function Infrastructure() {
     useFetchMe();
     const [showBlocks, setShowBlocks] = useState(true);
+    const [refresh, setRefresh] = useState(false);
+    const triggerRefresh = () => setRefresh(prev => !prev);
     
     const deleteRoomHandler = async (id: string) => {
       try {
@@ -37,10 +39,10 @@ function Infrastructure() {
 
 
 
-      <InfrastructureForm showBlocks={showBlocks}/>
+      <InfrastructureForm showBlocks={showBlocks} triggerRefresh={triggerRefresh}/>
         {showBlocks ? 
-          <Table <BlockType> key='blocks' fetchHandler={useFetchBlock} deleteHandler={deleteBlockHandler} titles={["Block Name", "Block Code"]} keysToDisplay={['name', 'blockCode']} />
-          :<Table <RoomType> key='rooms' fetchHandler={useFetchRoom} deleteHandler={deleteRoomHandler} titles={["Block", "Code", "Floor", "Capacity", 'Type']} keysToDisplay={['blockCode', 'code', 'floor', 'capacity', 'type']}  />
+          <Table <BlockType> key='blocks' fetchHandler={useFetchBlock} deleteHandler={deleteBlockHandler} titles={["Block Name", "Block Code"]} keysToDisplay={['name', 'blockCode']} refresh={refresh} />
+          :<Table <RoomType> key='rooms' fetchHandler={useFetchRoom} deleteHandler={deleteRoomHandler} titles={["Block", "Code", "Floor", "Capacity", 'Type']} keysToDisplay={['blockCode', 'code', 'floor', 'capacity', 'type']} refresh={refresh} />
         }
 
     </PageWrapper>

@@ -7,10 +7,13 @@ import Table from "../components/Table";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios'
 import config from '../../config.json'
+import { useState } from "react";
 
 
 function ScheduleMenu() {
     useFetchMe();
+    const [refresh, setRefresh] = useState(false);
+    const triggerRefresh = () => setRefresh(prev => !prev);
     const navigate = useNavigate();
 
     const clickHandler = (id: string) => {
@@ -30,8 +33,8 @@ function ScheduleMenu() {
   return (
     <>
         <PageWrapper>
-            <ScheduleForm/>
-            <Table <ScheduleType> titles={['Name']} keysToDisplay={['name']} fetchHandler={useFetchSchedule} clickHandler={clickHandler} deleteHandler={deleteHandler}/>
+            <ScheduleForm triggerRefresh={triggerRefresh}/>
+            <Table <ScheduleType> titles={['Name']} keysToDisplay={['name']} fetchHandler={useFetchSchedule} clickHandler={clickHandler} deleteHandler={deleteHandler} refresh={refresh}/>
             
         </PageWrapper>
     </>
