@@ -1,12 +1,11 @@
 
-import PageWrapper from "../components/PageWrapper"
-import ScheduleForm from "../components/Forms/ScheduleForm"
-import useFetchMe from "../hooks/useFetchMe";
-import useFetchSchedule, { ScheduleType } from "../hooks/useFetchSchedule";
-import Table from "../components/Table";
+import ScheduleForm from "../Forms/ScheduleForm"
+import useFetchMe from "../../hooks/useFetchMe";
+import useFetchSchedule, { ScheduleType } from "../../hooks/useFetchSchedule";
+import Table from "../Table";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios'
-import config from '../../config.json'
+import config from '../../../config.json'
 import { useState } from "react";
 
 
@@ -32,11 +31,10 @@ function ScheduleMenu() {
 
   return (
     <>
-        <PageWrapper>
+        <div>
             <ScheduleForm triggerRefresh={triggerRefresh}/>
             <Table <ScheduleType> titles={['Name']} keysToDisplay={['name']} fetchHandler={useFetchSchedule} clickHandler={clickHandler} deleteHandler={deleteHandler} refresh={refresh}/>
-            
-        </PageWrapper>
+        </div>
     </>
   )
 }

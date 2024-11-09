@@ -82,7 +82,7 @@ export function FacultyConstraint() {
   if(tableRef.current) console.log(tableRef.current.offsetHeight)
   return (
     <>
-      <PageWrapper>
+      <div>
         {loading ? 
           <AvailabilityTableSkeleton days={schedule.days} slots={schedule.slots} /> :
           <AvailabilityTable  days={schedule.days} slots={schedule.slots} occupiedSlots={occupiedSlots} setOccupiedSlots={setOccupiedSlots}/>
@@ -90,7 +90,7 @@ export function FacultyConstraint() {
         <div className='flex justify-center'>
             <Button handler={handler} isDisabled={loading} value={'Submit'} addCSS='bg-blue-400 '/>
           </div>
-      </PageWrapper>
+      </div>
     </>
   )
 }
