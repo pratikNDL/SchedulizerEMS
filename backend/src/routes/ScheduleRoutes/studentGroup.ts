@@ -11,6 +11,7 @@ const app = new Hono<{
     }
 }>();
 
+// Gets all studentGroups in  a particular Schedule
 app.get('/:scheduleId', async (c) => {
     const prisma = c.get("prisma")
     const scheduleId = c.req.param('scheduleId');
@@ -46,7 +47,65 @@ app.get('/:scheduleId', async (c) => {
             return c.json({message: "No such Schedule"}, {status: 409}); 
         }
 
-        return c.json({schedule: existingSchedule}, {status: 201});
+        return c.json({studentGroups: existingSchedule.studentGroups}, {status: 201});
+    } catch (e) {
+        return c.json({message: "Something went wrong"}, {status: 500}); 
+    }
+})
+
+// Gets all classes associated with a particular StudentGroup in a particular Schedule
+app.get(':studentGroupId/class/:scheduleId', async (c) => {
+    const prisma = c.get("prisma")
+    const scheduleId = c.req.param('scheduleId');
+    const studentGroupId = c.req.param('studentGroupId');
+    const showLabs = c.req.query('showLabs') == 'true' ? true : false
+    
+
+    try {
+        const existingSchedule = await prisma.schedule.findFirst({
+            where: {
+                id: scheduleId
+            },
+            select: {
+                classes: {
+                    where: {
+                        studentGroupId: studentGroupId,
+                        isLab: showLabs,
+                    },
+                    select: {
+                        id: true,
+                        faculty: true,
+                        course: true,
+                        room: {
+                            select: {
+                                code: true,
+                                floor: true,
+                                isLab: true,
+                                capacity: true,
+                                id: true,
+                                academicBlock: {
+                                    select: {
+                                        blockCode: true,
+                                        name: true
+                                    }
+                                }
+                            }
+                        },
+                        batch: {
+                            select: {
+                                name: true
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        if (!existingSchedule) {
+            return c.json({message: "No such Schedule"}, {status: 409}); 
+        }
+
+        return c.json({classes : existingSchedule.classes}, {status: 201});
     } catch (e) {
         return c.json({message: "Something went wrong"}, {status: 500}); 
     }
@@ -78,18 +137,22 @@ app.put('/:scheduleId/:studentGroupId', async (c) => {
             return c.json({message: "No such StudentGroup"}, {status: 409}); 
         }
 
-        await prisma.schedule.update({
-            where: {
-                id: scheduleId,   
-            },
-            data : {
-                studentGroups: {
-                    connect: {id: studentGroupId}
+       
+        
+            await prisma.schedule.update({
+                where: {
+                    id: scheduleId,   
+                },
+                data : {
+                    studentGroups: {
+                        connect: {id: studentGroupId}
+                    }
                 }
-            }
+            })
 
-        })
+        
 
+     
         return c.json({message: "Schedule Updated"}, {status: 201});
     } catch (e) {
         return c.json({message: "Something went wrong"}, {status: 500}); 
@@ -133,6 +196,8 @@ app.delete('/:scheduleId/:studentGroupId', async (c) => {
             }
 
         })
+
+        
 
         return c.json({message: "Schedule Updated"}, {status: 201});
     } catch (e) {

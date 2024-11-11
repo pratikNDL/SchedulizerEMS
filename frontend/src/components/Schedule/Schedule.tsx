@@ -1,23 +1,26 @@
-import { useParams } from "react-router-dom"
-import ManageFaculties from "./ManageFaculties";
+import { Outlet, useNavigate, useParams } from "react-router-dom"
 import { useEffect, useState } from "react";
 import { ScheduleType } from "../../hooks/useFetchSchedule";
 import axios from "axios";
 import config from '../../../config.json'
 import { ScheduleContext } from "../../context/ScheduleContext";
-import ManageRooms from "./ManageRooms";
-import ManageStudents from "./ManageStudents";
+
 
 function Schedule() {
   const {scheduleId} = useParams();
   const [schedule, setSchedule] = useState<ScheduleType | undefined>(undefined);
   const [show , setShow] = useState<'room'|'faculty'|'studentGroup'>('room');
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios.get(`${config.BACKEND_URl}/schedule/${scheduleId}`, {headers: {'Authorization': localStorage.getItem('token')}})
     .then((response) => { setSchedule(response.data.schedule)})
     .catch((e) => console.log(e))
   }, [])
+
+  useEffect(() => {
+    navigate(show);
+  }, [show])
 
   
   return (
@@ -34,9 +37,7 @@ function Schedule() {
         {
           schedule ? 
             <ScheduleContext.Provider value={schedule}>
-              {
-                show == 'room' ? <ManageRooms/> : show == 'faculty' ? <ManageFaculties/> : <ManageStudents/>
-              }
+              <Outlet/>
             </ScheduleContext.Provider> 
             :
             null

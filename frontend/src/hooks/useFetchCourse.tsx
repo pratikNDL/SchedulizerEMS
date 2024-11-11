@@ -1,10 +1,16 @@
-import { courseInputType } from "@pratikndl/common-schedulizer-ems"
 import { useEffect, useState } from "react";
 import axios from "axios";
 import config from '../../config.json'
 
-export type CourseType = courseInputType & {
-    id: string
+export type courseFetchType = {
+  id: string
+  name: string;
+  code: string;
+  departmentId: string;
+  credits: number;
+  isLab: boolean;
+}
+export type CourseType = courseFetchType & {
     type: 'T'|'P'
 
 }

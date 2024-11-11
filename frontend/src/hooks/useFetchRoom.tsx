@@ -19,28 +19,18 @@ export type RoomType = Exclude<RoomFetchType, 'academicBlock'| 'isLab'> & {
   type: 'Regular' | 'Laboratory'
 }
 
-function useFetchRoom(query: string) {
-
+function useFetchRoom(query: string, scheduleId?: string) {
   const [data, setData] = useState<Array<RoomType>>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const headers = {
-      Authorization: localStorage.getItem('token')
-    }
-    try {
-      axios.get(config.BACKEND_URl+`/infrastructure/room?name=${query}`, { headers})
-      .then((res) => {
-        setData(res.data.rooms.map((room: RoomFetchType) => ({...room, type: room.isLab ? 'Laboratory' : 'Regular', blockCode: room.academicBlock.blockCode})));
-        setLoading(false)
-      })
-  }
-  catch(e: any){
-      
-  }
+    const url = scheduleId ?`${config.BACKEND_URl}/schedule/room/${scheduleId}?name=${query}`: `${config.BACKEND_URl}/infrastructure/room?name=${query}`
+    axios.get(url, {headers: {Authorization: localStorage.getItem('token')}})
+    .then((res) => {
+      setData(res.data.rooms.map((room: RoomFetchType) => ({...room, type: room.isLab ? 'Laboratory' : 'Regular', blockCode: room.academicBlock.blockCode})));
+      setLoading(false)
+    })
   }, [query])
-
-  if(!data) setData([]);
   return {loading, data}
 }
 

@@ -12,26 +12,26 @@ const app = new Hono<{
 }>();
 
 
-const FacultyConstraintInput = z.object({
-    facultyId : z.string(),
+const studentGroupConstraintInput = z.object({
+    studentGroupId : z.string(),
     scheduleId: z.string(),
     constraints: z.array(z.number())
 })
 
-const FacultyConstraintUpdate = z.object({
+const studentGroupConstraintUpdate = z.object({
     id: z.string(),
     constraints: z.array(z.number())
 })
 
 app.get('/', async (c) => {
     const prisma = c.get("prisma")
-    const facultyId = c.req.query('facultyId');
+    const studentGroupId = c.req.query('studentGroupId');
     const scheduleId = c.req.query('scheduleId');
     
     try {
-        const faculty = await prisma.facultyConstraints.findFirst({
+        const studentGroupConstraint = await prisma.studentGroupConstraints.findFirst({
             where: {
-                facultyId: facultyId,
+                studentGroupId: studentGroupId,
                 scheduleId: scheduleId
             },
             select: {
@@ -39,7 +39,7 @@ app.get('/', async (c) => {
                 constraints: true
             }
         });
-        return c.json({faculty});
+        return c.json({studentGroupConstraint});
 
     } catch(e) {
         return c.json({message: "Something went wrong"}, {status: 500})
@@ -49,16 +49,16 @@ app.get('/', async (c) => {
 app.post('/', async (c) => {
     const prisma = c.get("prisma")
     const body =  await c.req.json();
-    const { data, success, error } = FacultyConstraintInput.safeParse(body);
+    const { data, success, error } = studentGroupConstraintInput.safeParse(body);
 
     if(!success) {
         return c.json({message: "invalid Inputs", error}, {status: 400})
     }
     
     try {
-        const existingFacultyConstraint = await prisma.facultyConstraints.findFirst({
+        const existingStudentGroupConstraints= await prisma.studentGroupConstraints.findFirst({
             where: {
-                facultyId: data.facultyId,
+                studentGroupId: data.studentGroupId,
                 scheduleId: data.scheduleId
             },
             select: {
@@ -67,17 +67,17 @@ app.post('/', async (c) => {
             }
         });
 
-        if (existingFacultyConstraint) {
+        if (existingStudentGroupConstraints) {
             return c.json({message: "Constraint with same detail code already exist"}, {status: 409}); 
         }
 
-        const newFacultyConstraint = await prisma.facultyConstraints.create({
+        const newStudentGroupConstraints = await prisma.studentGroupConstraints.create({
             data: {
                 ...data,
             }
         })
 
-        return c.json({message: "New Faculty Constraint Created", faculty:newFacultyConstraint}, {status: 201});
+        return c.json({message: "New Student Group Constraint Created", studentGroupConstraint:newStudentGroupConstraints}, {status: 201});
 
     } catch (e) {
         console.error(e);
@@ -89,25 +89,25 @@ app.post('/', async (c) => {
 app.put('/', async (c) => {
     const prisma = c.get("prisma")
     const body =  await c.req.json();
-    const { data, success, error } = FacultyConstraintUpdate.safeParse(body);
+    const { data, success, error } = studentGroupConstraintUpdate.safeParse(body);
 
     if(!success) {
         return c.json({message: "invalid Inputs", error}, {status: 400})
     }
     
     try {
-        const existingFacultyConstraint = await prisma.facultyConstraints.findFirst({
+        const existingStudentGroupConstraints = await prisma.studentGroupConstraints.findFirst({
             where: {
                 id: data.id
             }
         });
 
-        if (!existingFacultyConstraint) {
+        if (!existingStudentGroupConstraints) {
             return c.json({message: "No Record Found"}, {status: 409}); 
         }
 
         
-        const updatedFacultyConstraints = await prisma.facultyConstraints.update({
+        const updatedStudentGroupConstraints= await prisma.studentGroupConstraints.update({
             where: {
                 id: data.id
             },
@@ -116,7 +116,7 @@ app.put('/', async (c) => {
             }
         });
 
-        return c.json({message: "Record Updated", faculty:existingFacultyConstraint}, {status: 201});
+        return c.json({message: "Record Updated", studentGroupConstraint:updatedStudentGroupConstraints}, {status: 201});
 
     } catch (e) {
         console.error(e);

@@ -4,6 +4,9 @@ import { PrismaClient } from "@prisma/client";
 import { z } from 'zod';
 import facultyRouter from './faculty'
 import studentGroupRouter from './studentGroup'
+import roomRouter from './room'
+import classRouter from './class'
+import studentGroupConstraintRouter from './studentGroupConstraint'
 
 const app = new Hono<{
     Variables: {
@@ -22,11 +25,12 @@ const scheduleInput = z.object({
 app.use(authAdmin);
 app.route('/faculty', facultyRouter)
 app.route('/studentGroup', studentGroupRouter)
+app.route('/room', roomRouter)
+app.route('/class', classRouter)
+app.route('/studentGroupConstraint', studentGroupConstraintRouter)
 
 
-const roomsInput = z.object({
-    rooms: z.array(z.string()),
-})
+
 
 
 app.get('/:id', async (c) => {
@@ -38,14 +42,6 @@ app.get('/:id', async (c) => {
             where: {
                 id: id
             },
-            select: {
-                id: true,
-                name: true,
-                rooms: true,
-                days: true,
-                studentGroups: true,
-                slots: true,
-            }
         });
         return c.json({schedule});
 
@@ -133,53 +129,6 @@ app.post('/', async (c) => {
         return c.json({message: "Something went wrong"}, {status: 500}); 
     }
 })
-
-app.put('/rooms/:id', async (c) => {
-    const instituteId = c.get("instituteId") as string;
-    const prisma = c.get("prisma")
-    const id = c.req.param('id');
-    const body = await c.req.json();
-    
-
-    const {data, success, error} = roomsInput.safeParse(body);
-
-    if(!success) {
-        return c.json({message: "invalid Inputs", error}, {status: 400})
-    }
-    
-    try {        
-        const schedule = await prisma.schedule.findFirst({
-            where: {
-                id: id,
-                instituteId: instituteId    
-            }
-        });
-
-    
-        if (!schedule) {
-            return c.json({message: "no such schedule exist"}, {status: 409}); 
-        }
-
-        const updatesSchedule = await prisma.schedule.update({
-            where: {
-                id: id
-            },
-            data: {
-                rooms: {
-                    set: data.rooms.map((id) => ({id: id}))
-                }
-            }
-        })
-        
-
-        return c.json({message: "Rooms Updated", updatesSchedule}, {status: 201});
-
-    } catch (e) {
-        return c.json({message: "Something went wrong"}, {status: 500}); 
-    }
-})
-
-
 
 
 export default app;

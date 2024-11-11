@@ -1,11 +1,11 @@
 import axios from "axios";
 import config from '../../../config.json'
 import { useScheduleContext } from "../../context/ScheduleContext";
-import useScheduleStudents from "../../hooks/schedule Hooks/useScheduleStudents"
-import useFetchStudentGroup, { StudentGroupType } from "../../hooks/useFetchStudentGroup"
+import {useFetchStudentGroups, StudentGroupType} from "../../hooks/useFetchStudentGroups"
 import Table from "../Table"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 
 
 function ManageStudents() {   
@@ -14,7 +14,7 @@ function ManageStudents() {
   const triggerRefresh = () => setRefresh(prev => !prev);
   const navigate = useNavigate();
   const fetchData = (query: string) => {
-    return useScheduleStudents(schedule.id, query);
+    return useFetchStudentGroups(query, schedule.id)
   }
   
   const clickHandler = async (id: string) => {
@@ -37,9 +37,8 @@ function ManageStudents() {
 
 return (
     <>
-      <Table <StudentGroupType> fetchHandler={fetchData} titles={['Name', 'Section', 'Department']}  keysToDisplay={['name', 'section', 'departmentCode']} deleteHandler={deleteHandler} refresh={refresh} clickHandler={(id) => { console.log(id);navigate(`studentGroup/${id}`)}}/>
-      <Table <StudentGroupType> fetchHandler={useFetchStudentGroup} titles={['Name', 'Section', 'Department']}  keysToDisplay={['name', 'section', 'departmentCode']} clickHandler={clickHandler}/>
-      
+      <Table <StudentGroupType> fetchHandler={fetchData} titles={['Name', 'Section', 'Department']}  keysToDisplay={['name', 'section', 'departmentCode']} deleteHandler={deleteHandler} refresh={refresh} clickHandler={(id) => { navigate(id)}}/>
+      <Table <StudentGroupType> fetchHandler={useFetchStudentGroups} titles={['Name', 'Section', 'Department']}  keysToDisplay={['name', 'section', 'departmentCode']} clickHandler={clickHandler}/>
     </>
 )
 }

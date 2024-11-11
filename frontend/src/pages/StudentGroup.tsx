@@ -3,7 +3,7 @@ import useFetchMe from "../hooks/useFetchMe";
 import PageWrapper from "../components/PageWrapper";
 import axios from 'axios'
 import config from '../../config.json'
-import useFetchStudentGroup from "../hooks/useFetchStudentGroup";
+import {useFetchStudentGroups} from "../hooks/useFetchStudentGroups";
 import StudentGroupForm from "../components/Forms/StudentGroupForm";
 import { useState } from "react";
 
@@ -28,7 +28,7 @@ function StudentGroup() {
   return (
     <PageWrapper>
       <StudentGroupForm triggerRefresh={triggerRefresh}/>
-          <Table deleteHandler={deleteHandler} fetchHandler={useFetchStudentGroup} titles={["Name", "Department", "Passing Year", "Section", "No. Batches"]} keysToDisplay={['name', 'departmentCode' ,'passingYear', 'section', 'batchCount']} refresh={refresh}/>
+          <Table deleteHandler={deleteHandler} fetchHandler={useFetchStudentGroups} titles={["Name", "Department", "Passing Year", "Section", "No. Batches"]} keysToDisplay={['name', 'departmentCode' ,'passingYear', 'section', 'batchCount']} refresh={refresh}/>
     </PageWrapper>
   )
 }

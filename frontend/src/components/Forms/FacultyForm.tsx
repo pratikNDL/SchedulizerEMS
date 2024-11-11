@@ -1,7 +1,6 @@
 import { useState } from "react"
 import LabeledInput from "../LabeledInput"
 import { facultyInputType} from "@pratikndl/common-schedulizer-ems"
-import Button from "../Button"
 import config from '../../../config.json'
 import axios from "axios"
 import SelectInput from "../SelectInput"
@@ -15,37 +14,28 @@ function FacultyForm({triggerRefresh}: {triggerRefresh: () => void}) {
     const departments = useFetchDepartments("");
     const [data, setData] = useState<facultyInputType | {}>({})
     
-    const [prompt, setPrompt] = useState<String>("");
-    const [error, setError] = useState(true);
-    const [loading, setLoading] = useState(false)
+
         
     const handler = async() => {
-        setPrompt('');
-        setLoading(true);
-        const headers = {
-            Authorization: localStorage.getItem('token')
-        }
+        
+        console.log(data)
         try {
-            await  axios.post(config.BACKEND_URl+`/faculty`, data, { headers});
-            setPrompt("New Faculty Added")
-            setError(false)
+            await  axios.post(config.BACKEND_URl+`/faculty`, data, {headers: {Authorization: localStorage.getItem('token')}});
+        } catch(e: any){
+            return {
+                success: false,
+                message: e.response.data.message ? e.response.data.message : 'Something Went Wrong'
+            };
         }
-        catch(e: any){
-            if(!e.response.data.message) {
-                setPrompt("Something went wrong... Try again later")
-            }
-            else {
-                setPrompt(e.response.data.message);
-            }
-        }
-        setLoading(false);
-        triggerRefresh();
+        return {
+            success: true,
+            message: "New Faculty Added"
+        };
     }
 
 
     return (
-        <FormWrapper>
-            <div className="flex flex-col gap-5 items-center justify-evenly">
+        <FormWrapper handler={handler} triggerRefresh={triggerRefresh}>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
                     <LabeledInput label="Name"  placeholder="Pratik" handler={(e) => {setData({...data, name: e.target.value})}}/>
                     <LabeledInput label="Email"  placeholder="pratik@yadav.in" handler={(e) => {setData({...data, email: e.target.value})}}/>
@@ -59,12 +49,6 @@ function FacultyForm({triggerRefresh}: {triggerRefresh: () => void}) {
                         values={departments.loading ? [] : departments.data.map((department) => { return{displayValue: department.name, targetValue: department.id}})}/>
                 </div>
 
-                <Button addCSS="bg-blue-400" isDisabled={loading} value="Add"  handler={handler}/>
-                
-                <div className={` text-center font-bold ${error ? 'text-red-500': 'text-green-400'}`}>
-                    {prompt}
-                </div> 
-            </div>
         </FormWrapper>
     
   )

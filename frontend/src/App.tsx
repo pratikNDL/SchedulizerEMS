@@ -10,39 +10,47 @@ import Course from './pages/Course'
 import Infrastructure from './pages/Infrastructure'
 import Schedules from './pages/Schedules'
 import ScheduleMenu from './components/Schedule/ScheduleMenu'
-import Rough from './pages/Rough'
 import StudentGroup from './pages/StudentGroup'
-import { FacultyConstraint } from './components/Schedule/ManageFaculties'
-import ScheduleStudentGroup from './components/Schedule/ScheduleStudentGroup'
+import ManageFaculties from './components/Schedule/ManageFaculties'
 import Schedule from './components/Schedule/Schedule'
+import ManageRooms from './components/Schedule/ManageRooms'
+import ManageStudents from './components/Schedule/ManageStudents'
+import FacultyConstraint from './components/Schedule/FacultyConstraints'
+import StudentGroupMenu from './components/Schedule/StudentGroupMenu'
+import TheoryClassForm from './components/Schedule/TheoryClassForm'
+import PracticalClassForm from './components/Schedule/PracticalClassForm '
+import StudentGroupConstraint from './components/Schedule/StudentGroupConstraint'
 
 function App() {
-  return (
-  <>
-    <BrowserRouter>
-      <Routes>
-        <Route path='/signup' element={<Signup/>}/>
-        <Route path='/signin' element={<Signin/>}/>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/department' element={<Department/>}/>
-        <Route path='/faculty' element={<Faculty/>}/>
-        <Route path='/course' element={<Course/>}/>
-        <Route path='/infrastructure' element={<Infrastructure/>}/>
-        <Route path='/studentGroup' element={<StudentGroup/>}/>
-
-        
-        <Route path='/schedule/' element={<Schedules/>}>
-          <Route path='' element={<ScheduleMenu/>}/>
-          <Route path=':scheduleId' element={<Schedule/>}/>
-          <Route path='faculty/:facultyId' element={<FacultyConstraint/>}/>
-          <Route path=':scheduleId/studentGroup/:studentGroupId' element={<ScheduleStudentGroup/>} />
-        </Route>
-
-        
-        <Route path='/rough' element={<Rough/>}/>
-      </Routes>
-    </BrowserRouter>
-  </>
+	return (
+		<>
+    		<BrowserRouter>
+      			<Routes>
+					<Route path='/signup' element={<Signup/>}/>
+					<Route path='/signin' element={<Signin/>}/>
+					<Route path='/' element={<Home/>}/>
+					<Route path='/department' element={<Department/>}/>
+					<Route path='/faculty' element={<Faculty/>}/>
+					<Route path='/course' element={<Course/>}/>
+					<Route path='/infrastructure' element={<Infrastructure/>}/>
+					<Route path='/studentGroup' element={<StudentGroup/>}/>
+        			<Route path='/schedule' element={<Schedules/>}>
+						<Route path='' element={<ScheduleMenu/>}/>
+          				<Route path=':scheduleId' element={<Schedule/>}> 
+            				<Route path='room' element={<ManageRooms/>} />
+            				<Route path='faculty' element={<ManageFaculties/>}/> 
+							<Route path='faculty/:facultyId' element={<FacultyConstraint/>}/> 
+            				<Route path='studentGroup' element={<ManageStudents/>}/>
+							<Route path='studentGroup/:studentGroupId' element={<StudentGroupMenu/>} >
+								<Route path='theory' element={<TheoryClassForm/>} />
+								<Route path='practical' element={<PracticalClassForm/>} />
+								<Route path='availability' element={<StudentGroupConstraint/>} />
+							</Route>
+          				</Route>
+       				</Route>
+			    </Routes>
+    		</BrowserRouter>
+  		</>
   )
 }
 

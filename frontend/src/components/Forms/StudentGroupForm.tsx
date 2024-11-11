@@ -1,7 +1,6 @@
 import { useState } from "react"
 import LabeledInput from "../LabeledInput"
-import {StudentGroupType} from '../../hooks/useFetchStudentGroup'
-import Button from "../Button"
+import {StudentGroupType} from '../../hooks/useFetchStudentGroups'
 import config from '../../../config.json'
 import axios from "axios"
 import SelectInput from "../SelectInput"
@@ -16,50 +15,36 @@ function StudentGroupForm({triggerRefresh}: {triggerRefresh: () => void}) {
     const departments = useFetchDepartments("");
     const [data, setData] = useState<Omit<StudentGroupType,'id'>| {}>({})
     
-    const [prompt, setPrompt] = useState<String>("");
-    const [error, setError] = useState(true);
-    const [loading, setLoading] = useState(false)
+  
         
     const handler = async() => {
-        setLoading(true);
-        setPrompt('');
-
-        const headers = {
-            Authorization: localStorage.getItem('token')
+    
+        if(!('passingYear' in data)) return {
+            success: false,
+            message: 'Invalid Inputs'
+        };
+        const reqData: Omit<StudentGroupType,'id'> = {
+            ...data,
+            batchCount: Number(data.batchCount),
+            passingYear: Number(data.passingYear)
         }
-
-        
         try {
-            if(!('passingYear' in data)) throw new Error();
-            
-            const reqData: Omit<StudentGroupType,'id'> = {
-                ...data,
-                batchCount: Number(data.batchCount),
-                passingYear: Number(data.passingYear)
-            }
-
-            await  axios.post(config.BACKEND_URl+`/studentGroup`, reqData, { headers});
-            setPrompt("New StudentGroup Added")
-            setError(false)
+            await  axios.post(config.BACKEND_URl+`/studentGroup`, reqData, {headers: {Authorization: localStorage.getItem('token')}});
+        }catch(e: any){
+            return {
+                success: false,
+                message: e.response.data.message ? e.response.data.message : 'Something Went Wrong'
+            };
         }
-        catch(e: any){
-            console.log(e.response.data.error)
-            if(!e.response.data.message) {
-                setPrompt("Something went wrong... Try again later")
-            }
-            else {
-                setPrompt(e.response.data.message);
-            }
-        }
-        setLoading(false);
-        triggerRefresh()
-
+        return {
+            success: true,
+            message: "New StudentGroup Added"
+        };
     }
 
 
     return (
-        <FormWrapper>
-            <div className="flex flex-col gap-5 items-center justify-evenly">
+        <FormWrapper handler={handler} triggerRefresh={triggerRefresh}>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
                     <LabeledInput label="Name"  placeholder="ECS/2026" handler={(e) => {setData({...data, name: e.target.value})}}/>
                     <LabeledInput label="Section"  placeholder="A" handler={(e) => {setData({...data, section: e.target.value})}}/>
@@ -69,12 +54,7 @@ function StudentGroupForm({triggerRefresh}: {triggerRefresh: () => void}) {
                         values={departments.loading ? [] : departments.data.map((department) => { return{displayValue: department.name, targetValue: department.id}})}/>
                 </div>
 
-                <Button addCSS="bg-blue-400" isDisabled={loading} value="Add"  handler={handler}/>
-                
-                <div className={` text-center font-bold ${error ? 'text-red-500': 'text-green-400'}`}>
-                    {prompt}
-                </div> 
-            </div>
+ 
         </FormWrapper>
     
   )

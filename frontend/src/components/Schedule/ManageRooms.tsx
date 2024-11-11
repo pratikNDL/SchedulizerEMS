@@ -7,7 +7,6 @@ import config from '../../../config.json'
 import { useScheduleContext } from '../../context/ScheduleContext';
 
 
-
 type PanelProps = {
   title: string,
   rooms: Array<RoomType>,
@@ -49,8 +48,8 @@ function ManageRooms() {
   useEffect(() => {
     const headers = {Authorization: localStorage.getItem('token')}
     setLoading(true);
-    axios.get(config.BACKEND_URl+`/schedule/${schedule.id}`, {headers})
-    .then((response) => { setSelectedRooms(new Set(response.data.schedule.rooms.map((room:RoomType) => room.id)))})
+    axios.get(config.BACKEND_URl+`/schedule/room/${schedule.id}`, {headers})
+    .then((response) => {setSelectedRooms(new Set(response.data.rooms.map((room:RoomType) => room.id)))})
     .then(() => setLoading(false))
     .catch((e) => console.log(e))
   }, [])
@@ -60,7 +59,7 @@ function ManageRooms() {
     const headers = { authorization: localStorage.getItem('token') }
     const body = { rooms: Array.from(selectedRooms)}
     try {
-      await axios.put(config.BACKEND_URl+`/schedule/rooms/${schedule.id}`, body, {headers})
+      await axios.put(config.BACKEND_URl+`/schedule/room/${schedule.id}`, body, {headers})
     }
     catch(e: any){
       console.log(e)
