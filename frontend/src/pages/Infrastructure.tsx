@@ -10,7 +10,7 @@ import { useState } from 'react';
 
 function Infrastructure() {
     useFetchMe();
-    const [showBlocks, setShowBlocks] = useState(true);
+    const [showBlocks, setShowBlocks] = useState(false);
     const [refresh, setRefresh] = useState(false);
     const triggerRefresh = () => setRefresh(prev => !prev);
     
@@ -32,9 +32,10 @@ function Infrastructure() {
     }
   return (
     <PageWrapper>
-      <div className='mb-5 flex bg-gray-400 w-fit rounded-md text-sm text-gray-600 font-medium cursor-pointer '>
-        <div className={`py-1 px-3 rounded-md rounded-r-none border-2 border-gray-400 ${showBlocks ? 'bg-white': 'bg-blue-400 text-white'}`} onClick={() => setShowBlocks(false)}>Rooms</div>
-        <div className={`py-1 px-3  rounded-md rounded-l-none border-2 border-gray-400 border-l-0 ${!showBlocks ? 'bg-white': 'bg-blue-400 text-white'}`} onClick={() => setShowBlocks(true)}>Blocks</div>
+     
+      <div className='mb-5 flex bg-background-secondary w-fit rounded-md cursor-pointer text-white'>
+          <div className={`py-1 px-3 rounded-md rounded-r-none border-2 border-primary-purple/75 ${!showBlocks ? 'bg-primary-purple/75 ' : 'bg-transparent'}`} onClick={() => setShowBlocks(false)}>Rooms</div>
+          <div className={`py-1 px-3  rounded-md rounded-l-none border-2 border-primary-purple/75 border-l-0 ${showBlocks  ? 'bg-primary-purple/75 ': 'bg-transparent'}`} onClick={() => setShowBlocks(true)}>Blocks</div>
       </div>
 
 

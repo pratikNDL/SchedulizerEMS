@@ -40,7 +40,7 @@ function ScheduleForm({triggerRefresh}: {triggerRefresh: () => void}) {
 
     return (
         <FormWrapper handler={handler} triggerRefresh={triggerRefresh}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
                 <LabeledInput  label="Schedule Name"  placeholder="ECS Winter 2024" handler={(e) => setData({...data, name: e.target.value})}/>
                 <LabeledInput  label="Days in A Week"  placeholder="5" handler={(e) => setData({...data, days: e.target.value})}/>
                 <LabeledInput  label="Slots in A Day"  placeholder="12" handler={(e) => setData({...data, slots: e.target.value})}/>

@@ -1,8 +1,8 @@
 
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Signup } from './pages/Signup'
-import { Signin } from './pages/Signin'
+// import { Signup } from './pages/Signup'
+// import { Signin } from './pages/Signin'
 import Home from './pages/Home'
 import Department from './pages/Department'
 import Faculty from './pages/Faculty'
@@ -20,14 +20,19 @@ import StudentGroupMenu from './components/Schedule/StudentGroupMenu'
 import TheoryClassForm from './components/Schedule/TheoryClassForm'
 import PracticalClassForm from './components/Schedule/PracticalClassForm '
 import StudentGroupConstraint from './components/Schedule/StudentGroupConstraint'
+import SignUpx from './pages/SignUpx'
+
+import { instituteSignupType, instituteSigninType } from "@pratikndl/common-schedulizer-ems";
+
 
 function App() {
 	return (
 		<>
     		<BrowserRouter>
       			<Routes>
-					<Route path='/signup' element={<Signup/>}/>
-					<Route path='/signin' element={<Signin/>}/>
+					{/* <Route path='/signup' element={<Signup/>}/> */}
+					<Route path='/signup' element={<SignUpx <instituteSignupType> variant='signUp'/>}/>
+					<Route path='/signin' element={<SignUpx <instituteSigninType> variant='signIn'/>}/>
 					<Route path='/' element={<Home/>}/>
 					<Route path='/department' element={<Department/>}/>
 					<Route path='/faculty' element={<Faculty/>}/>

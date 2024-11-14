@@ -36,7 +36,7 @@ function FacultyForm({triggerRefresh}: {triggerRefresh: () => void}) {
 
     return (
         <FormWrapper handler={handler} triggerRefresh={triggerRefresh}>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full">
                     <LabeledInput label="Name"  placeholder="Pratik" handler={(e) => {setData({...data, name: e.target.value})}}/>
                     <LabeledInput label="Email"  placeholder="pratik@yadav.in" handler={(e) => {setData({...data, email: e.target.value})}}/>
                     <SelectInput handler={(e) => {setData({...data, rank: e.target.value })}} label="Designation"

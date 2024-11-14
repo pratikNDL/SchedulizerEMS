@@ -6,6 +6,7 @@ import config from '../../../config.json'
 import { ScheduleContext } from "../../context/ScheduleContext";
 
 
+
 function Schedule() {
   const {scheduleId} = useParams();
   const [schedule, setSchedule] = useState<ScheduleType | undefined>(undefined);
@@ -27,11 +28,12 @@ function Schedule() {
     <>
       <div>
       
-        <div className='mb-5 flex bg-gray-400 w-fit rounded-md text-sm text-gray-600 font-medium cursor-pointer '>
-          <div className={`py-1 px-3 rounded-md rounded-r-none border-2 border-gray-400 ${show=='room' ? 'bg-blue-400 text-white' : 'bg-white'}`} onClick={() => {setShow('room')}}>Rooms</div>
-          <div className={`py-1 px-3   border-2 border-gray-400 border-l-0 ${show=='faculty' ? 'bg-blue-400 text-white' : 'bg-white'}`} onClick={() => {setShow('faculty')}}>Faculties</div>
-          <div className={`py-1 px-3  rounded-md rounded-l-none border-2 border-gray-400 border-l-0 ${show=='studentGroup' ? 'bg-blue-400 text-white': 'bg-white'}`} onClick={() => {setShow('studentGroup')}}>Students</div>
+        <div className='mb-5 flex bg-background-secondary w-fit rounded-md cursor-pointer text-white'>
+          <div className={`py-1 px-3 rounded-md rounded-r-none border-2 border-primary-purple/75 ${show=='room' ? 'bg-primary-purple/75 ' : 'bg-transparent'}`} onClick={() => {setShow('room')}}>Rooms</div>
+          <div className={`py-1 px-3   border-2 border-primary-purple/75 border-l-0 ${show=='faculty' ? 'bg-primary-purple/75 ' : 'bg-transparent'}`} onClick={() => {setShow('faculty')}}>Faculties</div>
+          <div className={`py-1 px-3  rounded-md rounded-l-none border-2 border-primary-purple/75 border-l-0 ${show=='studentGroup' ? 'bg-primary-purple/75 ': 'bg-transparent'}`} onClick={() => {setShow('studentGroup')}}>Students</div>
         </div>
+
         
 
         {

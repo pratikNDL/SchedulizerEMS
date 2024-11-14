@@ -33,13 +33,13 @@ function FormWrapper({children, handler, triggerRefresh} : FormProps) {
    
 	return (
 		<div className="w-full">
-			<div className='p-1  border-2 border-gray-400  w-fit rounded mb-2' onClick={() => setShowForm((prev) => !prev)}>
+			<div className='p-1 border-2 w-fit rounded mb-2 border-border-divider bg-background-secondary' onClick={() => setShowForm((prev) => !prev)}>
 				{<img src={showForm ? collapse : add} width={20}></img>}  
 			</div>
-			<div className={`rounded-md bg-white shadow-2xl border-2 border-gray-400 flex flex-col gap-5 items-center justify-evenly ${!showForm ? 'p-0 h-0 border-0': 'p-5'} overflow-hidden transition-none ${loading ? 'cursor-wait': ''}`}>
+			<div className={`rounded-md bg-background-secondary shadow-2xl border-2 border-border-divider flex flex-col gap-5 items-center justify-evenly ${!showForm ? 'p-0 h-0 border-0': 'p-5'} overflow-hidden transition-none ${loading ? 'cursor-wait': ''}`}>
 				{children}
-				<Button addCSS="bg-blue-400 w-1/6" isDisabled={loading} value="Add"  handler={enhancedHandler} /> 
-				{prompt && <div className={`font-bold ${error ? 'text-red-500': 'text-green-400'}`}>{prompt} </div>} 
+				<Button addCSS="w-1/5 border border-input-highlight bg-transparent text-input-highlight  hover:bg-input-highlight hover:text-primary-text" isDisabled={loading} value="Add Record"  handler={enhancedHandler} /> 
+				{prompt && <div className={`font-bold ${error ? 'text-red-500': 'text-primary-green'}`}>{prompt} </div>} 
 			</div>
 		</div>
     

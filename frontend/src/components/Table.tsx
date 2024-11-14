@@ -70,9 +70,9 @@ function Table<T extends {id: string},>({titles, fetchHandler, keysToDisplay, de
     <Wrapper>
       
       <LabeledInput label="" placeholder="Start Typing To search A record..." handler={searchHandler}/>
-      <div className={`flex flex-col text-sm border-2 border-gray-400 border-r-0 rounded-sm  ${locked ? 'pointer-events-none cursor-not-allowed animate-pulse ': ''} `}>
-        <div className={`grid bg-blue-100 text-center font-semibold text-gray-800`} style={{ gridTemplateColumns: `repeat(${titles.length}, minmax(0, 1fr))`}}>
-            {titles.map((title, index) => <div key={index} className='p-1 border-r-2 border-gray-400 break-words'>{title}</div>)}
+      <div className={`flex flex-col border-2 border-r-0 border-table-highlight rounded-sm  text-primary-text ${locked ? 'pointer-events-none cursor-not-allowed animate-pulse ': ''} `}>
+        <div className={`grid bg-background-primary/50 text-center font-semibold `} style={{ gridTemplateColumns: `repeat(${titles.length}, minmax(0, 1fr))`}}>
+            {titles.map((title, index) => <div key={index} className='p-1 border-r-2 border-table-highlight break-words'>{title}</div>)}
         </div>
         {loading ?
             <TableBlock><div className="animate-pulse">Fetching Records....</div></TableBlock>: 
@@ -96,13 +96,13 @@ function TableRow<T extends {id: string}, >({data, keysToDisplay, index, deleteH
 
   return (
     <div className="relative flex"  onMouseEnter={() => {setShow(true)}} onMouseLeave={() => {setShow(false)}}>
-        <div key={data.id} onClick={() => clickHandler? clickHandler(data.id): null}  className={`grid w-full   ${show ? ' bg-green-200 ': `${index%2 ? 'bg-blue-100': 'bg-white'}`} `} style={{gridTemplateColumns: `repeat(${keysToDisplay.length}, minmax(0, 1fr))`}}>    
+        <div key={data.id} onClick={() => clickHandler? clickHandler(data.id): null}  className={`grid w-full ${show ? ' bg-primary-gray/50 ': `${index%2 ? 'bg-background-primary/50': 'bg-background-secondary'}`} `} style={{gridTemplateColumns: `repeat(${keysToDisplay.length}, minmax(0, 1fr))`}}>    
             {keysToDisplay.map((key, index) => <TableBlock key={index}>{data[key] as string}</TableBlock>)}
         </div>
         
         { deleteHandler ?
           <div className={`absolute -left-14 rounded-sm overflow-hidden  pr-10 ${show ? "": "h-0 translate-x-2"} transition-all`}>
-            <Button  addCSS="bg-red-400 hover:bg-red-500" isDisabled={false} value='X' handler={() => deleteHandler(data.id)}/>      
+            <Button  addCSS="bg-red-500 hover:bg-red-600" isDisabled={false} value='X' handler={() => deleteHandler(data.id)}/>      
           </div> : null
         }
     </div>
@@ -112,7 +112,7 @@ function TableRow<T extends {id: string}, >({data, keysToDisplay, index, deleteH
 
 function TableBlock({children} : {children: ReactNode})  {
   return (
-  <div className={"p-1 border-t-2 border-r-2 border-gray-400 cursor-pointer break-words font-medium text-gray-700 text-center"}>
+  <div className={"p-1 border-t-2 border-r-2 border-table-highlight cursor-pointer break-words  text-primary-text text-center "}>
     {children}
   </div>)
 }

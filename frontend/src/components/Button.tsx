@@ -4,16 +4,15 @@ type ButtonType = {
     value: any
     handler: () => void
     addCSS?: string
+    color?: string 
 }
 
-function Button({isDisabled=false, value, handler, addCSS}: ButtonType) {
+function Button({isDisabled=false, value, handler, addCSS, color}: ButtonType) {
   return (
     
-    <button className={`rounded-sm py-1 px-5 font-medium
-        text-sm text-white 
-        transition-shadow hover:shadow-xl w-fit
-        disabled:bg-gray-400 disabled:cursor-not-allowed
-        ${addCSS}`}
+    <button className={`rounded-sm py-1 px-5  border-2   font-medium  hover:text-white disabled:cursor-not-allowed 
+        border-${color ? color: 'primary-green'} text-${color ? color: 'primary-green'} 
+        ${addCSS}`} 
     disabled={isDisabled}
     onClick={handler}>
         {value}

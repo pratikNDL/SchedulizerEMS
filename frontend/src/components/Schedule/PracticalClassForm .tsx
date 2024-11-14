@@ -80,7 +80,7 @@ function PracticalClassForm() {
 
 			</div>
 
-			<div className='border border-gray-400'/>
+			<div className='border border-border-divider w-full'/>
 
 				{ 
 					studentGroup ?

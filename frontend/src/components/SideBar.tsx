@@ -19,11 +19,10 @@ type SideBarItemType = {
 function SideBar() {
     const [isExpanded, setIsExpanded] = useState(false);
   return (
-    <aside className="h-full w-fit p-2 pt-16 flex flex-col gap-2  z-10 bg-white shadow-2xl font-semibold text-gray-600 absolute top-0 " >
-       
-        <div className='flex items-center p-1 bg-blue-300 cursor-pointer rounded-sm shadow-xl' onClick={() => setIsExpanded(!isExpanded)}>
+    <aside className="h-full w-fit p-2 pt-16 flex flex-col gap-2 bg-background-secondary border-2 border-border-divider font-semibold text-primary-text absolute top-0 z-10 " >
+        <div className='flex items-center p-1 bg-background-primary/50 border-2 border-border-divider cursor-pointer rounded-sm' onClick={() => setIsExpanded(!isExpanded)}>
             <div className={`p-2 flex justify-center items-center `}>
-                <img src={isExpanded? expandLeft: expandRight} alt="" width={25} className='fill-red-200'/>
+                <img src={isExpanded? expandLeft: expandRight} alt="" width={30} />
             </div>
             <div className={`${isExpanded ? 'ml-3': 'ml-0 w-0 h-0 -translate-x-5 opacity-0 '} overflow-hidden transition-all duration-100 `}>
                 Menu
@@ -41,11 +40,11 @@ function SideBar() {
 
 function SideBarItem({isExpanded, path, title, icon}: SideBarItemType) {
   return (
-        <NavLink to={path} className={({ isActive }: { isActive: boolean }) => `${isActive ? 'bg-blue-300 shadow-xl' : ''} relative flex  items-center rounded-sm p-1 hover:bg-blue-300 hover:shadow-xl`}>
+        <NavLink to={path} className={({ isActive }: { isActive: boolean }) => `${isActive ? 'bg-background-primary/50 border-border-divider ' : ''} relative flex  items-center rounded-sm p-1 hover:bg-primary-gray/20 hover:border-border-divider border-2 border-background-secondary`}>
             <div className={`p-2 flex justify-center items-center `}>
-                <img src={icon} alt="" width={25} className='fill-red-200'/>
+                <img src={icon} alt="" width={35} />
             </div>
-            <div className={`${isExpanded ? 'ml-3': 'ml-0 w-0 h-0 -translate-x-5 opacity-0 '} overflow-hidden transition-all duration-100 `}>
+            <div className={`${isExpanded ? 'ml-3': 'ml-0 w-0 h-0 -translate-x-5 opacity-0 '} overflow-hidden transition-all duration-100 text-white `}>
                 {title}
             </div>
 

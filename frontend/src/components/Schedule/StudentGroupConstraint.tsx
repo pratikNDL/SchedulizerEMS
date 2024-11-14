@@ -2,8 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import config from '../../../config.json'
-import { AvailabilityTable, AvailabilityTableSkeleton } from "./AvailabilityTable";
-import Button from "../Button";
+import { AvailabilityTable } from "./AvailabilityTable";
 import { useScheduleContext } from "../../context/ScheduleContext";
 
 
@@ -64,13 +63,7 @@ export default function StudentGroupConstraint() {
     return (
       <>
         <div>
-          {loading ? 
-            <AvailabilityTableSkeleton days={schedule.days} slots={schedule.slots} /> :
-            <AvailabilityTable days={schedule.days} slots={schedule.slots} occupiedSlots={occupiedSlots} setOccupiedSlots={setOccupiedSlots}/>
-          }
-          <div className='flex justify-center'>
-              <Button handler={handler} isDisabled={loading} value={'Submit'} addCSS='bg-blue-400 '/>
-            </div>
+            <AvailabilityTable days={schedule.days} slots={schedule.slots} occupiedSlots={occupiedSlots} setOccupiedSlots={setOccupiedSlots} submitHandler={handler} loading={loading}/>
         </div>
       </>
     )
