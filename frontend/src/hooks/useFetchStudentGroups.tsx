@@ -27,8 +27,10 @@ export type StudentGroupType = Exclude<StudentGroupFetchType, 'department'> & {
 export function useFetchStudentGroups(query: string, scheduleId?: string) {
 	const [data, setData] = useState<Array<StudentGroupType>>([]);
 	const [loading, setLoading] = useState(true);
+	const url = scheduleId ? `${config.BACKEND_URl}/schedule/studentGroup/${scheduleId}?name=${query}`: `${config.BACKEND_URl}/studentGroup?name=${query}`;
+
+
 	useEffect(() => {
-		const url = scheduleId ? `${config.BACKEND_URl}/schedule/studentGroup/${scheduleId}?name=${query}`: `${config.BACKEND_URl}/studentGroup?name=${query}`;
 		axios.get(url, {headers:{Authorization: localStorage.getItem('token')}})
 		.then((res) => {
 			setData(res.data.studentGroups.map((group: StudentGroupFetchType) => ({...group, departmentCode:group.department.code})));
@@ -42,8 +44,9 @@ export function useFetchStudentGroups(query: string, scheduleId?: string) {
 export function useFetchStudentGroup(studentGroupId: string) {
 	const [data, setData] = useState<StudentGroupType>();
 	const [loading, setLoading] = useState(true);
+	const url =  `${config.BACKEND_URl}/studentGroup/${studentGroupId}`;
+
 	useEffect(() => {
-		const url =  `${config.BACKEND_URl}/studentGroup/${studentGroupId}`;
 		axios.get(url, {headers:{Authorization: localStorage.getItem('token')}})
 		.then((res) => {
 			const studentGroup:StudentGroupFetchType = res.data.studentGroup

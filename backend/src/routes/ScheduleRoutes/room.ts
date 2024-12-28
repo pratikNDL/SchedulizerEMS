@@ -1,8 +1,6 @@
 import { Hono } from "hono";
-import { authAdmin } from "../../middlewares/authAdmin";
 import { PrismaClient } from "@prisma/client";
 import { z } from 'zod';
-import { faculty } from "@pratikndl/common-schedulizer-ems";
 
 const app = new Hono<{
     Variables: {
@@ -14,6 +12,8 @@ const app = new Hono<{
 const roomsInput = z.object({
     rooms: z.array(z.string()),
 })
+
+
 
 app.get('/:scheduleId', async (c) => {
     const prisma = c.get("prisma")

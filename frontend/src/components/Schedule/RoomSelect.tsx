@@ -1,7 +1,7 @@
 import React, { Dispatch, SetStateAction, useEffect, useState } from 'react';
 import { RoomType } from '../../hooks/useFetchRoom';
-import Wrapper from '../Wrapper';
-import Button from '../Button';
+import Wrapper from '../Wrappers/Wrapper';
+import Button from '../Inputs/Button';
 import axios from 'axios';
 import config from '../../../config.json'
 import Spinner from '../Spinner';
@@ -15,7 +15,7 @@ type RoomSelectProps = {
 type RoomSelectPanelProps = {
   title: string,
   rooms: Array<RoomType>,
-  selectedRooms: Set<String>,
+  selectedRooms: Set<string>,
   setSelectedRooms: Dispatch<SetStateAction<Set<string>>>;
 };
 
@@ -93,7 +93,7 @@ export function RoomSelectPanel({ title, rooms, selectedRooms, setSelectedRooms}
                 <RoomSelectToggle 
                   key={room.id} title={room.code} isChecked={selectedRooms.has(room.id)} 
                   handler={(e) => {
-                    const newSelectedRooms = new Set<String>(selectedRooms);
+                    const newSelectedRooms = new Set<string>(selectedRooms);
                     if (e.target.checked) {
                       newSelectedRooms.add(room.id);
                     } else {
@@ -111,7 +111,7 @@ export function RoomSelectPanel({ title, rooms, selectedRooms, setSelectedRooms}
                 <RoomSelectToggle 
                   key={room.id} title={room.code} isChecked={selectedRooms.has(room.id)} 
                   handler={(e) => {
-                    const newSelectedRooms = new Set<String>(selectedRooms);
+                    const newSelectedRooms = new Set<string>(selectedRooms);
                     if (e.target.checked) {
                       newSelectedRooms.add(room.id);
                     } else {

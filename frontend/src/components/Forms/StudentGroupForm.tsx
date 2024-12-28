@@ -1,11 +1,11 @@
 import { useState } from "react"
-import LabeledInput from "../LabeledInput"
+import LabeledInput from "../Inputs/LabeledInput"
 import {StudentGroupType} from '../../hooks/useFetchStudentGroups'
 import config from '../../../config.json'
 import axios from "axios"
-import SelectInput from "../SelectInput"
+import SelectInput from "../Inputs/SelectInput"
 import useFetchDepartments from "../../hooks/useFetchDepartments"
-import FormWrapper from "../FormWrapper"
+import FormWrapper from "../Wrappers/FormWrapper"
 
 
 

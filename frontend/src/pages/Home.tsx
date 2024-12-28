@@ -1,4 +1,4 @@
-import PageWrapper from "../components/PageWrapper";
+import PageWrapper from "../components/Wrappers/PageWrapper";
 import useFetchMe from "../hooks/useFetchMe"
 
 function Home() {

@@ -15,11 +15,13 @@ import ManageFaculties from './components/Schedule/ManageFaculties'
 import Schedule from './components/Schedule/Schedule'
 import ManageRooms from './components/Schedule/ManageRooms'
 import ManageStudents from './components/Schedule/ManageStudents'
-import FacultyConstraint from './components/Schedule/FacultyConstraints'
+import FacultyConstraint from './components/Schedule/Availability/FacultyAvailability'
 import StudentGroupMenu from './components/Schedule/StudentGroupMenu'
-import TheoryClassForm from './components/Schedule/TheoryClassForm'
-import PracticalClassForm from './components/Schedule/PracticalClassForm '
-import StudentGroupConstraint from './components/Schedule/StudentGroupConstraint'
+import RegularPracticalClassForm from './components/Schedule/ClassForms/RegularPracticalClassForm '
+import RegularTheoryClassForm from './components/Schedule/ClassForms/RegularTheoryClassForm'
+import ProgramElectivePracticalClassForm from './components/Schedule/ClassForms/ProgramElectivePracticalClassForm'
+import ProgramElectiveTheoryClassForm from './components/Schedule/ClassForms/ProgramElectiveTheoryClassForm'
+import StudentGroupConstraint from './components/Schedule/Availability/StudentGroupAvailability'
 import SignUpx from './pages/SignUpx'
 
 import { instituteSignupType, instituteSigninType } from "@pratikndl/common-schedulizer-ems";
@@ -47,8 +49,10 @@ function App() {
 							<Route path='faculty/:facultyId' element={<FacultyConstraint/>}/> 
             				<Route path='studentGroup' element={<ManageStudents/>}/>
 							<Route path='studentGroup/:studentGroupId' element={<StudentGroupMenu/>} >
-								<Route path='theory' element={<TheoryClassForm/>} />
-								<Route path='practical' element={<PracticalClassForm/>} />
+								<Route path='regularTheory' element={<RegularTheoryClassForm/>} />
+								<Route path='regularPractical' element={<RegularPracticalClassForm/>} />
+								<Route path='programTheory' element={<ProgramElectiveTheoryClassForm/>} />
+								<Route path='programPractical' element={<ProgramElectivePracticalClassForm/>} />
 								<Route path='availability' element={<StudentGroupConstraint/>} />
 							</Route>
           				</Route>

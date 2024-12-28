@@ -1,16 +1,23 @@
 import { useState } from "react"
-import LabeledInput from "../LabeledInput"
-import { courseInputType } from "@pratikndl/common-schedulizer-ems"
+import LabeledInput from "../Inputs/LabeledInput"
 import config from '../../../config.json'
 import axios from "axios"
-import FormWrapper, { FormHandlerReturnType } from "../FormWrapper"
-import SelectInput from "../SelectInput"
+import FormWrapper, { FormHandlerReturnType } from "../Wrappers/FormWrapper"
+import SelectInput from "../Inputs/SelectInput"
 import useFetchDepartments from "../../hooks/useFetchDepartments"
-import Checkbox from "../Checkbox"
+
+const CourseType = ["REGULAR_THEORY","REGULAR_PRACTICAL","PROGRAM_ELECTIVE_THEORY",'PROGRAM_ELECTIVE_PRACTICAL'];
+type CourseInputType = {
+    name: string,
+    code: string,
+    credits: number,
+    departmentId: string,
+    courseType: (typeof CourseType)[number] 
+}
 
 
 function RegisterCourse({triggerRefresh}: {triggerRefresh: () => void}) {
-	const [data, setData] = useState<courseInputType | {}>({isLab: false})
+	const [data, setData] = useState<CourseInputType | {}>({})
     const departments = useFetchDepartments("");
 
     const handler = async(): Promise<FormHandlerReturnType>  => {    
@@ -41,7 +48,8 @@ function RegisterCourse({triggerRefresh}: {triggerRefresh: () => void}) {
                 <LabeledInput label="Credits"  placeholder="3" type="number" handler={(e) => setData({...data, credits: Number(e.target.value)})}/>
                 <SelectInput handler={(e) => {setData({...data, departmentId: e.target.value })}} label="Department"
                     values={departments.loading ? [] : departments.data.map((department) => { return{displayValue: department.name, targetValue: department.id}})}/>
-                <Checkbox label="Requires Lab" handler={(e) => setData({...data, isLab: e.target.checked})}/>
+                <SelectInput handler={(e) => {setData({...data, courseType: e.target.value })}} label="Course Type"
+                    values={CourseType.map((course) => { return{displayValue: course, targetValue: course}})}/>
             </div>  
         </FormWrapper>    
   )

@@ -2,8 +2,8 @@ import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react";
 import axios from "axios";
 import config from '../../config.json'
-import LabeledInput from "../components/LabeledInput";
-import Button from "../components/Button";
+import LabeledInput from "../components/Inputs/LabeledInput";
+import Button from "../components/Inputs/Button";
 
 function SignUpx<T>({variant} : {variant: 'signIn' | 'signUp'}) {
     const navigate = useNavigate();

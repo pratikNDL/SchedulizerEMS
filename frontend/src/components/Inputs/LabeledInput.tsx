@@ -13,7 +13,7 @@ function LabeledInput({label, value, placeholder, handler, type='text'}: Labeled
   return (
     <div className="flex flex-col w-full">
         <label  className="text-primary-text "> {label}</label>
-        <input className="border-b-2 border-input-highlight outline-none bg-transparent text-primary-text"
+        <input className="border-b-2 border-input-highlight/70 outline-none bg-transparent text-primary-text focus:border-input-highlight"
             placeholder={placeholder}
             value={value}
             onChange={(e) => handler(e)}

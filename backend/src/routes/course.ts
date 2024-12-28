@@ -1,7 +1,8 @@
 import { Hono } from "hono";
+import { z } from 'zod'
 import { authAdmin } from "../middlewares/authAdmin";
 import { PrismaClient } from "@prisma/client";
-import { courseInput } from "@pratikndl/common-schedulizer-ems";
+
 
 const app = new Hono<{
     Variables: {
@@ -10,13 +11,22 @@ const app = new Hono<{
     }
 }>();
 
+const CourseTypeSchema =  z.enum(["REGULAR_THEORY", "REGULAR_PRACTICAL", "PROGRAM_ELECTIVE_THEORY", "PROGRAM_ELECTIVE_PRACTICAL"])
+type CourseType = z.infer<typeof CourseTypeSchema>
+const CourseInput = z.object({
+    name: z.string(),
+    code: z.string(),
+    credits: z.number(),
+    departmentId: z.string(),
+    courseType: CourseTypeSchema
+})
+
 app.use(authAdmin);
-
-
 app.get('/', async (c) => {
     const instituteId = c.get("instituteId") as string;
     const prisma = c.get("prisma")
     const query = c.req.query('name');
+    const courseType = c.req.query('courseType') as CourseType;
     
     try {
         const courses = await prisma.course.findMany({
@@ -25,7 +35,8 @@ app.get('/', async (c) => {
                     { name: { contains: query, mode: 'insensitive' } },
                     { code: { contains: query, mode: 'insensitive' } },
                 ],
-                instituteId: instituteId
+                instituteId: instituteId,
+                courseType: courseType
             }
         });
         return c.json({courses});
@@ -42,7 +53,7 @@ app.post('/', async (c) => {
     const prisma = c.get("prisma")
     const body = await c.req.json();
 
-    const {data, success, error} = courseInput.safeParse(body);
+    const {data, success, error} = CourseInput.safeParse(body);
 
     if(!success) {
         return c.json({message: "invalid Inputs", error}, {status: 400})

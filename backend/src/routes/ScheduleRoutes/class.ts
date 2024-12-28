@@ -1,8 +1,7 @@
 import { Hono } from "hono";
-import { authAdmin } from "../../middlewares/authAdmin";
 import { PrismaClient } from "@prisma/client";
 import { z } from 'zod';
-import { faculty } from "@pratikndl/common-schedulizer-ems";
+import { accepts } from "hono/accepts";
 
 const app = new Hono<{
     Variables: {
@@ -11,6 +10,8 @@ const app = new Hono<{
     }
 }>();
 
+const CourseTypeSchema =  z.enum(["REGULAR_THEORY", "REGULAR_PRACTICAL", "PROGRAM_ELECTIVE_THEORY", "PROGRAM_ELECTIVE_PRACTICAL"])
+type CourseType = z.infer<typeof CourseTypeSchema>
 const classSchema = z.object({
     courseId: z.string(),
     facultyId: z.string(),
@@ -18,86 +19,65 @@ const classSchema = z.object({
     scheduleId: z.string(),
     studentGroupId: z.string(),
     batchId: z.string().optional(),
-    isLab: z.boolean().optional(),
+    courseType: CourseTypeSchema,
 })
+const manyClassSchema = z.array(classSchema)
 
-const practicalClassSchema = z.array(classSchema);
 
+// gets all classes for a schedule
 app.get('/:scheduleId', async (c) => {
     const prisma = c.get("prisma")
     const scheduleId = c.req.param('scheduleId');
     
     try {
-        const schedule = await prisma.schedule.findFirst({
+        const classes = await prisma.class.findMany({
             where: {
-                id: scheduleId
+                scheduleId: scheduleId
             },
-            select: {
-                classes: true
-            }
         });
 
-        if(!schedule) return c.json({message: 'No Such Schedule'}, 409)
-        return c.json({classes: schedule.classes});
+        return c.json({classes});
 
     } catch(e) {
         return c.json({message: "Something went wrong"}, 500)
     }
 })
 
-
-app.get('theory/:scheduleId', async (c) => {
+// gets all classes for a schedule (for a particular studentGroup)
+app.get('/:scheduleId/:studentGroupId', async (c) => {
     const prisma = c.get("prisma")
     const scheduleId = c.req.param('scheduleId');
+    const studentGroupId = c.req.param('studentGroupId');
+    const courseType = c.req.query('courseType') as CourseType;
     
     try {
-        const schedule = await prisma.schedule.findFirst({
+        const classes = await prisma.class.findMany({
             where: {
-                id: scheduleId
+                scheduleId: scheduleId,
+                studentGroupId: studentGroupId,
+                courseType: courseType
             },
             select: {
-                classes: {
-                    where: {
-                        isLab: false
+                faculty: {select: {name: true}},
+                course: {select: {name: true, code:true}},
+                batch: true,
+                id: true,
+                room: {
+                    select: {
+                        code: true,
+                        academicBlock: {select: {blockCode: true}}
                     }
                 }
             }
         });
-
-        if(!schedule) return c.json({message: 'No Such Schedule'}, 409)
-        return c.json({classes: schedule.classes});
-
+        return c.json({classes});
     } catch(e) {
         return c.json({message: "Something went wrong"}, 500)
     }
 })
 
-app.get('practical/:scheduleId', async (c) => {
-    const prisma = c.get("prisma")
-    const scheduleId = c.req.param('scheduleId');
-    
-    try {
-        const schedule = await prisma.schedule.findFirst({
-            where: {
-                id: scheduleId
-            },
-            select: {
-                classes: {
-                    where: {
-                        isLab: true
-                    }
-                }
-            }
-        });
-
-        if(!schedule) return c.json({message: 'No Such Schedule'}, 409)
-        return c.json({classes: schedule.classes});
-
-    } catch(e) {
-        return c.json({message: "Something went wrong"}, 500)
-    }
-})
-app.post('/theory', async (c) => {
+// adds a class to a schedule
+app.post('/add', async (c) => {
     const prisma = c.get("prisma")
     const body =  await c.req.json();
     const { data, success, error } = classSchema.safeParse(body);
@@ -119,10 +99,11 @@ app.post('/theory', async (c) => {
     }
 })
 
-app.post('/practical', async (c) => {
+// add multiple classes to a schedule (for different batches of same StudentGroup)
+app.post('/addMany', async (c) => {
     const prisma = c.get("prisma")
     const body =  await c.req.json();
-    const { data, success, error } = practicalClassSchema.safeParse(body);
+    const { data, success, error } = manyClassSchema.safeParse(body);
 
     if(!success) {
         return c.json({message: "invalid Inputs", error}, {status: 400})
@@ -141,63 +122,25 @@ app.post('/practical', async (c) => {
     }
 })
 
-// app.put('/', async (c) => {
-//     const prisma = c.get("prisma")
-//     const body =  await c.req.json();
-//     const { data, success, error } = FacultyConstraintUpdate.safeParse(body);
+// Delete a class
+app.delete('/:classId', async (c) => {
+    const prisma = c.get("prisma")
+    const classId = c.req.param('classId');
 
-//     if(!success) {
-//         return c.json({message: "invalid Inputs", error}, {status: 400})
-//     }
-    
-//     try {
-//         const existingFacultyConstraint = await prisma.facultyConstraints.findFirst({
-//             where: {
-//                 id: data.id
-//             }
-//         });
+    try {        
+        await prisma.class.delete({
+            where:{
+                id: classId
+            }
+        })
 
-//         if (!existingFacultyConstraint) {
-//             return c.json({message: "No Record Found"}, {status: 409}); 
-//         }
+        return c.json({message: "schedule Deleted", }, {status: 201});
 
-        
-//         const updatedFacultyConstraints = await prisma.facultyConstraints.update({
-//             where: {
-//                 id: data.id
-//             },
-//             data: {
-//                 constraints: data.constraints
-//             }
-//         });
-
-//         return c.json({message: "Record Updated", faculty:existingFacultyConstraint}, {status: 201});
-
-//     } catch (e) {
-//         console.error(e);
-//         return c.json({message: "Something went wrong"}, {status: 500}); 
-//     }
-
-// })
-
-// app.delete('/:facultyId', async (c) => {
-//     const prisma = c.get("prisma")
-//     const facultyId = c.req.param('facultyId');
-
-//     try {        
-//         await prisma.schedule.delete({
-//             where:{
-//                 id: id
-//             }
-//         })
-
-//         return c.json({message: "schedule Deleted", }, {status: 201});
-
-//     } catch (e) {
-//         console.error(e);
-//         return c.json({message: "Something went wrong"}, {status: 500}); 
-//     }
-// })
+    } catch (e) {
+        console.error(e);
+        return c.json({message: "Something went wrong"}, {status: 500}); 
+    }
+})
 
 
 

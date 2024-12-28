@@ -1,8 +1,8 @@
 
 import { ReactNode } from 'react'
-import Navbar from './Navbar'
-import SideBar from './SideBar'
-import useFetchMe from '../hooks/useFetchMe'
+import Navbar from '../Navbar'
+import SideBar from '../SideBar'
+import useFetchMe from '../../hooks/useFetchMe'
 
 function PageWrapper({children}: {children?:ReactNode}) {
   useFetchMe();

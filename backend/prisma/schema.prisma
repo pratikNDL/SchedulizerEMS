@@ -12,12 +12,13 @@ model Institute {
   name           String         @unique
   email          String         @unique
   password       String
+  
   departments    Department[]  
   academicBlocks AcademicBlock[]
   faculties      Faculty[]
   rooms          Room[]
   courses        Course[]
-  scheduels      Schedule[]
+  schedules      Schedule[]
   studentGroups  StudentGroup[]
 }
 
@@ -46,21 +47,22 @@ model Faculty {
   rank         FacultyRank
   departmentId String
   instituteId  String
-  constarints FacultyConstraints[]
+
+  availability FacultyAvailability[]
   classes Class[]
   institute    Institute    @relation(fields: [instituteId], references: [id], onDelete: Cascade)
   department   Department   @relation(fields: [departmentId], references: [id], onDelete: Cascade)
 }
 
-model FacultyConstraints {
+model FacultyAvailability {
   id String @id @default(uuid())
   facultyId String
   scheduleId String
-  constraints Int[]
+  availability Int[]
 
   faculty Faculty    @relation(fields: [facultyId], references: [id], onDelete: Cascade)
   schedule Schedule    @relation(fields: [scheduleId], references: [id], onDelete: Cascade)
-
+  @@unique([scheduleId, facultyId])
 }
 
 model Course {
@@ -68,9 +70,10 @@ model Course {
   name         String
   credits      Int
   departmentId String
-  isLab        Boolean       @default(false)
+  courseType   CourseType @default(REGULAR_THEORY)
   code         String
   instituteId  String
+
   classes      Class[]
   institute    Institute    @relation(fields: [instituteId], references: [id], onDelete: Cascade)
   department   Department   @relation(fields: [departmentId], references: [id], onDelete: Cascade)
@@ -95,6 +98,7 @@ model Room {
   instituteId   String
   capacity      Int           @default(0)
   isLab         Boolean
+
   institute     Institute     @relation(fields: [instituteId], references: [id], onDelete: Cascade)
   academicBlock AcademicBlock @relation(fields: [blockId], references: [id], onDelete: Cascade)
   schedules     Schedule[]
@@ -106,12 +110,14 @@ model Schedule {
   name String
   days Int @default(1)
   slots Int @default(1)
+  instituteId String
+
+
   rooms Room[]
   classes Class[]
   studentGroups StudentGroup[]
-  facultyConstraints FacultyConstraints[]
-  studentGroupConstraints StudentGroupConstraints[]
-  instituteId String
+  facultyAvailability FacultyAvailability[]
+  studentGroupAvailability StudentGroupAvailability[]
   institute    Institute    @relation(fields: [instituteId], references: [id], onDelete: Cascade)
 }
 
@@ -125,21 +131,23 @@ model StudentGroup {
   batches Batch[]
   classes Class[]
   schedules Schedule[]
-  constarints StudentGroupConstraints[]
+  availability StudentGroupAvailability[]
 
   instituteId  String
   institute    Institute    @relation(fields: [instituteId], references: [id], onDelete: Cascade)
   department Department @relation(fields: [departmentId], references: [id], onDelete: Cascade)
 }
 
-model StudentGroupConstraints {
-  id String @id @default(uuid())
+model StudentGroupAvailability {
+  id String  @id @default(uuid())
   studentGroupId String
   scheduleId String
-  constraints Int[]
+  availability Int[]
 
   studentGroup StudentGroup    @relation(fields: [studentGroupId], references: [id], onDelete: Cascade)
   schedule Schedule    @relation(fields: [scheduleId], references: [id], onDelete: Cascade)
+  @@unique([scheduleId, studentGroupId])
+  
 
 }
 
@@ -158,7 +166,7 @@ model Class {
   studentGroupId String
   courseId String
   batchId String? 
-  isLab Boolean? @default(false)
+  courseType CourseType @default(REGULAR_THEORY)
   roomId String
   scheduleId String
 
@@ -170,4 +178,10 @@ model Class {
   batch Batch? @relation(fields: [batchId], references: [id], onDelete: Cascade)
 }
 
+enum CourseType {
+  REGULAR_THEORY
+  REGULAR_PRACTICAL
+  PROGRAM_ELECTIVE_THEORY
+  PROGRAM_ELECTIVE_PRACTICAL
+}
 

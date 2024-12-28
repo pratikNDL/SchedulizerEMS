@@ -1,7 +1,7 @@
 import Table from "../components/Table"
 import useFetchFaculties, { FacultyType } from "../hooks/useFetchFaculty";
 import useFetchMe from "../hooks/useFetchMe";
-import PageWrapper from "../components/PageWrapper";
+import PageWrapper from "../components/Wrappers/PageWrapper";
 import FacultyForm from "../components/Forms/FacultyForm";
 import axios from 'axios'
 import config from '../../config.json'

@@ -1,4 +1,4 @@
-import PageWrapper from '../components/PageWrapper'
+import PageWrapper from '../components/Wrappers/PageWrapper'
 import Table from '../components/Table'
 import useFetchMe from '../hooks/useFetchMe';
 import useFetchBlock, { BlockType } from '../hooks/useFetchBlock';

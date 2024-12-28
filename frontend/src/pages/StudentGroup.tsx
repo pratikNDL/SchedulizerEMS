@@ -1,6 +1,6 @@
 import Table from "../components/Table"
 import useFetchMe from "../hooks/useFetchMe";
-import PageWrapper from "../components/PageWrapper";
+import PageWrapper from "../components/Wrappers/PageWrapper";
 import axios from 'axios'
 import config from '../../config.json'
 import {useFetchStudentGroups} from "../hooks/useFetchStudentGroups";

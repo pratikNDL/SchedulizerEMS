@@ -1,7 +1,6 @@
 import { Hono } from "hono";
 import { authAdmin } from "../middlewares/authAdmin";
 import { PrismaClient } from "@prisma/client";
-import { scheduleInput } from "@pratikndl/common-schedulizer-ems";
 import { date, z } from 'zod';
 
 const app = new Hono<{
@@ -165,25 +164,6 @@ app.delete('/:id', async (c) => {
     }
 })
 
-app.get('/:id', async (c) => {
-    const prisma = c.get("prisma")
-    const id = c.req.param('id');
-    
-    try {
-        const record = await prisma.studentGroup.findFirst({
-            where: {
-                id: id
-            },
-            select: {
-                id: true,
-                name: true,
-            }
-        });
-        return c.json({record});
 
-    } catch(e) {
-        return c.json({message: "Something went wrong"}, {status: 500})
-    }
-})
 
 export default app;

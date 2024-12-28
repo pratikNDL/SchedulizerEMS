@@ -94,6 +94,8 @@ app.delete('/block/:id', async (c) => {
     }
 })
 
+
+
 app.get('/room', async (c) => {
     const instituteId = c.get("instituteId") as string;
     const prisma = c.get("prisma")
@@ -187,6 +189,34 @@ app.delete('/room/:id', async (c) => {
     }
 })
 
+app.get('/groupedRoom', async (c) => {
+    const instituteId = c.get("instituteId") as string;
+    const prisma = c.get("prisma")
+    const query = c.req.query('name');
+    
+    try {
+        const groupedRooms = await prisma.academicBlock.findMany({
+            where: {
+                instituteId: instituteId
+            },
+            select: {
+                name: true,
+                blockCode: true,
+                rooms: {
+                    select: {
+                        id: true,
+                        code: true,
+                        isLab: true
+                    }
+                }
+            }
+            
+        });
+        return c.json({groupedRooms});
 
+    } catch(e) {
+        return c.json({message: "Something went wrong"}, {status: 500})
+    }
+})
 
 export default app;

@@ -1,7 +1,7 @@
 import { ChangeEvent, Dispatch, ReactNode, useEffect, useRef, useState } from "react"
-import Button from "./Button"
-import Wrapper from "./Wrapper";
-import LabeledInput from "./LabeledInput";
+import Button from "./Inputs/Button"
+import Wrapper from "./Wrappers/Wrapper";
+import LabeledInput from "./Inputs/LabeledInput";
 
 type TableType<T> = {
   titles: Array<string>,
@@ -9,7 +9,9 @@ type TableType<T> = {
   fetchHandler :  ((query: string) => {loading: boolean,data: Array<T>} )
   refresh?: boolean
   deleteHandler?: (id: string) => Promise<void> | void,
-  clickHandler?: (id: string) => Promise<void>  | void
+  clickHandler?: (id: string) => Promise<void>  | void,
+  heading?: string,
+  subHeading?: string,
 } 
 
 type TableRowType<T> = {
@@ -22,7 +24,7 @@ type TableRowType<T> = {
   setLocked: Dispatch<React.SetStateAction<boolean>>
 }
 
-function Table<T extends {id: string},>({titles, fetchHandler, keysToDisplay, deleteHandler, clickHandler, refresh=false}: TableType<T>) {
+function Table<T extends {id: string},>({titles, fetchHandler, keysToDisplay, deleteHandler, clickHandler, refresh=false, heading, subHeading}: TableType<T>) {
   
   const refreshData = () => {
     setQuery('  ');
@@ -67,7 +69,7 @@ function Table<T extends {id: string},>({titles, fetchHandler, keysToDisplay, de
 
 
   return (
-    <Wrapper>
+    <Wrapper heading={heading} subHeading={subHeading}>
       
       <LabeledInput label="" placeholder="Start Typing To search A record..." handler={searchHandler}/>
       <div className={`flex flex-col border-2 border-r-0 border-table-highlight rounded-sm  text-primary-text ${locked ? 'pointer-events-none cursor-not-allowed animate-pulse ': ''} `}>
@@ -96,13 +98,15 @@ function TableRow<T extends {id: string}, >({data, keysToDisplay, index, deleteH
 
   return (
     <div className="relative flex"  onMouseEnter={() => {setShow(true)}} onMouseLeave={() => {setShow(false)}}>
-        <div key={data.id} onClick={() => clickHandler? clickHandler(data.id): null}  className={`grid w-full ${show ? ' bg-primary-gray/50 ': `${index%2 ? 'bg-background-primary/50': 'bg-background-secondary'}`} `} style={{gridTemplateColumns: `repeat(${keysToDisplay.length}, minmax(0, 1fr))`}}>    
+        <div key={data.id} onClick={() => clickHandler? clickHandler(data.id): null}  className={`grid w-full ${show ? ' bg-primary-gray/50 underline underline-offset-4  ': `${index%2 ? 'bg-background-primary/50': 'bg-background-secondary'}`} `} style={{gridTemplateColumns: `repeat(${keysToDisplay.length}, minmax(0, 1fr))`}}>    
             {keysToDisplay.map((key, index) => <TableBlock key={index}>{data[key] as string}</TableBlock>)}
         </div>
         
         { deleteHandler ?
-          <div className={`absolute -left-14 rounded-sm overflow-hidden  pr-10 ${show ? "": "h-0 translate-x-2"} transition-all`}>
-            <Button  addCSS="bg-red-500 hover:bg-red-600" isDisabled={false} value='X' handler={() => deleteHandler(data.id)}/>      
+          <div className={`  absolute -left-16 rounded-sm overflow-hidden  pr-10 ${show ? "": "h-0 translate-x-2"} transition-all`}>
+            <Button className="bg-red border-red px-5 py-1.5 text-xs font-bold rounded-sm  " isDisabled={false} handler={() => deleteHandler(data.id)}>
+              X  
+            </Button>      
           </div> : null
         }
     </div>

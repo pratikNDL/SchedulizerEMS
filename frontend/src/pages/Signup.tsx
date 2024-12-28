@@ -1,10 +1,10 @@
 import { useState } from "react"
-import LabeledInput from "../components/LabeledInput"
+import LabeledInput from "../components/Inputs/LabeledInput"
 import { instituteSignupType } from "@pratikndl/common-schedulizer-ems"
 import axios from "axios"
 import config from '../../config.json'
 import { Link, useNavigate } from "react-router-dom"
-import Button from "../components/Button"
+import Button from "../components/Inputs/Button"
 
 const defaultInput = {  
     name: '', 
@@ -15,7 +15,7 @@ const defaultInput = {
 export const Signup = () => {
     const navigate = useNavigate();
 
-    const [error, setError] = useState<String>("");
+    const [error, setError] = useState<string>("");
     const [data, setData] = useState<instituteSignupType>(defaultInput);
     const [isLoading, setisLoading] = useState<boolean>(false)
 
