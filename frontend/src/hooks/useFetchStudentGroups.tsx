@@ -7,6 +7,7 @@ export type StudentGroupFetchType = {
 	name: string,
 	passingYear: number,
 	section: string,
+	headCount: number,
 	batchCount: number
 	department: {
 		code: string

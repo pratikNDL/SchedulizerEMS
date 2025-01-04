@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Department from './pages/Department'
 import Faculty from './pages/Faculty'
-import Course from './pages/Course'
+import Course, { ElectiveBasket, RegularCourse } from './pages/Course'
 import Infrastructure from './pages/Infrastructure'
 import Schedules from './pages/Schedules'
 import ScheduleMenu from './components/Schedule/ScheduleMenu'
@@ -19,12 +19,12 @@ import FacultyConstraint from './components/Schedule/Availability/FacultyAvailab
 import StudentGroupMenu from './components/Schedule/StudentGroupMenu'
 import RegularPracticalClassForm from './components/Schedule/ClassForms/RegularPracticalClassForm '
 import RegularTheoryClassForm from './components/Schedule/ClassForms/RegularTheoryClassForm'
-import ProgramElectivePracticalClassForm from './components/Schedule/ClassForms/ProgramElectivePracticalClassForm'
-import ProgramElectiveTheoryClassForm from './components/Schedule/ClassForms/ProgramElectiveTheoryClassForm'
 import StudentGroupConstraint from './components/Schedule/Availability/StudentGroupAvailability'
 import SignUpx from './pages/SignUpx'
 
 import { instituteSignupType, instituteSigninType } from "@pratikndl/common-schedulizer-ems";
+import ElectiveClassFormTheory from './components/Schedule/ClassForms/ElectiveClassFormTheory'
+import ElectiveClassFormPractical from './components/Schedule/ClassForms/ElectiveClassFormPractical'
 
 
 function App() {
@@ -38,7 +38,10 @@ function App() {
 					<Route path='/' element={<Home/>}/>
 					<Route path='/department' element={<Department/>}/>
 					<Route path='/faculty' element={<Faculty/>}/>
-					<Route path='/course' element={<Course/>}/>
+					<Route path='/course' element={<Course/>}>
+							<Route path='regular' element={<RegularCourse/>} />
+							<Route path='elective' element={<ElectiveBasket/>} />
+					</Route>
 					<Route path='/infrastructure' element={<Infrastructure/>}/>
 					<Route path='/studentGroup' element={<StudentGroup/>}/>
         			<Route path='/schedule' element={<Schedules/>}>
@@ -51,8 +54,8 @@ function App() {
 							<Route path='studentGroup/:studentGroupId' element={<StudentGroupMenu/>} >
 								<Route path='regularTheory' element={<RegularTheoryClassForm/>} />
 								<Route path='regularPractical' element={<RegularPracticalClassForm/>} />
-								<Route path='programTheory' element={<ProgramElectiveTheoryClassForm/>} />
-								<Route path='programPractical' element={<ProgramElectivePracticalClassForm/>} />
+								<Route path='programTheory' element={<ElectiveClassFormTheory />} />
+								<Route path='programPractical' element={<ElectiveClassFormPractical/>} />
 								<Route path='availability' element={<StudentGroupConstraint/>} />
 							</Route>
           				</Route>

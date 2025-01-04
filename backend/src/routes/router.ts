@@ -7,6 +7,7 @@ import infrastructureRouter from './infrastructure'
 import courseRouter from './course'
 import scheduleRouter from './ScheduleRoutes/schedule'
 import studentGroupRouter from './studentGroup'
+import electiveRouter from './elective'
 
 export const router = new Hono();
 
@@ -18,4 +19,5 @@ router.route('/infrastructure', infrastructureRouter)
 router.route('/course', courseRouter)
 router.route('/schedule', scheduleRouter)
 router.route('/studentGroup', studentGroupRouter)
+router.route('/elective', electiveRouter)
 

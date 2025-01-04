@@ -17,7 +17,8 @@ const studentGroupInput = z.object({
     departmentId: z.string(), 
     batchCount: z.number(),
     passingYear: z.number().min(1900).max(new Date().getFullYear() + 5),
-    section: z.string()
+    section: z.string(),
+    headCount: z.number()
 })
 
 
@@ -124,9 +125,13 @@ app.post('/', async (c) => {
                 }
             })
 
+            const batchSize = data.headCount/data.batchCount;
+            const leftOver = data.headCount%data.batchCount;
+
             const batchData = Array.from({length: data.batchCount}, (_, i) => ({
                 name: `${data.section}-${i+1}`,
-                studentGroupId: newRecord.id
+                studentGroupId: newRecord.id,
+                headCount: batchSize + (i>=data.batchCount-leftOver ? 1 : 0)
             }))
 
             await prisma.batch.createMany({

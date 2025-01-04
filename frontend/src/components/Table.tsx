@@ -7,9 +7,10 @@ type TableType<T> = {
   titles: Array<string>,
   keysToDisplay: Array<keyof T>,
   fetchHandler :  ((query: string) => {loading: boolean,data: Array<T>} )
-  refresh?: boolean
   deleteHandler?: (id: string) => Promise<void> | void,
   clickHandler?: (id: string) => Promise<void>  | void,
+  triggerRefresh?: () => void,
+  refresh?: boolean
   heading?: string,
   subHeading?: string,
 } 
@@ -24,7 +25,7 @@ type TableRowType<T> = {
   setLocked: Dispatch<React.SetStateAction<boolean>>
 }
 
-function Table<T extends {id: string},>({titles, fetchHandler, keysToDisplay, deleteHandler, clickHandler, refresh=false, heading, subHeading}: TableType<T>) {
+function Table<T extends {id: string},>({titles, fetchHandler, keysToDisplay, deleteHandler, clickHandler, triggerRefresh, refresh, heading, subHeading}: TableType<T>) {
   
   const refreshData = () => {
     setQuery('  ');
@@ -57,6 +58,7 @@ function Table<T extends {id: string},>({titles, fetchHandler, keysToDisplay, de
     setLocked(true)
     await deleteHandler(id);
     refreshData();
+    if(triggerRefresh) triggerRefresh();
     setLocked(false)
   } : undefined
 

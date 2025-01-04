@@ -123,7 +123,16 @@ app.get('/room', async (c) => {
                         name: true
                     }
                 }
-            }
+            },
+
+            orderBy: [
+                {academicBlock: {
+                    blockCode: "asc"
+                }},
+                {code: 'asc'},
+                {floor: "asc"},
+                {isLab: 'desc'}
+            ]
         });
         return c.json({rooms});
 

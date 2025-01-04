@@ -1,30 +1,30 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import config from '../../config.json'
+import { CourseFetchType, CourseType } from "./useFetchCourse";
 
-export type CourseType = "THEORY"|"PRACTICAL"
-export type CourseFetchType = {
+export type ElectiveBasketFetchType = {
   id: string
   name: string;
   code: string;
   departmentId: string;
   credits: number;
-  courseType: CourseType
-  electiveBasketId?: string
+  courseCount: number;
+  courses: Array<Pick<CourseFetchType, 'name'| 'code' | 'id'>>
+  courseType: CourseType,
 }
 
 
 
 
-function useFetchCourses(query: string, courseType?:CourseType, filter?:"regular"|"elective") {
+function useFetchElectiveBasket(query: string,  courseType?:CourseType) {
 
-  const [data, setData] = useState<Array<CourseFetchType>>([]);
+  const [data, setData] = useState<Array<ElectiveBasketFetchType>>([]);
   const [loading, setLoading] = useState(true);
 
-  let url = `${config.BACKEND_URl}/course?name=${query}`
+  let url = `${config.BACKEND_URl}/elective?name=${query}`
   if(courseType) url += `&courseType=${courseType}`
-  if(filter) url += `&filter=${filter}`
-
+ 
   useEffect(() => {
     const headers = {
       Authorization: localStorage.getItem('token')
@@ -32,7 +32,7 @@ function useFetchCourses(query: string, courseType?:CourseType, filter?:"regular
     try {
       axios.get(url, { headers})
       .then((res) => {
-        setData(res.data.courses);
+        setData(res.data.electiveBaskets);
         setLoading(false)
       })
   }
@@ -45,4 +45,4 @@ function useFetchCourses(query: string, courseType?:CourseType, filter?:"regular
   return {loading, data}
 }
 
-export default useFetchCourses
+export default useFetchElectiveBasket

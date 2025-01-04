@@ -11,9 +11,7 @@ export type ClassxFetchType = {
   course: CourseFetchType,
   room: RoomFetchType
   id: string
-  batch: {
-    name: string
-  }
+  batches: Array<{name: string}> 
 }
 export type ClassxType = {
   id: string
@@ -26,13 +24,18 @@ export type ClassxType = {
 
 
 
-function useFetchClasses(scheduleId: string, query:string, studentGroupId?: string, courseType?:CourseType) {
+function useFetchClasses(scheduleId: string, query:string, studentGroupId?: string, courseType?:CourseType, filter?:'elective'|'regular') {
   const [data, setData] = useState<Array<ClassxType>>([]);
   const [loading, setLoading] = useState(true);
+
+  let url = `${config.BACKEND_URl}/schedule/class/${scheduleId}`;
+  if(studentGroupId) url+= `/${studentGroupId}`;
+  if(courseType) url += `?courseType=${courseType}`;
+  if(filter) url += `&filter=${filter}`
+
+
   useEffect(() => {
-    let url = `${config.BACKEND_URl}/schedule/class/${scheduleId}`;
-    if(studentGroupId) url+= `/${studentGroupId}`;
-    if(courseType) url += `?courseType=${courseType}`;
+    
     axios.get(url, {headers:{Authorization: localStorage.getItem('token')}})
     .then((res) => {
       const transformedData = res.data.classes.map((classx:ClassxFetchType) => ({
@@ -40,7 +43,8 @@ function useFetchClasses(scheduleId: string, query:string, studentGroupId?: stri
         courseName: classx.course.name, 
         courseCode: classx.course.code, 
         roomCode: `${classx.room.academicBlock.blockCode}-${classx.room.code}`, 
-        id:classx.id, batchName:classx.batch?.name
+        id:classx.id, 
+        batchName: JSON.stringify(classx.batches.map(batch => batch.name)).replace(/\[|\]|\"/g, "").replace(/\,/g , '  ')
       }))
       
       setData(transformedData);

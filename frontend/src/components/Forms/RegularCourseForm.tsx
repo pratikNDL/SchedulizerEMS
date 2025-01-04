@@ -6,17 +6,18 @@ import FormWrapper, { FormHandlerReturnType } from "../Wrappers/FormWrapper"
 import SelectInput from "../Inputs/SelectInput"
 import useFetchDepartments from "../../hooks/useFetchDepartments"
 
-const CourseType = ["REGULAR_THEORY","REGULAR_PRACTICAL","PROGRAM_ELECTIVE_THEORY",'PROGRAM_ELECTIVE_PRACTICAL'];
-type CourseInputType = {
+const CourseType = ["THEORY","PRACTICAL"];
+export type CourseInputType = {
     name: string,
     code: string,
     credits: number,
     departmentId: string,
-    courseType: (typeof CourseType)[number] 
+    courseType: (typeof CourseType)[number],
+    electiveBasketId?: string
 }
 
 
-function RegisterCourse({triggerRefresh}: {triggerRefresh: () => void}) {
+function RegularCourseForm({triggerRefresh}: {triggerRefresh: () => void}) {
 	const [data, setData] = useState<CourseInputType | {}>({})
     const departments = useFetchDepartments("");
 
@@ -55,4 +56,4 @@ function RegisterCourse({triggerRefresh}: {triggerRefresh: () => void}) {
   )
 }
 
-export default RegisterCourse
+export default RegularCourseForm
