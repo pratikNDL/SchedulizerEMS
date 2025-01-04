@@ -1,0 +1,105 @@
+import { Schedulizer } from "./Schedulizer";
+import { _Class, Room, ScheduleType } from "./types";
+
+class Schedule {
+    schedule:ScheduleType = [];
+    constructor(public schedulizer:Schedulizer) {};
+
+    initializeNewSchedule()  {
+        this.schedule = Array.from({length: this.schedulizer.daysPerWeek}, () => Array.from({length: this.schedulizer.slotsPerDay}, () => Array.from({length: this.schedulizer.roomCount}, () => [])));
+        this.schedulizer.classes.forEach(_class => {
+            for(let i=0; i<_class.classesPerWeek; i++) {
+                const day = Math.floor(Math.random() * this.schedulizer.daysPerWeek);
+                const startSlot = Math.floor(Math.random() * (this.schedulizer.slotsPerDay - (_class.duration - 1)));
+                const room = Math.floor(Math.random() * this.schedulizer.roomCount);
+                for(let i=0; i<_class.duration; i++) this.schedule[day][startSlot + i][room].push(_class)
+            }
+            
+        })
+    }
+
+    calculateFitness() {
+        let penalty = 0; 
+
+        this.schedule.forEach((day, dayIndex) => {
+            day.forEach((slot, slotIndex) => {
+                const position = dayIndex*this.schedulizer.slotsPerDay + slotIndex;
+                const facultiesSeen = new Set<string>();
+                const batchesSeen = new Set<string>();
+                const classesSeen = new Set<string>();
+
+                slot.forEach((room, roomIndex) => {
+                    const currRoom = this.schedulizer.mappedRooms.get(roomIndex);
+                    if(!currRoom) throw new Error(`Room not found  for index:${roomIndex}: mappedRooms may not be Initialized properly`)
+
+                    if(this.calculateRoomHeadCount(dayIndex, slotIndex, roomIndex) > currRoom?.capacity) penalty += RoomOverBookedPenalty;
+
+                    room.forEach(_class => {
+                        if(facultiesSeen.has(_class.facultyId)) penalty += FacultyOverBookedPenalty;
+                        else facultiesSeen.add(_class.facultyId);
+
+                        _class.batches.forEach(batchId => {
+                            if(batchesSeen.has(batchId)) penalty += BatchOverBookedPenalty;
+                            else batchesSeen.add(batchId);
+                        })
+
+                        if(this.schedulizer.facultyNonAvailability.get(_class.facultyId)?.has(position)) penalty += FacultyNonAvailabilityPenalty;
+                        if(this.schedulizer.studentGroupNonAvailability.get(_class.studentGroupId)?.has(position)) penalty += StudentGroupNonAvailabilityPenalty;
+
+                        if(_class.preferredRoomId != currRoom.id) {
+                            if(_class.courseType=='PRACTICAL' || currRoom.isLab) penalty += HardPreferredRoomMismatchPenalty;
+                            else penalty += SoftPreferredRoomMismatchPenalty;
+                        }
+
+                        classesSeen.add(_class.id);
+
+                    })
+                })
+
+
+                classesSeen.forEach(classId => {
+                    const _class = this.schedulizer.mappedClasses.get(classId);
+                    if(!_class) throw new Error(`Class not found for id:${classId}: mappedClasses may not be Initialized properly`)
+                    _class.concurrentClasses.forEach(concurrentClassId => {
+                        if(!classesSeen.has(concurrentClassId)) penalty += ConcurrentClassFailurePenalty
+                    })
+
+
+                })
+
+
+
+            })
+        })
+    }
+
+
+    calculateRoomHeadCount(dayIndex: number, slotIndex: number, roomIndex: number) {
+        const classes = this.schedule[dayIndex][slotIndex][roomIndex];
+        return classes.reduce((sum, _class) => sum + _class.headCount, 0);
+    }
+}
+
+const RoomOverBookedPenalty = 10;
+const FacultyOverBookedPenalty = 10;
+const BatchOverBookedPenalty = 10;
+const FacultyNonAvailabilityPenalty = 10;
+const StudentGroupNonAvailabilityPenalty = 10;
+const ConcurrentClassFailurePenalty = 10;
+const HardPreferredRoomMismatchPenalty = 10;
+const SoftPreferredRoomMismatchPenalty = 10;
+
+// const BatchOverBookedPenalty = 10;
+/*
+    Penalties:
+
+    1. RoomOverBooked: VERY HIGH
+    2. concurrentClassFailure: VERY HIGH
+    3. FacultyAvailabilityFailure: MODERATE
+    4. StudentGroupAvailabilityFailure: HIGH
+    5. PreferredRoomFailure:
+        PracticalClass: VERY HIGH
+        TheoryClass: 
+            LabRoom: VERY HIGH
+            RegularRoom: LOW 
+*/
