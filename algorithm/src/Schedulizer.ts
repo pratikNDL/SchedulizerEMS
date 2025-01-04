@@ -1,4 +1,6 @@
-import { _Class, Room } from "./types";
+import { Schedule } from "./Schedule";
+import { _Class, Room,  } from "./types";
+
 
 export class Schedulizer {
     mappedRooms = new Map<number, Room>(); // index to room
@@ -11,6 +13,8 @@ export class Schedulizer {
         this.classes.forEach(_class => this.mappedClasses.set(_class.id, _class))
 
     };
+
+    
 
 
 }

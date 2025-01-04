@@ -1,24 +1,77 @@
+import { RouletteWheelSelector } from "./RouletteWheelSelector";
 import { Schedulizer } from "./Schedulizer";
 import { _Class, Room, ScheduleType } from "./types";
 
-class Schedule {
-    schedule:ScheduleType = [];
-    constructor(public schedulizer:Schedulizer) {};
+export class Schedule {
+    public schedule:ScheduleType = [];
+    public fitness = -1;
+    public mappedSchedule = new Map<string, Array<number>>();
 
-    initializeNewSchedule()  {
-        this.schedule = Array.from({length: this.schedulizer.daysPerWeek}, () => Array.from({length: this.schedulizer.slotsPerDay}, () => Array.from({length: this.schedulizer.roomCount}, () => [])));
+    constructor(public schedulizer:Schedulizer) {
+        this.schedulizer.classes.forEach(({id}) => {
+            this.mappedSchedule.set(id, []);
+        })
+        this.schedule = Array.from({length: this.schedulizer.daysPerWeek}, () => 
+                            Array.from({length: this.schedulizer.slotsPerDay}, () =>
+                                Array.from({length: this.schedulizer.roomCount}, () => [])));
+    };
+
+    initializeByRandomization()  {
         this.schedulizer.classes.forEach(_class => {
             for(let i=0; i<_class.classesPerWeek; i++) {
                 const day = Math.floor(Math.random() * this.schedulizer.daysPerWeek);
                 const startSlot = Math.floor(Math.random() * (this.schedulizer.slotsPerDay - (_class.duration - 1)));
                 const room = Math.floor(Math.random() * this.schedulizer.roomCount);
-                for(let i=0; i<_class.duration; i++) this.schedule[day][startSlot + i][room].push(_class)
+                for(let i=0; i<_class.duration; i++) {
+                    this.schedule[day][startSlot + i][room].push(_class) 
+                }
+                
+                const index = (day * this.schedulizer.slotsPerDay * this.schedulizer.roomCount) + (startSlot * this.schedulizer.roomCount) + room
+                const indices = this.mappedSchedule.get(_class.id);
+
+                if(!indices) throw new Error(`Indices array not found  for id:${_class.id}: mappedSchedule may not be Initialized properly`)
+                indices.push(index)
             }
-            
         })
+
+        this.calculateFitness();
     }
 
-    calculateFitness() {
+    public initializeByCrossover(parent1: Schedule, parent2: Schedule) {
+        const parents = [parent1, parent2];
+        const fitness = parents.map(parent => {
+            if(parent.fitness == -1) parent.calculateFitness();
+            return parent.fitness;
+        })
+
+        const selector = new RouletteWheelSelector(fitness)
+
+        this.schedulizer.classes.forEach(_class => {
+            for(let i=0; i<_class.classesPerWeek; i++) {
+                const parentIndices = parents[selector.select()].mappedSchedule.get(_class.id)
+                if(!parentIndices) throw new Error(`Indices array not found  for id:${_class.id}: mappedSchedule may not be Initialized properly`)
+                
+                const parentIndex = parentIndices[i];
+
+                const day = Math.floor(parentIndex / (this.schedulizer.slotsPerDay * this.schedulizer.roomCount));
+                const startSlot = Math.floor((parentIndex % (this.schedulizer.slotsPerDay * this.schedulizer.roomCount)) / this.schedulizer.roomCount);
+                const room = parentIndex % this.schedulizer.roomCount;
+
+
+                for(let i=0; i<_class.duration; i++) {
+                    this.schedule[day][startSlot + i][room].push(_class) 
+                }
+                
+                const indices = this.mappedSchedule.get(_class.id);
+                if(!indices) throw new Error(`Indices array not found  for id:${_class.id}: mappedSchedule may not be Initialized properly`)
+                indices.push(parentIndex)
+            }
+        })
+
+        this.calculateFitness();
+    }
+
+    public calculateFitness() {
         let penalty = 0; 
 
         this.schedule.forEach((day, dayIndex) => {
@@ -66,15 +119,16 @@ class Schedule {
 
 
                 })
-
-
-
             })
         })
+
+        this.fitness = 1 /(1+penalty);
     }
 
+    
 
-    calculateRoomHeadCount(dayIndex: number, slotIndex: number, roomIndex: number) {
+
+    private calculateRoomHeadCount(dayIndex: number, slotIndex: number, roomIndex: number) {
         const classes = this.schedule[dayIndex][slotIndex][roomIndex];
         return classes.reduce((sum, _class) => sum + _class.headCount, 0);
     }
@@ -89,17 +143,3 @@ const ConcurrentClassFailurePenalty = 10;
 const HardPreferredRoomMismatchPenalty = 10;
 const SoftPreferredRoomMismatchPenalty = 10;
 
-// const BatchOverBookedPenalty = 10;
-/*
-    Penalties:
-
-    1. RoomOverBooked: VERY HIGH
-    2. concurrentClassFailure: VERY HIGH
-    3. FacultyAvailabilityFailure: MODERATE
-    4. StudentGroupAvailabilityFailure: HIGH
-    5. PreferredRoomFailure:
-        PracticalClass: VERY HIGH
-        TheoryClass: 
-            LabRoom: VERY HIGH
-            RegularRoom: LOW 
-*/
