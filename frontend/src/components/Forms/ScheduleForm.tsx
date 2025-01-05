@@ -1,8 +1,8 @@
 import { useState } from "react"
-import LabeledInput from "../LabeledInput"
+import LabeledInput from "../Inputs/LabeledInput"
 import config from '../../../config.json'
 import axios from "axios"
-import FormWrapper from "../FormWrapper"
+import FormWrapper from "../Wrappers/FormWrapper"
 import { useNavigate } from "react-router-dom"
 import { ScheduleType } from "../../hooks/useFetchSchedule"
 
@@ -39,7 +39,7 @@ function ScheduleForm({triggerRefresh}: {triggerRefresh: () => void}) {
     }
 
     return (
-        <FormWrapper handler={handler} triggerRefresh={triggerRefresh}>
+        <FormWrapper handler={handler} triggerRefresh={triggerRefresh} heading="Add a new Schedule" >
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
                 <LabeledInput  label="Schedule Name"  placeholder="ECS Winter 2024" handler={(e) => setData({...data, name: e.target.value})}/>
                 <LabeledInput  label="Days in A Week"  placeholder="5" handler={(e) => setData({...data, days: e.target.value})}/>

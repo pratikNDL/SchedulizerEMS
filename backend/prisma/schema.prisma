@@ -12,13 +12,15 @@ model Institute {
   name           String         @unique
   email          String         @unique
   password       String
-  departments    Department[]  
-  academicBlocks AcademicBlock[]
-  faculties      Faculty[]
-  rooms          Room[]
-  courses        Course[]
-  scheduels      Schedule[]
-  studentGroups  StudentGroup[]
+  
+  departments     Department[]  
+  academicBlocks  AcademicBlock[]
+  rooms           Room[]
+  courses         Course[]
+  electiveBaskets ElectiveBasket[]
+  faculties       Faculty[]
+  schedules       Schedule[]
+  studentGroups   StudentGroup[]
 }
 
 model Department {
@@ -30,6 +32,7 @@ model Department {
   faculties    Faculty[]
   courses      Course[]
   StudentGroups     StudentGroup[]
+  electiveBaskets   ElectiveBasket[]
   institute    Institute    @relation(fields: [instituteId], references: [id], onDelete: Cascade)
 }
 
@@ -46,21 +49,22 @@ model Faculty {
   rank         FacultyRank
   departmentId String
   instituteId  String
-  constarints FacultyConstraints[]
+
+  availability FacultyAvailability[]
   classes Class[]
   institute    Institute    @relation(fields: [instituteId], references: [id], onDelete: Cascade)
   department   Department   @relation(fields: [departmentId], references: [id], onDelete: Cascade)
 }
 
-model FacultyConstraints {
+model FacultyAvailability {
   id String @id @default(uuid())
   facultyId String
   scheduleId String
-  constraints Int[]
+  availability Int[]
 
   faculty Faculty    @relation(fields: [facultyId], references: [id], onDelete: Cascade)
   schedule Schedule    @relation(fields: [scheduleId], references: [id], onDelete: Cascade)
-
+  @@unique([scheduleId, facultyId])
 }
 
 model Course {
@@ -68,12 +72,32 @@ model Course {
   name         String
   credits      Int
   departmentId String
-  isLab        Boolean       @default(false)
+  courseType   CourseType @default(THEORY)
   code         String
-  instituteId  String
+  electiveBasketId String? 
+  instituteId String
   classes      Class[]
+  department   Department   @relation(fields: [departmentId], references: [id], onDelete: Cascade)
+  electiveBasket ElectiveBasket? @relation(fields: [electiveBasketId], references: [id], onDelete: Cascade)
+  institute    Institute    @relation(fields: [instituteId], references: [id], onDelete: Cascade)
+  
+  @@unique([code, departmentId])
+}
+
+model ElectiveBasket {
+  id String @id @default(uuid())
+  name String 
+  code String
+  courseCount Int
+  credits Int
+  courseType   CourseType @default(THEORY)
+  courses Course[]
+  classes Class[]
+  departmentId String
+  instituteId String
   institute    Institute    @relation(fields: [instituteId], references: [id], onDelete: Cascade)
   department   Department   @relation(fields: [departmentId], references: [id], onDelete: Cascade)
+  @@unique([name, code,  departmentId])
 }
 
 model AcademicBlock {
@@ -95,7 +119,7 @@ model Room {
   instituteId   String
   capacity      Int           @default(0)
   isLab         Boolean
-  institute     Institute     @relation(fields: [instituteId], references: [id], onDelete: Cascade)
+  institute    Institute    @relation(fields: [instituteId], references: [id], onDelete: Cascade)
   academicBlock AcademicBlock @relation(fields: [blockId], references: [id], onDelete: Cascade)
   schedules     Schedule[]
   classes       Class[]
@@ -106,12 +130,14 @@ model Schedule {
   name String
   days Int @default(1)
   slots Int @default(1)
+  instituteId String
+
+
   rooms Room[]
   classes Class[]
   studentGroups StudentGroup[]
-  facultyConstraints FacultyConstraints[]
-  studentGroupConstraints StudentGroupConstraints[]
-  instituteId String
+  facultyAvailability FacultyAvailability[]
+  studentGroupAvailability StudentGroupAvailability[]
   institute    Institute    @relation(fields: [instituteId], references: [id], onDelete: Cascade)
 }
 
@@ -125,21 +151,24 @@ model StudentGroup {
   batches Batch[]
   classes Class[]
   schedules Schedule[]
-  constarints StudentGroupConstraints[]
+  availability StudentGroupAvailability[]
+  headCount Int @default(0)
 
   instituteId  String
   institute    Institute    @relation(fields: [instituteId], references: [id], onDelete: Cascade)
   department Department @relation(fields: [departmentId], references: [id], onDelete: Cascade)
 }
 
-model StudentGroupConstraints {
-  id String @id @default(uuid())
+model StudentGroupAvailability {
+  id String  @id @default(uuid())
   studentGroupId String
   scheduleId String
-  constraints Int[]
+  availability Int[]
 
   studentGroup StudentGroup    @relation(fields: [studentGroupId], references: [id], onDelete: Cascade)
   schedule Schedule    @relation(fields: [scheduleId], references: [id], onDelete: Cascade)
+  @@unique([scheduleId, studentGroupId])
+  
 
 }
 
@@ -148,7 +177,7 @@ model Batch {
   name String
   studentGroupId String
   classes Class[]
-
+  headCount Int @default(0)
   StudentGroup StudentGroup @relation(fields: [studentGroupId], references: [id], onDelete: Cascade)
 }
 
@@ -157,17 +186,27 @@ model Class {
   facultyId String
   studentGroupId String
   courseId String
-  batchId String? 
-  isLab Boolean? @default(false)
+
+  courseType CourseType @default(THEORY)
   roomId String
   scheduleId String
+  electiveBasketId String?
+
+  batches Batch[]
+
+  concurrentClasses  Class[]   @relation("ConcurrentClasses")
+  concurrentByClasses Class[]  @relation("ConcurrentClasses")
 
   faculty Faculty @relation(fields: [facultyId], references: [id], onDelete: Cascade)
   StudentGroup StudentGroup @relation(fields: [studentGroupId], references: [id], onDelete: Cascade)
   course Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
   room Room @relation(fields: [roomId], references: [id], onDelete: Cascade)
   schedule Schedule @relation(fields: [scheduleId], references: [id], onDelete: Cascade)
-  batch Batch? @relation(fields: [batchId], references: [id], onDelete: Cascade)
+  electiveBasket ElectiveBasket? @relation(fields: [electiveBasketId], references: [id], onDelete: Cascade)
 }
 
+enum CourseType {
+  THEORY
+  PRACTICAL
+}
 

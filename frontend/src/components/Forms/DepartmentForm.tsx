@@ -1,9 +1,9 @@
 import { useState } from "react"
-import LabeledInput from "../LabeledInput"
+import LabeledInput from "../Inputs/LabeledInput"
 import { departmentInputType } from "@pratikndl/common-schedulizer-ems"
 import config from '../../../config.json'
 import axios from "axios"
-import FormWrapper from "../FormWrapper"
+import FormWrapper from "../Wrappers/FormWrapper"
 
 
 function DepartmentForm({triggerRefresh}: {triggerRefresh: () => void}) {

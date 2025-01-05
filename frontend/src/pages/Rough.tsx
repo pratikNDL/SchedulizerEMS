@@ -22,7 +22,7 @@
 
 
 
-import PageWrapper from '../components/PageWrapper'
+import PageWrapper from '../components/Wrappers/PageWrapper'
 
 function Rough() {
   return (

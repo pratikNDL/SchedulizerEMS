@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom"
-import PageWrapper from "../components/PageWrapper"
+import PageWrapper from "../components/Wrappers/PageWrapper"
 
 function Schedules() {
   return (

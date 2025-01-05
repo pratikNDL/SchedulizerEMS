@@ -1,7 +1,8 @@
 import { Hono } from "hono";
+import { z } from 'zod'
 import { authAdmin } from "../middlewares/authAdmin";
-import { PrismaClient } from "@prisma/client";
-import { courseInput } from "@pratikndl/common-schedulizer-ems";
+import { Prisma, PrismaClient } from "@prisma/client";
+
 
 const app = new Hono<{
     Variables: {
@@ -10,31 +11,49 @@ const app = new Hono<{
     }
 }>();
 
-app.use(authAdmin);
-
-
-app.get('/', async (c) => {
-    const instituteId = c.get("instituteId") as string;
-    const prisma = c.get("prisma")
-    const query = c.req.query('name');
-    
-    try {
-        const courses = await prisma.course.findMany({
-            where: {
-                OR: [
-                    { name: { contains: query, mode: 'insensitive' } },
-                    { code: { contains: query, mode: 'insensitive' } },
-                ],
-                instituteId: instituteId
-            }
-        });
-        return c.json({courses});
-
-    } catch(e) {
-        return c.json({message: "Something went wrong"}, {status: 500})
-    }
+export const CourseTypeSchema =  z.enum(["PRACTICAL", "THEORY"])
+type CourseType = z.infer<typeof CourseTypeSchema>
+const CourseInput = z.object({
+    name: z.string(),
+    code: z.string(),
+    credits: z.number(),
+    departmentId: z.string(),
+    courseType: CourseTypeSchema,
+    electiveBasketId: z.string().optional()
 })
 
+app.use(authAdmin);
+app.get('/', async (c) => {
+    const prisma = c.get("prisma");
+    const instituteId = c.get("instituteId") as string;
+    const query = c.req.query('name') || "";
+    const courseType = c.req.query('courseType') as CourseType;
+    const filter = c.req.query('filter'); 
+
+    try {
+        const whereClause: Prisma.CourseWhereInput = {
+            OR: [
+                { name: { contains: query, mode: 'insensitive' } },
+                { code: { contains: query, mode: 'insensitive' } },
+            ],
+            courseType: courseType,
+            instituteId: instituteId
+        };
+
+        if (filter === 'regular') {
+            whereClause.electiveBasketId = null;
+        } else if (filter === 'elective') {
+            whereClause.electiveBasketId = { not: { equals: null } };
+        }
+
+        const courses = await prisma.course.findMany({ where: whereClause });
+
+        return c.json({ courses });
+
+    } catch (e) {
+        return c.json({ message: "Something went wrong" }, { status: 500 });
+    }
+});
 
 
 app.post('/', async (c) => {
@@ -42,27 +61,14 @@ app.post('/', async (c) => {
     const prisma = c.get("prisma")
     const body = await c.req.json();
 
-    const {data, success, error} = courseInput.safeParse(body);
+    const {data, success, error} = CourseInput.safeParse(body);
 
     if(!success) {
         return c.json({message: "invalid Inputs", error}, {status: 400})
     }
+
     
     try {        
-        const existingCourse = await prisma.course.findFirst({
-            where: {
-                OR: [
-                    {code: data.code}, 
-                ],
-                instituteId: instituteId    
-            }
-        });
-
-        
-        if (existingCourse) {
-            return c.json({message: "Department with same name or code already exist"}, {status: 409}); 
-        }
-
         
         const newRoom = await prisma.course.create({
             data: {
@@ -72,6 +78,37 @@ app.post('/', async (c) => {
         })
 
         return c.json({message: "New Department Created", newRoom}, {status: 201});
+
+    } catch (e) {
+        console.error(e);
+        return c.json({message: "Something went wrong"}, {status: 500}); 
+    }
+})
+
+app.post('/multiple', async (c) => {
+    const instituteId = c.get("instituteId") as string;
+    const prisma = c.get("prisma")
+    const body = await c.req.json();
+
+    const {data, success, error} = z.array(CourseInput).safeParse(body);
+
+    if(!success) {
+        return c.json({message: "invalid Inputs", error}, {status: 400})
+    }
+
+    const newData = data.map(course => ({
+        ...course,
+        instituteId: instituteId
+    }))
+    
+    try {        
+        
+        
+        const newCourses = await prisma.course.createMany({
+            data: newData
+        })
+
+        return c.json({message: "New Courses Added", newCourses}, {status: 201});
 
     } catch (e) {
         console.error(e);

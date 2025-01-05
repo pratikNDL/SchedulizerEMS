@@ -33,7 +33,7 @@ function ScheduleMenu() {
     <>
         <div>
             <ScheduleForm triggerRefresh={triggerRefresh}/>
-            <Table <ScheduleType> titles={['Name']} keysToDisplay={['name']} fetchHandler={useFetchSchedule} clickHandler={clickHandler} deleteHandler={deleteHandler} refresh={refresh}/>
+            <Table <ScheduleType> heading={"Continue with existing Schedule"} subHeading={"Hover over and click on the schedule"} titles={['Name']} keysToDisplay={['name']} fetchHandler={useFetchSchedule} clickHandler={clickHandler} deleteHandler={deleteHandler} refresh={refresh}/>
         </div>
     </>
   )

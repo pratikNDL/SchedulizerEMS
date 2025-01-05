@@ -1,7 +1,7 @@
 import Table from "../components/Table"
 import useFetchDepartments, { DepartmentType } from "../hooks/useFetchDepartments";
 import useFetchMe from "../hooks/useFetchMe";
-import PageWrapper from "../components/PageWrapper";
+import PageWrapper from "../components/Wrappers/PageWrapper";
 import DepartmentForm from "../components/Forms/DepartmentForm"
 import axios from "axios";
 import config from '../../config.json'

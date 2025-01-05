@@ -2,11 +2,11 @@ import { Hono } from "hono";
 import { authAdmin } from "../../middlewares/authAdmin";
 import { PrismaClient } from "@prisma/client";
 import { z } from 'zod';
-import facultyRouter from './faculty'
+
 import studentGroupRouter from './studentGroup'
 import roomRouter from './room'
 import classRouter from './class'
-import studentGroupConstraintRouter from './studentGroupConstraint'
+import availabilityRouter from './availability'
 
 const app = new Hono<{
     Variables: {
@@ -23,12 +23,10 @@ const scheduleInput = z.object({
 
 
 app.use(authAdmin);
-app.route('/faculty', facultyRouter)
+app.route('/availability', availabilityRouter)
+app.route('/class', classRouter)
 app.route('/studentGroup', studentGroupRouter)
 app.route('/room', roomRouter)
-app.route('/class', classRouter)
-app.route('/studentGroupConstraint', studentGroupConstraintRouter)
-
 
 
 

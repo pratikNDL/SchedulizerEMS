@@ -1,11 +1,11 @@
 import { useState } from "react"
-import LabeledInput from "../LabeledInput"
+import LabeledInput from "../Inputs/LabeledInput"
 import {StudentGroupType} from '../../hooks/useFetchStudentGroups'
 import config from '../../../config.json'
 import axios from "axios"
-import SelectInput from "../SelectInput"
+import SelectInput from "../Inputs/SelectInput"
 import useFetchDepartments from "../../hooks/useFetchDepartments"
-import FormWrapper from "../FormWrapper"
+import FormWrapper from "../Wrappers/FormWrapper"
 
 
 
@@ -26,11 +26,13 @@ function StudentGroupForm({triggerRefresh}: {triggerRefresh: () => void}) {
         const reqData: Omit<StudentGroupType,'id'> = {
             ...data,
             batchCount: Number(data.batchCount),
-            passingYear: Number(data.passingYear)
+            passingYear: Number(data.passingYear),
+            headCount: Number(data.headCount)
         }
         try {
             await  axios.post(config.BACKEND_URl+`/studentGroup`, reqData, {headers: {Authorization: localStorage.getItem('token')}});
         }catch(e: any){
+            console.log(e)
             return {
                 success: false,
                 message: e.response.data.message ? e.response.data.message : 'Something Went Wrong'
@@ -49,6 +51,7 @@ function StudentGroupForm({triggerRefresh}: {triggerRefresh: () => void}) {
                     <LabeledInput label="Name"  placeholder="ECS/2026" handler={(e) => {setData({...data, name: e.target.value})}}/>
                     <LabeledInput label="Section"  placeholder="A" handler={(e) => {setData({...data, section: e.target.value})}}/>
                     <LabeledInput label="Passing Year" type="number" placeholder="2026" handler={(e) => {setData({...data, passingYear: e.target.value})}}/>
+                    <LabeledInput label="No. of Students" type='number' placeholder="70" handler={(e) => {setData({...data, headCount: e.target.value})}}/>
                     <LabeledInput label="No. of Batches" type='number' placeholder="4" handler={(e) => {setData({...data, batchCount: e.target.value})}}/>
                     <SelectInput handler={(e) => {setData({...data, departmentId: e.target.value })}} label="Department"
                         values={departments.loading ? [] : departments.data.map((department) => { return{displayValue: department.name, targetValue: department.id}})}/>

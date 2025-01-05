@@ -2,7 +2,6 @@ import { Hono } from "hono";
 import { authAdmin } from "../../middlewares/authAdmin";
 import { PrismaClient } from "@prisma/client";
 import { z } from 'zod';
-import { faculty } from "@pratikndl/common-schedulizer-ems";
 
 const app = new Hono<{
     Variables: {
@@ -53,63 +52,6 @@ app.get('/:scheduleId', async (c) => {
     }
 })
 
-// Gets all classes associated with a particular StudentGroup in a particular Schedule
-app.get(':studentGroupId/class/:scheduleId', async (c) => {
-    const prisma = c.get("prisma")
-    const scheduleId = c.req.param('scheduleId');
-    const studentGroupId = c.req.param('studentGroupId');
-    const showLabs = c.req.query('showLabs') == 'true' ? true : false
-    
-
-    try {
-        const existingSchedule = await prisma.schedule.findFirst({
-            where: {
-                id: scheduleId
-            },
-            select: {
-                classes: {
-                    where: {
-                        studentGroupId: studentGroupId,
-                        isLab: showLabs,
-                    },
-                    select: {
-                        id: true,
-                        faculty: true,
-                        course: true,
-                        room: {
-                            select: {
-                                code: true,
-                                floor: true,
-                                isLab: true,
-                                capacity: true,
-                                id: true,
-                                academicBlock: {
-                                    select: {
-                                        blockCode: true,
-                                        name: true
-                                    }
-                                }
-                            }
-                        },
-                        batch: {
-                            select: {
-                                name: true
-                            }
-                        }
-                    }
-                }
-            }
-        });
-
-        if (!existingSchedule) {
-            return c.json({message: "No such Schedule"}, {status: 409}); 
-        }
-
-        return c.json({classes : existingSchedule.classes}, {status: 201});
-    } catch (e) {
-        return c.json({message: "Something went wrong"}, {status: 500}); 
-    }
-})
 
 app.put('/:scheduleId/:studentGroupId', async (c) => {
     const prisma = c.get("prisma")
@@ -204,8 +146,6 @@ app.delete('/:scheduleId/:studentGroupId', async (c) => {
         return c.json({message: "Something went wrong"}, {status: 500}); 
     }
 })
-
-
 
 
 export default app;

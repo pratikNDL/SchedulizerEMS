@@ -1,7 +1,6 @@
 import { Hono } from "hono";
 import { authAdmin } from "../middlewares/authAdmin";
 import { PrismaClient } from "@prisma/client";
-import { scheduleInput } from "@pratikndl/common-schedulizer-ems";
 import { date, z } from 'zod';
 
 const app = new Hono<{
@@ -18,7 +17,8 @@ const studentGroupInput = z.object({
     departmentId: z.string(), 
     batchCount: z.number(),
     passingYear: z.number().min(1900).max(new Date().getFullYear() + 5),
-    section: z.string()
+    section: z.string(),
+    headCount: z.number()
 })
 
 
@@ -125,9 +125,13 @@ app.post('/', async (c) => {
                 }
             })
 
+            const batchSize = data.headCount/data.batchCount;
+            const leftOver = data.headCount%data.batchCount;
+
             const batchData = Array.from({length: data.batchCount}, (_, i) => ({
                 name: `${data.section}-${i+1}`,
-                studentGroupId: newRecord.id
+                studentGroupId: newRecord.id,
+                headCount: batchSize + (i>=data.batchCount-leftOver ? 1 : 0)
             }))
 
             await prisma.batch.createMany({
@@ -165,25 +169,6 @@ app.delete('/:id', async (c) => {
     }
 })
 
-app.get('/:id', async (c) => {
-    const prisma = c.get("prisma")
-    const id = c.req.param('id');
-    
-    try {
-        const record = await prisma.studentGroup.findFirst({
-            where: {
-                id: id
-            },
-            select: {
-                id: true,
-                name: true,
-            }
-        });
-        return c.json({record});
 
-    } catch(e) {
-        return c.json({message: "Something went wrong"}, {status: 500})
-    }
-})
 
 export default app;
