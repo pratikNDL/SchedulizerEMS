@@ -231,7 +231,7 @@ function ElectiveCourseForm({course, studentGroup, faculties, rooms, setBinding}
 				<Switch isOn={include} handleToggle={handleToggle}/>
 			</div>
 
-			<div className='grid grid-cols-2 gap-8'>
+			<div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
 				<SelectInput
 					label='Faculty'
 					handler={(e) => facultyHandler(course.id, e.target.value)} 
@@ -244,13 +244,15 @@ function ElectiveCourseForm({course, studentGroup, faculties, rooms, setBinding}
 					disabled={!include}
 
 				/>
-				<div className='flex gap-8 col-span-full w-full mt-4 border-b-2 p-1 border-input-highlight'>
-					<div className='text-primary-text'>Select Batches:</div>
+				<div className=' flex-col col-span-full w-full mt-4 border-b-2 p-1 border-input-highlight  '>
+					<div className='text-primary-text '>Select Batches:</div>
+					<div className='grid grid-cols-2 md:grid-cols-4 gap-8 mt-4'>
 					{
 						studentGroup ?
 						studentGroup.batches.map(batch => <CheckBox disabled={!include} label={`${batch.name}`} handler={(e) => batchHandler(course.id, batch.id, e)}/>):
 						<Spinner/>
 					}
+					</div>
 				</div>
 			</div>
 		</div>
