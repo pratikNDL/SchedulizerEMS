@@ -56,6 +56,7 @@ app.get('/', async (c) => {
 });
 
 
+
 app.post('/', async (c) => {
     const instituteId = c.get("instituteId") as string;
     const prisma = c.get("prisma")

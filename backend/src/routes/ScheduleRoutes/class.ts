@@ -172,36 +172,70 @@ app.post('/concurrent', async (c) => {
 
 
 
-
-
-
-
-
-
-
-
-// adds a class to a schedule
-// app.post('/add', async (c) => {
-//     const prisma = c.get("prisma")
-//     const body =  await c.req.json();
-//     const { data, success, error } = classSchema.safeParse(body);
-
-//     if(!success) {
-//         return c.json({message: "invalid Inputs", error}, {status: 400})
-//     }
+app.post('/single', async (c) => {
+    const prisma = c.get("prisma")
+    const body =  await c.req.json();
+    const { data, success, error } = ClassSchema.safeParse(body);
+    console.log(body);
+    if(!success) {
+        return c.json({message: "invalid Inputs", error}, {status: 400})
+    }
     
-//     try {
+    try {
         
-//         await prisma.class.create({
-//             data: data
-//         })
-//         return c.json({message: "New Class Added"}, 201);
+        await prisma.class.create({
+            data: {
+                ...data,
+                batches: {
+                    connect: data.batches
+                }
+            }
+        })
 
-//     } catch (e) {
-//         console.error(e);
-//         return c.json({message: "Something went wrong"}, {status: 500}); 
-//     }
-// })
+        return c.json({message: "New Theory Class Added"}, 201);
+        
+    } catch (e) {
+        console.error(e);
+        return c.json({message: "Something went wrong"}, {status: 500}); 
+    }
+})
+
+app.post('/multiple', async (c) => {
+    const prisma = c.get("prisma")
+    const body =  await c.req.json();
+    const { data, success, error } = z.array(ClassSchema).safeParse(body);
+
+    if(!success) {
+        return c.json({message: "invalid Inputs", error}, {status: 400})
+    }
+    
+    try {
+        const newClasses = await Promise.all(
+            data.map(_class => prisma.class.create({
+                data: {
+                    ..._class,
+                    batches: {
+                        connect: _class.batches
+                    }
+                }
+            }))
+        )
+        // await prisma.class.createMany
+        return c.json({message: "New Class Added"}, 201);
+
+    } catch (e) {
+        console.error(e);
+        return c.json({message: "Something went wrong"}, {status: 500}); 
+    }    
+    
+})
+
+
+
+
+
+
+
 
 // add multiple classes to a schedule (for different batches of same StudentGroup)
 app.post('/addMany', async (c) => {

@@ -41,7 +41,7 @@ function useFetchCourses(query: string, courseType?:CourseType, filter?:"regular
   }
   }, [query])
 
-  if(!data) setData([]);
+  // if(!data) setData([]);
   return {loading, data}
 }
 

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import FormWrapper from "../../Wrappers/FormWrapper";
-import useFetchCourses, { CourseType } from "../../../hooks/useFetchCourse";
+import { CourseType } from "../../../hooks/useFetchCourse";
 import useFetchFaculties from "../../../hooks/useFetchFaculty";
 import SelectInput from "../../Inputs/SelectInput";
 import useFetchRoom from "../../../hooks/useFetchRoom";
@@ -76,7 +76,7 @@ function ElectiveClassFormPractical() {
 
     try {
       await axios.post(
-        `${config.BACKEND_URl}/schedule/class/concurrent`,
+        `${config.BACKEND_URl}/schedule/class/multiple`,
         body,
         { headers: { Authorization: localStorage.getItem("token") } }
       );

@@ -116,7 +116,7 @@ function ElectiveCourseForm({electiveBasket, triggerRefresh, setElectiveBasket} 
 
         const body: Array<CourseInputType> = courses.map((course, i) => ({
                 name: course,
-                code: `${electiveBasket.code}-${i}`,
+                code: `${electiveBasket.code}-${i+1}`,
                 electiveBasketId: electiveBasket.id,
                 courseType: electiveBasket.courseType,
                 credits: electiveBasket.credits,

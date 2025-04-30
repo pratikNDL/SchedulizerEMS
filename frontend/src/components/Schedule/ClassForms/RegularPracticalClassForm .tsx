@@ -59,7 +59,7 @@ function RegularPracticalClassForm() {
 
     try {
       await axios.post(
-        `${config.BACKEND_URl}/schedule/class/concurrent`,
+        `${config.BACKEND_URl}/schedule/class/multiple`,
         transformedData,
         { headers: { Authorization: localStorage.getItem("token") } }
       );

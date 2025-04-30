@@ -13,7 +13,7 @@ import Spinner from '../../Spinner';
 import useFetchElectiveBasket, { ElectiveBasketFetchType } from '../../../hooks/useFetchElectiveBasket';
 import CheckBox from '../../Inputs/Checkbox';
 import Switch from '../../Inputs/Switch';
-import { CourseFetchType, CourseType } from '../../../hooks/useFetchCourse';
+import { CourseFetchType } from '../../../hooks/useFetchCourse';
 import { Class } from './RegularPracticalClassForm ';
 
 export type ElectiveClassType = {
@@ -62,7 +62,7 @@ function ElectiveClassFormTheory() {
 
 		try {
 		  await axios.post(
-			`${config.BACKEND_URl}/schedule/class/concurrent`,
+			`${config.BACKEND_URl}/schedule/class/multiple`,
 			body,
 			{ headers: { Authorization: localStorage.getItem("token") } }
 		  );
