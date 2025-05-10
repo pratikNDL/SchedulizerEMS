@@ -8,7 +8,7 @@ import courseRouter from './course'
 import scheduleRouter from './ScheduleRoutes/schedule'
 import studentGroupRouter from './studentGroup'
 import electiveRouter from './elective'
-
+import algoInputRouter from './algorithmInputs';
 export const router = new Hono();
 
 router.route('/me', meRouter)
@@ -20,4 +20,4 @@ router.route('/course', courseRouter)
 router.route('/schedule', scheduleRouter)
 router.route('/studentGroup', studentGroupRouter)
 router.route('/elective', electiveRouter)
-
+router.route('/algorithmInput',algoInputRouter)
