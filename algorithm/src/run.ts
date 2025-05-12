@@ -3,9 +3,11 @@ import { Schedule } from './Schedule';
 import { Schedulizer, SchedulizerMetaData } from './Schedulizer';
 import { _Class, Room } from './types';
 import { _classesGenerator, facultyNonAvailabilityGenerator, roomGenerator, studentGroupNonAvailabilityGenerator } from './utils';
+import { writeFile } from 'fs/promises';
 
 
-
+export default function run() {
+    
 
 const metaData: SchedulizerMetaData = {
     daysPerWeek: data.days,
@@ -27,6 +29,35 @@ for(let i=0; i<2; i++) {
     schedulizer.spawnNextGeneration();
 }
 
-console.log((schedulizer.fittestSchedule.studentGroupFormat()))
+const response = {
+    days: schedulizer.data.daysPerWeek,
+    slots: schedulizer.data.slotsPerDay,
+    studentsGroupData: schedulizer.fittestSchedule.studentGroupFormat(),
+    facultyData: schedulizer.fittestSchedule.facultyFormat()
+
+}
+console.log(response)
+return response;
+
+
+}
+
+run()
+// const saveResponseToFile = async () => {
+  
+
+//   try {
+//     const jsonData = JSON.stringify(response, null, 2); // pretty print with 2 spaces
+//     await writeFile('response.json', jsonData);
+//     console.log('response.json has been saved!');
+//   } catch (error) {
+//     console.error('Error writing file:', error);
+//   }
+// };
+
+// saveResponseToFile();
+
+
+
 
 // tsc -b && clear && node ./dist/run.js
