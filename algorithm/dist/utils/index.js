@@ -19,13 +19,16 @@ function lowerBound(arr, target) {
 }
 function formatClass(data) {
     const _class = Object.assign({}, data);
-    _class.batches = data.batches.map((batch) => batch.id);
+    _class.batches = data.batches;
     _class.concurrentClasses = data.concurrentClasses.map((_class) => _class.id);
     _class.courseType = data.course.courseType;
     _class.courseCredits = data.course.credits;
     _class.headCount = _class.courseType == 'THEORY' ? 80 : 30;
     _class.duration = _class.courseType == 'THEORY' ? _class.courseCredits : _class.courseCredits * 2;
     _class.classesPerWeek = _class.courseType == 'THEORY' ? _class.courseCredits : 1;
+    _class.facultyName = data.faculty.name;
+    _class.courseName = data.course.name;
+    _class.studentGroupName = data.StudentGroup.name;
     return _class;
 }
 function facultyNonAvailabilityGenerator(data) {

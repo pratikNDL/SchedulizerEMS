@@ -12,6 +12,8 @@ class Schedulizer {
         this.studentGroupNonAvailability = studentGroupNonAvailability;
         this.mappedRooms = new Map(); // index to room
         this.mappedClasses = new Map(); // id to class
+        this.mappedStudentGroup = new Map();
+        this.mappedFaculty = new Map();
         this.population = [];
         this.generation = 0;
         this.fittestSchedule = new Schedule_1.Schedule(this);
@@ -22,7 +24,16 @@ class Schedulizer {
         this.mutationRate = data.mutationRate;
         this.populationSize = data.populationSize;
         this.rooms.forEach((room, i) => this.mappedRooms.set(i, room));
-        this.classes.forEach(_class => this.mappedClasses.set(_class.id, _class));
+        this.classes.forEach(_class => {
+            var _a, _b;
+            this.mappedClasses.set(_class.id, _class);
+            if (!this.mappedStudentGroup.get(_class.studentGroupId))
+                this.mappedStudentGroup.set(_class.studentGroupId, []);
+            (_a = this.mappedStudentGroup.get(_class.studentGroupId)) === null || _a === void 0 ? void 0 : _a.push(_class);
+            if (!this.mappedFaculty.get(_class.facultyId))
+                this.mappedFaculty.set(_class.facultyId, []);
+            (_b = this.mappedFaculty.get(_class.facultyId)) === null || _b === void 0 ? void 0 : _b.push(_class);
+        });
     }
     ;
     initializePopulation() {

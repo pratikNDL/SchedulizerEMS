@@ -90,9 +90,9 @@ export class Schedule {
                         if(facultiesSeen.has(_class.facultyId)) penalty += FacultyOverBookedPenalty;
                         else facultiesSeen.add(_class.facultyId);
 
-                        _class.batches.forEach(batchId => {
-                            if(batchesSeen.has(batchId)) penalty += BatchOverBookedPenalty;
-                            else batchesSeen.add(batchId);
+                        _class.batches.forEach((batch) => {
+                            if(batchesSeen.has(batch.id)) penalty += BatchOverBookedPenalty;
+                            else batchesSeen.add(batch.id);
                         })
 
                         if(this.schedulizer.facultyNonAvailability.get(_class.facultyId)?.has(position)) penalty += FacultyNonAvailabilityPenalty;
@@ -126,13 +126,50 @@ export class Schedule {
 
     
 
-    view() {
-        const prettyView = new Map<string, Array<{day: number, startSlot: number, roomId: string}>>();
+    classFormat() {
+        const classView = new Map<string, Array<{day: number, startSlot: number, roomId: string}>>();
         for (const [classId, indexes] of this.mappedSchedule.entries()) {
-            prettyView.set(classId, indexes.map((index) => this.expandedIndex(index)))
+            classView.set(classId, indexes.map((index) => (
+                {
+                    ...this.expandedIndex(index),
+                    ...this.schedulizer.mappedClasses.get(classId)
+                }
+            )))
         }
-        console.log(prettyView)
+        return classView;
     }
+
+    studentGroupFormat() {
+        const studentGroupView = new Map<string, Array<any>>();
+        const classView = this.classFormat();
+        for (const [studentGroupId, classes] of this.schedulizer.mappedStudentGroup.entries()) {
+            let views:any = [];
+            for(const _class of classes) {
+                const cView = classView.get(_class.id) || []
+                views = [...views, ...cView]
+            }
+            studentGroupView.set(studentGroupId, views);
+        }
+        return studentGroupView
+
+    }
+
+    facultyFormat() {
+        const facultyView = new Map<string, Array<any>>();
+        const classView = this.classFormat();
+        for (const [facultyId, classes] of this.schedulizer.mappedFaculty.entries()) {
+            let views:any = [];
+            for(const _class of classes) {
+                const cView = classView.get(_class.id) || []
+                views = [...views, ...cView]
+            }
+            facultyView.set(facultyId, views);
+        }
+        return facultyView
+
+    }
+
+    
 
     private expandedIndex(index: number) {
         const day = Math.floor(index / (this.schedulizer.slotsPerDay * this.schedulizer.roomCount));
@@ -145,6 +182,8 @@ export class Schedule {
             roomId: this.schedulizer.mappedRooms.get(room)?.id || ""
         }
     }
+
+    
     private calculateRoomHeadCount(dayIndex: number, slotIndex: number, roomIndex: number) {
         const classes = this.schedule[dayIndex][slotIndex][roomIndex];
         return classes.reduce((sum, _class) => sum + _class.headCount, 0);

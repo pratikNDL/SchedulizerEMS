@@ -4,10 +4,13 @@ export type CourseType = 'THEORY' | 'PRACTICAL';
 export type _Class = {
     id: string
     facultyId: string,
+    facultyName: string,
     studentGroupId: string,
-    batches: string[], // reference to batchId
+    studentGroupName: string
+    batches: {id: string, name: string}[], // reference to batchId
     concurrentClasses: string[] // reference to other class
     courseType: CourseType,
+    courseName: string,
     preferredRoomId: string,
     courseCredits: number,
     headCount: number,
@@ -19,7 +22,8 @@ export type Room = {
     id: string,
     capacity: number,
     isLab: boolean,
-    index? : number 
+    index? : number,
+    code: string
 }
 
 

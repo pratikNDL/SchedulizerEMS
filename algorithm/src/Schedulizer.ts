@@ -13,6 +13,8 @@ export type SchedulizerMetaData = {
 export class Schedulizer {
     public mappedRooms = new Map<number, Room>(); // index to room
     public mappedClasses = new Map<string, _Class>(); // id to class
+    public mappedStudentGroup = new Map<string, Array<_Class>>(); 
+    public mappedFaculty = new Map<string, Array<_Class>>(); 
     public population:Array<Schedule> = [];
 
     public daysPerWeek;
@@ -33,7 +35,13 @@ export class Schedulizer {
         this.populationSize = data.populationSize
 
         this.rooms.forEach((room, i) => this.mappedRooms.set(i, room));
-        this.classes.forEach(_class => this.mappedClasses.set(_class.id, _class))
+        this.classes.forEach(_class => {
+            this.mappedClasses.set(_class.id, _class)
+            if(!this.mappedStudentGroup.get(_class.studentGroupId)) this.mappedStudentGroup.set(_class.studentGroupId, [])
+            this.mappedStudentGroup.get(_class.studentGroupId)?.push(_class)
+            if(!this.mappedFaculty.get(_class.facultyId)) this.mappedFaculty.set(_class.facultyId, [])
+            this.mappedFaculty.get(_class.facultyId)?.push(_class)
+        })
     };
 
     initializePopulation() {

@@ -80,11 +80,11 @@ class Schedule {
                             penalty += FacultyOverBookedPenalty;
                         else
                             facultiesSeen.add(_class.facultyId);
-                        _class.batches.forEach(batchId => {
-                            if (batchesSeen.has(batchId))
+                        _class.batches.forEach((batch) => {
+                            if (batchesSeen.has(batch.id))
                                 penalty += BatchOverBookedPenalty;
                             else
-                                batchesSeen.add(batchId);
+                                batchesSeen.add(batch.id);
                         });
                         if ((_a = this.schedulizer.facultyNonAvailability.get(_class.facultyId)) === null || _a === void 0 ? void 0 : _a.has(position))
                             penalty += FacultyNonAvailabilityPenalty;
@@ -112,12 +112,38 @@ class Schedule {
         });
         this.fitness = 1 / (penalty);
     }
-    view() {
-        const prettyView = new Map();
+    classFormat() {
+        const classView = new Map();
         for (const [classId, indexes] of this.mappedSchedule.entries()) {
-            prettyView.set(classId, indexes.map((index) => this.expandedIndex(index)));
+            classView.set(classId, indexes.map((index) => (Object.assign(Object.assign({}, this.expandedIndex(index)), this.schedulizer.mappedClasses.get(classId)))));
         }
-        console.log(prettyView);
+        return classView;
+    }
+    studentGroupFormat() {
+        const studentGroupView = new Map();
+        const classView = this.classFormat();
+        for (const [studentGroupId, classes] of this.schedulizer.mappedStudentGroup.entries()) {
+            let views = [];
+            for (const _class of classes) {
+                const cView = classView.get(_class.id) || [];
+                views = [...views, ...cView];
+            }
+            studentGroupView.set(studentGroupId, views);
+        }
+        return studentGroupView;
+    }
+    facultyFormat() {
+        const facultyView = new Map();
+        const classView = this.classFormat();
+        for (const [facultyId, classes] of this.schedulizer.mappedFaculty.entries()) {
+            let views = [];
+            for (const _class of classes) {
+                const cView = classView.get(_class.id) || [];
+                views = [...views, ...cView];
+            }
+            facultyView.set(facultyId, views);
+        }
+        return facultyView;
     }
     expandedIndex(index) {
         var _a;

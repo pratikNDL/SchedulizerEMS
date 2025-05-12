@@ -27,4 +27,6 @@ for(let i=0; i<2; i++) {
     schedulizer.spawnNextGeneration();
 }
 
-schedulizer.fittestSchedule.view()
+console.log((schedulizer.fittestSchedule.studentGroupFormat()))
+
+// tsc -b && clear && node ./dist/run.js

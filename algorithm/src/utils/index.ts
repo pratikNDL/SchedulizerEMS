@@ -13,13 +13,16 @@ export function lowerBound(arr:Array<number>, target: number) {
 
 export function formatClass(data: any): _Class {
   const _class:_Class = {...data};
-  _class.batches = data.batches.map((batch: { id: string; }) => batch.id);
+  _class.batches = data.batches;
   _class.concurrentClasses = data.concurrentClasses.map((_class: {id: string}) => _class.id)
   _class.courseType = data.course.courseType
   _class.courseCredits = data.course.credits
   _class.headCount = _class.courseType == 'THEORY'? 80: 30;
   _class.duration = _class.courseType == 'THEORY'? _class.courseCredits: _class.courseCredits*2;
   _class.classesPerWeek = _class.courseType == 'THEORY'? _class.courseCredits: 1 ;
+  _class.facultyName = data.faculty.name;
+  _class.courseName = data.course.name
+  _class.studentGroupName = data.StudentGroup.name
   return _class;
 }
 

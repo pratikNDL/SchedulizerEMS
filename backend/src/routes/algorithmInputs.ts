@@ -1,5 +1,5 @@
 import { Hono } from "hono";
-import { z } from 'zod'
+import { tuple, z } from 'zod'
 import { authAdmin } from "../middlewares/authAdmin";
 import { CourseType, PrismaClient } from "@prisma/client";
 
@@ -33,13 +33,24 @@ app.get('/schedule/data/:scheduleId', async (c) => {
                 
                     classes:{
                         include: {
-                            batches: { select: { id: true } },
+                            batches: { select: { id: true, name: true } },
                             concurrentClasses: {select: {id: true}},
                             concurrentByClasses: {select: {id: true}},
                             course: {
                                 select: {
                                     credits: true,
-                                    courseType: true
+                                    courseType: true,
+                                    name: true
+                                }
+                            },
+                            faculty: {
+                                select : {
+                                    name: true
+                                }
+                            },
+                            StudentGroup: {
+                                select: {
+                                    name: true
                                 }
                             }
                         }
