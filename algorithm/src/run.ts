@@ -32,30 +32,50 @@ for(let i=0; i<2; i++) {
 const response = {
     days: schedulizer.data.daysPerWeek,
     slots: schedulizer.data.slotsPerDay,
-    studentsGroupData: schedulizer.fittestSchedule.studentGroupFormat(),
-    facultyData: schedulizer.fittestSchedule.facultyFormat()
+    studentsGroupData: deepMapToObject(schedulizer.fittestSchedule.studentGroupFormat()),
+    facultyData: deepMapToObject(schedulizer.fittestSchedule.facultyFormat())
 
 }
 console.log(response)
+
 return response;
 
 
 }
 
+
+
 run()
+
+
+
 // const saveResponseToFile = async () => {
   
 
-//   try {
-//     const jsonData = JSON.stringify(response, null, 2); // pretty print with 2 spaces
-//     await writeFile('response.json', jsonData);
-//     console.log('response.json has been saved!');
-//   } catch (error) {
-//     console.error('Error writing file:', error);
-//   }
-// };
+//     try {
+//       const jsonData = JSON.stringify(response, null, 2); // pretty print with 2 spaces
+//       await writeFile('response.json', jsonData);
+//       console.log('response.json has been saved!');
+//     } catch (error) {
+//       console.error('Error writing file:', error);
+//     }
+//   };
+  
+//   saveResponseToFile();
 
-// saveResponseToFile();
+function deepMapToObject(map: any): any {
+    if (map instanceof Map) {
+      const obj: Record<string, any> = {};
+      for (const [key, value] of map.entries()) {
+        obj[key] = deepMapToObject(value);
+      }
+      return obj;
+    } else if (Array.isArray(map)) {
+      return map.map(deepMapToObject);
+    } else {
+      return map;
+    }
+  }
 
 
 

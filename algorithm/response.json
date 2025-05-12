@@ -1,6 +1,5466 @@
 {
   "days": 5,
   "slots": 7,
-  "studentsGroupData": {},
-  "facultyData": {}
+  "studentsGroupData": {
+    "547f8f93-1683-4193-88ae-349564fcfdca": [
+      {
+        "day": 1,
+        "startSlot": 1,
+        "room": 2,
+        "roomId": "510dcbb7-8458-48d8-b1b8-b03ea4480149",
+        "id": "3a338df2-a3f7-4230-9a35-23ca22cd8533",
+        "facultyId": "6c9d3bd2-1485-4291-ae51-f38a138807d6",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "79ee5678-69fc-416c-8a18-07eb1de888d4",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": null,
+        "batches": [
+          {
+            "id": "4e11694a-229f-4fe1-8afd-a60d8bc03099",
+            "name": "A-1"
+          },
+          {
+            "id": "1808ab72-611f-4bba-89fd-c507c6a3cbb4",
+            "name": "A-2"
+          },
+          {
+            "id": "b02e9fc0-5fc0-45b6-b8e2-44347d1e5328",
+            "name": "A-3"
+          },
+          {
+            "id": "26ca3da1-e950-41df-b80d-2661b9a2c081",
+            "name": "A-4"
+          }
+        ],
+        "concurrentClasses": [],
+        "concurrentByClasses": [],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Computer Networks"
+        },
+        "faculty": {
+          "name": "Deepali Mangesh Kotambkar"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Deepali Mangesh Kotambkar",
+        "courseName": "Computer Networks",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 2,
+        "startSlot": 0,
+        "room": 0,
+        "roomId": "510dcbb7-8458-48d8-b1b8-b03ea4480149",
+        "id": "3a338df2-a3f7-4230-9a35-23ca22cd8533",
+        "facultyId": "6c9d3bd2-1485-4291-ae51-f38a138807d6",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "79ee5678-69fc-416c-8a18-07eb1de888d4",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": null,
+        "batches": [
+          {
+            "id": "4e11694a-229f-4fe1-8afd-a60d8bc03099",
+            "name": "A-1"
+          },
+          {
+            "id": "1808ab72-611f-4bba-89fd-c507c6a3cbb4",
+            "name": "A-2"
+          },
+          {
+            "id": "b02e9fc0-5fc0-45b6-b8e2-44347d1e5328",
+            "name": "A-3"
+          },
+          {
+            "id": "26ca3da1-e950-41df-b80d-2661b9a2c081",
+            "name": "A-4"
+          }
+        ],
+        "concurrentClasses": [],
+        "concurrentByClasses": [],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Computer Networks"
+        },
+        "faculty": {
+          "name": "Deepali Mangesh Kotambkar"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Deepali Mangesh Kotambkar",
+        "courseName": "Computer Networks",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 0,
+        "startSlot": 2,
+        "room": 4,
+        "roomId": "510dcbb7-8458-48d8-b1b8-b03ea4480149",
+        "id": "3a338df2-a3f7-4230-9a35-23ca22cd8533",
+        "facultyId": "6c9d3bd2-1485-4291-ae51-f38a138807d6",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "79ee5678-69fc-416c-8a18-07eb1de888d4",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": null,
+        "batches": [
+          {
+            "id": "4e11694a-229f-4fe1-8afd-a60d8bc03099",
+            "name": "A-1"
+          },
+          {
+            "id": "1808ab72-611f-4bba-89fd-c507c6a3cbb4",
+            "name": "A-2"
+          },
+          {
+            "id": "b02e9fc0-5fc0-45b6-b8e2-44347d1e5328",
+            "name": "A-3"
+          },
+          {
+            "id": "26ca3da1-e950-41df-b80d-2661b9a2c081",
+            "name": "A-4"
+          }
+        ],
+        "concurrentClasses": [],
+        "concurrentByClasses": [],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Computer Networks"
+        },
+        "faculty": {
+          "name": "Deepali Mangesh Kotambkar"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Deepali Mangesh Kotambkar",
+        "courseName": "Computer Networks",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 0,
+        "startSlot": 2,
+        "room": 1,
+        "roomId": "f0711744-b164-4c02-ae0b-5b5017f0307b",
+        "id": "53340471-09b7-4551-8caf-a7183afa4e5f",
+        "facultyId": "5d5b174c-36ec-4674-afbb-f199c4c96862",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "c1c09525-ee86-47de-8afc-48ed5a1bf067",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "4e11694a-229f-4fe1-8afd-a60d8bc03099",
+            "name": "A-1"
+          },
+          {
+            "id": "1808ab72-611f-4bba-89fd-c507c6a3cbb4",
+            "name": "A-2"
+          }
+        ],
+        "concurrentClasses": [
+          "53340471-09b7-4551-8caf-a7183afa4e5f",
+          "efa1f33a-150f-4460-accd-73be7bb1b71c",
+          "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "53340471-09b7-4551-8caf-a7183afa4e5f"
+          },
+          {
+            "id": "efa1f33a-150f-4460-accd-73be7bb1b71c"
+          },
+          {
+            "id": "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Digital System Design"
+        },
+        "faculty": {
+          "name": "Smita Gulabrao Daware"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Smita Gulabrao Daware",
+        "courseName": "Digital System Design",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 0,
+        "startSlot": 4,
+        "room": 3,
+        "roomId": "f0711744-b164-4c02-ae0b-5b5017f0307b",
+        "id": "53340471-09b7-4551-8caf-a7183afa4e5f",
+        "facultyId": "5d5b174c-36ec-4674-afbb-f199c4c96862",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "c1c09525-ee86-47de-8afc-48ed5a1bf067",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "4e11694a-229f-4fe1-8afd-a60d8bc03099",
+            "name": "A-1"
+          },
+          {
+            "id": "1808ab72-611f-4bba-89fd-c507c6a3cbb4",
+            "name": "A-2"
+          }
+        ],
+        "concurrentClasses": [
+          "53340471-09b7-4551-8caf-a7183afa4e5f",
+          "efa1f33a-150f-4460-accd-73be7bb1b71c",
+          "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "53340471-09b7-4551-8caf-a7183afa4e5f"
+          },
+          {
+            "id": "efa1f33a-150f-4460-accd-73be7bb1b71c"
+          },
+          {
+            "id": "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Digital System Design"
+        },
+        "faculty": {
+          "name": "Smita Gulabrao Daware"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Smita Gulabrao Daware",
+        "courseName": "Digital System Design",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 3,
+        "startSlot": 1,
+        "room": 1,
+        "roomId": "f0711744-b164-4c02-ae0b-5b5017f0307b",
+        "id": "53340471-09b7-4551-8caf-a7183afa4e5f",
+        "facultyId": "5d5b174c-36ec-4674-afbb-f199c4c96862",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "c1c09525-ee86-47de-8afc-48ed5a1bf067",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "4e11694a-229f-4fe1-8afd-a60d8bc03099",
+            "name": "A-1"
+          },
+          {
+            "id": "1808ab72-611f-4bba-89fd-c507c6a3cbb4",
+            "name": "A-2"
+          }
+        ],
+        "concurrentClasses": [
+          "53340471-09b7-4551-8caf-a7183afa4e5f",
+          "efa1f33a-150f-4460-accd-73be7bb1b71c",
+          "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "53340471-09b7-4551-8caf-a7183afa4e5f"
+          },
+          {
+            "id": "efa1f33a-150f-4460-accd-73be7bb1b71c"
+          },
+          {
+            "id": "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Digital System Design"
+        },
+        "faculty": {
+          "name": "Smita Gulabrao Daware"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Smita Gulabrao Daware",
+        "courseName": "Digital System Design",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 3,
+        "startSlot": 3,
+        "room": 4,
+        "roomId": "510dcbb7-8458-48d8-b1b8-b03ea4480149",
+        "id": "efa1f33a-150f-4460-accd-73be7bb1b71c",
+        "facultyId": "d15b9e8e-3de0-4c58-8501-30011b6d5beb",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "448ae444-7d49-402f-a228-847980ba9e11",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "b02e9fc0-5fc0-45b6-b8e2-44347d1e5328",
+            "name": "A-3"
+          }
+        ],
+        "concurrentClasses": [
+          "53340471-09b7-4551-8caf-a7183afa4e5f",
+          "efa1f33a-150f-4460-accd-73be7bb1b71c",
+          "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "53340471-09b7-4551-8caf-a7183afa4e5f"
+          },
+          {
+            "id": "efa1f33a-150f-4460-accd-73be7bb1b71c"
+          },
+          {
+            "id": "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Wireless Communication"
+        },
+        "faculty": {
+          "name": "Parag Shiva Jawarkar"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Parag Shiva Jawarkar",
+        "courseName": "Wireless Communication",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 3,
+        "startSlot": 4,
+        "room": 4,
+        "roomId": "510dcbb7-8458-48d8-b1b8-b03ea4480149",
+        "id": "efa1f33a-150f-4460-accd-73be7bb1b71c",
+        "facultyId": "d15b9e8e-3de0-4c58-8501-30011b6d5beb",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "448ae444-7d49-402f-a228-847980ba9e11",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "b02e9fc0-5fc0-45b6-b8e2-44347d1e5328",
+            "name": "A-3"
+          }
+        ],
+        "concurrentClasses": [
+          "53340471-09b7-4551-8caf-a7183afa4e5f",
+          "efa1f33a-150f-4460-accd-73be7bb1b71c",
+          "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "53340471-09b7-4551-8caf-a7183afa4e5f"
+          },
+          {
+            "id": "efa1f33a-150f-4460-accd-73be7bb1b71c"
+          },
+          {
+            "id": "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Wireless Communication"
+        },
+        "faculty": {
+          "name": "Parag Shiva Jawarkar"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Parag Shiva Jawarkar",
+        "courseName": "Wireless Communication",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 2,
+        "startSlot": 1,
+        "room": 5,
+        "roomId": "510dcbb7-8458-48d8-b1b8-b03ea4480149",
+        "id": "efa1f33a-150f-4460-accd-73be7bb1b71c",
+        "facultyId": "d15b9e8e-3de0-4c58-8501-30011b6d5beb",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "448ae444-7d49-402f-a228-847980ba9e11",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "b02e9fc0-5fc0-45b6-b8e2-44347d1e5328",
+            "name": "A-3"
+          }
+        ],
+        "concurrentClasses": [
+          "53340471-09b7-4551-8caf-a7183afa4e5f",
+          "efa1f33a-150f-4460-accd-73be7bb1b71c",
+          "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "53340471-09b7-4551-8caf-a7183afa4e5f"
+          },
+          {
+            "id": "efa1f33a-150f-4460-accd-73be7bb1b71c"
+          },
+          {
+            "id": "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Wireless Communication"
+        },
+        "faculty": {
+          "name": "Parag Shiva Jawarkar"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Parag Shiva Jawarkar",
+        "courseName": "Wireless Communication",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 3,
+        "startSlot": 2,
+        "room": 4,
+        "roomId": "acd54b15-270d-4ee2-b906-2426b0802870",
+        "id": "586c28a6-1711-4add-8d1a-9f7f00c881d8",
+        "facultyId": "525d3c2b-0242-47c0-8f8a-0c2148ed87bc",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "4976c327-a001-45b2-8835-8de2bd6b3b2e",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "26ca3da1-e950-41df-b80d-2661b9a2c081",
+            "name": "A-4"
+          }
+        ],
+        "concurrentClasses": [
+          "53340471-09b7-4551-8caf-a7183afa4e5f",
+          "efa1f33a-150f-4460-accd-73be7bb1b71c",
+          "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "53340471-09b7-4551-8caf-a7183afa4e5f"
+          },
+          {
+            "id": "efa1f33a-150f-4460-accd-73be7bb1b71c"
+          },
+          {
+            "id": "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Analog IC Design"
+        },
+        "faculty": {
+          "name": "Rajesh Harba Khobragade"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Rajesh Harba Khobragade",
+        "courseName": "Analog IC Design",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 4,
+        "startSlot": 1,
+        "room": 1,
+        "roomId": "acd54b15-270d-4ee2-b906-2426b0802870",
+        "id": "586c28a6-1711-4add-8d1a-9f7f00c881d8",
+        "facultyId": "525d3c2b-0242-47c0-8f8a-0c2148ed87bc",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "4976c327-a001-45b2-8835-8de2bd6b3b2e",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "26ca3da1-e950-41df-b80d-2661b9a2c081",
+            "name": "A-4"
+          }
+        ],
+        "concurrentClasses": [
+          "53340471-09b7-4551-8caf-a7183afa4e5f",
+          "efa1f33a-150f-4460-accd-73be7bb1b71c",
+          "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "53340471-09b7-4551-8caf-a7183afa4e5f"
+          },
+          {
+            "id": "efa1f33a-150f-4460-accd-73be7bb1b71c"
+          },
+          {
+            "id": "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Analog IC Design"
+        },
+        "faculty": {
+          "name": "Rajesh Harba Khobragade"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Rajesh Harba Khobragade",
+        "courseName": "Analog IC Design",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 2,
+        "startSlot": 4,
+        "room": 4,
+        "roomId": "acd54b15-270d-4ee2-b906-2426b0802870",
+        "id": "586c28a6-1711-4add-8d1a-9f7f00c881d8",
+        "facultyId": "525d3c2b-0242-47c0-8f8a-0c2148ed87bc",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "4976c327-a001-45b2-8835-8de2bd6b3b2e",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "26ca3da1-e950-41df-b80d-2661b9a2c081",
+            "name": "A-4"
+          }
+        ],
+        "concurrentClasses": [
+          "53340471-09b7-4551-8caf-a7183afa4e5f",
+          "efa1f33a-150f-4460-accd-73be7bb1b71c",
+          "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "53340471-09b7-4551-8caf-a7183afa4e5f"
+          },
+          {
+            "id": "efa1f33a-150f-4460-accd-73be7bb1b71c"
+          },
+          {
+            "id": "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Analog IC Design"
+        },
+        "faculty": {
+          "name": "Rajesh Harba Khobragade"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Rajesh Harba Khobragade",
+        "courseName": "Analog IC Design",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 2,
+        "startSlot": 1,
+        "room": 5,
+        "roomId": "acd54b15-270d-4ee2-b906-2426b0802870",
+        "id": "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8",
+        "facultyId": "b0ffd7f0-e9d8-4f10-be81-501024886fd0",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "32f0aee2-d4f5-4909-8fd6-10e7e9b03314",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "26ca3da1-e950-41df-b80d-2661b9a2c081",
+            "name": "A-4"
+          }
+        ],
+        "concurrentClasses": [
+          "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8",
+          "7d503fa3-fd0e-4098-a882-08ee1ce14f66",
+          "e7729d44-94da-4838-87a4-005b3eda784c"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "7d503fa3-fd0e-4098-a882-08ee1ce14f66"
+          },
+          {
+            "id": "e7729d44-94da-4838-87a4-005b3eda784c"
+          },
+          {
+            "id": "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "MicroElectro Mechanical System"
+        },
+        "faculty": {
+          "name": "Poorvi Khushal Joshi"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Poorvi Khushal Joshi",
+        "courseName": "MicroElectro Mechanical System",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 3,
+        "startSlot": 3,
+        "room": 4,
+        "roomId": "acd54b15-270d-4ee2-b906-2426b0802870",
+        "id": "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8",
+        "facultyId": "b0ffd7f0-e9d8-4f10-be81-501024886fd0",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "32f0aee2-d4f5-4909-8fd6-10e7e9b03314",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "26ca3da1-e950-41df-b80d-2661b9a2c081",
+            "name": "A-4"
+          }
+        ],
+        "concurrentClasses": [
+          "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8",
+          "7d503fa3-fd0e-4098-a882-08ee1ce14f66",
+          "e7729d44-94da-4838-87a4-005b3eda784c"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "7d503fa3-fd0e-4098-a882-08ee1ce14f66"
+          },
+          {
+            "id": "e7729d44-94da-4838-87a4-005b3eda784c"
+          },
+          {
+            "id": "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "MicroElectro Mechanical System"
+        },
+        "faculty": {
+          "name": "Poorvi Khushal Joshi"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Poorvi Khushal Joshi",
+        "courseName": "MicroElectro Mechanical System",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 2,
+        "startSlot": 4,
+        "room": 2,
+        "roomId": "acd54b15-270d-4ee2-b906-2426b0802870",
+        "id": "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8",
+        "facultyId": "b0ffd7f0-e9d8-4f10-be81-501024886fd0",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "32f0aee2-d4f5-4909-8fd6-10e7e9b03314",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "26ca3da1-e950-41df-b80d-2661b9a2c081",
+            "name": "A-4"
+          }
+        ],
+        "concurrentClasses": [
+          "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8",
+          "7d503fa3-fd0e-4098-a882-08ee1ce14f66",
+          "e7729d44-94da-4838-87a4-005b3eda784c"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "7d503fa3-fd0e-4098-a882-08ee1ce14f66"
+          },
+          {
+            "id": "e7729d44-94da-4838-87a4-005b3eda784c"
+          },
+          {
+            "id": "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "MicroElectro Mechanical System"
+        },
+        "faculty": {
+          "name": "Poorvi Khushal Joshi"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Poorvi Khushal Joshi",
+        "courseName": "MicroElectro Mechanical System",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 2,
+        "startSlot": 1,
+        "room": 4,
+        "roomId": "f0711744-b164-4c02-ae0b-5b5017f0307b",
+        "id": "7d503fa3-fd0e-4098-a882-08ee1ce14f66",
+        "facultyId": "a6de1d11-e7a4-4f0e-957e-dea883e15dbe",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "faaf2e3b-8924-4c37-a301-2384a259a083",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "4e11694a-229f-4fe1-8afd-a60d8bc03099",
+            "name": "A-1"
+          },
+          {
+            "id": "1808ab72-611f-4bba-89fd-c507c6a3cbb4",
+            "name": "A-2"
+          }
+        ],
+        "concurrentClasses": [
+          "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8",
+          "7d503fa3-fd0e-4098-a882-08ee1ce14f66",
+          "e7729d44-94da-4838-87a4-005b3eda784c"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "7d503fa3-fd0e-4098-a882-08ee1ce14f66"
+          },
+          {
+            "id": "e7729d44-94da-4838-87a4-005b3eda784c"
+          },
+          {
+            "id": "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Testing and verification of digital system"
+        },
+        "faculty": {
+          "name": "Lokesh Mohan Heda"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Lokesh Mohan Heda",
+        "courseName": "Testing and verification of digital system",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 3,
+        "startSlot": 4,
+        "room": 2,
+        "roomId": "f0711744-b164-4c02-ae0b-5b5017f0307b",
+        "id": "7d503fa3-fd0e-4098-a882-08ee1ce14f66",
+        "facultyId": "a6de1d11-e7a4-4f0e-957e-dea883e15dbe",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "faaf2e3b-8924-4c37-a301-2384a259a083",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "4e11694a-229f-4fe1-8afd-a60d8bc03099",
+            "name": "A-1"
+          },
+          {
+            "id": "1808ab72-611f-4bba-89fd-c507c6a3cbb4",
+            "name": "A-2"
+          }
+        ],
+        "concurrentClasses": [
+          "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8",
+          "7d503fa3-fd0e-4098-a882-08ee1ce14f66",
+          "e7729d44-94da-4838-87a4-005b3eda784c"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "7d503fa3-fd0e-4098-a882-08ee1ce14f66"
+          },
+          {
+            "id": "e7729d44-94da-4838-87a4-005b3eda784c"
+          },
+          {
+            "id": "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Testing and verification of digital system"
+        },
+        "faculty": {
+          "name": "Lokesh Mohan Heda"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Lokesh Mohan Heda",
+        "courseName": "Testing and verification of digital system",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 4,
+        "startSlot": 3,
+        "room": 1,
+        "roomId": "f0711744-b164-4c02-ae0b-5b5017f0307b",
+        "id": "7d503fa3-fd0e-4098-a882-08ee1ce14f66",
+        "facultyId": "a6de1d11-e7a4-4f0e-957e-dea883e15dbe",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "faaf2e3b-8924-4c37-a301-2384a259a083",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "4e11694a-229f-4fe1-8afd-a60d8bc03099",
+            "name": "A-1"
+          },
+          {
+            "id": "1808ab72-611f-4bba-89fd-c507c6a3cbb4",
+            "name": "A-2"
+          }
+        ],
+        "concurrentClasses": [
+          "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8",
+          "7d503fa3-fd0e-4098-a882-08ee1ce14f66",
+          "e7729d44-94da-4838-87a4-005b3eda784c"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "7d503fa3-fd0e-4098-a882-08ee1ce14f66"
+          },
+          {
+            "id": "e7729d44-94da-4838-87a4-005b3eda784c"
+          },
+          {
+            "id": "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Testing and verification of digital system"
+        },
+        "faculty": {
+          "name": "Lokesh Mohan Heda"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Lokesh Mohan Heda",
+        "courseName": "Testing and verification of digital system",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 4,
+        "startSlot": 1,
+        "room": 1,
+        "roomId": "510dcbb7-8458-48d8-b1b8-b03ea4480149",
+        "id": "e7729d44-94da-4838-87a4-005b3eda784c",
+        "facultyId": "7fdac776-5dea-43f4-b264-5f7a883522c5",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "e3b64296-6d9c-4dde-b053-f7ab416a4e2f",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "b02e9fc0-5fc0-45b6-b8e2-44347d1e5328",
+            "name": "A-3"
+          }
+        ],
+        "concurrentClasses": [
+          "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8",
+          "7d503fa3-fd0e-4098-a882-08ee1ce14f66",
+          "e7729d44-94da-4838-87a4-005b3eda784c"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "7d503fa3-fd0e-4098-a882-08ee1ce14f66"
+          },
+          {
+            "id": "e7729d44-94da-4838-87a4-005b3eda784c"
+          },
+          {
+            "id": "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Fiber Optics Communication"
+        },
+        "faculty": {
+          "name": "Prachi Parag Rane"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Prachi Parag Rane",
+        "courseName": "Fiber Optics Communication",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 4,
+        "startSlot": 4,
+        "room": 3,
+        "roomId": "510dcbb7-8458-48d8-b1b8-b03ea4480149",
+        "id": "e7729d44-94da-4838-87a4-005b3eda784c",
+        "facultyId": "7fdac776-5dea-43f4-b264-5f7a883522c5",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "e3b64296-6d9c-4dde-b053-f7ab416a4e2f",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "b02e9fc0-5fc0-45b6-b8e2-44347d1e5328",
+            "name": "A-3"
+          }
+        ],
+        "concurrentClasses": [
+          "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8",
+          "7d503fa3-fd0e-4098-a882-08ee1ce14f66",
+          "e7729d44-94da-4838-87a4-005b3eda784c"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "7d503fa3-fd0e-4098-a882-08ee1ce14f66"
+          },
+          {
+            "id": "e7729d44-94da-4838-87a4-005b3eda784c"
+          },
+          {
+            "id": "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Fiber Optics Communication"
+        },
+        "faculty": {
+          "name": "Prachi Parag Rane"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Prachi Parag Rane",
+        "courseName": "Fiber Optics Communication",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 1,
+        "startSlot": 1,
+        "room": 6,
+        "roomId": "510dcbb7-8458-48d8-b1b8-b03ea4480149",
+        "id": "e7729d44-94da-4838-87a4-005b3eda784c",
+        "facultyId": "7fdac776-5dea-43f4-b264-5f7a883522c5",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "e3b64296-6d9c-4dde-b053-f7ab416a4e2f",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "b02e9fc0-5fc0-45b6-b8e2-44347d1e5328",
+            "name": "A-3"
+          }
+        ],
+        "concurrentClasses": [
+          "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8",
+          "7d503fa3-fd0e-4098-a882-08ee1ce14f66",
+          "e7729d44-94da-4838-87a4-005b3eda784c"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "7d503fa3-fd0e-4098-a882-08ee1ce14f66"
+          },
+          {
+            "id": "e7729d44-94da-4838-87a4-005b3eda784c"
+          },
+          {
+            "id": "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Fiber Optics Communication"
+        },
+        "faculty": {
+          "name": "Prachi Parag Rane"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Prachi Parag Rane",
+        "courseName": "Fiber Optics Communication",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 2,
+        "startSlot": 5,
+        "room": 5,
+        "roomId": "5506ed3a-f33e-475c-a5c5-cc7a31351fe4",
+        "id": "3e931aeb-5d58-484e-8067-9aa55ebadc95",
+        "facultyId": "6c9d3bd2-1485-4291-ae51-f38a138807d6",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "2828ad00-c091-4f01-84bd-856e7ff53035",
+        "courseType": "PRACTICAL",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": null,
+        "batches": [
+          {
+            "id": "1808ab72-611f-4bba-89fd-c507c6a3cbb4",
+            "name": "A-2"
+          }
+        ],
+        "concurrentClasses": [
+          "3e931aeb-5d58-484e-8067-9aa55ebadc95",
+          "8e358eaf-eaae-469b-8d09-e808ed33af1d",
+          "d7fbeab1-cb04-461b-83b9-3bdc22bce41c",
+          "0cd72f61-6524-49eb-9cda-1f84c6ed103b"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "0cd72f61-6524-49eb-9cda-1f84c6ed103b"
+          },
+          {
+            "id": "8e358eaf-eaae-469b-8d09-e808ed33af1d"
+          },
+          {
+            "id": "3e931aeb-5d58-484e-8067-9aa55ebadc95"
+          },
+          {
+            "id": "d7fbeab1-cb04-461b-83b9-3bdc22bce41c"
+          }
+        ],
+        "course": {
+          "credits": 1,
+          "courseType": "PRACTICAL",
+          "name": "Computer Networks"
+        },
+        "faculty": {
+          "name": "Deepali Mangesh Kotambkar"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 1,
+        "headCount": 30,
+        "duration": 2,
+        "classesPerWeek": 1,
+        "facultyName": "Deepali Mangesh Kotambkar",
+        "courseName": "Computer Networks",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 3,
+        "startSlot": 2,
+        "room": 2,
+        "roomId": "5506ed3a-f33e-475c-a5c5-cc7a31351fe4",
+        "id": "8e358eaf-eaae-469b-8d09-e808ed33af1d",
+        "facultyId": "6c9d3bd2-1485-4291-ae51-f38a138807d6",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "2828ad00-c091-4f01-84bd-856e7ff53035",
+        "courseType": "PRACTICAL",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": null,
+        "batches": [
+          {
+            "id": "4e11694a-229f-4fe1-8afd-a60d8bc03099",
+            "name": "A-1"
+          }
+        ],
+        "concurrentClasses": [
+          "3e931aeb-5d58-484e-8067-9aa55ebadc95",
+          "8e358eaf-eaae-469b-8d09-e808ed33af1d",
+          "d7fbeab1-cb04-461b-83b9-3bdc22bce41c",
+          "0cd72f61-6524-49eb-9cda-1f84c6ed103b"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "0cd72f61-6524-49eb-9cda-1f84c6ed103b"
+          },
+          {
+            "id": "8e358eaf-eaae-469b-8d09-e808ed33af1d"
+          },
+          {
+            "id": "3e931aeb-5d58-484e-8067-9aa55ebadc95"
+          },
+          {
+            "id": "d7fbeab1-cb04-461b-83b9-3bdc22bce41c"
+          }
+        ],
+        "course": {
+          "credits": 1,
+          "courseType": "PRACTICAL",
+          "name": "Computer Networks"
+        },
+        "faculty": {
+          "name": "Deepali Mangesh Kotambkar"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 1,
+        "headCount": 30,
+        "duration": 2,
+        "classesPerWeek": 1,
+        "facultyName": "Deepali Mangesh Kotambkar",
+        "courseName": "Computer Networks",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 0,
+        "startSlot": 3,
+        "room": 3,
+        "roomId": "5506ed3a-f33e-475c-a5c5-cc7a31351fe4",
+        "id": "d7fbeab1-cb04-461b-83b9-3bdc22bce41c",
+        "facultyId": "6c9d3bd2-1485-4291-ae51-f38a138807d6",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "2828ad00-c091-4f01-84bd-856e7ff53035",
+        "courseType": "PRACTICAL",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": null,
+        "batches": [
+          {
+            "id": "b02e9fc0-5fc0-45b6-b8e2-44347d1e5328",
+            "name": "A-3"
+          }
+        ],
+        "concurrentClasses": [
+          "3e931aeb-5d58-484e-8067-9aa55ebadc95",
+          "8e358eaf-eaae-469b-8d09-e808ed33af1d",
+          "d7fbeab1-cb04-461b-83b9-3bdc22bce41c",
+          "0cd72f61-6524-49eb-9cda-1f84c6ed103b"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "0cd72f61-6524-49eb-9cda-1f84c6ed103b"
+          },
+          {
+            "id": "8e358eaf-eaae-469b-8d09-e808ed33af1d"
+          },
+          {
+            "id": "3e931aeb-5d58-484e-8067-9aa55ebadc95"
+          },
+          {
+            "id": "d7fbeab1-cb04-461b-83b9-3bdc22bce41c"
+          }
+        ],
+        "course": {
+          "credits": 1,
+          "courseType": "PRACTICAL",
+          "name": "Computer Networks"
+        },
+        "faculty": {
+          "name": "Deepali Mangesh Kotambkar"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 1,
+        "headCount": 30,
+        "duration": 2,
+        "classesPerWeek": 1,
+        "facultyName": "Deepali Mangesh Kotambkar",
+        "courseName": "Computer Networks",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 1,
+        "startSlot": 3,
+        "room": 6,
+        "roomId": "5506ed3a-f33e-475c-a5c5-cc7a31351fe4",
+        "id": "0cd72f61-6524-49eb-9cda-1f84c6ed103b",
+        "facultyId": "6c9d3bd2-1485-4291-ae51-f38a138807d6",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "2828ad00-c091-4f01-84bd-856e7ff53035",
+        "courseType": "PRACTICAL",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": null,
+        "batches": [
+          {
+            "id": "26ca3da1-e950-41df-b80d-2661b9a2c081",
+            "name": "A-4"
+          }
+        ],
+        "concurrentClasses": [
+          "3e931aeb-5d58-484e-8067-9aa55ebadc95",
+          "8e358eaf-eaae-469b-8d09-e808ed33af1d",
+          "d7fbeab1-cb04-461b-83b9-3bdc22bce41c",
+          "0cd72f61-6524-49eb-9cda-1f84c6ed103b"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "0cd72f61-6524-49eb-9cda-1f84c6ed103b"
+          },
+          {
+            "id": "8e358eaf-eaae-469b-8d09-e808ed33af1d"
+          },
+          {
+            "id": "3e931aeb-5d58-484e-8067-9aa55ebadc95"
+          },
+          {
+            "id": "d7fbeab1-cb04-461b-83b9-3bdc22bce41c"
+          }
+        ],
+        "course": {
+          "credits": 1,
+          "courseType": "PRACTICAL",
+          "name": "Computer Networks"
+        },
+        "faculty": {
+          "name": "Deepali Mangesh Kotambkar"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 1,
+        "headCount": 30,
+        "duration": 2,
+        "classesPerWeek": 1,
+        "facultyName": "Deepali Mangesh Kotambkar",
+        "courseName": "Computer Networks",
+        "studentGroupName": "ECS/2021 4th Yr"
+      }
+    ],
+    "047fe721-670b-4ee1-83cc-dd19b22fc4b2": [
+      {
+        "day": 3,
+        "startSlot": 3,
+        "room": 1,
+        "roomId": "7740cb6a-f869-4a47-9af8-73b2c3e39c7d",
+        "id": "5a7d6499-00af-4df9-a6b1-df6e3d91a26f",
+        "facultyId": "706e72b4-9a3e-4337-b5e8-8fa04ebf64d6",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "79ee5678-69fc-416c-8a18-07eb1de888d4",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": null,
+        "batches": [
+          {
+            "id": "8cedf495-46dc-45ea-9694-1784d68de94b",
+            "name": "B-1"
+          },
+          {
+            "id": "cbffdaff-ed54-42ad-92f3-818788344b83",
+            "name": "B-2"
+          },
+          {
+            "id": "fbf55e76-db16-47de-8d54-cf71794f1f93",
+            "name": "B-3"
+          },
+          {
+            "id": "b57a0601-4737-4b74-a605-e205fee75491",
+            "name": "B-4"
+          }
+        ],
+        "concurrentClasses": [],
+        "concurrentByClasses": [],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Computer Networks"
+        },
+        "faculty": {
+          "name": "Pankaj Uday Joshi"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Pankaj Uday Joshi",
+        "courseName": "Computer Networks",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 2,
+        "startSlot": 3,
+        "room": 2,
+        "roomId": "7740cb6a-f869-4a47-9af8-73b2c3e39c7d",
+        "id": "5a7d6499-00af-4df9-a6b1-df6e3d91a26f",
+        "facultyId": "706e72b4-9a3e-4337-b5e8-8fa04ebf64d6",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "79ee5678-69fc-416c-8a18-07eb1de888d4",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": null,
+        "batches": [
+          {
+            "id": "8cedf495-46dc-45ea-9694-1784d68de94b",
+            "name": "B-1"
+          },
+          {
+            "id": "cbffdaff-ed54-42ad-92f3-818788344b83",
+            "name": "B-2"
+          },
+          {
+            "id": "fbf55e76-db16-47de-8d54-cf71794f1f93",
+            "name": "B-3"
+          },
+          {
+            "id": "b57a0601-4737-4b74-a605-e205fee75491",
+            "name": "B-4"
+          }
+        ],
+        "concurrentClasses": [],
+        "concurrentByClasses": [],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Computer Networks"
+        },
+        "faculty": {
+          "name": "Pankaj Uday Joshi"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Pankaj Uday Joshi",
+        "courseName": "Computer Networks",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 2,
+        "startSlot": 0,
+        "room": 4,
+        "roomId": "7740cb6a-f869-4a47-9af8-73b2c3e39c7d",
+        "id": "5a7d6499-00af-4df9-a6b1-df6e3d91a26f",
+        "facultyId": "706e72b4-9a3e-4337-b5e8-8fa04ebf64d6",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "79ee5678-69fc-416c-8a18-07eb1de888d4",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": null,
+        "batches": [
+          {
+            "id": "8cedf495-46dc-45ea-9694-1784d68de94b",
+            "name": "B-1"
+          },
+          {
+            "id": "cbffdaff-ed54-42ad-92f3-818788344b83",
+            "name": "B-2"
+          },
+          {
+            "id": "fbf55e76-db16-47de-8d54-cf71794f1f93",
+            "name": "B-3"
+          },
+          {
+            "id": "b57a0601-4737-4b74-a605-e205fee75491",
+            "name": "B-4"
+          }
+        ],
+        "concurrentClasses": [],
+        "concurrentByClasses": [],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Computer Networks"
+        },
+        "faculty": {
+          "name": "Pankaj Uday Joshi"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Pankaj Uday Joshi",
+        "courseName": "Computer Networks",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 0,
+        "startSlot": 2,
+        "room": 0,
+        "roomId": "2dc146a9-ee1b-436d-bc8d-40eb67d87344",
+        "id": "534b8fab-c2c3-430d-aeb7-7c799d0a7f1c",
+        "facultyId": "3685f6f2-9d33-4a84-98e4-3c7bf6ea9ee4",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "2828ad00-c091-4f01-84bd-856e7ff53035",
+        "courseType": "PRACTICAL",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": null,
+        "batches": [
+          {
+            "id": "cbffdaff-ed54-42ad-92f3-818788344b83",
+            "name": "B-2"
+          }
+        ],
+        "concurrentClasses": [
+          "534b8fab-c2c3-430d-aeb7-7c799d0a7f1c",
+          "02c95cbd-40fc-46ec-a806-227d590e9793",
+          "79840d0c-ad95-476d-833c-b79fd9bee08d",
+          "636e4b78-2950-469e-8655-c4e15e702f44"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "79840d0c-ad95-476d-833c-b79fd9bee08d"
+          },
+          {
+            "id": "636e4b78-2950-469e-8655-c4e15e702f44"
+          },
+          {
+            "id": "534b8fab-c2c3-430d-aeb7-7c799d0a7f1c"
+          },
+          {
+            "id": "02c95cbd-40fc-46ec-a806-227d590e9793"
+          }
+        ],
+        "course": {
+          "credits": 1,
+          "courseType": "PRACTICAL",
+          "name": "Computer Networks"
+        },
+        "faculty": {
+          "name": "Aleefia Aliasgher Khurshid"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 1,
+        "headCount": 30,
+        "duration": 2,
+        "classesPerWeek": 1,
+        "facultyName": "Aleefia Aliasgher Khurshid",
+        "courseName": "Computer Networks",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 1,
+        "startSlot": 4,
+        "room": 2,
+        "roomId": "510dcbb7-8458-48d8-b1b8-b03ea4480149",
+        "id": "83d0e234-fd1d-43a0-95ea-4fa6a334970f",
+        "facultyId": "525d3c2b-0242-47c0-8f8a-0c2148ed87bc",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "4976c327-a001-45b2-8835-8de2bd6b3b2e",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "b57a0601-4737-4b74-a605-e205fee75491",
+            "name": "B-4"
+          }
+        ],
+        "concurrentClasses": [
+          "83d0e234-fd1d-43a0-95ea-4fa6a334970f",
+          "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55",
+          "6f22901c-647d-4ac4-b383-163e93223c4f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "83d0e234-fd1d-43a0-95ea-4fa6a334970f"
+          },
+          {
+            "id": "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55"
+          },
+          {
+            "id": "6f22901c-647d-4ac4-b383-163e93223c4f"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Analog IC Design"
+        },
+        "faculty": {
+          "name": "Rajesh Harba Khobragade"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Rajesh Harba Khobragade",
+        "courseName": "Analog IC Design",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 0,
+        "startSlot": 4,
+        "room": 2,
+        "roomId": "510dcbb7-8458-48d8-b1b8-b03ea4480149",
+        "id": "83d0e234-fd1d-43a0-95ea-4fa6a334970f",
+        "facultyId": "525d3c2b-0242-47c0-8f8a-0c2148ed87bc",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "4976c327-a001-45b2-8835-8de2bd6b3b2e",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "b57a0601-4737-4b74-a605-e205fee75491",
+            "name": "B-4"
+          }
+        ],
+        "concurrentClasses": [
+          "83d0e234-fd1d-43a0-95ea-4fa6a334970f",
+          "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55",
+          "6f22901c-647d-4ac4-b383-163e93223c4f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "83d0e234-fd1d-43a0-95ea-4fa6a334970f"
+          },
+          {
+            "id": "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55"
+          },
+          {
+            "id": "6f22901c-647d-4ac4-b383-163e93223c4f"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Analog IC Design"
+        },
+        "faculty": {
+          "name": "Rajesh Harba Khobragade"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Rajesh Harba Khobragade",
+        "courseName": "Analog IC Design",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 1,
+        "startSlot": 1,
+        "room": 6,
+        "roomId": "510dcbb7-8458-48d8-b1b8-b03ea4480149",
+        "id": "83d0e234-fd1d-43a0-95ea-4fa6a334970f",
+        "facultyId": "525d3c2b-0242-47c0-8f8a-0c2148ed87bc",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "4976c327-a001-45b2-8835-8de2bd6b3b2e",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "b57a0601-4737-4b74-a605-e205fee75491",
+            "name": "B-4"
+          }
+        ],
+        "concurrentClasses": [
+          "83d0e234-fd1d-43a0-95ea-4fa6a334970f",
+          "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55",
+          "6f22901c-647d-4ac4-b383-163e93223c4f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "83d0e234-fd1d-43a0-95ea-4fa6a334970f"
+          },
+          {
+            "id": "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55"
+          },
+          {
+            "id": "6f22901c-647d-4ac4-b383-163e93223c4f"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Analog IC Design"
+        },
+        "faculty": {
+          "name": "Rajesh Harba Khobragade"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Rajesh Harba Khobragade",
+        "courseName": "Analog IC Design",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 0,
+        "startSlot": 4,
+        "room": 5,
+        "roomId": "acd54b15-270d-4ee2-b906-2426b0802870",
+        "id": "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7",
+        "facultyId": "7fdac776-5dea-43f4-b264-5f7a883522c5",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "e3b64296-6d9c-4dde-b053-f7ab416a4e2f",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "fbf55e76-db16-47de-8d54-cf71794f1f93",
+            "name": "B-3"
+          }
+        ],
+        "concurrentClasses": [
+          "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7",
+          "50eac99d-0ee8-4cd8-9a23-8093ea5a7513",
+          "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+          },
+          {
+            "id": "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7"
+          },
+          {
+            "id": "50eac99d-0ee8-4cd8-9a23-8093ea5a7513"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Fiber Optics Communication"
+        },
+        "faculty": {
+          "name": "Prachi Parag Rane"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Prachi Parag Rane",
+        "courseName": "Fiber Optics Communication",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 4,
+        "startSlot": 2,
+        "room": 7,
+        "roomId": "acd54b15-270d-4ee2-b906-2426b0802870",
+        "id": "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7",
+        "facultyId": "7fdac776-5dea-43f4-b264-5f7a883522c5",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "e3b64296-6d9c-4dde-b053-f7ab416a4e2f",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "fbf55e76-db16-47de-8d54-cf71794f1f93",
+            "name": "B-3"
+          }
+        ],
+        "concurrentClasses": [
+          "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7",
+          "50eac99d-0ee8-4cd8-9a23-8093ea5a7513",
+          "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+          },
+          {
+            "id": "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7"
+          },
+          {
+            "id": "50eac99d-0ee8-4cd8-9a23-8093ea5a7513"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Fiber Optics Communication"
+        },
+        "faculty": {
+          "name": "Prachi Parag Rane"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Prachi Parag Rane",
+        "courseName": "Fiber Optics Communication",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 1,
+        "startSlot": 4,
+        "room": 4,
+        "roomId": "acd54b15-270d-4ee2-b906-2426b0802870",
+        "id": "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7",
+        "facultyId": "7fdac776-5dea-43f4-b264-5f7a883522c5",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "e3b64296-6d9c-4dde-b053-f7ab416a4e2f",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "fbf55e76-db16-47de-8d54-cf71794f1f93",
+            "name": "B-3"
+          }
+        ],
+        "concurrentClasses": [
+          "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7",
+          "50eac99d-0ee8-4cd8-9a23-8093ea5a7513",
+          "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+          },
+          {
+            "id": "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7"
+          },
+          {
+            "id": "50eac99d-0ee8-4cd8-9a23-8093ea5a7513"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Fiber Optics Communication"
+        },
+        "faculty": {
+          "name": "Prachi Parag Rane"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Prachi Parag Rane",
+        "courseName": "Fiber Optics Communication",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 1,
+        "startSlot": 3,
+        "room": 1,
+        "roomId": "2dc146a9-ee1b-436d-bc8d-40eb67d87344",
+        "id": "02c95cbd-40fc-46ec-a806-227d590e9793",
+        "facultyId": "3685f6f2-9d33-4a84-98e4-3c7bf6ea9ee4",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "2828ad00-c091-4f01-84bd-856e7ff53035",
+        "courseType": "PRACTICAL",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": null,
+        "batches": [
+          {
+            "id": "fbf55e76-db16-47de-8d54-cf71794f1f93",
+            "name": "B-3"
+          }
+        ],
+        "concurrentClasses": [
+          "534b8fab-c2c3-430d-aeb7-7c799d0a7f1c",
+          "02c95cbd-40fc-46ec-a806-227d590e9793",
+          "79840d0c-ad95-476d-833c-b79fd9bee08d",
+          "636e4b78-2950-469e-8655-c4e15e702f44"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "79840d0c-ad95-476d-833c-b79fd9bee08d"
+          },
+          {
+            "id": "636e4b78-2950-469e-8655-c4e15e702f44"
+          },
+          {
+            "id": "534b8fab-c2c3-430d-aeb7-7c799d0a7f1c"
+          },
+          {
+            "id": "02c95cbd-40fc-46ec-a806-227d590e9793"
+          }
+        ],
+        "course": {
+          "credits": 1,
+          "courseType": "PRACTICAL",
+          "name": "Computer Networks"
+        },
+        "faculty": {
+          "name": "Aleefia Aliasgher Khurshid"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 1,
+        "headCount": 30,
+        "duration": 2,
+        "classesPerWeek": 1,
+        "facultyName": "Aleefia Aliasgher Khurshid",
+        "courseName": "Computer Networks",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 0,
+        "startSlot": 3,
+        "room": 3,
+        "roomId": "acd54b15-270d-4ee2-b906-2426b0802870",
+        "id": "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55",
+        "facultyId": "d15b9e8e-3de0-4c58-8501-30011b6d5beb",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "448ae444-7d49-402f-a228-847980ba9e11",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "fbf55e76-db16-47de-8d54-cf71794f1f93",
+            "name": "B-3"
+          }
+        ],
+        "concurrentClasses": [
+          "83d0e234-fd1d-43a0-95ea-4fa6a334970f",
+          "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55",
+          "6f22901c-647d-4ac4-b383-163e93223c4f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "83d0e234-fd1d-43a0-95ea-4fa6a334970f"
+          },
+          {
+            "id": "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55"
+          },
+          {
+            "id": "6f22901c-647d-4ac4-b383-163e93223c4f"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Wireless Communication"
+        },
+        "faculty": {
+          "name": "Parag Shiva Jawarkar"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Parag Shiva Jawarkar",
+        "courseName": "Wireless Communication",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 3,
+        "startSlot": 0,
+        "room": 3,
+        "roomId": "acd54b15-270d-4ee2-b906-2426b0802870",
+        "id": "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55",
+        "facultyId": "d15b9e8e-3de0-4c58-8501-30011b6d5beb",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "448ae444-7d49-402f-a228-847980ba9e11",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "fbf55e76-db16-47de-8d54-cf71794f1f93",
+            "name": "B-3"
+          }
+        ],
+        "concurrentClasses": [
+          "83d0e234-fd1d-43a0-95ea-4fa6a334970f",
+          "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55",
+          "6f22901c-647d-4ac4-b383-163e93223c4f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "83d0e234-fd1d-43a0-95ea-4fa6a334970f"
+          },
+          {
+            "id": "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55"
+          },
+          {
+            "id": "6f22901c-647d-4ac4-b383-163e93223c4f"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Wireless Communication"
+        },
+        "faculty": {
+          "name": "Parag Shiva Jawarkar"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Parag Shiva Jawarkar",
+        "courseName": "Wireless Communication",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 1,
+        "startSlot": 1,
+        "room": 0,
+        "roomId": "acd54b15-270d-4ee2-b906-2426b0802870",
+        "id": "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55",
+        "facultyId": "d15b9e8e-3de0-4c58-8501-30011b6d5beb",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "448ae444-7d49-402f-a228-847980ba9e11",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "fbf55e76-db16-47de-8d54-cf71794f1f93",
+            "name": "B-3"
+          }
+        ],
+        "concurrentClasses": [
+          "83d0e234-fd1d-43a0-95ea-4fa6a334970f",
+          "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55",
+          "6f22901c-647d-4ac4-b383-163e93223c4f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "83d0e234-fd1d-43a0-95ea-4fa6a334970f"
+          },
+          {
+            "id": "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55"
+          },
+          {
+            "id": "6f22901c-647d-4ac4-b383-163e93223c4f"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Wireless Communication"
+        },
+        "faculty": {
+          "name": "Parag Shiva Jawarkar"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Parag Shiva Jawarkar",
+        "courseName": "Wireless Communication",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 2,
+        "startSlot": 0,
+        "room": 4,
+        "roomId": "7740cb6a-f869-4a47-9af8-73b2c3e39c7d",
+        "id": "50eac99d-0ee8-4cd8-9a23-8093ea5a7513",
+        "facultyId": "a6de1d11-e7a4-4f0e-957e-dea883e15dbe",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "faaf2e3b-8924-4c37-a301-2384a259a083",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "8cedf495-46dc-45ea-9694-1784d68de94b",
+            "name": "B-1"
+          },
+          {
+            "id": "cbffdaff-ed54-42ad-92f3-818788344b83",
+            "name": "B-2"
+          }
+        ],
+        "concurrentClasses": [
+          "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7",
+          "50eac99d-0ee8-4cd8-9a23-8093ea5a7513",
+          "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+          },
+          {
+            "id": "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7"
+          },
+          {
+            "id": "50eac99d-0ee8-4cd8-9a23-8093ea5a7513"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Testing and verification of digital system"
+        },
+        "faculty": {
+          "name": "Lokesh Mohan Heda"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Lokesh Mohan Heda",
+        "courseName": "Testing and verification of digital system",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 1,
+        "startSlot": 2,
+        "room": 7,
+        "roomId": "7740cb6a-f869-4a47-9af8-73b2c3e39c7d",
+        "id": "50eac99d-0ee8-4cd8-9a23-8093ea5a7513",
+        "facultyId": "a6de1d11-e7a4-4f0e-957e-dea883e15dbe",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "faaf2e3b-8924-4c37-a301-2384a259a083",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "8cedf495-46dc-45ea-9694-1784d68de94b",
+            "name": "B-1"
+          },
+          {
+            "id": "cbffdaff-ed54-42ad-92f3-818788344b83",
+            "name": "B-2"
+          }
+        ],
+        "concurrentClasses": [
+          "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7",
+          "50eac99d-0ee8-4cd8-9a23-8093ea5a7513",
+          "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+          },
+          {
+            "id": "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7"
+          },
+          {
+            "id": "50eac99d-0ee8-4cd8-9a23-8093ea5a7513"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Testing and verification of digital system"
+        },
+        "faculty": {
+          "name": "Lokesh Mohan Heda"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Lokesh Mohan Heda",
+        "courseName": "Testing and verification of digital system",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 0,
+        "startSlot": 1,
+        "room": 5,
+        "roomId": "7740cb6a-f869-4a47-9af8-73b2c3e39c7d",
+        "id": "50eac99d-0ee8-4cd8-9a23-8093ea5a7513",
+        "facultyId": "a6de1d11-e7a4-4f0e-957e-dea883e15dbe",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "faaf2e3b-8924-4c37-a301-2384a259a083",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "8cedf495-46dc-45ea-9694-1784d68de94b",
+            "name": "B-1"
+          },
+          {
+            "id": "cbffdaff-ed54-42ad-92f3-818788344b83",
+            "name": "B-2"
+          }
+        ],
+        "concurrentClasses": [
+          "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7",
+          "50eac99d-0ee8-4cd8-9a23-8093ea5a7513",
+          "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+          },
+          {
+            "id": "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7"
+          },
+          {
+            "id": "50eac99d-0ee8-4cd8-9a23-8093ea5a7513"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Testing and verification of digital system"
+        },
+        "faculty": {
+          "name": "Lokesh Mohan Heda"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Lokesh Mohan Heda",
+        "courseName": "Testing and verification of digital system",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 0,
+        "startSlot": 5,
+        "room": 1,
+        "roomId": "2dc146a9-ee1b-436d-bc8d-40eb67d87344",
+        "id": "79840d0c-ad95-476d-833c-b79fd9bee08d",
+        "facultyId": "3685f6f2-9d33-4a84-98e4-3c7bf6ea9ee4",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "2828ad00-c091-4f01-84bd-856e7ff53035",
+        "courseType": "PRACTICAL",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": null,
+        "batches": [
+          {
+            "id": "8cedf495-46dc-45ea-9694-1784d68de94b",
+            "name": "B-1"
+          }
+        ],
+        "concurrentClasses": [
+          "534b8fab-c2c3-430d-aeb7-7c799d0a7f1c",
+          "02c95cbd-40fc-46ec-a806-227d590e9793",
+          "79840d0c-ad95-476d-833c-b79fd9bee08d",
+          "636e4b78-2950-469e-8655-c4e15e702f44"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "79840d0c-ad95-476d-833c-b79fd9bee08d"
+          },
+          {
+            "id": "636e4b78-2950-469e-8655-c4e15e702f44"
+          },
+          {
+            "id": "534b8fab-c2c3-430d-aeb7-7c799d0a7f1c"
+          },
+          {
+            "id": "02c95cbd-40fc-46ec-a806-227d590e9793"
+          }
+        ],
+        "course": {
+          "credits": 1,
+          "courseType": "PRACTICAL",
+          "name": "Computer Networks"
+        },
+        "faculty": {
+          "name": "Aleefia Aliasgher Khurshid"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 1,
+        "headCount": 30,
+        "duration": 2,
+        "classesPerWeek": 1,
+        "facultyName": "Aleefia Aliasgher Khurshid",
+        "courseName": "Computer Networks",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 0,
+        "startSlot": 3,
+        "room": 0,
+        "roomId": "7740cb6a-f869-4a47-9af8-73b2c3e39c7d",
+        "id": "6f22901c-647d-4ac4-b383-163e93223c4f",
+        "facultyId": "5d5b174c-36ec-4674-afbb-f199c4c96862",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "c1c09525-ee86-47de-8afc-48ed5a1bf067",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "8cedf495-46dc-45ea-9694-1784d68de94b",
+            "name": "B-1"
+          },
+          {
+            "id": "cbffdaff-ed54-42ad-92f3-818788344b83",
+            "name": "B-2"
+          }
+        ],
+        "concurrentClasses": [
+          "83d0e234-fd1d-43a0-95ea-4fa6a334970f",
+          "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55",
+          "6f22901c-647d-4ac4-b383-163e93223c4f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "83d0e234-fd1d-43a0-95ea-4fa6a334970f"
+          },
+          {
+            "id": "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55"
+          },
+          {
+            "id": "6f22901c-647d-4ac4-b383-163e93223c4f"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Digital System Design"
+        },
+        "faculty": {
+          "name": "Smita Gulabrao Daware"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Smita Gulabrao Daware",
+        "courseName": "Digital System Design",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 3,
+        "startSlot": 3,
+        "room": 7,
+        "roomId": "7740cb6a-f869-4a47-9af8-73b2c3e39c7d",
+        "id": "6f22901c-647d-4ac4-b383-163e93223c4f",
+        "facultyId": "5d5b174c-36ec-4674-afbb-f199c4c96862",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "c1c09525-ee86-47de-8afc-48ed5a1bf067",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "8cedf495-46dc-45ea-9694-1784d68de94b",
+            "name": "B-1"
+          },
+          {
+            "id": "cbffdaff-ed54-42ad-92f3-818788344b83",
+            "name": "B-2"
+          }
+        ],
+        "concurrentClasses": [
+          "83d0e234-fd1d-43a0-95ea-4fa6a334970f",
+          "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55",
+          "6f22901c-647d-4ac4-b383-163e93223c4f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "83d0e234-fd1d-43a0-95ea-4fa6a334970f"
+          },
+          {
+            "id": "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55"
+          },
+          {
+            "id": "6f22901c-647d-4ac4-b383-163e93223c4f"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Digital System Design"
+        },
+        "faculty": {
+          "name": "Smita Gulabrao Daware"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Smita Gulabrao Daware",
+        "courseName": "Digital System Design",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 2,
+        "startSlot": 3,
+        "room": 2,
+        "roomId": "7740cb6a-f869-4a47-9af8-73b2c3e39c7d",
+        "id": "6f22901c-647d-4ac4-b383-163e93223c4f",
+        "facultyId": "5d5b174c-36ec-4674-afbb-f199c4c96862",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "c1c09525-ee86-47de-8afc-48ed5a1bf067",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "8cedf495-46dc-45ea-9694-1784d68de94b",
+            "name": "B-1"
+          },
+          {
+            "id": "cbffdaff-ed54-42ad-92f3-818788344b83",
+            "name": "B-2"
+          }
+        ],
+        "concurrentClasses": [
+          "83d0e234-fd1d-43a0-95ea-4fa6a334970f",
+          "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55",
+          "6f22901c-647d-4ac4-b383-163e93223c4f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "83d0e234-fd1d-43a0-95ea-4fa6a334970f"
+          },
+          {
+            "id": "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55"
+          },
+          {
+            "id": "6f22901c-647d-4ac4-b383-163e93223c4f"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Digital System Design"
+        },
+        "faculty": {
+          "name": "Smita Gulabrao Daware"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Smita Gulabrao Daware",
+        "courseName": "Digital System Design",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 4,
+        "startSlot": 3,
+        "room": 6,
+        "roomId": "510dcbb7-8458-48d8-b1b8-b03ea4480149",
+        "id": "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f",
+        "facultyId": "706e72b4-9a3e-4337-b5e8-8fa04ebf64d6",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "32f0aee2-d4f5-4909-8fd6-10e7e9b03314",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "b57a0601-4737-4b74-a605-e205fee75491",
+            "name": "B-4"
+          }
+        ],
+        "concurrentClasses": [
+          "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7",
+          "50eac99d-0ee8-4cd8-9a23-8093ea5a7513",
+          "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+          },
+          {
+            "id": "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7"
+          },
+          {
+            "id": "50eac99d-0ee8-4cd8-9a23-8093ea5a7513"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "MicroElectro Mechanical System"
+        },
+        "faculty": {
+          "name": "Pankaj Uday Joshi"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Pankaj Uday Joshi",
+        "courseName": "MicroElectro Mechanical System",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 3,
+        "startSlot": 0,
+        "room": 2,
+        "roomId": "510dcbb7-8458-48d8-b1b8-b03ea4480149",
+        "id": "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f",
+        "facultyId": "706e72b4-9a3e-4337-b5e8-8fa04ebf64d6",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "32f0aee2-d4f5-4909-8fd6-10e7e9b03314",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "b57a0601-4737-4b74-a605-e205fee75491",
+            "name": "B-4"
+          }
+        ],
+        "concurrentClasses": [
+          "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7",
+          "50eac99d-0ee8-4cd8-9a23-8093ea5a7513",
+          "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+          },
+          {
+            "id": "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7"
+          },
+          {
+            "id": "50eac99d-0ee8-4cd8-9a23-8093ea5a7513"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "MicroElectro Mechanical System"
+        },
+        "faculty": {
+          "name": "Pankaj Uday Joshi"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Pankaj Uday Joshi",
+        "courseName": "MicroElectro Mechanical System",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 0,
+        "startSlot": 0,
+        "room": 7,
+        "roomId": "510dcbb7-8458-48d8-b1b8-b03ea4480149",
+        "id": "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f",
+        "facultyId": "706e72b4-9a3e-4337-b5e8-8fa04ebf64d6",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "32f0aee2-d4f5-4909-8fd6-10e7e9b03314",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "b57a0601-4737-4b74-a605-e205fee75491",
+            "name": "B-4"
+          }
+        ],
+        "concurrentClasses": [
+          "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7",
+          "50eac99d-0ee8-4cd8-9a23-8093ea5a7513",
+          "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+          },
+          {
+            "id": "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7"
+          },
+          {
+            "id": "50eac99d-0ee8-4cd8-9a23-8093ea5a7513"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "MicroElectro Mechanical System"
+        },
+        "faculty": {
+          "name": "Pankaj Uday Joshi"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Pankaj Uday Joshi",
+        "courseName": "MicroElectro Mechanical System",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 3,
+        "startSlot": 5,
+        "room": 3,
+        "roomId": "2dc146a9-ee1b-436d-bc8d-40eb67d87344",
+        "id": "636e4b78-2950-469e-8655-c4e15e702f44",
+        "facultyId": "3685f6f2-9d33-4a84-98e4-3c7bf6ea9ee4",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "2828ad00-c091-4f01-84bd-856e7ff53035",
+        "courseType": "PRACTICAL",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": null,
+        "batches": [
+          {
+            "id": "b57a0601-4737-4b74-a605-e205fee75491",
+            "name": "B-4"
+          }
+        ],
+        "concurrentClasses": [
+          "534b8fab-c2c3-430d-aeb7-7c799d0a7f1c",
+          "02c95cbd-40fc-46ec-a806-227d590e9793",
+          "79840d0c-ad95-476d-833c-b79fd9bee08d",
+          "636e4b78-2950-469e-8655-c4e15e702f44"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "79840d0c-ad95-476d-833c-b79fd9bee08d"
+          },
+          {
+            "id": "636e4b78-2950-469e-8655-c4e15e702f44"
+          },
+          {
+            "id": "534b8fab-c2c3-430d-aeb7-7c799d0a7f1c"
+          },
+          {
+            "id": "02c95cbd-40fc-46ec-a806-227d590e9793"
+          }
+        ],
+        "course": {
+          "credits": 1,
+          "courseType": "PRACTICAL",
+          "name": "Computer Networks"
+        },
+        "faculty": {
+          "name": "Aleefia Aliasgher Khurshid"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 1,
+        "headCount": 30,
+        "duration": 2,
+        "classesPerWeek": 1,
+        "facultyName": "Aleefia Aliasgher Khurshid",
+        "courseName": "Computer Networks",
+        "studentGroupName": "ECS/2021 4th Yr"
+      }
+    ]
+  },
+  "facultyData": {
+    "6c9d3bd2-1485-4291-ae51-f38a138807d6": [
+      {
+        "day": 1,
+        "startSlot": 1,
+        "room": 2,
+        "roomId": "510dcbb7-8458-48d8-b1b8-b03ea4480149",
+        "id": "3a338df2-a3f7-4230-9a35-23ca22cd8533",
+        "facultyId": "6c9d3bd2-1485-4291-ae51-f38a138807d6",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "79ee5678-69fc-416c-8a18-07eb1de888d4",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": null,
+        "batches": [
+          {
+            "id": "4e11694a-229f-4fe1-8afd-a60d8bc03099",
+            "name": "A-1"
+          },
+          {
+            "id": "1808ab72-611f-4bba-89fd-c507c6a3cbb4",
+            "name": "A-2"
+          },
+          {
+            "id": "b02e9fc0-5fc0-45b6-b8e2-44347d1e5328",
+            "name": "A-3"
+          },
+          {
+            "id": "26ca3da1-e950-41df-b80d-2661b9a2c081",
+            "name": "A-4"
+          }
+        ],
+        "concurrentClasses": [],
+        "concurrentByClasses": [],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Computer Networks"
+        },
+        "faculty": {
+          "name": "Deepali Mangesh Kotambkar"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Deepali Mangesh Kotambkar",
+        "courseName": "Computer Networks",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 2,
+        "startSlot": 0,
+        "room": 0,
+        "roomId": "510dcbb7-8458-48d8-b1b8-b03ea4480149",
+        "id": "3a338df2-a3f7-4230-9a35-23ca22cd8533",
+        "facultyId": "6c9d3bd2-1485-4291-ae51-f38a138807d6",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "79ee5678-69fc-416c-8a18-07eb1de888d4",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": null,
+        "batches": [
+          {
+            "id": "4e11694a-229f-4fe1-8afd-a60d8bc03099",
+            "name": "A-1"
+          },
+          {
+            "id": "1808ab72-611f-4bba-89fd-c507c6a3cbb4",
+            "name": "A-2"
+          },
+          {
+            "id": "b02e9fc0-5fc0-45b6-b8e2-44347d1e5328",
+            "name": "A-3"
+          },
+          {
+            "id": "26ca3da1-e950-41df-b80d-2661b9a2c081",
+            "name": "A-4"
+          }
+        ],
+        "concurrentClasses": [],
+        "concurrentByClasses": [],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Computer Networks"
+        },
+        "faculty": {
+          "name": "Deepali Mangesh Kotambkar"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Deepali Mangesh Kotambkar",
+        "courseName": "Computer Networks",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 0,
+        "startSlot": 2,
+        "room": 4,
+        "roomId": "510dcbb7-8458-48d8-b1b8-b03ea4480149",
+        "id": "3a338df2-a3f7-4230-9a35-23ca22cd8533",
+        "facultyId": "6c9d3bd2-1485-4291-ae51-f38a138807d6",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "79ee5678-69fc-416c-8a18-07eb1de888d4",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": null,
+        "batches": [
+          {
+            "id": "4e11694a-229f-4fe1-8afd-a60d8bc03099",
+            "name": "A-1"
+          },
+          {
+            "id": "1808ab72-611f-4bba-89fd-c507c6a3cbb4",
+            "name": "A-2"
+          },
+          {
+            "id": "b02e9fc0-5fc0-45b6-b8e2-44347d1e5328",
+            "name": "A-3"
+          },
+          {
+            "id": "26ca3da1-e950-41df-b80d-2661b9a2c081",
+            "name": "A-4"
+          }
+        ],
+        "concurrentClasses": [],
+        "concurrentByClasses": [],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Computer Networks"
+        },
+        "faculty": {
+          "name": "Deepali Mangesh Kotambkar"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Deepali Mangesh Kotambkar",
+        "courseName": "Computer Networks",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 2,
+        "startSlot": 5,
+        "room": 5,
+        "roomId": "5506ed3a-f33e-475c-a5c5-cc7a31351fe4",
+        "id": "3e931aeb-5d58-484e-8067-9aa55ebadc95",
+        "facultyId": "6c9d3bd2-1485-4291-ae51-f38a138807d6",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "2828ad00-c091-4f01-84bd-856e7ff53035",
+        "courseType": "PRACTICAL",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": null,
+        "batches": [
+          {
+            "id": "1808ab72-611f-4bba-89fd-c507c6a3cbb4",
+            "name": "A-2"
+          }
+        ],
+        "concurrentClasses": [
+          "3e931aeb-5d58-484e-8067-9aa55ebadc95",
+          "8e358eaf-eaae-469b-8d09-e808ed33af1d",
+          "d7fbeab1-cb04-461b-83b9-3bdc22bce41c",
+          "0cd72f61-6524-49eb-9cda-1f84c6ed103b"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "0cd72f61-6524-49eb-9cda-1f84c6ed103b"
+          },
+          {
+            "id": "8e358eaf-eaae-469b-8d09-e808ed33af1d"
+          },
+          {
+            "id": "3e931aeb-5d58-484e-8067-9aa55ebadc95"
+          },
+          {
+            "id": "d7fbeab1-cb04-461b-83b9-3bdc22bce41c"
+          }
+        ],
+        "course": {
+          "credits": 1,
+          "courseType": "PRACTICAL",
+          "name": "Computer Networks"
+        },
+        "faculty": {
+          "name": "Deepali Mangesh Kotambkar"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 1,
+        "headCount": 30,
+        "duration": 2,
+        "classesPerWeek": 1,
+        "facultyName": "Deepali Mangesh Kotambkar",
+        "courseName": "Computer Networks",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 3,
+        "startSlot": 2,
+        "room": 2,
+        "roomId": "5506ed3a-f33e-475c-a5c5-cc7a31351fe4",
+        "id": "8e358eaf-eaae-469b-8d09-e808ed33af1d",
+        "facultyId": "6c9d3bd2-1485-4291-ae51-f38a138807d6",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "2828ad00-c091-4f01-84bd-856e7ff53035",
+        "courseType": "PRACTICAL",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": null,
+        "batches": [
+          {
+            "id": "4e11694a-229f-4fe1-8afd-a60d8bc03099",
+            "name": "A-1"
+          }
+        ],
+        "concurrentClasses": [
+          "3e931aeb-5d58-484e-8067-9aa55ebadc95",
+          "8e358eaf-eaae-469b-8d09-e808ed33af1d",
+          "d7fbeab1-cb04-461b-83b9-3bdc22bce41c",
+          "0cd72f61-6524-49eb-9cda-1f84c6ed103b"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "0cd72f61-6524-49eb-9cda-1f84c6ed103b"
+          },
+          {
+            "id": "8e358eaf-eaae-469b-8d09-e808ed33af1d"
+          },
+          {
+            "id": "3e931aeb-5d58-484e-8067-9aa55ebadc95"
+          },
+          {
+            "id": "d7fbeab1-cb04-461b-83b9-3bdc22bce41c"
+          }
+        ],
+        "course": {
+          "credits": 1,
+          "courseType": "PRACTICAL",
+          "name": "Computer Networks"
+        },
+        "faculty": {
+          "name": "Deepali Mangesh Kotambkar"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 1,
+        "headCount": 30,
+        "duration": 2,
+        "classesPerWeek": 1,
+        "facultyName": "Deepali Mangesh Kotambkar",
+        "courseName": "Computer Networks",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 0,
+        "startSlot": 3,
+        "room": 3,
+        "roomId": "5506ed3a-f33e-475c-a5c5-cc7a31351fe4",
+        "id": "d7fbeab1-cb04-461b-83b9-3bdc22bce41c",
+        "facultyId": "6c9d3bd2-1485-4291-ae51-f38a138807d6",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "2828ad00-c091-4f01-84bd-856e7ff53035",
+        "courseType": "PRACTICAL",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": null,
+        "batches": [
+          {
+            "id": "b02e9fc0-5fc0-45b6-b8e2-44347d1e5328",
+            "name": "A-3"
+          }
+        ],
+        "concurrentClasses": [
+          "3e931aeb-5d58-484e-8067-9aa55ebadc95",
+          "8e358eaf-eaae-469b-8d09-e808ed33af1d",
+          "d7fbeab1-cb04-461b-83b9-3bdc22bce41c",
+          "0cd72f61-6524-49eb-9cda-1f84c6ed103b"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "0cd72f61-6524-49eb-9cda-1f84c6ed103b"
+          },
+          {
+            "id": "8e358eaf-eaae-469b-8d09-e808ed33af1d"
+          },
+          {
+            "id": "3e931aeb-5d58-484e-8067-9aa55ebadc95"
+          },
+          {
+            "id": "d7fbeab1-cb04-461b-83b9-3bdc22bce41c"
+          }
+        ],
+        "course": {
+          "credits": 1,
+          "courseType": "PRACTICAL",
+          "name": "Computer Networks"
+        },
+        "faculty": {
+          "name": "Deepali Mangesh Kotambkar"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 1,
+        "headCount": 30,
+        "duration": 2,
+        "classesPerWeek": 1,
+        "facultyName": "Deepali Mangesh Kotambkar",
+        "courseName": "Computer Networks",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 1,
+        "startSlot": 3,
+        "room": 6,
+        "roomId": "5506ed3a-f33e-475c-a5c5-cc7a31351fe4",
+        "id": "0cd72f61-6524-49eb-9cda-1f84c6ed103b",
+        "facultyId": "6c9d3bd2-1485-4291-ae51-f38a138807d6",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "2828ad00-c091-4f01-84bd-856e7ff53035",
+        "courseType": "PRACTICAL",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": null,
+        "batches": [
+          {
+            "id": "26ca3da1-e950-41df-b80d-2661b9a2c081",
+            "name": "A-4"
+          }
+        ],
+        "concurrentClasses": [
+          "3e931aeb-5d58-484e-8067-9aa55ebadc95",
+          "8e358eaf-eaae-469b-8d09-e808ed33af1d",
+          "d7fbeab1-cb04-461b-83b9-3bdc22bce41c",
+          "0cd72f61-6524-49eb-9cda-1f84c6ed103b"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "0cd72f61-6524-49eb-9cda-1f84c6ed103b"
+          },
+          {
+            "id": "8e358eaf-eaae-469b-8d09-e808ed33af1d"
+          },
+          {
+            "id": "3e931aeb-5d58-484e-8067-9aa55ebadc95"
+          },
+          {
+            "id": "d7fbeab1-cb04-461b-83b9-3bdc22bce41c"
+          }
+        ],
+        "course": {
+          "credits": 1,
+          "courseType": "PRACTICAL",
+          "name": "Computer Networks"
+        },
+        "faculty": {
+          "name": "Deepali Mangesh Kotambkar"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 1,
+        "headCount": 30,
+        "duration": 2,
+        "classesPerWeek": 1,
+        "facultyName": "Deepali Mangesh Kotambkar",
+        "courseName": "Computer Networks",
+        "studentGroupName": "ECS/2021 4th Yr"
+      }
+    ],
+    "5d5b174c-36ec-4674-afbb-f199c4c96862": [
+      {
+        "day": 0,
+        "startSlot": 2,
+        "room": 1,
+        "roomId": "f0711744-b164-4c02-ae0b-5b5017f0307b",
+        "id": "53340471-09b7-4551-8caf-a7183afa4e5f",
+        "facultyId": "5d5b174c-36ec-4674-afbb-f199c4c96862",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "c1c09525-ee86-47de-8afc-48ed5a1bf067",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "4e11694a-229f-4fe1-8afd-a60d8bc03099",
+            "name": "A-1"
+          },
+          {
+            "id": "1808ab72-611f-4bba-89fd-c507c6a3cbb4",
+            "name": "A-2"
+          }
+        ],
+        "concurrentClasses": [
+          "53340471-09b7-4551-8caf-a7183afa4e5f",
+          "efa1f33a-150f-4460-accd-73be7bb1b71c",
+          "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "53340471-09b7-4551-8caf-a7183afa4e5f"
+          },
+          {
+            "id": "efa1f33a-150f-4460-accd-73be7bb1b71c"
+          },
+          {
+            "id": "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Digital System Design"
+        },
+        "faculty": {
+          "name": "Smita Gulabrao Daware"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Smita Gulabrao Daware",
+        "courseName": "Digital System Design",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 0,
+        "startSlot": 4,
+        "room": 3,
+        "roomId": "f0711744-b164-4c02-ae0b-5b5017f0307b",
+        "id": "53340471-09b7-4551-8caf-a7183afa4e5f",
+        "facultyId": "5d5b174c-36ec-4674-afbb-f199c4c96862",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "c1c09525-ee86-47de-8afc-48ed5a1bf067",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "4e11694a-229f-4fe1-8afd-a60d8bc03099",
+            "name": "A-1"
+          },
+          {
+            "id": "1808ab72-611f-4bba-89fd-c507c6a3cbb4",
+            "name": "A-2"
+          }
+        ],
+        "concurrentClasses": [
+          "53340471-09b7-4551-8caf-a7183afa4e5f",
+          "efa1f33a-150f-4460-accd-73be7bb1b71c",
+          "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "53340471-09b7-4551-8caf-a7183afa4e5f"
+          },
+          {
+            "id": "efa1f33a-150f-4460-accd-73be7bb1b71c"
+          },
+          {
+            "id": "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Digital System Design"
+        },
+        "faculty": {
+          "name": "Smita Gulabrao Daware"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Smita Gulabrao Daware",
+        "courseName": "Digital System Design",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 3,
+        "startSlot": 1,
+        "room": 1,
+        "roomId": "f0711744-b164-4c02-ae0b-5b5017f0307b",
+        "id": "53340471-09b7-4551-8caf-a7183afa4e5f",
+        "facultyId": "5d5b174c-36ec-4674-afbb-f199c4c96862",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "c1c09525-ee86-47de-8afc-48ed5a1bf067",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "4e11694a-229f-4fe1-8afd-a60d8bc03099",
+            "name": "A-1"
+          },
+          {
+            "id": "1808ab72-611f-4bba-89fd-c507c6a3cbb4",
+            "name": "A-2"
+          }
+        ],
+        "concurrentClasses": [
+          "53340471-09b7-4551-8caf-a7183afa4e5f",
+          "efa1f33a-150f-4460-accd-73be7bb1b71c",
+          "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "53340471-09b7-4551-8caf-a7183afa4e5f"
+          },
+          {
+            "id": "efa1f33a-150f-4460-accd-73be7bb1b71c"
+          },
+          {
+            "id": "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Digital System Design"
+        },
+        "faculty": {
+          "name": "Smita Gulabrao Daware"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Smita Gulabrao Daware",
+        "courseName": "Digital System Design",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 0,
+        "startSlot": 3,
+        "room": 0,
+        "roomId": "7740cb6a-f869-4a47-9af8-73b2c3e39c7d",
+        "id": "6f22901c-647d-4ac4-b383-163e93223c4f",
+        "facultyId": "5d5b174c-36ec-4674-afbb-f199c4c96862",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "c1c09525-ee86-47de-8afc-48ed5a1bf067",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "8cedf495-46dc-45ea-9694-1784d68de94b",
+            "name": "B-1"
+          },
+          {
+            "id": "cbffdaff-ed54-42ad-92f3-818788344b83",
+            "name": "B-2"
+          }
+        ],
+        "concurrentClasses": [
+          "83d0e234-fd1d-43a0-95ea-4fa6a334970f",
+          "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55",
+          "6f22901c-647d-4ac4-b383-163e93223c4f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "83d0e234-fd1d-43a0-95ea-4fa6a334970f"
+          },
+          {
+            "id": "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55"
+          },
+          {
+            "id": "6f22901c-647d-4ac4-b383-163e93223c4f"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Digital System Design"
+        },
+        "faculty": {
+          "name": "Smita Gulabrao Daware"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Smita Gulabrao Daware",
+        "courseName": "Digital System Design",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 3,
+        "startSlot": 3,
+        "room": 7,
+        "roomId": "7740cb6a-f869-4a47-9af8-73b2c3e39c7d",
+        "id": "6f22901c-647d-4ac4-b383-163e93223c4f",
+        "facultyId": "5d5b174c-36ec-4674-afbb-f199c4c96862",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "c1c09525-ee86-47de-8afc-48ed5a1bf067",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "8cedf495-46dc-45ea-9694-1784d68de94b",
+            "name": "B-1"
+          },
+          {
+            "id": "cbffdaff-ed54-42ad-92f3-818788344b83",
+            "name": "B-2"
+          }
+        ],
+        "concurrentClasses": [
+          "83d0e234-fd1d-43a0-95ea-4fa6a334970f",
+          "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55",
+          "6f22901c-647d-4ac4-b383-163e93223c4f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "83d0e234-fd1d-43a0-95ea-4fa6a334970f"
+          },
+          {
+            "id": "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55"
+          },
+          {
+            "id": "6f22901c-647d-4ac4-b383-163e93223c4f"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Digital System Design"
+        },
+        "faculty": {
+          "name": "Smita Gulabrao Daware"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Smita Gulabrao Daware",
+        "courseName": "Digital System Design",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 2,
+        "startSlot": 3,
+        "room": 2,
+        "roomId": "7740cb6a-f869-4a47-9af8-73b2c3e39c7d",
+        "id": "6f22901c-647d-4ac4-b383-163e93223c4f",
+        "facultyId": "5d5b174c-36ec-4674-afbb-f199c4c96862",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "c1c09525-ee86-47de-8afc-48ed5a1bf067",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "8cedf495-46dc-45ea-9694-1784d68de94b",
+            "name": "B-1"
+          },
+          {
+            "id": "cbffdaff-ed54-42ad-92f3-818788344b83",
+            "name": "B-2"
+          }
+        ],
+        "concurrentClasses": [
+          "83d0e234-fd1d-43a0-95ea-4fa6a334970f",
+          "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55",
+          "6f22901c-647d-4ac4-b383-163e93223c4f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "83d0e234-fd1d-43a0-95ea-4fa6a334970f"
+          },
+          {
+            "id": "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55"
+          },
+          {
+            "id": "6f22901c-647d-4ac4-b383-163e93223c4f"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Digital System Design"
+        },
+        "faculty": {
+          "name": "Smita Gulabrao Daware"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Smita Gulabrao Daware",
+        "courseName": "Digital System Design",
+        "studentGroupName": "ECS/2021 4th Yr"
+      }
+    ],
+    "d15b9e8e-3de0-4c58-8501-30011b6d5beb": [
+      {
+        "day": 3,
+        "startSlot": 3,
+        "room": 4,
+        "roomId": "510dcbb7-8458-48d8-b1b8-b03ea4480149",
+        "id": "efa1f33a-150f-4460-accd-73be7bb1b71c",
+        "facultyId": "d15b9e8e-3de0-4c58-8501-30011b6d5beb",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "448ae444-7d49-402f-a228-847980ba9e11",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "b02e9fc0-5fc0-45b6-b8e2-44347d1e5328",
+            "name": "A-3"
+          }
+        ],
+        "concurrentClasses": [
+          "53340471-09b7-4551-8caf-a7183afa4e5f",
+          "efa1f33a-150f-4460-accd-73be7bb1b71c",
+          "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "53340471-09b7-4551-8caf-a7183afa4e5f"
+          },
+          {
+            "id": "efa1f33a-150f-4460-accd-73be7bb1b71c"
+          },
+          {
+            "id": "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Wireless Communication"
+        },
+        "faculty": {
+          "name": "Parag Shiva Jawarkar"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Parag Shiva Jawarkar",
+        "courseName": "Wireless Communication",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 3,
+        "startSlot": 4,
+        "room": 4,
+        "roomId": "510dcbb7-8458-48d8-b1b8-b03ea4480149",
+        "id": "efa1f33a-150f-4460-accd-73be7bb1b71c",
+        "facultyId": "d15b9e8e-3de0-4c58-8501-30011b6d5beb",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "448ae444-7d49-402f-a228-847980ba9e11",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "b02e9fc0-5fc0-45b6-b8e2-44347d1e5328",
+            "name": "A-3"
+          }
+        ],
+        "concurrentClasses": [
+          "53340471-09b7-4551-8caf-a7183afa4e5f",
+          "efa1f33a-150f-4460-accd-73be7bb1b71c",
+          "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "53340471-09b7-4551-8caf-a7183afa4e5f"
+          },
+          {
+            "id": "efa1f33a-150f-4460-accd-73be7bb1b71c"
+          },
+          {
+            "id": "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Wireless Communication"
+        },
+        "faculty": {
+          "name": "Parag Shiva Jawarkar"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Parag Shiva Jawarkar",
+        "courseName": "Wireless Communication",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 2,
+        "startSlot": 1,
+        "room": 5,
+        "roomId": "510dcbb7-8458-48d8-b1b8-b03ea4480149",
+        "id": "efa1f33a-150f-4460-accd-73be7bb1b71c",
+        "facultyId": "d15b9e8e-3de0-4c58-8501-30011b6d5beb",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "448ae444-7d49-402f-a228-847980ba9e11",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "b02e9fc0-5fc0-45b6-b8e2-44347d1e5328",
+            "name": "A-3"
+          }
+        ],
+        "concurrentClasses": [
+          "53340471-09b7-4551-8caf-a7183afa4e5f",
+          "efa1f33a-150f-4460-accd-73be7bb1b71c",
+          "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "53340471-09b7-4551-8caf-a7183afa4e5f"
+          },
+          {
+            "id": "efa1f33a-150f-4460-accd-73be7bb1b71c"
+          },
+          {
+            "id": "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Wireless Communication"
+        },
+        "faculty": {
+          "name": "Parag Shiva Jawarkar"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Parag Shiva Jawarkar",
+        "courseName": "Wireless Communication",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 0,
+        "startSlot": 3,
+        "room": 3,
+        "roomId": "acd54b15-270d-4ee2-b906-2426b0802870",
+        "id": "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55",
+        "facultyId": "d15b9e8e-3de0-4c58-8501-30011b6d5beb",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "448ae444-7d49-402f-a228-847980ba9e11",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "fbf55e76-db16-47de-8d54-cf71794f1f93",
+            "name": "B-3"
+          }
+        ],
+        "concurrentClasses": [
+          "83d0e234-fd1d-43a0-95ea-4fa6a334970f",
+          "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55",
+          "6f22901c-647d-4ac4-b383-163e93223c4f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "83d0e234-fd1d-43a0-95ea-4fa6a334970f"
+          },
+          {
+            "id": "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55"
+          },
+          {
+            "id": "6f22901c-647d-4ac4-b383-163e93223c4f"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Wireless Communication"
+        },
+        "faculty": {
+          "name": "Parag Shiva Jawarkar"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Parag Shiva Jawarkar",
+        "courseName": "Wireless Communication",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 3,
+        "startSlot": 0,
+        "room": 3,
+        "roomId": "acd54b15-270d-4ee2-b906-2426b0802870",
+        "id": "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55",
+        "facultyId": "d15b9e8e-3de0-4c58-8501-30011b6d5beb",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "448ae444-7d49-402f-a228-847980ba9e11",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "fbf55e76-db16-47de-8d54-cf71794f1f93",
+            "name": "B-3"
+          }
+        ],
+        "concurrentClasses": [
+          "83d0e234-fd1d-43a0-95ea-4fa6a334970f",
+          "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55",
+          "6f22901c-647d-4ac4-b383-163e93223c4f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "83d0e234-fd1d-43a0-95ea-4fa6a334970f"
+          },
+          {
+            "id": "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55"
+          },
+          {
+            "id": "6f22901c-647d-4ac4-b383-163e93223c4f"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Wireless Communication"
+        },
+        "faculty": {
+          "name": "Parag Shiva Jawarkar"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Parag Shiva Jawarkar",
+        "courseName": "Wireless Communication",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 1,
+        "startSlot": 1,
+        "room": 0,
+        "roomId": "acd54b15-270d-4ee2-b906-2426b0802870",
+        "id": "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55",
+        "facultyId": "d15b9e8e-3de0-4c58-8501-30011b6d5beb",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "448ae444-7d49-402f-a228-847980ba9e11",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "fbf55e76-db16-47de-8d54-cf71794f1f93",
+            "name": "B-3"
+          }
+        ],
+        "concurrentClasses": [
+          "83d0e234-fd1d-43a0-95ea-4fa6a334970f",
+          "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55",
+          "6f22901c-647d-4ac4-b383-163e93223c4f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "83d0e234-fd1d-43a0-95ea-4fa6a334970f"
+          },
+          {
+            "id": "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55"
+          },
+          {
+            "id": "6f22901c-647d-4ac4-b383-163e93223c4f"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Wireless Communication"
+        },
+        "faculty": {
+          "name": "Parag Shiva Jawarkar"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Parag Shiva Jawarkar",
+        "courseName": "Wireless Communication",
+        "studentGroupName": "ECS/2021 4th Yr"
+      }
+    ],
+    "525d3c2b-0242-47c0-8f8a-0c2148ed87bc": [
+      {
+        "day": 3,
+        "startSlot": 2,
+        "room": 4,
+        "roomId": "acd54b15-270d-4ee2-b906-2426b0802870",
+        "id": "586c28a6-1711-4add-8d1a-9f7f00c881d8",
+        "facultyId": "525d3c2b-0242-47c0-8f8a-0c2148ed87bc",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "4976c327-a001-45b2-8835-8de2bd6b3b2e",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "26ca3da1-e950-41df-b80d-2661b9a2c081",
+            "name": "A-4"
+          }
+        ],
+        "concurrentClasses": [
+          "53340471-09b7-4551-8caf-a7183afa4e5f",
+          "efa1f33a-150f-4460-accd-73be7bb1b71c",
+          "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "53340471-09b7-4551-8caf-a7183afa4e5f"
+          },
+          {
+            "id": "efa1f33a-150f-4460-accd-73be7bb1b71c"
+          },
+          {
+            "id": "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Analog IC Design"
+        },
+        "faculty": {
+          "name": "Rajesh Harba Khobragade"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Rajesh Harba Khobragade",
+        "courseName": "Analog IC Design",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 4,
+        "startSlot": 1,
+        "room": 1,
+        "roomId": "acd54b15-270d-4ee2-b906-2426b0802870",
+        "id": "586c28a6-1711-4add-8d1a-9f7f00c881d8",
+        "facultyId": "525d3c2b-0242-47c0-8f8a-0c2148ed87bc",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "4976c327-a001-45b2-8835-8de2bd6b3b2e",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "26ca3da1-e950-41df-b80d-2661b9a2c081",
+            "name": "A-4"
+          }
+        ],
+        "concurrentClasses": [
+          "53340471-09b7-4551-8caf-a7183afa4e5f",
+          "efa1f33a-150f-4460-accd-73be7bb1b71c",
+          "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "53340471-09b7-4551-8caf-a7183afa4e5f"
+          },
+          {
+            "id": "efa1f33a-150f-4460-accd-73be7bb1b71c"
+          },
+          {
+            "id": "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Analog IC Design"
+        },
+        "faculty": {
+          "name": "Rajesh Harba Khobragade"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Rajesh Harba Khobragade",
+        "courseName": "Analog IC Design",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 2,
+        "startSlot": 4,
+        "room": 4,
+        "roomId": "acd54b15-270d-4ee2-b906-2426b0802870",
+        "id": "586c28a6-1711-4add-8d1a-9f7f00c881d8",
+        "facultyId": "525d3c2b-0242-47c0-8f8a-0c2148ed87bc",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "4976c327-a001-45b2-8835-8de2bd6b3b2e",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "26ca3da1-e950-41df-b80d-2661b9a2c081",
+            "name": "A-4"
+          }
+        ],
+        "concurrentClasses": [
+          "53340471-09b7-4551-8caf-a7183afa4e5f",
+          "efa1f33a-150f-4460-accd-73be7bb1b71c",
+          "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "53340471-09b7-4551-8caf-a7183afa4e5f"
+          },
+          {
+            "id": "efa1f33a-150f-4460-accd-73be7bb1b71c"
+          },
+          {
+            "id": "586c28a6-1711-4add-8d1a-9f7f00c881d8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Analog IC Design"
+        },
+        "faculty": {
+          "name": "Rajesh Harba Khobragade"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Rajesh Harba Khobragade",
+        "courseName": "Analog IC Design",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 1,
+        "startSlot": 4,
+        "room": 2,
+        "roomId": "510dcbb7-8458-48d8-b1b8-b03ea4480149",
+        "id": "83d0e234-fd1d-43a0-95ea-4fa6a334970f",
+        "facultyId": "525d3c2b-0242-47c0-8f8a-0c2148ed87bc",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "4976c327-a001-45b2-8835-8de2bd6b3b2e",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "b57a0601-4737-4b74-a605-e205fee75491",
+            "name": "B-4"
+          }
+        ],
+        "concurrentClasses": [
+          "83d0e234-fd1d-43a0-95ea-4fa6a334970f",
+          "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55",
+          "6f22901c-647d-4ac4-b383-163e93223c4f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "83d0e234-fd1d-43a0-95ea-4fa6a334970f"
+          },
+          {
+            "id": "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55"
+          },
+          {
+            "id": "6f22901c-647d-4ac4-b383-163e93223c4f"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Analog IC Design"
+        },
+        "faculty": {
+          "name": "Rajesh Harba Khobragade"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Rajesh Harba Khobragade",
+        "courseName": "Analog IC Design",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 0,
+        "startSlot": 4,
+        "room": 2,
+        "roomId": "510dcbb7-8458-48d8-b1b8-b03ea4480149",
+        "id": "83d0e234-fd1d-43a0-95ea-4fa6a334970f",
+        "facultyId": "525d3c2b-0242-47c0-8f8a-0c2148ed87bc",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "4976c327-a001-45b2-8835-8de2bd6b3b2e",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "b57a0601-4737-4b74-a605-e205fee75491",
+            "name": "B-4"
+          }
+        ],
+        "concurrentClasses": [
+          "83d0e234-fd1d-43a0-95ea-4fa6a334970f",
+          "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55",
+          "6f22901c-647d-4ac4-b383-163e93223c4f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "83d0e234-fd1d-43a0-95ea-4fa6a334970f"
+          },
+          {
+            "id": "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55"
+          },
+          {
+            "id": "6f22901c-647d-4ac4-b383-163e93223c4f"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Analog IC Design"
+        },
+        "faculty": {
+          "name": "Rajesh Harba Khobragade"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Rajesh Harba Khobragade",
+        "courseName": "Analog IC Design",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 1,
+        "startSlot": 1,
+        "room": 6,
+        "roomId": "510dcbb7-8458-48d8-b1b8-b03ea4480149",
+        "id": "83d0e234-fd1d-43a0-95ea-4fa6a334970f",
+        "facultyId": "525d3c2b-0242-47c0-8f8a-0c2148ed87bc",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "4976c327-a001-45b2-8835-8de2bd6b3b2e",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "dc086185-1ae0-40ef-ac0a-c8435bd0cbfc",
+        "batches": [
+          {
+            "id": "b57a0601-4737-4b74-a605-e205fee75491",
+            "name": "B-4"
+          }
+        ],
+        "concurrentClasses": [
+          "83d0e234-fd1d-43a0-95ea-4fa6a334970f",
+          "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55",
+          "6f22901c-647d-4ac4-b383-163e93223c4f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "83d0e234-fd1d-43a0-95ea-4fa6a334970f"
+          },
+          {
+            "id": "6fb2f52e-2b5a-4e56-ab20-2a83456f6c55"
+          },
+          {
+            "id": "6f22901c-647d-4ac4-b383-163e93223c4f"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Analog IC Design"
+        },
+        "faculty": {
+          "name": "Rajesh Harba Khobragade"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Rajesh Harba Khobragade",
+        "courseName": "Analog IC Design",
+        "studentGroupName": "ECS/2021 4th Yr"
+      }
+    ],
+    "b0ffd7f0-e9d8-4f10-be81-501024886fd0": [
+      {
+        "day": 2,
+        "startSlot": 1,
+        "room": 5,
+        "roomId": "acd54b15-270d-4ee2-b906-2426b0802870",
+        "id": "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8",
+        "facultyId": "b0ffd7f0-e9d8-4f10-be81-501024886fd0",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "32f0aee2-d4f5-4909-8fd6-10e7e9b03314",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "26ca3da1-e950-41df-b80d-2661b9a2c081",
+            "name": "A-4"
+          }
+        ],
+        "concurrentClasses": [
+          "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8",
+          "7d503fa3-fd0e-4098-a882-08ee1ce14f66",
+          "e7729d44-94da-4838-87a4-005b3eda784c"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "7d503fa3-fd0e-4098-a882-08ee1ce14f66"
+          },
+          {
+            "id": "e7729d44-94da-4838-87a4-005b3eda784c"
+          },
+          {
+            "id": "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "MicroElectro Mechanical System"
+        },
+        "faculty": {
+          "name": "Poorvi Khushal Joshi"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Poorvi Khushal Joshi",
+        "courseName": "MicroElectro Mechanical System",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 3,
+        "startSlot": 3,
+        "room": 4,
+        "roomId": "acd54b15-270d-4ee2-b906-2426b0802870",
+        "id": "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8",
+        "facultyId": "b0ffd7f0-e9d8-4f10-be81-501024886fd0",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "32f0aee2-d4f5-4909-8fd6-10e7e9b03314",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "26ca3da1-e950-41df-b80d-2661b9a2c081",
+            "name": "A-4"
+          }
+        ],
+        "concurrentClasses": [
+          "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8",
+          "7d503fa3-fd0e-4098-a882-08ee1ce14f66",
+          "e7729d44-94da-4838-87a4-005b3eda784c"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "7d503fa3-fd0e-4098-a882-08ee1ce14f66"
+          },
+          {
+            "id": "e7729d44-94da-4838-87a4-005b3eda784c"
+          },
+          {
+            "id": "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "MicroElectro Mechanical System"
+        },
+        "faculty": {
+          "name": "Poorvi Khushal Joshi"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Poorvi Khushal Joshi",
+        "courseName": "MicroElectro Mechanical System",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 2,
+        "startSlot": 4,
+        "room": 2,
+        "roomId": "acd54b15-270d-4ee2-b906-2426b0802870",
+        "id": "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8",
+        "facultyId": "b0ffd7f0-e9d8-4f10-be81-501024886fd0",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "32f0aee2-d4f5-4909-8fd6-10e7e9b03314",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "26ca3da1-e950-41df-b80d-2661b9a2c081",
+            "name": "A-4"
+          }
+        ],
+        "concurrentClasses": [
+          "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8",
+          "7d503fa3-fd0e-4098-a882-08ee1ce14f66",
+          "e7729d44-94da-4838-87a4-005b3eda784c"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "7d503fa3-fd0e-4098-a882-08ee1ce14f66"
+          },
+          {
+            "id": "e7729d44-94da-4838-87a4-005b3eda784c"
+          },
+          {
+            "id": "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "MicroElectro Mechanical System"
+        },
+        "faculty": {
+          "name": "Poorvi Khushal Joshi"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Poorvi Khushal Joshi",
+        "courseName": "MicroElectro Mechanical System",
+        "studentGroupName": "ECS/2021 4th Yr"
+      }
+    ],
+    "a6de1d11-e7a4-4f0e-957e-dea883e15dbe": [
+      {
+        "day": 2,
+        "startSlot": 1,
+        "room": 4,
+        "roomId": "f0711744-b164-4c02-ae0b-5b5017f0307b",
+        "id": "7d503fa3-fd0e-4098-a882-08ee1ce14f66",
+        "facultyId": "a6de1d11-e7a4-4f0e-957e-dea883e15dbe",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "faaf2e3b-8924-4c37-a301-2384a259a083",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "4e11694a-229f-4fe1-8afd-a60d8bc03099",
+            "name": "A-1"
+          },
+          {
+            "id": "1808ab72-611f-4bba-89fd-c507c6a3cbb4",
+            "name": "A-2"
+          }
+        ],
+        "concurrentClasses": [
+          "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8",
+          "7d503fa3-fd0e-4098-a882-08ee1ce14f66",
+          "e7729d44-94da-4838-87a4-005b3eda784c"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "7d503fa3-fd0e-4098-a882-08ee1ce14f66"
+          },
+          {
+            "id": "e7729d44-94da-4838-87a4-005b3eda784c"
+          },
+          {
+            "id": "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Testing and verification of digital system"
+        },
+        "faculty": {
+          "name": "Lokesh Mohan Heda"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Lokesh Mohan Heda",
+        "courseName": "Testing and verification of digital system",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 3,
+        "startSlot": 4,
+        "room": 2,
+        "roomId": "f0711744-b164-4c02-ae0b-5b5017f0307b",
+        "id": "7d503fa3-fd0e-4098-a882-08ee1ce14f66",
+        "facultyId": "a6de1d11-e7a4-4f0e-957e-dea883e15dbe",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "faaf2e3b-8924-4c37-a301-2384a259a083",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "4e11694a-229f-4fe1-8afd-a60d8bc03099",
+            "name": "A-1"
+          },
+          {
+            "id": "1808ab72-611f-4bba-89fd-c507c6a3cbb4",
+            "name": "A-2"
+          }
+        ],
+        "concurrentClasses": [
+          "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8",
+          "7d503fa3-fd0e-4098-a882-08ee1ce14f66",
+          "e7729d44-94da-4838-87a4-005b3eda784c"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "7d503fa3-fd0e-4098-a882-08ee1ce14f66"
+          },
+          {
+            "id": "e7729d44-94da-4838-87a4-005b3eda784c"
+          },
+          {
+            "id": "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Testing and verification of digital system"
+        },
+        "faculty": {
+          "name": "Lokesh Mohan Heda"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Lokesh Mohan Heda",
+        "courseName": "Testing and verification of digital system",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 4,
+        "startSlot": 3,
+        "room": 1,
+        "roomId": "f0711744-b164-4c02-ae0b-5b5017f0307b",
+        "id": "7d503fa3-fd0e-4098-a882-08ee1ce14f66",
+        "facultyId": "a6de1d11-e7a4-4f0e-957e-dea883e15dbe",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "faaf2e3b-8924-4c37-a301-2384a259a083",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "4e11694a-229f-4fe1-8afd-a60d8bc03099",
+            "name": "A-1"
+          },
+          {
+            "id": "1808ab72-611f-4bba-89fd-c507c6a3cbb4",
+            "name": "A-2"
+          }
+        ],
+        "concurrentClasses": [
+          "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8",
+          "7d503fa3-fd0e-4098-a882-08ee1ce14f66",
+          "e7729d44-94da-4838-87a4-005b3eda784c"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "7d503fa3-fd0e-4098-a882-08ee1ce14f66"
+          },
+          {
+            "id": "e7729d44-94da-4838-87a4-005b3eda784c"
+          },
+          {
+            "id": "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Testing and verification of digital system"
+        },
+        "faculty": {
+          "name": "Lokesh Mohan Heda"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Lokesh Mohan Heda",
+        "courseName": "Testing and verification of digital system",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 2,
+        "startSlot": 0,
+        "room": 4,
+        "roomId": "7740cb6a-f869-4a47-9af8-73b2c3e39c7d",
+        "id": "50eac99d-0ee8-4cd8-9a23-8093ea5a7513",
+        "facultyId": "a6de1d11-e7a4-4f0e-957e-dea883e15dbe",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "faaf2e3b-8924-4c37-a301-2384a259a083",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "8cedf495-46dc-45ea-9694-1784d68de94b",
+            "name": "B-1"
+          },
+          {
+            "id": "cbffdaff-ed54-42ad-92f3-818788344b83",
+            "name": "B-2"
+          }
+        ],
+        "concurrentClasses": [
+          "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7",
+          "50eac99d-0ee8-4cd8-9a23-8093ea5a7513",
+          "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+          },
+          {
+            "id": "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7"
+          },
+          {
+            "id": "50eac99d-0ee8-4cd8-9a23-8093ea5a7513"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Testing and verification of digital system"
+        },
+        "faculty": {
+          "name": "Lokesh Mohan Heda"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Lokesh Mohan Heda",
+        "courseName": "Testing and verification of digital system",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 1,
+        "startSlot": 2,
+        "room": 7,
+        "roomId": "7740cb6a-f869-4a47-9af8-73b2c3e39c7d",
+        "id": "50eac99d-0ee8-4cd8-9a23-8093ea5a7513",
+        "facultyId": "a6de1d11-e7a4-4f0e-957e-dea883e15dbe",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "faaf2e3b-8924-4c37-a301-2384a259a083",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "8cedf495-46dc-45ea-9694-1784d68de94b",
+            "name": "B-1"
+          },
+          {
+            "id": "cbffdaff-ed54-42ad-92f3-818788344b83",
+            "name": "B-2"
+          }
+        ],
+        "concurrentClasses": [
+          "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7",
+          "50eac99d-0ee8-4cd8-9a23-8093ea5a7513",
+          "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+          },
+          {
+            "id": "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7"
+          },
+          {
+            "id": "50eac99d-0ee8-4cd8-9a23-8093ea5a7513"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Testing and verification of digital system"
+        },
+        "faculty": {
+          "name": "Lokesh Mohan Heda"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Lokesh Mohan Heda",
+        "courseName": "Testing and verification of digital system",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 0,
+        "startSlot": 1,
+        "room": 5,
+        "roomId": "7740cb6a-f869-4a47-9af8-73b2c3e39c7d",
+        "id": "50eac99d-0ee8-4cd8-9a23-8093ea5a7513",
+        "facultyId": "a6de1d11-e7a4-4f0e-957e-dea883e15dbe",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "faaf2e3b-8924-4c37-a301-2384a259a083",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "8cedf495-46dc-45ea-9694-1784d68de94b",
+            "name": "B-1"
+          },
+          {
+            "id": "cbffdaff-ed54-42ad-92f3-818788344b83",
+            "name": "B-2"
+          }
+        ],
+        "concurrentClasses": [
+          "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7",
+          "50eac99d-0ee8-4cd8-9a23-8093ea5a7513",
+          "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+          },
+          {
+            "id": "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7"
+          },
+          {
+            "id": "50eac99d-0ee8-4cd8-9a23-8093ea5a7513"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Testing and verification of digital system"
+        },
+        "faculty": {
+          "name": "Lokesh Mohan Heda"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Lokesh Mohan Heda",
+        "courseName": "Testing and verification of digital system",
+        "studentGroupName": "ECS/2021 4th Yr"
+      }
+    ],
+    "7fdac776-5dea-43f4-b264-5f7a883522c5": [
+      {
+        "day": 4,
+        "startSlot": 1,
+        "room": 1,
+        "roomId": "510dcbb7-8458-48d8-b1b8-b03ea4480149",
+        "id": "e7729d44-94da-4838-87a4-005b3eda784c",
+        "facultyId": "7fdac776-5dea-43f4-b264-5f7a883522c5",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "e3b64296-6d9c-4dde-b053-f7ab416a4e2f",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "b02e9fc0-5fc0-45b6-b8e2-44347d1e5328",
+            "name": "A-3"
+          }
+        ],
+        "concurrentClasses": [
+          "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8",
+          "7d503fa3-fd0e-4098-a882-08ee1ce14f66",
+          "e7729d44-94da-4838-87a4-005b3eda784c"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "7d503fa3-fd0e-4098-a882-08ee1ce14f66"
+          },
+          {
+            "id": "e7729d44-94da-4838-87a4-005b3eda784c"
+          },
+          {
+            "id": "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Fiber Optics Communication"
+        },
+        "faculty": {
+          "name": "Prachi Parag Rane"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Prachi Parag Rane",
+        "courseName": "Fiber Optics Communication",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 4,
+        "startSlot": 4,
+        "room": 3,
+        "roomId": "510dcbb7-8458-48d8-b1b8-b03ea4480149",
+        "id": "e7729d44-94da-4838-87a4-005b3eda784c",
+        "facultyId": "7fdac776-5dea-43f4-b264-5f7a883522c5",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "e3b64296-6d9c-4dde-b053-f7ab416a4e2f",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "b02e9fc0-5fc0-45b6-b8e2-44347d1e5328",
+            "name": "A-3"
+          }
+        ],
+        "concurrentClasses": [
+          "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8",
+          "7d503fa3-fd0e-4098-a882-08ee1ce14f66",
+          "e7729d44-94da-4838-87a4-005b3eda784c"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "7d503fa3-fd0e-4098-a882-08ee1ce14f66"
+          },
+          {
+            "id": "e7729d44-94da-4838-87a4-005b3eda784c"
+          },
+          {
+            "id": "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Fiber Optics Communication"
+        },
+        "faculty": {
+          "name": "Prachi Parag Rane"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Prachi Parag Rane",
+        "courseName": "Fiber Optics Communication",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 1,
+        "startSlot": 1,
+        "room": 6,
+        "roomId": "510dcbb7-8458-48d8-b1b8-b03ea4480149",
+        "id": "e7729d44-94da-4838-87a4-005b3eda784c",
+        "facultyId": "7fdac776-5dea-43f4-b264-5f7a883522c5",
+        "studentGroupId": "547f8f93-1683-4193-88ae-349564fcfdca",
+        "courseId": "e3b64296-6d9c-4dde-b053-f7ab416a4e2f",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "b02e9fc0-5fc0-45b6-b8e2-44347d1e5328",
+            "name": "A-3"
+          }
+        ],
+        "concurrentClasses": [
+          "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8",
+          "7d503fa3-fd0e-4098-a882-08ee1ce14f66",
+          "e7729d44-94da-4838-87a4-005b3eda784c"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "7d503fa3-fd0e-4098-a882-08ee1ce14f66"
+          },
+          {
+            "id": "e7729d44-94da-4838-87a4-005b3eda784c"
+          },
+          {
+            "id": "988bf3a7-31f6-40d8-bd88-ec2ee2131cf8"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Fiber Optics Communication"
+        },
+        "faculty": {
+          "name": "Prachi Parag Rane"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Prachi Parag Rane",
+        "courseName": "Fiber Optics Communication",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 0,
+        "startSlot": 4,
+        "room": 5,
+        "roomId": "acd54b15-270d-4ee2-b906-2426b0802870",
+        "id": "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7",
+        "facultyId": "7fdac776-5dea-43f4-b264-5f7a883522c5",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "e3b64296-6d9c-4dde-b053-f7ab416a4e2f",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "fbf55e76-db16-47de-8d54-cf71794f1f93",
+            "name": "B-3"
+          }
+        ],
+        "concurrentClasses": [
+          "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7",
+          "50eac99d-0ee8-4cd8-9a23-8093ea5a7513",
+          "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+          },
+          {
+            "id": "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7"
+          },
+          {
+            "id": "50eac99d-0ee8-4cd8-9a23-8093ea5a7513"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Fiber Optics Communication"
+        },
+        "faculty": {
+          "name": "Prachi Parag Rane"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Prachi Parag Rane",
+        "courseName": "Fiber Optics Communication",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 4,
+        "startSlot": 2,
+        "room": 7,
+        "roomId": "acd54b15-270d-4ee2-b906-2426b0802870",
+        "id": "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7",
+        "facultyId": "7fdac776-5dea-43f4-b264-5f7a883522c5",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "e3b64296-6d9c-4dde-b053-f7ab416a4e2f",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "fbf55e76-db16-47de-8d54-cf71794f1f93",
+            "name": "B-3"
+          }
+        ],
+        "concurrentClasses": [
+          "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7",
+          "50eac99d-0ee8-4cd8-9a23-8093ea5a7513",
+          "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+          },
+          {
+            "id": "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7"
+          },
+          {
+            "id": "50eac99d-0ee8-4cd8-9a23-8093ea5a7513"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Fiber Optics Communication"
+        },
+        "faculty": {
+          "name": "Prachi Parag Rane"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Prachi Parag Rane",
+        "courseName": "Fiber Optics Communication",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 1,
+        "startSlot": 4,
+        "room": 4,
+        "roomId": "acd54b15-270d-4ee2-b906-2426b0802870",
+        "id": "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7",
+        "facultyId": "7fdac776-5dea-43f4-b264-5f7a883522c5",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "e3b64296-6d9c-4dde-b053-f7ab416a4e2f",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "fbf55e76-db16-47de-8d54-cf71794f1f93",
+            "name": "B-3"
+          }
+        ],
+        "concurrentClasses": [
+          "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7",
+          "50eac99d-0ee8-4cd8-9a23-8093ea5a7513",
+          "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+          },
+          {
+            "id": "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7"
+          },
+          {
+            "id": "50eac99d-0ee8-4cd8-9a23-8093ea5a7513"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Fiber Optics Communication"
+        },
+        "faculty": {
+          "name": "Prachi Parag Rane"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Prachi Parag Rane",
+        "courseName": "Fiber Optics Communication",
+        "studentGroupName": "ECS/2021 4th Yr"
+      }
+    ],
+    "706e72b4-9a3e-4337-b5e8-8fa04ebf64d6": [
+      {
+        "day": 3,
+        "startSlot": 3,
+        "room": 1,
+        "roomId": "7740cb6a-f869-4a47-9af8-73b2c3e39c7d",
+        "id": "5a7d6499-00af-4df9-a6b1-df6e3d91a26f",
+        "facultyId": "706e72b4-9a3e-4337-b5e8-8fa04ebf64d6",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "79ee5678-69fc-416c-8a18-07eb1de888d4",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": null,
+        "batches": [
+          {
+            "id": "8cedf495-46dc-45ea-9694-1784d68de94b",
+            "name": "B-1"
+          },
+          {
+            "id": "cbffdaff-ed54-42ad-92f3-818788344b83",
+            "name": "B-2"
+          },
+          {
+            "id": "fbf55e76-db16-47de-8d54-cf71794f1f93",
+            "name": "B-3"
+          },
+          {
+            "id": "b57a0601-4737-4b74-a605-e205fee75491",
+            "name": "B-4"
+          }
+        ],
+        "concurrentClasses": [],
+        "concurrentByClasses": [],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Computer Networks"
+        },
+        "faculty": {
+          "name": "Pankaj Uday Joshi"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Pankaj Uday Joshi",
+        "courseName": "Computer Networks",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 2,
+        "startSlot": 3,
+        "room": 2,
+        "roomId": "7740cb6a-f869-4a47-9af8-73b2c3e39c7d",
+        "id": "5a7d6499-00af-4df9-a6b1-df6e3d91a26f",
+        "facultyId": "706e72b4-9a3e-4337-b5e8-8fa04ebf64d6",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "79ee5678-69fc-416c-8a18-07eb1de888d4",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": null,
+        "batches": [
+          {
+            "id": "8cedf495-46dc-45ea-9694-1784d68de94b",
+            "name": "B-1"
+          },
+          {
+            "id": "cbffdaff-ed54-42ad-92f3-818788344b83",
+            "name": "B-2"
+          },
+          {
+            "id": "fbf55e76-db16-47de-8d54-cf71794f1f93",
+            "name": "B-3"
+          },
+          {
+            "id": "b57a0601-4737-4b74-a605-e205fee75491",
+            "name": "B-4"
+          }
+        ],
+        "concurrentClasses": [],
+        "concurrentByClasses": [],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Computer Networks"
+        },
+        "faculty": {
+          "name": "Pankaj Uday Joshi"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Pankaj Uday Joshi",
+        "courseName": "Computer Networks",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 2,
+        "startSlot": 0,
+        "room": 4,
+        "roomId": "7740cb6a-f869-4a47-9af8-73b2c3e39c7d",
+        "id": "5a7d6499-00af-4df9-a6b1-df6e3d91a26f",
+        "facultyId": "706e72b4-9a3e-4337-b5e8-8fa04ebf64d6",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "79ee5678-69fc-416c-8a18-07eb1de888d4",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": null,
+        "batches": [
+          {
+            "id": "8cedf495-46dc-45ea-9694-1784d68de94b",
+            "name": "B-1"
+          },
+          {
+            "id": "cbffdaff-ed54-42ad-92f3-818788344b83",
+            "name": "B-2"
+          },
+          {
+            "id": "fbf55e76-db16-47de-8d54-cf71794f1f93",
+            "name": "B-3"
+          },
+          {
+            "id": "b57a0601-4737-4b74-a605-e205fee75491",
+            "name": "B-4"
+          }
+        ],
+        "concurrentClasses": [],
+        "concurrentByClasses": [],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "Computer Networks"
+        },
+        "faculty": {
+          "name": "Pankaj Uday Joshi"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Pankaj Uday Joshi",
+        "courseName": "Computer Networks",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 4,
+        "startSlot": 3,
+        "room": 6,
+        "roomId": "510dcbb7-8458-48d8-b1b8-b03ea4480149",
+        "id": "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f",
+        "facultyId": "706e72b4-9a3e-4337-b5e8-8fa04ebf64d6",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "32f0aee2-d4f5-4909-8fd6-10e7e9b03314",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "b57a0601-4737-4b74-a605-e205fee75491",
+            "name": "B-4"
+          }
+        ],
+        "concurrentClasses": [
+          "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7",
+          "50eac99d-0ee8-4cd8-9a23-8093ea5a7513",
+          "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+          },
+          {
+            "id": "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7"
+          },
+          {
+            "id": "50eac99d-0ee8-4cd8-9a23-8093ea5a7513"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "MicroElectro Mechanical System"
+        },
+        "faculty": {
+          "name": "Pankaj Uday Joshi"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Pankaj Uday Joshi",
+        "courseName": "MicroElectro Mechanical System",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 3,
+        "startSlot": 0,
+        "room": 2,
+        "roomId": "510dcbb7-8458-48d8-b1b8-b03ea4480149",
+        "id": "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f",
+        "facultyId": "706e72b4-9a3e-4337-b5e8-8fa04ebf64d6",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "32f0aee2-d4f5-4909-8fd6-10e7e9b03314",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "b57a0601-4737-4b74-a605-e205fee75491",
+            "name": "B-4"
+          }
+        ],
+        "concurrentClasses": [
+          "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7",
+          "50eac99d-0ee8-4cd8-9a23-8093ea5a7513",
+          "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+          },
+          {
+            "id": "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7"
+          },
+          {
+            "id": "50eac99d-0ee8-4cd8-9a23-8093ea5a7513"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "MicroElectro Mechanical System"
+        },
+        "faculty": {
+          "name": "Pankaj Uday Joshi"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Pankaj Uday Joshi",
+        "courseName": "MicroElectro Mechanical System",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 0,
+        "startSlot": 0,
+        "room": 7,
+        "roomId": "510dcbb7-8458-48d8-b1b8-b03ea4480149",
+        "id": "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f",
+        "facultyId": "706e72b4-9a3e-4337-b5e8-8fa04ebf64d6",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "32f0aee2-d4f5-4909-8fd6-10e7e9b03314",
+        "courseType": "THEORY",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": "92dfb0f1-b686-4683-b9f7-a06e009d28ea",
+        "batches": [
+          {
+            "id": "b57a0601-4737-4b74-a605-e205fee75491",
+            "name": "B-4"
+          }
+        ],
+        "concurrentClasses": [
+          "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7",
+          "50eac99d-0ee8-4cd8-9a23-8093ea5a7513",
+          "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "f4b6b9ef-48fd-4727-b2ed-9bf24e41c25f"
+          },
+          {
+            "id": "8a8ee64d-5a2d-4f2b-9325-3ef1f681c8a7"
+          },
+          {
+            "id": "50eac99d-0ee8-4cd8-9a23-8093ea5a7513"
+          }
+        ],
+        "course": {
+          "credits": 3,
+          "courseType": "THEORY",
+          "name": "MicroElectro Mechanical System"
+        },
+        "faculty": {
+          "name": "Pankaj Uday Joshi"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 3,
+        "headCount": 80,
+        "duration": 3,
+        "classesPerWeek": 3,
+        "facultyName": "Pankaj Uday Joshi",
+        "courseName": "MicroElectro Mechanical System",
+        "studentGroupName": "ECS/2021 4th Yr"
+      }
+    ],
+    "3685f6f2-9d33-4a84-98e4-3c7bf6ea9ee4": [
+      {
+        "day": 0,
+        "startSlot": 2,
+        "room": 0,
+        "roomId": "2dc146a9-ee1b-436d-bc8d-40eb67d87344",
+        "id": "534b8fab-c2c3-430d-aeb7-7c799d0a7f1c",
+        "facultyId": "3685f6f2-9d33-4a84-98e4-3c7bf6ea9ee4",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "2828ad00-c091-4f01-84bd-856e7ff53035",
+        "courseType": "PRACTICAL",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": null,
+        "batches": [
+          {
+            "id": "cbffdaff-ed54-42ad-92f3-818788344b83",
+            "name": "B-2"
+          }
+        ],
+        "concurrentClasses": [
+          "534b8fab-c2c3-430d-aeb7-7c799d0a7f1c",
+          "02c95cbd-40fc-46ec-a806-227d590e9793",
+          "79840d0c-ad95-476d-833c-b79fd9bee08d",
+          "636e4b78-2950-469e-8655-c4e15e702f44"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "79840d0c-ad95-476d-833c-b79fd9bee08d"
+          },
+          {
+            "id": "636e4b78-2950-469e-8655-c4e15e702f44"
+          },
+          {
+            "id": "534b8fab-c2c3-430d-aeb7-7c799d0a7f1c"
+          },
+          {
+            "id": "02c95cbd-40fc-46ec-a806-227d590e9793"
+          }
+        ],
+        "course": {
+          "credits": 1,
+          "courseType": "PRACTICAL",
+          "name": "Computer Networks"
+        },
+        "faculty": {
+          "name": "Aleefia Aliasgher Khurshid"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 1,
+        "headCount": 30,
+        "duration": 2,
+        "classesPerWeek": 1,
+        "facultyName": "Aleefia Aliasgher Khurshid",
+        "courseName": "Computer Networks",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 1,
+        "startSlot": 3,
+        "room": 1,
+        "roomId": "2dc146a9-ee1b-436d-bc8d-40eb67d87344",
+        "id": "02c95cbd-40fc-46ec-a806-227d590e9793",
+        "facultyId": "3685f6f2-9d33-4a84-98e4-3c7bf6ea9ee4",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "2828ad00-c091-4f01-84bd-856e7ff53035",
+        "courseType": "PRACTICAL",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": null,
+        "batches": [
+          {
+            "id": "fbf55e76-db16-47de-8d54-cf71794f1f93",
+            "name": "B-3"
+          }
+        ],
+        "concurrentClasses": [
+          "534b8fab-c2c3-430d-aeb7-7c799d0a7f1c",
+          "02c95cbd-40fc-46ec-a806-227d590e9793",
+          "79840d0c-ad95-476d-833c-b79fd9bee08d",
+          "636e4b78-2950-469e-8655-c4e15e702f44"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "79840d0c-ad95-476d-833c-b79fd9bee08d"
+          },
+          {
+            "id": "636e4b78-2950-469e-8655-c4e15e702f44"
+          },
+          {
+            "id": "534b8fab-c2c3-430d-aeb7-7c799d0a7f1c"
+          },
+          {
+            "id": "02c95cbd-40fc-46ec-a806-227d590e9793"
+          }
+        ],
+        "course": {
+          "credits": 1,
+          "courseType": "PRACTICAL",
+          "name": "Computer Networks"
+        },
+        "faculty": {
+          "name": "Aleefia Aliasgher Khurshid"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 1,
+        "headCount": 30,
+        "duration": 2,
+        "classesPerWeek": 1,
+        "facultyName": "Aleefia Aliasgher Khurshid",
+        "courseName": "Computer Networks",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 0,
+        "startSlot": 5,
+        "room": 1,
+        "roomId": "2dc146a9-ee1b-436d-bc8d-40eb67d87344",
+        "id": "79840d0c-ad95-476d-833c-b79fd9bee08d",
+        "facultyId": "3685f6f2-9d33-4a84-98e4-3c7bf6ea9ee4",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "2828ad00-c091-4f01-84bd-856e7ff53035",
+        "courseType": "PRACTICAL",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": null,
+        "batches": [
+          {
+            "id": "8cedf495-46dc-45ea-9694-1784d68de94b",
+            "name": "B-1"
+          }
+        ],
+        "concurrentClasses": [
+          "534b8fab-c2c3-430d-aeb7-7c799d0a7f1c",
+          "02c95cbd-40fc-46ec-a806-227d590e9793",
+          "79840d0c-ad95-476d-833c-b79fd9bee08d",
+          "636e4b78-2950-469e-8655-c4e15e702f44"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "79840d0c-ad95-476d-833c-b79fd9bee08d"
+          },
+          {
+            "id": "636e4b78-2950-469e-8655-c4e15e702f44"
+          },
+          {
+            "id": "534b8fab-c2c3-430d-aeb7-7c799d0a7f1c"
+          },
+          {
+            "id": "02c95cbd-40fc-46ec-a806-227d590e9793"
+          }
+        ],
+        "course": {
+          "credits": 1,
+          "courseType": "PRACTICAL",
+          "name": "Computer Networks"
+        },
+        "faculty": {
+          "name": "Aleefia Aliasgher Khurshid"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 1,
+        "headCount": 30,
+        "duration": 2,
+        "classesPerWeek": 1,
+        "facultyName": "Aleefia Aliasgher Khurshid",
+        "courseName": "Computer Networks",
+        "studentGroupName": "ECS/2021 4th Yr"
+      },
+      {
+        "day": 3,
+        "startSlot": 5,
+        "room": 3,
+        "roomId": "2dc146a9-ee1b-436d-bc8d-40eb67d87344",
+        "id": "636e4b78-2950-469e-8655-c4e15e702f44",
+        "facultyId": "3685f6f2-9d33-4a84-98e4-3c7bf6ea9ee4",
+        "studentGroupId": "047fe721-670b-4ee1-83cc-dd19b22fc4b2",
+        "courseId": "2828ad00-c091-4f01-84bd-856e7ff53035",
+        "courseType": "PRACTICAL",
+        "scheduleId": "9ff647c5-f54e-4176-ada3-90e3b995d04c",
+        "electiveBasketId": null,
+        "batches": [
+          {
+            "id": "b57a0601-4737-4b74-a605-e205fee75491",
+            "name": "B-4"
+          }
+        ],
+        "concurrentClasses": [
+          "534b8fab-c2c3-430d-aeb7-7c799d0a7f1c",
+          "02c95cbd-40fc-46ec-a806-227d590e9793",
+          "79840d0c-ad95-476d-833c-b79fd9bee08d",
+          "636e4b78-2950-469e-8655-c4e15e702f44"
+        ],
+        "concurrentByClasses": [
+          {
+            "id": "79840d0c-ad95-476d-833c-b79fd9bee08d"
+          },
+          {
+            "id": "636e4b78-2950-469e-8655-c4e15e702f44"
+          },
+          {
+            "id": "534b8fab-c2c3-430d-aeb7-7c799d0a7f1c"
+          },
+          {
+            "id": "02c95cbd-40fc-46ec-a806-227d590e9793"
+          }
+        ],
+        "course": {
+          "credits": 1,
+          "courseType": "PRACTICAL",
+          "name": "Computer Networks"
+        },
+        "faculty": {
+          "name": "Aleefia Aliasgher Khurshid"
+        },
+        "StudentGroup": {
+          "name": "ECS/2021 4th Yr"
+        },
+        "courseCredits": 1,
+        "headCount": 30,
+        "duration": 2,
+        "classesPerWeek": 1,
+        "facultyName": "Aleefia Aliasgher Khurshid",
+        "courseName": "Computer Networks",
+        "studentGroupName": "ECS/2021 4th Yr"
+      }
+    ]
+  }
 }
