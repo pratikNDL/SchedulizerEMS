@@ -20,23 +20,28 @@ app.get('/schedule/data/:scheduleId', async (c) => {
       const data=await  prisma.schedule.findFirst({
             where: { id: scheduleId },
             select: {
+                days: true,
+                slots: true,
                 rooms: {
-                  
                     select: {
                         code: true,
-                        floor: true,
                         isLab: true,
                         capacity: true,
                         id: true,
-                        academicBlock: { select: { blockCode: true, name: true } }
                     }
                 },
                 
                     classes:{
                         include: {
                             batches: { select: { id: true } },
-                            concurrentClasses: true,
-                            concurrentByClasses: true
+                            concurrentClasses: {select: {id: true}},
+                            concurrentByClasses: {select: {id: true}},
+                            course: {
+                                select: {
+                                    credits: true,
+                                    courseType: true
+                                }
+                            }
                         }
                     } ,
 

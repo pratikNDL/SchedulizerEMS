@@ -52,7 +52,6 @@ export class Schedule {
                 if(!parentIndices) throw new Error(`Indices array not found  for id:${_class.id}: mappedSchedule may not be Initialized properly`)
                 
                 const parentIndex = parentIndices[i];
-
                 const day = Math.floor(parentIndex / (this.schedulizer.slotsPerDay * this.schedulizer.roomCount));
                 const startSlot = Math.floor((parentIndex % (this.schedulizer.slotsPerDay * this.schedulizer.roomCount)) / this.schedulizer.roomCount);
                 const room = parentIndex % this.schedulizer.roomCount;
@@ -122,24 +121,44 @@ export class Schedule {
             })
         })
 
-        this.fitness = 1 /(1+penalty);
+        this.fitness = 1 /(penalty);
     }
 
     
 
+    view() {
+        const prettyView = new Map<string, Array<{day: number, startSlot: number, roomId: string}>>();
+        for (const [classId, indexes] of this.mappedSchedule.entries()) {
+            prettyView.set(classId, indexes.map((index) => this.expandedIndex(index)))
+        }
+        console.log(prettyView)
+    }
 
+    private expandedIndex(index: number) {
+        const day = Math.floor(index / (this.schedulizer.slotsPerDay * this.schedulizer.roomCount));
+        const startSlot = Math.floor((index % (this.schedulizer.slotsPerDay * this.schedulizer.roomCount)) / this.schedulizer.roomCount);
+        const room = index % this.schedulizer.roomCount;
+        return {
+            day,
+            startSlot,
+            room,
+            roomId: this.schedulizer.mappedRooms.get(room)?.id || ""
+        }
+    }
     private calculateRoomHeadCount(dayIndex: number, slotIndex: number, roomIndex: number) {
         const classes = this.schedule[dayIndex][slotIndex][roomIndex];
         return classes.reduce((sum, _class) => sum + _class.headCount, 0);
     }
 }
 
-const RoomOverBookedPenalty = 10;
-const FacultyOverBookedPenalty = 10;
-const BatchOverBookedPenalty = 10;
-const FacultyNonAvailabilityPenalty = 10;
-const StudentGroupNonAvailabilityPenalty = 10;
-const ConcurrentClassFailurePenalty = 10;
-const HardPreferredRoomMismatchPenalty = 10;
-const SoftPreferredRoomMismatchPenalty = 10;
+const HARD_PENALTY = 10;
+const SOFT_PENALTY = 5;
+const RoomOverBookedPenalty = HARD_PENALTY;
+const FacultyOverBookedPenalty = HARD_PENALTY;
+const BatchOverBookedPenalty = HARD_PENALTY;
+const FacultyNonAvailabilityPenalty = SOFT_PENALTY;
+const StudentGroupNonAvailabilityPenalty = SOFT_PENALTY;
+const ConcurrentClassFailurePenalty = HARD_PENALTY;
+const HardPreferredRoomMismatchPenalty = HARD_PENALTY;
+const SoftPreferredRoomMismatchPenalty = SOFT_PENALTY;
 

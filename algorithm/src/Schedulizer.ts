@@ -64,6 +64,8 @@ export class Schedulizer {
         })
 
         this.population = this.elimination(parents, offsprings);
+        this.findFittestSchedule()
+        console.log(this.fittestSchedule.fitness)
         this.generation++;
     }
 
@@ -76,6 +78,12 @@ export class Schedulizer {
             else return offsprings[j++];
         } )
         return nextGeneration;
+    }
+
+    findFittestSchedule() {
+        for(const schedule of this.population) {
+            if(schedule.fitness > this.fittestSchedule.fitness) this.fittestSchedule = schedule;
+        }
     }
 
 

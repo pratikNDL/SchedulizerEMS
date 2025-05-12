@@ -1,9 +1,9 @@
-import { Class, Room } from "./types";
+import { _Class, Room } from "./types";
 
 class GeneticAlgo {
     public indexToRoom = new Map<number, Room>()
     public idToRoom = new Map<string, Room>()
-    public idToClass = new Map<string, Class>()
+    public idToClass = new Map<string, _Class>()
 
     constructor(public days:number, public slots: number, public rooms: Array<Room>) {
         this.initializeRooms(rooms);

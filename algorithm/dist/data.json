@@ -1,0 +1,708 @@
+{
+    "days": 6,
+    "slots": 12,
+    "rooms": [
+        {
+            "code": "0/4",
+            "isLab": false,
+            "capacity": 80,
+            "id": "b6b6193e-4237-45d1-8a1c-14367a36d263"
+        },
+        {
+            "code": "0/5",
+            "isLab": false,
+            "capacity": 80,
+            "id": "f0711744-b164-4c02-ae0b-5b5017f0307b"
+        },
+        {
+            "code": "0/6",
+            "isLab": false,
+            "capacity": 80,
+            "id": "510dcbb7-8458-48d8-b1b8-b03ea4480149"
+        },
+        {
+            "code": "1/6",
+            "isLab": false,
+            "capacity": 80,
+            "id": "44bfba3b-c71a-4514-9efc-d61261f5143e"
+        },
+        {
+            "code": "1/7",
+            "isLab": false,
+            "capacity": 80,
+            "id": "acd54b15-270d-4ee2-b906-2426b0802870"
+        },
+        {
+            "code": "1/8",
+            "isLab": false,
+            "capacity": 80,
+            "id": "7740cb6a-f869-4a47-9af8-73b2c3e39c7d"
+        },
+        {
+            "code": "01/3",
+            "isLab": true,
+            "capacity": 30,
+            "id": "5506ed3a-f33e-475c-a5c5-cc7a31351fe4"
+        },
+        {
+            "code": "01/6A",
+            "isLab": true,
+            "capacity": 30,
+            "id": "2dc146a9-ee1b-436d-bc8d-40eb67d87344"
+        },
+        {
+            "code": "01/4",
+            "isLab": true,
+            "capacity": 30,
+            "id": "a7945a41-70de-47b5-82e1-415f919bc134"
+        },
+        {
+            "code": "02/4",
+            "isLab": true,
+            "capacity": 30,
+            "id": "cbb056d5-9460-45ce-945e-7a3873aca6b9"
+        }
+    ],
+    "classes": [
+        {
+            "id": "41dbdd74-6d85-419f-881b-b4ce854edb8c",
+            "facultyId": "a62f4ee9-c97a-4310-8c48-6f8da4dee8af",
+            "studentGroupId": "07cbe791-21e9-4086-9491-618db141ab74",
+            "courseId": "c460d6c0-7993-4e86-bd86-cf2147c356e3",
+            "courseType": "THEORY",
+            "roomId": "b6b6193e-4237-45d1-8a1c-14367a36d263",
+            "scheduleId": "37bbe5cb-fd35-4d62-bcc3-f46dbae2812c",
+            "electiveBasketId": null,
+            "batches": [
+                {
+                    "id": "b84ea738-8932-4a43-a664-f09ed74484c5"
+                },
+                {
+                    "id": "fdc6a2d9-1da2-4172-b9c3-814882fc7954"
+                },
+                {
+                    "id": "124b2289-0162-4075-a782-9794e30ce0e6"
+                },
+                {
+                    "id": "7026f52b-7857-44f8-af05-8465fd6aca0e"
+                }
+            ],
+            "concurrentClasses": [],
+            "concurrentByClasses": [],
+            "course": {
+                "credits": 3,
+                "courseType": "THEORY"
+            }
+        },
+        {
+            "id": "94bd7abd-201d-4024-9301-0fe70174b678",
+            "facultyId": "ee99fe89-06be-449e-94b2-6aba4a5f0be4",
+            "studentGroupId": "07cbe791-21e9-4086-9491-618db141ab74",
+            "courseId": "dd6b4db3-cae3-41dd-90ad-85c10aa73a68",
+            "courseType": "THEORY",
+            "roomId": "b6b6193e-4237-45d1-8a1c-14367a36d263",
+            "scheduleId": "37bbe5cb-fd35-4d62-bcc3-f46dbae2812c",
+            "electiveBasketId": null,
+            "batches": [
+                {
+                    "id": "b84ea738-8932-4a43-a664-f09ed74484c5"
+                },
+                {
+                    "id": "fdc6a2d9-1da2-4172-b9c3-814882fc7954"
+                },
+                {
+                    "id": "124b2289-0162-4075-a782-9794e30ce0e6"
+                },
+                {
+                    "id": "7026f52b-7857-44f8-af05-8465fd6aca0e"
+                }
+            ],
+            "concurrentClasses": [],
+            "concurrentByClasses": [],
+            "course": {
+                "credits": 3,
+                "courseType": "THEORY"
+            }
+        },
+        {
+            "id": "3f02f20b-7b7a-4df8-a060-64ebaf40763f",
+            "facultyId": "f4ea07ec-15d9-4946-972c-e88bffb9c1d2",
+            "studentGroupId": "07cbe791-21e9-4086-9491-618db141ab74",
+            "courseId": "a3b0125a-c6a7-4f05-885f-70dca007cf42",
+            "courseType": "THEORY",
+            "roomId": "b6b6193e-4237-45d1-8a1c-14367a36d263",
+            "scheduleId": "37bbe5cb-fd35-4d62-bcc3-f46dbae2812c",
+            "electiveBasketId": null,
+            "batches": [
+                {
+                    "id": "b84ea738-8932-4a43-a664-f09ed74484c5"
+                },
+                {
+                    "id": "fdc6a2d9-1da2-4172-b9c3-814882fc7954"
+                },
+                {
+                    "id": "124b2289-0162-4075-a782-9794e30ce0e6"
+                },
+                {
+                    "id": "7026f52b-7857-44f8-af05-8465fd6aca0e"
+                }
+            ],
+            "concurrentClasses": [],
+            "concurrentByClasses": [],
+            "course": {
+                "credits": 3,
+                "courseType": "THEORY"
+            }
+        },
+        {
+            "id": "ac576eab-6d6d-4277-a565-01c18649ea91",
+            "facultyId": "6c9d3bd2-1485-4291-ae51-f38a138807d6",
+            "studentGroupId": "07cbe791-21e9-4086-9491-618db141ab74",
+            "courseId": "1de4185f-8280-4f9e-8da1-14e9ba5337dc",
+            "courseType": "PRACTICAL",
+            "roomId": "5506ed3a-f33e-475c-a5c5-cc7a31351fe4",
+            "scheduleId": "37bbe5cb-fd35-4d62-bcc3-f46dbae2812c",
+            "electiveBasketId": null,
+            "batches": [
+                {
+                    "id": "b84ea738-8932-4a43-a664-f09ed74484c5"
+                }
+            ],
+            "concurrentClasses": [
+                {
+                    "id": "ac576eab-6d6d-4277-a565-01c18649ea91"
+                },
+                {
+                    "id": "4891981b-c5cb-4f14-bd49-3218f06533a7"
+                },
+                {
+                    "id": "96f812a4-a650-437e-bbb0-43ad8bdcf004"
+                },
+                {
+                    "id": "8758097b-672e-4042-a5ed-908c34fa258a"
+                }
+            ],
+            "concurrentByClasses": [
+                {
+                    "id": "4891981b-c5cb-4f14-bd49-3218f06533a7"
+                },
+                {
+                    "id": "96f812a4-a650-437e-bbb0-43ad8bdcf004"
+                },
+                {
+                    "id": "ac576eab-6d6d-4277-a565-01c18649ea91"
+                },
+                {
+                    "id": "8758097b-672e-4042-a5ed-908c34fa258a"
+                }
+            ],
+            "course": {
+                "credits": 1,
+                "courseType": "PRACTICAL"
+            }
+        },
+        {
+            "id": "4891981b-c5cb-4f14-bd49-3218f06533a7",
+            "facultyId": "6c9d3bd2-1485-4291-ae51-f38a138807d6",
+            "studentGroupId": "07cbe791-21e9-4086-9491-618db141ab74",
+            "courseId": "1de4185f-8280-4f9e-8da1-14e9ba5337dc",
+            "courseType": "PRACTICAL",
+            "roomId": "5506ed3a-f33e-475c-a5c5-cc7a31351fe4",
+            "scheduleId": "37bbe5cb-fd35-4d62-bcc3-f46dbae2812c",
+            "electiveBasketId": null,
+            "batches": [
+                {
+                    "id": "fdc6a2d9-1da2-4172-b9c3-814882fc7954"
+                }
+            ],
+            "concurrentClasses": [
+                {
+                    "id": "ac576eab-6d6d-4277-a565-01c18649ea91"
+                },
+                {
+                    "id": "4891981b-c5cb-4f14-bd49-3218f06533a7"
+                },
+                {
+                    "id": "96f812a4-a650-437e-bbb0-43ad8bdcf004"
+                },
+                {
+                    "id": "8758097b-672e-4042-a5ed-908c34fa258a"
+                }
+            ],
+            "concurrentByClasses": [
+                {
+                    "id": "4891981b-c5cb-4f14-bd49-3218f06533a7"
+                },
+                {
+                    "id": "96f812a4-a650-437e-bbb0-43ad8bdcf004"
+                },
+                {
+                    "id": "ac576eab-6d6d-4277-a565-01c18649ea91"
+                },
+                {
+                    "id": "8758097b-672e-4042-a5ed-908c34fa258a"
+                }
+            ],
+            "course": {
+                "credits": 1,
+                "courseType": "PRACTICAL"
+            }
+        },
+        {
+            "id": "96f812a4-a650-437e-bbb0-43ad8bdcf004",
+            "facultyId": "6c9d3bd2-1485-4291-ae51-f38a138807d6",
+            "studentGroupId": "07cbe791-21e9-4086-9491-618db141ab74",
+            "courseId": "1de4185f-8280-4f9e-8da1-14e9ba5337dc",
+            "courseType": "PRACTICAL",
+            "roomId": "5506ed3a-f33e-475c-a5c5-cc7a31351fe4",
+            "scheduleId": "37bbe5cb-fd35-4d62-bcc3-f46dbae2812c",
+            "electiveBasketId": null,
+            "batches": [
+                {
+                    "id": "7026f52b-7857-44f8-af05-8465fd6aca0e"
+                }
+            ],
+            "concurrentClasses": [
+                {
+                    "id": "ac576eab-6d6d-4277-a565-01c18649ea91"
+                },
+                {
+                    "id": "4891981b-c5cb-4f14-bd49-3218f06533a7"
+                },
+                {
+                    "id": "96f812a4-a650-437e-bbb0-43ad8bdcf004"
+                },
+                {
+                    "id": "8758097b-672e-4042-a5ed-908c34fa258a"
+                }
+            ],
+            "concurrentByClasses": [
+                {
+                    "id": "4891981b-c5cb-4f14-bd49-3218f06533a7"
+                },
+                {
+                    "id": "96f812a4-a650-437e-bbb0-43ad8bdcf004"
+                },
+                {
+                    "id": "ac576eab-6d6d-4277-a565-01c18649ea91"
+                },
+                {
+                    "id": "8758097b-672e-4042-a5ed-908c34fa258a"
+                }
+            ],
+            "course": {
+                "credits": 1,
+                "courseType": "PRACTICAL"
+            }
+        },
+        {
+            "id": "8758097b-672e-4042-a5ed-908c34fa258a",
+            "facultyId": "6c9d3bd2-1485-4291-ae51-f38a138807d6",
+            "studentGroupId": "07cbe791-21e9-4086-9491-618db141ab74",
+            "courseId": "1de4185f-8280-4f9e-8da1-14e9ba5337dc",
+            "courseType": "PRACTICAL",
+            "roomId": "5506ed3a-f33e-475c-a5c5-cc7a31351fe4",
+            "scheduleId": "37bbe5cb-fd35-4d62-bcc3-f46dbae2812c",
+            "electiveBasketId": null,
+            "batches": [
+                {
+                    "id": "124b2289-0162-4075-a782-9794e30ce0e6"
+                }
+            ],
+            "concurrentClasses": [
+                {
+                    "id": "ac576eab-6d6d-4277-a565-01c18649ea91"
+                },
+                {
+                    "id": "4891981b-c5cb-4f14-bd49-3218f06533a7"
+                },
+                {
+                    "id": "96f812a4-a650-437e-bbb0-43ad8bdcf004"
+                },
+                {
+                    "id": "8758097b-672e-4042-a5ed-908c34fa258a"
+                }
+            ],
+            "concurrentByClasses": [
+                {
+                    "id": "4891981b-c5cb-4f14-bd49-3218f06533a7"
+                },
+                {
+                    "id": "96f812a4-a650-437e-bbb0-43ad8bdcf004"
+                },
+                {
+                    "id": "ac576eab-6d6d-4277-a565-01c18649ea91"
+                },
+                {
+                    "id": "8758097b-672e-4042-a5ed-908c34fa258a"
+                }
+            ],
+            "course": {
+                "credits": 1,
+                "courseType": "PRACTICAL"
+            }
+        },
+        {
+            "id": "147b5daf-5c0d-4607-bd2e-037b355d98e9",
+            "facultyId": "ee99fe89-06be-449e-94b2-6aba4a5f0be4",
+            "studentGroupId": "07cbe791-21e9-4086-9491-618db141ab74",
+            "courseId": "7ae1c0a1-7483-4590-a300-7ade5c41c107",
+            "courseType": "PRACTICAL",
+            "roomId": "5506ed3a-f33e-475c-a5c5-cc7a31351fe4",
+            "scheduleId": "37bbe5cb-fd35-4d62-bcc3-f46dbae2812c",
+            "electiveBasketId": null,
+            "batches": [
+                {
+                    "id": "b84ea738-8932-4a43-a664-f09ed74484c5"
+                }
+            ],
+            "concurrentClasses": [
+                {
+                    "id": "147b5daf-5c0d-4607-bd2e-037b355d98e9"
+                },
+                {
+                    "id": "aea4ff27-fc27-454f-a6e6-43124f3ad8a6"
+                },
+                {
+                    "id": "ae879bae-719b-41d7-9998-16d5e647ea82"
+                },
+                {
+                    "id": "7142f2cd-4238-4264-b1bd-fe3ce68e2dfa"
+                }
+            ],
+            "concurrentByClasses": [
+                {
+                    "id": "ae879bae-719b-41d7-9998-16d5e647ea82"
+                },
+                {
+                    "id": "7142f2cd-4238-4264-b1bd-fe3ce68e2dfa"
+                },
+                {
+                    "id": "147b5daf-5c0d-4607-bd2e-037b355d98e9"
+                },
+                {
+                    "id": "aea4ff27-fc27-454f-a6e6-43124f3ad8a6"
+                }
+            ],
+            "course": {
+                "credits": 1,
+                "courseType": "PRACTICAL"
+            }
+        },
+        {
+            "id": "aea4ff27-fc27-454f-a6e6-43124f3ad8a6",
+            "facultyId": "ee99fe89-06be-449e-94b2-6aba4a5f0be4",
+            "studentGroupId": "07cbe791-21e9-4086-9491-618db141ab74",
+            "courseId": "7ae1c0a1-7483-4590-a300-7ade5c41c107",
+            "courseType": "PRACTICAL",
+            "roomId": "5506ed3a-f33e-475c-a5c5-cc7a31351fe4",
+            "scheduleId": "37bbe5cb-fd35-4d62-bcc3-f46dbae2812c",
+            "electiveBasketId": null,
+            "batches": [
+                {
+                    "id": "fdc6a2d9-1da2-4172-b9c3-814882fc7954"
+                }
+            ],
+            "concurrentClasses": [
+                {
+                    "id": "147b5daf-5c0d-4607-bd2e-037b355d98e9"
+                },
+                {
+                    "id": "aea4ff27-fc27-454f-a6e6-43124f3ad8a6"
+                },
+                {
+                    "id": "ae879bae-719b-41d7-9998-16d5e647ea82"
+                },
+                {
+                    "id": "7142f2cd-4238-4264-b1bd-fe3ce68e2dfa"
+                }
+            ],
+            "concurrentByClasses": [
+                {
+                    "id": "ae879bae-719b-41d7-9998-16d5e647ea82"
+                },
+                {
+                    "id": "7142f2cd-4238-4264-b1bd-fe3ce68e2dfa"
+                },
+                {
+                    "id": "147b5daf-5c0d-4607-bd2e-037b355d98e9"
+                },
+                {
+                    "id": "aea4ff27-fc27-454f-a6e6-43124f3ad8a6"
+                }
+            ],
+            "course": {
+                "credits": 1,
+                "courseType": "PRACTICAL"
+            }
+        },
+        {
+            "id": "ae879bae-719b-41d7-9998-16d5e647ea82",
+            "facultyId": "ee99fe89-06be-449e-94b2-6aba4a5f0be4",
+            "studentGroupId": "07cbe791-21e9-4086-9491-618db141ab74",
+            "courseId": "7ae1c0a1-7483-4590-a300-7ade5c41c107",
+            "courseType": "PRACTICAL",
+            "roomId": "5506ed3a-f33e-475c-a5c5-cc7a31351fe4",
+            "scheduleId": "37bbe5cb-fd35-4d62-bcc3-f46dbae2812c",
+            "electiveBasketId": null,
+            "batches": [
+                {
+                    "id": "124b2289-0162-4075-a782-9794e30ce0e6"
+                }
+            ],
+            "concurrentClasses": [
+                {
+                    "id": "147b5daf-5c0d-4607-bd2e-037b355d98e9"
+                },
+                {
+                    "id": "aea4ff27-fc27-454f-a6e6-43124f3ad8a6"
+                },
+                {
+                    "id": "ae879bae-719b-41d7-9998-16d5e647ea82"
+                },
+                {
+                    "id": "7142f2cd-4238-4264-b1bd-fe3ce68e2dfa"
+                }
+            ],
+            "concurrentByClasses": [
+                {
+                    "id": "ae879bae-719b-41d7-9998-16d5e647ea82"
+                },
+                {
+                    "id": "7142f2cd-4238-4264-b1bd-fe3ce68e2dfa"
+                },
+                {
+                    "id": "147b5daf-5c0d-4607-bd2e-037b355d98e9"
+                },
+                {
+                    "id": "aea4ff27-fc27-454f-a6e6-43124f3ad8a6"
+                }
+            ],
+            "course": {
+                "credits": 1,
+                "courseType": "PRACTICAL"
+            }
+        },
+        {
+            "id": "7142f2cd-4238-4264-b1bd-fe3ce68e2dfa",
+            "facultyId": "ee99fe89-06be-449e-94b2-6aba4a5f0be4",
+            "studentGroupId": "07cbe791-21e9-4086-9491-618db141ab74",
+            "courseId": "7ae1c0a1-7483-4590-a300-7ade5c41c107",
+            "courseType": "PRACTICAL",
+            "roomId": "5506ed3a-f33e-475c-a5c5-cc7a31351fe4",
+            "scheduleId": "37bbe5cb-fd35-4d62-bcc3-f46dbae2812c",
+            "electiveBasketId": null,
+            "batches": [
+                {
+                    "id": "7026f52b-7857-44f8-af05-8465fd6aca0e"
+                }
+            ],
+            "concurrentClasses": [
+                {
+                    "id": "147b5daf-5c0d-4607-bd2e-037b355d98e9"
+                },
+                {
+                    "id": "aea4ff27-fc27-454f-a6e6-43124f3ad8a6"
+                },
+                {
+                    "id": "ae879bae-719b-41d7-9998-16d5e647ea82"
+                },
+                {
+                    "id": "7142f2cd-4238-4264-b1bd-fe3ce68e2dfa"
+                }
+            ],
+            "concurrentByClasses": [
+                {
+                    "id": "ae879bae-719b-41d7-9998-16d5e647ea82"
+                },
+                {
+                    "id": "7142f2cd-4238-4264-b1bd-fe3ce68e2dfa"
+                },
+                {
+                    "id": "147b5daf-5c0d-4607-bd2e-037b355d98e9"
+                },
+                {
+                    "id": "aea4ff27-fc27-454f-a6e6-43124f3ad8a6"
+                }
+            ],
+            "course": {
+                "credits": 1,
+                "courseType": "PRACTICAL"
+            }
+        },
+        {
+            "id": "0f0ace6b-634c-4044-83d7-604fac1fc460",
+            "facultyId": "ae9c1e56-d74a-408d-9b79-f518e15cedea",
+            "studentGroupId": "07cbe791-21e9-4086-9491-618db141ab74",
+            "courseId": "0c451e2c-9110-4e8c-b603-0e846d854073",
+            "courseType": "THEORY",
+            "roomId": "b6b6193e-4237-45d1-8a1c-14367a36d263",
+            "scheduleId": "37bbe5cb-fd35-4d62-bcc3-f46dbae2812c",
+            "electiveBasketId": null,
+            "batches": [
+                {
+                    "id": "b84ea738-8932-4a43-a664-f09ed74484c5"
+                },
+                {
+                    "id": "fdc6a2d9-1da2-4172-b9c3-814882fc7954"
+                },
+                {
+                    "id": "124b2289-0162-4075-a782-9794e30ce0e6"
+                },
+                {
+                    "id": "7026f52b-7857-44f8-af05-8465fd6aca0e"
+                }
+            ],
+            "concurrentClasses": [],
+            "concurrentByClasses": [],
+            "course": {
+                "credits": 2,
+                "courseType": "THEORY"
+            }
+        },
+        {
+            "id": "a20bba08-920c-4ace-8935-8ed8e16856c3",
+            "facultyId": "439be4d4-8c2d-4b0d-9d59-b263c775c3be",
+            "studentGroupId": "07cbe791-21e9-4086-9491-618db141ab74",
+            "courseId": "a424312b-fa5c-4b68-846b-6f33236c11da",
+            "courseType": "THEORY",
+            "roomId": "b6b6193e-4237-45d1-8a1c-14367a36d263",
+            "scheduleId": "37bbe5cb-fd35-4d62-bcc3-f46dbae2812c",
+            "electiveBasketId": "46e570c5-6d14-4ae5-b3dd-26dabc0af45b",
+            "batches": [
+                {
+                    "id": "7026f52b-7857-44f8-af05-8465fd6aca0e"
+                }
+            ],
+            "concurrentClasses": [
+                {
+                    "id": "a20bba08-920c-4ace-8935-8ed8e16856c3"
+                },
+                {
+                    "id": "c20c05c7-4e9a-47ea-9cd9-32d66376b948"
+                }
+            ],
+            "concurrentByClasses": [
+                {
+                    "id": "a20bba08-920c-4ace-8935-8ed8e16856c3"
+                },
+                {
+                    "id": "c20c05c7-4e9a-47ea-9cd9-32d66376b948"
+                }
+            ],
+            "course": {
+                "credits": 3,
+                "courseType": "THEORY"
+            }
+        },
+        {
+            "id": "c20c05c7-4e9a-47ea-9cd9-32d66376b948",
+            "facultyId": "6bcd8446-1771-4e2d-9dde-88ab54882708",
+            "studentGroupId": "07cbe791-21e9-4086-9491-618db141ab74",
+            "courseId": "6342575c-fbda-4e95-a64c-238d6a4c0332",
+            "courseType": "THEORY",
+            "roomId": "f0711744-b164-4c02-ae0b-5b5017f0307b",
+            "scheduleId": "37bbe5cb-fd35-4d62-bcc3-f46dbae2812c",
+            "electiveBasketId": "46e570c5-6d14-4ae5-b3dd-26dabc0af45b",
+            "batches": [
+                {
+                    "id": "b84ea738-8932-4a43-a664-f09ed74484c5"
+                },
+                {
+                    "id": "fdc6a2d9-1da2-4172-b9c3-814882fc7954"
+                },
+                {
+                    "id": "124b2289-0162-4075-a782-9794e30ce0e6"
+                }
+            ],
+            "concurrentClasses": [
+                {
+                    "id": "a20bba08-920c-4ace-8935-8ed8e16856c3"
+                },
+                {
+                    "id": "c20c05c7-4e9a-47ea-9cd9-32d66376b948"
+                }
+            ],
+            "concurrentByClasses": [
+                {
+                    "id": "a20bba08-920c-4ace-8935-8ed8e16856c3"
+                },
+                {
+                    "id": "c20c05c7-4e9a-47ea-9cd9-32d66376b948"
+                }
+            ],
+            "course": {
+                "credits": 3,
+                "courseType": "THEORY"
+            }
+        }
+    ],
+    "facultyAvailability": [
+        {
+            "availability": [
+                0,
+                1,
+                25,
+                38
+            ],
+            "facultyId": "3685f6f2-9d33-4a84-98e4-3c7bf6ea9ee4",
+            "scheduleId": "37bbe5cb-fd35-4d62-bcc3-f46dbae2812c"
+        },
+        {
+            "availability": [],
+            "facultyId": "525d3c2b-0242-47c0-8f8a-0c2148ed87bc",
+            "scheduleId": "37bbe5cb-fd35-4d62-bcc3-f46dbae2812c"
+        },
+        {
+            "availability": [],
+            "facultyId": "ee99fe89-06be-449e-94b2-6aba4a5f0be4",
+            "scheduleId": "37bbe5cb-fd35-4d62-bcc3-f46dbae2812c"
+        },
+        {
+            "availability": [],
+            "facultyId": "a62f4ee9-c97a-4310-8c48-6f8da4dee8af",
+            "scheduleId": "37bbe5cb-fd35-4d62-bcc3-f46dbae2812c"
+        },
+        {
+            "availability": [],
+            "facultyId": "439be4d4-8c2d-4b0d-9d59-b263c775c3be",
+            "scheduleId": "37bbe5cb-fd35-4d62-bcc3-f46dbae2812c"
+        },
+        {
+            "availability": [
+                5,
+                16,
+                14,
+                1
+            ],
+            "facultyId": "3ffaa9ad-1371-45e4-8b48-ff3df66f377a",
+            "scheduleId": "37bbe5cb-fd35-4d62-bcc3-f46dbae2812c"
+        },
+        {
+            "availability": [],
+            "facultyId": "5c24344e-1343-485d-b25c-d634fcc39f95",
+            "scheduleId": "37bbe5cb-fd35-4d62-bcc3-f46dbae2812c"
+        }
+    ],
+    "studentGroupAvailability": [
+        {
+            "availability": [
+                20,
+                60,
+                61,
+                62,
+                64,
+                63,
+                66,
+                65,
+                67,
+                68,
+                69,
+                70,
+                71
+            ],
+            "studentGroupId": "07cbe791-21e9-4086-9491-618db141ab74",
+            "scheduleId": "37bbe5cb-fd35-4d62-bcc3-f46dbae2812c"
+        }
+    ]
+}
